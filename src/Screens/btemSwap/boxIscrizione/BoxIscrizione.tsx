@@ -107,13 +107,16 @@ const BoxIscrizione = () => {
   };
   const registrazione = (values) => {
     console.log(values);
+
     setRefCodeExist(values.refcode);
+
     const payload: RegisterPayload = {
       lastName: values.cognome,
       firstName: values.nome,
       userEmail: values.mail,
       walletCode: account as any,
     };
+
     console.log(payload);
     axios
       .post("http://51.158.113.131:8080/user/register", payload)
@@ -133,6 +136,10 @@ const BoxIscrizione = () => {
               left: "-0.8vw",
               top: "-0.35vw",
               height: "35vw",
+              display: "flex",
+              justifyContent: "center",
+              alignContent: "center",
+              alignItems: "center",
             }}
           />
           <Formik
@@ -162,7 +169,7 @@ const BoxIscrizione = () => {
                   alignContent: "center",
                   justifyContent: "center",
                   alignItems: "center",
-                  gap: "0.5rem",
+                  gap: "0.6rem",
                   marginTop: "1rem",
                 }}
               >
@@ -186,7 +193,7 @@ const BoxIscrizione = () => {
                   name="refcode"
                   onChange={handleChange}
                 />
-                <ButtonSignUp type={"submit"}>
+                <ButtonSignUp style={{ marginTop: "2rem" }} type={"submit"}>
                   <TestoButton>SEND</TestoButton>
                 </ButtonSignUp>
                 <Mandatory>*MANDATORY FIELD</Mandatory>

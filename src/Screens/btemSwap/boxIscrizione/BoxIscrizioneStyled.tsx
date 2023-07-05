@@ -19,6 +19,7 @@ const ContainerIscrizione = styled.div`
   display: flex;
   flex-direction: row;
   gap: 4rem;
+  align-items: center;
 `;
 const BoxSinistra = styled.div`
   width: 32vw;

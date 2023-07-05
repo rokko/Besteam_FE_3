@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import SfondoDescrizione from "../assets/img/sfondoDescrizione.jpg";
+
 const TitoloDescrizione = styled.p`
   font-size: 2.3vw;
   font-family: DinPROBold;

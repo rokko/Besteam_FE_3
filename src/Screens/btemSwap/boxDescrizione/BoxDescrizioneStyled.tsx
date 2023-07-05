@@ -11,6 +11,7 @@ const TitoloDescrizione = styled.p`
 `;
 
 const TestoGrassetto = styled.p`
+  margin-top: -10px;
   font-size: 1.7vw;
   font-family: DinPROBold;
   text-align: center;
@@ -20,7 +21,7 @@ const TestoGrassetto = styled.p`
 `;
 const TestoParagrafo = styled.p`
   font-size: 1.7vw;
-  font-family: DIN-PRO;
+  font-family: DinPROBold;
   text-align: center;
   letter-spacing: 0px;
   color: #ffffff;

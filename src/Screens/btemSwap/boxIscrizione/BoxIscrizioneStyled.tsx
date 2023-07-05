@@ -79,7 +79,10 @@ const InputFormRegistrazione = styled.input`
 
 const ButtonSignUp = styled.button`
   background: #2dc653 0% 0% no-repeat padding-box;
-
+  cursor: url("cursore2.png"), auto;
+  &:hover {
+    background-color: #555;
+  }
   opacity: 1;
   width: 12.1vw;
   height: 2.6vw;
@@ -91,7 +94,7 @@ const ButtonSignUp = styled.button`
 `;
 
 const TestoButton = styled.p`
-  font-family: DINProCondensedBlack;
+  font-family: DinPROBold;
   font-size: 2.08vw;
   color: white;
 `;
@@ -146,6 +149,10 @@ const TestoSottoInput = styled.p`
 `;
 
 const BuyButton = styled.div`
+  cursor: url("cursore2.png"), auto;
+  &:hover {
+    background-color: #555;
+  }
   position: relative;
   display: flex;
   left: 5.5vw;

@@ -11,7 +11,10 @@ import schemaRef from "../assets/img/schemaRef.png";
 import separatore from "../assets/img/separatore.png";
 import { useWeb3React } from "@web3-react/core";
 import abiBTEM from "../../../components/BtemSaleAbi.json";
+import bordo from "../../../components/video/bordo2.png";
+
 import CopyToClipboard from "react-copy-to-clipboard";
+import { LastFooter } from "../../../components/LastFooter";
 var Contract2 = require("web3-eth-contract");
 
 const BoxDescrizione = () => {
@@ -26,6 +29,11 @@ const BoxDescrizione = () => {
   return (
     <>
       <ContainerDescrizione>
+        <br />
+        <br />
+        <br />
+        <br />
+
         <TitoloDescrizione>1. REFERRAL CODE</TitoloDescrizione>
         <TestoGrassetto>
           Invite a friends to EARN more BTEM with your ref code:
@@ -105,15 +113,44 @@ const BoxDescrizione = () => {
           watch this video for all the steps to swap BTEM!
         </TestoParagrafo>
         <iframe
-          width="600"
-          height="315"
+          width="1050"
+          height="590"
           src="https://www.youtube.com/embed/Ze9r6c1OOM4"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            maxWidth: "100%",
+            marginTop: "100px",
+          }}
+        >
+          <img src={bordo} style={{ width: "100%" }} />
+        </div>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            backgroundColor: "#1C1C1C",
+            color: "white",
+            height: "100px",
+            alignContent: "center",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <p>
+            Besteam Game S.R.L. © 2022, All rights reserved - VAT 16643031004,
+            Roma
+          </p>
+        </div>
       </ContainerDescrizione>
+      <LastFooter />
     </>
   );
 };

@@ -76,18 +76,20 @@ const BoxIscrizione = () => {
     console.log(x);
   };
   const compraBTEM = async () => {
-    if (!refCodeExist) {
-      const x = await contract.methods.buyTokensWithoutCode(account).send({
-        from: account,
-        value: library.utils.toWei(`${maticInv}`, "ether"),
-      });
-    } else {
-      const x = await contract.methods
-        .buyTokensWithCode(account, refCodeExist)
-        .send({
+    if (utenteAttivo) {
+      if (!refCodeExist) {
+        const x = await contract.methods.buyTokensWithoutCode(account).send({
           from: account,
           value: library.utils.toWei(`${maticInv}`, "ether"),
         });
+      } else {
+        const x = await contract.methods
+          .buyTokensWithCode(account, refCodeExist)
+          .send({
+            from: account,
+            value: library.utils.toWei(`${maticInv}`, "ether"),
+          });
+      }
     }
   };
   const initialValues = {
@@ -118,10 +120,11 @@ const BoxIscrizione = () => {
     };
 
     console.log(payload);
-    axios
+    /**axios
       .post("http://51.158.113.131:8080/user/register", payload)
-      .then((x) => console.log(x));
+      .then((x) => console.log(x));**/
     setOpen(true);
+    setUtenteAttivo(true);
   };
 
   return (
@@ -250,7 +253,10 @@ const BoxIscrizione = () => {
             />
 
             <div style={{ position: "relative" }}>
-              <InputCoin onChange={(x) => cambioValore(x)} />
+              <InputCoin
+                onChange={(x) => cambioValore(x)}
+                style={{ opacity: !utenteAttivo ? "0.5" : "1" }}
+              />
               <img
                 src={simbMATIC}
                 style={{
@@ -267,7 +273,11 @@ const BoxIscrizione = () => {
               </TestoSottoInput>
             </div>
             <div style={{ position: "relative" }}>
-              <InputCoin value={totbtem} readOnly={true} />
+              <InputCoin
+                value={totbtem}
+                readOnly={true}
+                style={{ opacity: !utenteAttivo ? "0.5" : "1" }}
+              />
               <img
                 src={simbBTEM}
                 style={{
@@ -284,7 +294,12 @@ const BoxIscrizione = () => {
               </TestoSottoInput>
             </div>
           </div>
-          <BuyButton onClick={() => compraBTEM()}>BUY</BuyButton>
+          <BuyButton
+            style={{ opacity: !utenteAttivo ? "0.5" : "1" }}
+            onClick={() => compraBTEM()}
+          >
+            BUY
+          </BuyButton>
         </BoxDestra>
       </ContainerIscrizione>
       <div

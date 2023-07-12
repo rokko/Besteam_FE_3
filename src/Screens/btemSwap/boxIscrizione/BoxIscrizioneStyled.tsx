@@ -117,8 +117,9 @@ const InputCoin = styled.input`
   color: #7c7c7c;
   opacity: 1;
   border: none;
-  font-size: 4vw;
+  font-size: 3vw;
   padding-left: 11vw;
+  font-family: Dinproregular;
 `;
 
 const TestoSupporto = styled.p`

@@ -24,6 +24,13 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Dinproregular";
+  src: local("Dinproregular"), url(./fonts/dinproregular.otf) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 @font-face {
   font-family: "DinLightItalic";
   src: local("DinLight"), url(./fonts/dpl.ttf) format("opentype");

@@ -50,9 +50,7 @@ const HeaderBar = () => {
             <Link to="/ico" style={{ textDecoration: "none" }}>
               <p className="testo">ICO</p>
   </Link>*/}
-            <a href="/swap" style={{ textDecoration: "none" }}>
-              <p className="testo">BTEM</p>
-            </a>
+
             <a href="#team" style={{ textDecoration: "none" }}>
               <p className="testo">Team</p>
             </a>
@@ -78,6 +76,9 @@ const HeaderBar = () => {
             </Button>
             */}
             <VerticalMenu />
+            <a href="/swap" style={{ textDecoration: "none" }}>
+              <p className="testo">BTEM</p>
+            </a>
             <div className="wallet">
               <ConnectionWallet />
             </div>

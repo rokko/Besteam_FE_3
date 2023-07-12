@@ -21,7 +21,7 @@ const TestoGrassetto = styled.p`
 `;
 const TestoParagrafo = styled.p`
   font-size: 1.7vw;
-  font-family: DinPROBold;
+  font-family: Dinproregular;
   text-align: center;
   letter-spacing: 0px;
   color: #ffffff;

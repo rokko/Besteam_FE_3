@@ -94,7 +94,7 @@ const ButtonSignUp = styled.button`
 `;
 
 const TestoButton = styled.p`
-  font-family: DinPROBold;
+  font-family: DinPROBlack2;
   font-size: 2.08vw;
   color: white;
 `;
@@ -171,7 +171,7 @@ const BuyButton = styled.div`
   background: #2dc653 0% 0% no-repeat padding-box;
   width: 21vw;
   height: 5.34vw;
-  font-family: DINProCondensedBlack;
+  font-family: DinPROBlack2;
   font-size: 3.75vw;
   color: white;
 `;

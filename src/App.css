@@ -12,6 +12,13 @@
 }
 
 @font-face {
+  font-family: "DinPROBlack2";
+  src: local("DinPROBlack2"), url(./fonts/DINProblack.otf) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "DinPRO";
   src: local("DinPRO"), url(./fonts/DINPro-Medium.ttf) format("opentype");
   font-weight: normal;

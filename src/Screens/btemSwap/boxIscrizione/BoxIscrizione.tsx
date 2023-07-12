@@ -232,7 +232,9 @@ const BoxIscrizione = () => {
             />
           )}
 
-          <TestoSwap style={{ marginTop: "-0.1vw" }}>SWAP</TestoSwap>
+          <TestoSwap style={{ marginTop: "1vw", marginBottom: "3vw" }}>
+            SWAP
+          </TestoSwap>
           <div
             style={{
               display: "flex",

@@ -205,7 +205,7 @@ const BoxIscrizione = () => {
           </Formik>
         </BoxSinistra>
 
-        <BoxDestra>
+        <BoxDestra style={{ border: utenteAttivo ? "8px solid #ffffff" : "" }}>
           {!utenteAttivo && (
             <img
               src={lucchetto}
@@ -249,13 +249,15 @@ const BoxIscrizione = () => {
                 width: "2.86vw",
                 left: "14vw",
                 top: "6.3vw",
+                opacity: !utenteAttivo ? "0.4" : "1",
               }}
             />
 
             <div style={{ position: "relative" }}>
               <InputCoin
                 onChange={(x) => cambioValore(x)}
-                style={{ opacity: !utenteAttivo ? "0.5" : "1" }}
+                disabled={!utenteAttivo}
+                style={{ opacity: !utenteAttivo ? "0.4" : "1" }}
               />
               <img
                 src={simbMATIC}
@@ -264,19 +266,30 @@ const BoxIscrizione = () => {
                   position: "absolute",
                   left: "13.5vw",
                   top: "0.8vw",
+                  opacity: !utenteAttivo ? "0.4" : "1",
                 }}
               ></img>
               <TestoSottoInput
-                style={{ position: "absolute", left: "7vw", top: "-0.6vw" }}
+                style={{
+                  position: "absolute",
+                  left: "7vw",
+                  top: "-0.6vw",
+                  opacity: !utenteAttivo ? "0.4" : "1",
+                }}
               >
                 MATIC
               </TestoSottoInput>
             </div>
-            <div style={{ position: "relative" }}>
+            <div
+              style={{
+                position: "relative",
+                opacity: !utenteAttivo ? "0.4" : "1",
+              }}
+            >
               <InputCoin
                 value={totbtem}
                 readOnly={true}
-                style={{ opacity: !utenteAttivo ? "0.5" : "1" }}
+                style={{ opacity: !utenteAttivo ? "0.4" : "1" }}
               />
               <img
                 src={simbBTEM}
@@ -285,10 +298,16 @@ const BoxIscrizione = () => {
                   position: "absolute",
                   left: "13.5vw",
                   top: "0.8vw",
+                  opacity: !utenteAttivo ? "0.5" : "1",
                 }}
               ></img>
               <TestoSottoInput
-                style={{ position: "absolute", left: "7vw", top: "-0.6vw" }}
+                style={{
+                  position: "absolute",
+                  left: "7vw",
+                  top: "-0.6vw",
+                  opacity: !utenteAttivo ? "0.5" : "1",
+                }}
               >
                 BTEM
               </TestoSottoInput>

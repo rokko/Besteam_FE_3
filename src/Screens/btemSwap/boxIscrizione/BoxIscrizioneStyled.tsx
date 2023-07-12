@@ -39,7 +39,7 @@ const BoxDestra = styled.div`
   width: 32vw;
   height: 35vw;
   // mix-blend-mode: overlay;
-  border: 8px solid #ffffff;
+
   background: #e8e8e8 0% 0% no-repeat padding-box;
   opacity: 1;
 

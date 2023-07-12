@@ -137,6 +137,8 @@ const Mandatory = styled.p`
   text-align: center;
   letter-spacing: 0px;
   color: #10451d;
+  font-family: DinLightItalic;
+  font-style: italic;
   opacity: 1;
 `;
 

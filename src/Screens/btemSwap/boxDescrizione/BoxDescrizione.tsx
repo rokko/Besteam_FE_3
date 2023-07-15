@@ -20,6 +20,7 @@ var Contract2 = require("web3-eth-contract");
 
 const BoxDescrizione = () => {
   const [copied, setCopied] = useState(false);
+  const [copied2, setCopied2] = useState(false);
   const { account } = useWeb3React();
   const SWAP_ADDRESS = "0x9bd219F280E64701bcec868e3ac428b6D5828Dae";
   Contract2.setProvider(window.ethereum);
@@ -94,7 +95,7 @@ const BoxDescrizione = () => {
               }}
               onClick={() => {
                 var copyText = document.getElementById("add");
-                setCopied(true);
+                setCopied2(true);
               }}
             >
               <img
@@ -103,7 +104,7 @@ const BoxDescrizione = () => {
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAcklEQVR4nGNgGDZA52igt87RoCe6x4L/k4MZCFsQ/Jhcw3WJsYBoheQCulugQ2ac6ICC+niwJxEWUBAnR4MfEbSA3CDTxaVv1AIYGA0igmA0iAgCmpeuuoPGAh1qF3boAFTkkmXJ0eBHescCPTAMHLIAAAAcga4mAxLxAAAAAElFTkSuQmCC"
               ></img>
 
-              {copied && (
+              {copied2 && (
                 <p style={{ color: "white", fontSize: 10 }}>Copied!</p>
               )}
             </button>

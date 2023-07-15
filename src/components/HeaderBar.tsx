@@ -51,7 +51,10 @@ const HeaderBar = () => {
               <p className="testo">ICO</p>
   </Link>*/}
 
-            <a href="#team" style={{ textDecoration: "none" }}>
+            <a
+              href="https://besteam.io/#team"
+              style={{ textDecoration: "none" }}
+            >
               <p className="testo">Team</p>
             </a>
 

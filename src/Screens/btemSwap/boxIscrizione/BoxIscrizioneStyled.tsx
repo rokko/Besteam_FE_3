@@ -22,8 +22,8 @@ const ContainerIscrizione = styled.div`
   align-items: center;
 `;
 const BoxSinistra = styled.div`
-  width: 32vw;
-  height: 35vw;
+  width: 30vw;
+  height: 33vw;
   // mix-blend-mode: overlay;
   border: 8px solid #ffffff;
   background: #e8e8e8 0% 0% no-repeat padding-box;
@@ -36,8 +36,8 @@ const BoxSinistra = styled.div`
 
 const BoxDestra = styled.div`
   position: relative;
-  width: 32vw;
-  height: 35vw;
+  width: 30vw;
+  height: 33vw;
   // mix-blend-mode: overlay;
 
   background: #e8e8e8 0% 0% no-repeat padding-box;
@@ -47,8 +47,8 @@ const BoxDestra = styled.div`
 `;
 
 const BoxDestraScuro = styled.div`
-  width: 32vw;
-  height: 35vw;
+  width: 30vw;
+  height: 33vw;
   // mix-blend-mode: overlay;
   border: 8px solid #ffffff;
   background: #010101 0% 0% no-repeat padding-box;

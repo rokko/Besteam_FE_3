@@ -15,6 +15,7 @@ import bordo from "../../../components/video/bordo2.png";
 
 import CopyToClipboard from "react-copy-to-clipboard";
 import { LastFooter } from "../../../components/LastFooter";
+import { Hidden } from "@mui/material";
 var Contract2 = require("web3-eth-contract");
 
 const BoxDescrizione = () => {
@@ -113,8 +114,10 @@ const BoxDescrizione = () => {
           watch this video for all the steps to swap BTEM!
         </TestoParagrafo>
         <iframe
-          width="1050"
-          height="590"
+          style={{
+            width: "54vw",
+            height: "30vw",
+          }}
           src="https://www.youtube.com/embed/Ze9r6c1OOM4"
           title="YouTube video player"
           frameBorder="0"

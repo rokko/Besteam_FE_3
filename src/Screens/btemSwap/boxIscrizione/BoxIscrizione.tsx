@@ -138,7 +138,7 @@ const BoxIscrizione = () => {
               position: "absolute",
               left: "-0.8vw",
               top: "-0.35vw",
-              height: "35vw",
+              height: "33vw",
               display: "flex",
               justifyContent: "center",
               alignContent: "center",
@@ -152,15 +152,15 @@ const BoxIscrizione = () => {
             }}
             validationSchema={object({
               nome: string()
-                .required("Inserisci il tuo Cognome")
-                .min(2, "Cognome troppo corto"),
-              cognome: string()
                 .required("Inserisci il tuo nome")
                 .min(2, "Nome troppo corto"),
+              cognome: string()
+                .required("Inserisci il tuo cognome")
+                .min(2, "Cognome troppo corto"),
               mail: string()
                 .required("Inserisci la tua mail")
                 .email("Email non valida"),
-              wallet: string(),
+              wallet: string().required(),
               refcode: string(),
             })}
           >
@@ -177,22 +177,47 @@ const BoxIscrizione = () => {
                 }}
               >
                 <TestoForm>FIRST NAME*</TestoForm>
-                <InputFormRegistrazione name="nome" onChange={handleChange} />
+                <InputFormRegistrazione
+                  style={{
+                    border: errors.nome ? "1px solid red" : "",
+                  }}
+                  name="nome"
+                  onChange={handleChange}
+                />
+
                 <TestoForm>SECOND NAME*</TestoForm>
                 <InputFormRegistrazione
+                  style={{
+                    border: errors.cognome ? "1px solid red" : "",
+                  }}
                   name="cognome"
                   onChange={handleChange}
                 />
+
                 <TestoForm>EMAIL*</TestoForm>
-                <InputFormRegistrazione name="mail" onChange={handleChange} />
+                <InputFormRegistrazione
+                  style={{
+                    border: errors.mail ? "1px solid red" : "",
+                  }}
+                  name="mail"
+                  onChange={handleChange}
+                />
                 <TestoForm>WALLET*</TestoForm>
                 <InputFormRegistrazione
+                  style={{
+                    border: errors.wallet ? "1px solid red" : "",
+                  }}
                   name="wallet"
                   value={account as any}
                   onChange={handleChange}
                 />
                 <TestoForm>REF CODE</TestoForm>
                 <InputFormRegistrazione
+                  style={{
+                    border: errors.refcode
+                      ? "1px solid red"
+                      : "1px solid green",
+                  }}
                   name="refcode"
                   onChange={handleChange}
                 />

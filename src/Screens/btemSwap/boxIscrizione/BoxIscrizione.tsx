@@ -291,7 +291,7 @@ const BoxIscrizione = () => {
                 style={{
                   width: "3.50vw",
                   position: "absolute",
-                  left: "13.5vw",
+                  left: "11.5vw",
                   top: "0.8vw",
                   opacity: !utenteAttivo ? "0.4" : "1",
                 }}
@@ -299,7 +299,7 @@ const BoxIscrizione = () => {
               <TestoSottoInput
                 style={{
                   position: "absolute",
-                  left: "7vw",
+                  left: "5vw",
                   top: "-0.6vw",
                   opacity: !utenteAttivo ? "0.4" : "1",
                 }}
@@ -323,7 +323,7 @@ const BoxIscrizione = () => {
                 style={{
                   width: "3.50vw",
                   position: "absolute",
-                  left: "13.5vw",
+                  left: "11.5vw",
                   top: "0.8vw",
                   opacity: !utenteAttivo ? "0.5" : "1",
                 }}
@@ -331,7 +331,7 @@ const BoxIscrizione = () => {
               <TestoSottoInput
                 style={{
                   position: "absolute",
-                  left: "7vw",
+                  left: "5vw",
                   top: "-0.6vw",
                   opacity: !utenteAttivo ? "0.5" : "1",
                 }}

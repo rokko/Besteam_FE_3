@@ -41,8 +41,8 @@ const BoxDescrizione = () => {
           Invite a friends to EARN more BTEM with your ref code:
         </TestoGrassetto>
         <div style={{ display: "flex", flexDirection: "row" }}>
-          <BoxRefCode />
-          <CopyToClipboard text={"0x57b308E24Fa808BeF391D8402d2314fDD286d52f"}>
+          <BoxRefCode id='refcode' />
+          <CopyToClipboard text={''}>
             <button
               style={{
                 border: "none",
@@ -52,7 +52,7 @@ const BoxDescrizione = () => {
                 background: "none",
               }}
               onClick={() => {
-                var copyText = document.getElementById("add");
+                var copyTextRefCode = document.getElementById("refcode");
                 setCopied(true);
               }}
             >

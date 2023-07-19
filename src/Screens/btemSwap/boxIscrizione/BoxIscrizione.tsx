@@ -132,19 +132,6 @@ const BoxIscrizione = () => {
       <Modalico open={open} setopen={setOpen} testo={4} />
       <ContainerIscrizione>
         <BoxSinistra>
-          <img
-            src={fasciaverticale}
-            style={{
-              position: "absolute",
-              left: "-0.8vw",
-              top: "-0.35vw",
-              height: "33vw",
-              display: "flex",
-              justifyContent: "center",
-              alignContent: "center",
-              alignItems: "center",
-            }}
-          />
           <Formik
             initialValues={initialValues}
             onSubmit={(values, formikHelper) => {

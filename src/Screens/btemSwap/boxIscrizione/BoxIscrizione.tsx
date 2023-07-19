@@ -47,7 +47,7 @@ const BoxIscrizione = () => {
   const { account, library } = useWeb3React();
   console.log(account);
   const [utenteAttivo, setUtenteAttivo] = useState(false);
-
+  const [notAccount, setNotAccount] = useState(true);
   const [refCodeExist, setRefCodeExist] = useState();
 
   const config = {
@@ -120,11 +120,15 @@ const BoxIscrizione = () => {
     };
 
     console.log(payload);
-    axios
-      .post("http://localhost:8080/user/register", payload)
-      .then((x) => console.log(x));
-    setOpen(true);
-    setUtenteAttivo(true);
+    if (account || values.wallet !== "") {
+      axios
+        .post("http://localhost:8080/user/register", payload)
+        .then((x) => console.log(x));
+      setOpen(true);
+      setUtenteAttivo(true);
+    } else {
+      setNotAccount(true);
+    }
   };
 
   return (
@@ -147,7 +151,7 @@ const BoxIscrizione = () => {
               mail: string()
                 .required("Inserisci la tua mail")
                 .email("Email non valida"),
-              wallet: string().required(),
+              wallet: string(),
               refcode: string(),
             })}
           >
@@ -192,12 +196,16 @@ const BoxIscrizione = () => {
                 <TestoForm>WALLET*</TestoForm>
                 <InputFormRegistrazione
                   style={{
-                    border: errors.wallet ? "1px solid red" : "",
+                    border:
+                      !account && touched.wallet && notAccount
+                        ? "1px solid red"
+                        : "",
                   }}
                   name="wallet"
-                  value={account as any}
+                  value={account as string}
                   onChange={handleChange}
                 />
+
                 <TestoForm>REF CODE</TestoForm>
                 <InputFormRegistrazione
                   style={{

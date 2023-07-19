@@ -59,8 +59,8 @@ const BoxIscrizione = () => {
   useEffect(() => {
     if (!!account) {
       axios
-        .get("http://51.158.113.131:8080/user/getByWallet", {
-          params: { walletCode: account as any },
+        .post("http://51.158.113.131:8080/user/login", null, {
+          params: { walletCode: account as string },
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
         })
         .then((e) => {
@@ -120,9 +120,9 @@ const BoxIscrizione = () => {
     };
 
     console.log(payload);
-    /**axios
-      .post("http://51.158.113.131:8080/user/register", payload)
-      .then((x) => console.log(x));**/
+    axios
+      .post("http://localhost:8080/user/register", payload)
+      .then((x) => console.log(x));
     setOpen(true);
     setUtenteAttivo(true);
   };
@@ -172,7 +172,7 @@ const BoxIscrizione = () => {
                   alignContent: "center",
                   justifyContent: "center",
                   alignItems: "center",
-                  gap: "0.6rem",
+                  gap: "0.5vw",
                   marginTop: "1rem",
                 }}
               >
@@ -221,7 +221,7 @@ const BoxIscrizione = () => {
                   name="refcode"
                   onChange={handleChange}
                 />
-                <ButtonSignUp style={{ marginTop: "2rem" }} type={"submit"}>
+                <ButtonSignUp style={{ marginTop: "0.3vw" }} type={"submit"}>
                   <TestoButton>SEND</TestoButton>
                 </ButtonSignUp>
                 <Mandatory>*MANDATORY FIELD</Mandatory>

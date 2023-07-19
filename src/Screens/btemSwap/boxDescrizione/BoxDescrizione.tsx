@@ -30,7 +30,7 @@ const BoxDescrizione = () => {
   }, [account]);
   return (
     <>
-      <ContainerDescrizione>
+      <ContainerDescrizione id="refcode">
         <br />
         <br />
         <br />
@@ -41,8 +41,8 @@ const BoxDescrizione = () => {
           Invite a friends to EARN more BTEM with your ref code:
         </TestoGrassetto>
         <div style={{ display: "flex", flexDirection: "row" }}>
-          <BoxRefCode id='refcode' />
-          <CopyToClipboard text={''}>
+          <BoxRefCode id="refcode" />
+          <CopyToClipboard text={""}>
             <button
               style={{
                 border: "none",
@@ -149,9 +149,9 @@ const BoxDescrizione = () => {
           }}
         >
           <p>
-          Besteam Game S.R.L. ©️ 2022, All rights reserved <br />
-          Via Roccella Jonica 25, 00173 Roma - VAT 16643031004 -
-          besteamgamesrl@legalmail.it
+            Besteam Game S.R.L. ©️ 2022, All rights reserved <br />
+            Via Roccella Jonica 25, 00173 Roma - VAT 16643031004 -
+            besteamgamesrl@legalmail.it
           </p>
         </div>
       </ContainerDescrizione>

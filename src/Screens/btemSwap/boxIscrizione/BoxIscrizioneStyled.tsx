@@ -158,10 +158,10 @@ const BuyButton = styled.div`
   &:hover {
     background-color: #555;
   }
-  position: relative;
+  // position: relative;
   display: flex;
-  left: 4.4vw;
-  top: 2vw;
+  // left: 4.1vw;
+  //top: 1.7vw;
   align-items: center;
   justify-content: center;
   align-content: center;

@@ -264,7 +264,7 @@ const BoxIscrizione = () => {
             style={{
               display: "flex",
               flexDirection: "column",
-              gap: "3rem",
+              gap: "3vw",
               position: "relative",
               marginTop: "-2vw",
             }}
@@ -274,7 +274,7 @@ const BoxIscrizione = () => {
               style={{
                 position: "absolute",
                 width: "2.86vw",
-                left: "14vw",
+                left: "13vw",
                 top: "6.3vw",
                 opacity: !utenteAttivo ? "0.4" : "1",
               }}
@@ -289,10 +289,10 @@ const BoxIscrizione = () => {
               <img
                 src={simbMATIC}
                 style={{
-                  width: "3.50vw",
+                  width: "3.00vw",
                   position: "absolute",
                   left: "11.5vw",
-                  top: "0.8vw",
+                  top: "1.2vw",
                   opacity: !utenteAttivo ? "0.4" : "1",
                 }}
               ></img>
@@ -321,10 +321,10 @@ const BoxIscrizione = () => {
               <img
                 src={simbBTEM}
                 style={{
-                  width: "3.50vw",
+                  width: "3.00vw",
                   position: "absolute",
                   left: "11.5vw",
-                  top: "0.8vw",
+                  top: "1.2vw",
                   opacity: !utenteAttivo ? "0.5" : "1",
                 }}
               ></img>
@@ -334,18 +334,29 @@ const BoxIscrizione = () => {
                   left: "5vw",
                   top: "-0.6vw",
                   opacity: !utenteAttivo ? "0.5" : "1",
+                  letterSpacing: "0.1vw",
                 }}
               >
                 BTEM
               </TestoSottoInput>
             </div>
           </div>
-          <BuyButton
-            style={{ opacity: !utenteAttivo ? "0.5" : "1" }}
-            onClick={() => compraBTEM()}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignContent: "center",
+              alignItems: "center",
+            }}
           >
-            BUY
-          </BuyButton>
+            <BuyButton
+              style={{ opacity: !utenteAttivo ? "0.5" : "1" }}
+              onClick={() => compraBTEM()}
+            >
+              BUY
+            </BuyButton>
+          </div>
         </BoxDestra>
       </ContainerIscrizione>
       <div
@@ -359,7 +370,10 @@ const BoxIscrizione = () => {
         }}
       >
         <TestoSupporto>REF CODE and TUTORIAL</TestoSupporto>
-        <FrecciaBasso src={FrecciaVersoBasso} />
+
+        <a href="#refcode">
+          <FrecciaBasso src={FrecciaVersoBasso} />
+        </a>
       </div>
     </BoxTop>
   );

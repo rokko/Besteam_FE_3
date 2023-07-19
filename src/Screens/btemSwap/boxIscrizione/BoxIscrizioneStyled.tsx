@@ -160,7 +160,7 @@ const BuyButton = styled.div`
   }
   position: relative;
   display: flex;
-  left: 4.1vw;
+  left: 4.4vw;
   top: 2vw;
   align-items: center;
   justify-content: center;

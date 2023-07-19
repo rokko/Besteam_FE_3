@@ -78,7 +78,7 @@ const BoxDescrizione = () => {
         <TestoParagrafo style={{ marginTop: "-10px" }}>
           Don't see the BTEM on your wallet Metamask?
         </TestoParagrafo>
-        <TestoGrassetto>
+        <TestoGrassetto style={{ marginTop: "-1.5vw" }}>
           {" "}
           Import token with this contract address:
         </TestoGrassetto>
@@ -116,8 +116,8 @@ const BoxDescrizione = () => {
         </TestoParagrafo>
         <iframe
           style={{
-            width: "54vw",
-            height: "30vw",
+            width: "52vw",
+            height: "28vw",
           }}
           src="https://www.youtube.com/embed/Ze9r6c1OOM4"
           title="YouTube video player"
@@ -132,9 +132,18 @@ const BoxDescrizione = () => {
             maxWidth: "100%",
             marginTop: "100px",
           }}
-        >
-          <img src={bordo} style={{ width: "100%" }} />
-        </div>
+        ></div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <img src={bordo} style={{ width: "100%" }} />
         <div
           style={{
             width: "100%",
@@ -155,6 +164,7 @@ const BoxDescrizione = () => {
           </p>
         </div>
       </ContainerDescrizione>
+
       <LastFooter />
     </>
   );

@@ -29,7 +29,7 @@ const TestoParagrafo = styled.p`
 `;
 
 const ContainerDescrizione = styled.div`
-  height: 200vh;
+  //height: 200vh;
   background-image: url(${SfondoDescrizione});
   background-size: cover;
   background-repeat: no-repeat;

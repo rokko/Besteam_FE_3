@@ -30,9 +30,9 @@ const TestoParagrafo = styled.p`
 
 const ContainerDescrizione = styled.div`
   //height: 200vh;
-  background-image: url(${SfondoDescrizione});
+  background: url(${SfondoDescrizione}) no-repeat center;
   background-size: cover;
-  background-repeat: no-repeat;
+  //background-repeat: no-repeat;
   /* UI Properties */
   opacity: 1;
   display: flex;

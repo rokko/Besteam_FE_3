@@ -277,8 +277,10 @@ const BoxIscrizione = () => {
 
             <div style={{ position: "relative" }}>
               <InputCoin
+                placeholder="0"
                 onChange={(x) => cambioValore(x)}
                 disabled={!utenteAttivo}
+                type="number"
                 style={{ opacity: !utenteAttivo ? "0.4" : "1" }}
               />
               <img

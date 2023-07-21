@@ -177,6 +177,7 @@ const BoxIscrizione = () => {
                 />
 
                 <TestoForm>SECOND NAME*</TestoForm>
+
                 <InputFormRegistrazione
                   style={{
                     border: errors.cognome ? "1px solid red" : "",
@@ -277,6 +278,7 @@ const BoxIscrizione = () => {
 
             <div style={{ position: "relative" }}>
               <InputCoin
+                autoCorrect="off"
                 placeholder="0"
                 onChange={(x) => cambioValore(x)}
                 disabled={!utenteAttivo}

@@ -281,7 +281,12 @@ const BoxIscrizione = () => {
                 onChange={(x) => cambioValore(x)}
                 disabled={!utenteAttivo}
                 type="number"
-                style={{ opacity: !utenteAttivo ? "0.4" : "1" }}
+                max={2000}
+                min={50}
+                style={{
+                  opacity: !utenteAttivo ? "0.4" : "1",
+                  paddingLeft: "11.5vw",
+                }}
               />
               <img
                 src={simbMATIC}

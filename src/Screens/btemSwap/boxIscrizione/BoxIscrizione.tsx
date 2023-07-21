@@ -360,6 +360,9 @@ const BoxIscrizione = () => {
             >
               BUY
             </BuyButton>
+            {(maticInv < 50 || maticInv > 2000) && (
+              <p style={{ color: "red" }}>Min 50 Max 2000 Matic</p>
+            )}
           </div>
         </BoxDestra>
       </ContainerIscrizione>

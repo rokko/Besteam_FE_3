@@ -120,6 +120,9 @@ const InputCoin = styled.input`
   font-size: 3vw;
   padding-left: 11vw;
   font-family: Dinproregular;
+  &:invalid {
+    border: 1px solid red;
+  }
 `;
 
 const TestoSupporto = styled.p`

@@ -79,7 +79,10 @@ const HeaderBar = () => {
             </Button>
             */}
             <VerticalMenu />
-            <a href="/swap" style={{ textDecoration: "none" }}>
+            <a
+              href="/swap"
+              style={{ textDecoration: "none", marginLeft: "-0.6vw" }}
+            >
               <p className="testo">BTEM</p>
             </a>
             <div className="wallet">

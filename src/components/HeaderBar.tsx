@@ -83,7 +83,7 @@ const HeaderBar = () => {
               href="/swap"
               style={{ textDecoration: "none", marginLeft: "-0.6vw" }}
             >
-              <p className="testo">BTEM</p>
+              <p className="testo">SupportUS</p>
             </a>
             <div className="wallet">
               <ConnectionWallet />

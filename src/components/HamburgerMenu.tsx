@@ -65,7 +65,7 @@ const HamburgerMenu = () => {
         )}
         <div className="testi-menu">
           <div className="beforeline">
-            <p className="testo coming">BTEM</p>
+            <p className="testo coming">SupportUS</p>
           </div>
         </div>
 

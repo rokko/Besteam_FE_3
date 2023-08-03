@@ -39,6 +39,14 @@
 }
 
 @font-face {
+  font-family: "DinProMediumItalic";
+  src: local("DinProMediumItalic"),
+    url(./fonts/dinpromediumitalic.OTF) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "DinPROBlackItalic";
   src: local("DinPROBlackItalic"),
     url(./fonts/DINProBlackItalic.otf) format("opentype");

@@ -116,13 +116,13 @@ const BoxIscrizione = () => {
       lastName: values.cognome,
       firstName: values.nome,
       userEmail: values.mail,
-      walletCode: account as any,
+      walletCode: "fdsafdsafdsafadggffdgsfa", //account as any,
     };
 
     console.log(payload);
     if (account || values.wallet !== "") {
       axios
-        .post("http://localhost:8080/user/register", payload)
+        .post("http://51.158.113.131:8080/user/register", payload)
         .then((x) => console.log(x));
       setOpen(true);
       setUtenteAttivo(true);

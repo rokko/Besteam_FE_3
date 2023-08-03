@@ -4,6 +4,7 @@ import HeaderBar from "../../components/HeaderBar";
 import { BoxDescrizione } from "./boxDescrizione";
 import { BoxIscrizione } from "./boxIscrizione";
 import freccia2 from "../../components/video/freccia2.png";
+import LoginSwap from "./loginSwap/LoginSwap";
 
 const BtemSwap = () => {
   const [attivo, setAttivo] = useState(false);
@@ -40,16 +41,18 @@ const BtemSwap = () => {
   }
   return (
     <>
-      <BoxIscrizione />
+      <LoginSwap />
+    </>
+  );
+};
+
+export default BtemSwap;
+
+/*  <BoxIscrizione />
       <BoxDescrizione />
       <button
         className={attivo ? " button-up" : "button-no"}
         onClick={topFunction}
       >
         <img className="button-image" src={freccia2} alt="arrow" />
-      </button>
-    </>
-  );
-};
-
-export default BtemSwap;
+      </button>*/

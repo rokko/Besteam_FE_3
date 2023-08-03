@@ -3,6 +3,7 @@ import styled from "styled-components";
 import SfondoSupport from "../../../components/video/sfondoSupport.jpg";
 import bordo from "../../../components/video/bordo2.png";
 import { LastFooter } from "../../../components/LastFooter";
+import separatore from "../../btemSwap/assets/img/separatore.png";
 
 const BoxSupport = styled.div`
   height: 100vh;
@@ -50,6 +51,7 @@ const LoginSwap = () => {
         >
           support us build it!
         </p>
+        <img src={separatore} />
         <p
           style={{
             fontFamily: "DinPROBold",
@@ -95,11 +97,14 @@ const LoginSwap = () => {
           }}
           placeholder={"password"}
         ></input>
+        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{" "}
+        <br /> <br />
         <img src={bordo} style={{ width: "100%" }} />
       </BoxSupport>
       ;
       <div
         style={{
+          margin: "-3vh",
           width: "100%",
           display: "flex",
           flexDirection: "column",
@@ -117,7 +122,9 @@ const LoginSwap = () => {
           besteamgamesrl@legalmail.it
         </p>
       </div>
-      <LastFooter />
+      <div style={{ marginTop: "3vh" }}>
+        <LastFooter />
+      </div>
     </>
   );
 };

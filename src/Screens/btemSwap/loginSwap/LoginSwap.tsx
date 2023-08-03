@@ -25,7 +25,7 @@ const LoginSwap = () => {
             fontFamily: "DinPROBold",
             fontSize: "8.30vh",
             color: "#31c652",
-            margin: "0",
+            marginTop: "12vh",
           }}
         >
           if You are here
@@ -35,7 +35,8 @@ const LoginSwap = () => {
             fontFamily: "DinPROBold",
             fontSize: "11.86vh",
             color: "white",
-            margin: "0",
+            marginTop: "-10vh",
+            lineHeight: "12vh",
           }}
         >
           YOU ARE A TRUE FAN OF <br />
@@ -46,18 +47,18 @@ const LoginSwap = () => {
             fontFamily: "DinProMediumItalic",
             fontSize: "7.11vh",
             color: "white",
-            margin: "0",
+            marginTop: "-13vh",
           }}
         >
           support us build it!
         </p>
-        <img src={separatore} />
+        <img src={separatore} style={{ marginTop: "4vh" }} />
         <p
           style={{
             fontFamily: "DinPROBold",
             fontSize: "5.43vh",
             color: "#31c652",
-            margin: "0",
+            margin: "2vh",
           }}
         >
           Contact us
@@ -67,7 +68,7 @@ const LoginSwap = () => {
             fontFamily: "DinPRONormale",
             fontSize: "4.15vh",
             color: "white",
-            margin: "0",
+            margin: "-3vh",
           }}
         >
           Join our{" "}
@@ -94,10 +95,11 @@ const LoginSwap = () => {
             alignItems: "center",
             justifyContent: "center",
             textAlign: "center",
+            marginTop: "5vh",
           }}
           placeholder={"password"}
         ></input>
-        <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />{" "}
+        <br /> <br />
         <br /> <br />
         <img src={bordo} style={{ width: "100%" }} />
       </BoxSupport>

@@ -111,9 +111,19 @@ const BoxDescrizione = () => {
           </CopyToClipboard>
         </div>
         <TestoParagrafo>
-          If you need help you can contact us or <br />
-          watch this video for all the steps to swap BTEM!
+          If you need help you can contact us <br />
+          <a
+            href="https://discord.gg/Besteam"
+            target="_blank"
+            style={{ fontWeight: "bold" }}
+          >
+            JOIN OUR DISCORD
+          </a>
         </TestoParagrafo>
+        <img
+          src={separatore}
+          style={{ width: "54vw", marginTop: "5vh", marginBottom: "5vh" }}
+        />
         <iframe
           style={{
             width: "52vw",

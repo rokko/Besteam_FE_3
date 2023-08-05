@@ -26,12 +26,18 @@ const BoxSupport = styled.div`
 `;
 const LoginSwap = () => {
   const [attivo, setAttivo] = useState(false);
+  const [password, setPassword] = useState("");
   const [attivo2, setAttivo2] = useState(false);
   const [accesso, setAccesso] = useState(true);
 
   window.onscroll = function () {
     scrollFunction();
     scrollFunction2();
+  };
+  const apriPagina = () => {
+    if (password === "Besteam1!") {
+      setAccesso(false);
+    }
   };
 
   function scrollFunction() {
@@ -149,6 +155,7 @@ const LoginSwap = () => {
             }}
           >
             <input
+              onChange={(e) => setPassword(e.target.value)}
               style={{
                 width: "40vh",
                 height: "4.5vh",
@@ -162,7 +169,7 @@ const LoginSwap = () => {
               placeholder={"password"}
             ></input>
             <ButtonSignUp style={{ marginTop: "0.3vw" }} type={"submit"}>
-              <TestoButton>OK</TestoButton>
+              <TestoButton onClick={() => apriPagina()}>OK</TestoButton>
             </ButtonSignUp>
           </div>
           <br /> <br />

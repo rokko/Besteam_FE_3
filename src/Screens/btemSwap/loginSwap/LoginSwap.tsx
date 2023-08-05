@@ -24,6 +24,7 @@ const BoxSupport = styled.div`
   align-items: center;
   flex-direction: column;
   position: relative;
+  margin-bottom: -0.6vw;
 `;
 const LoginSwap = () => {
   const [attivo, setAttivo] = useState(false);
@@ -195,10 +196,9 @@ const LoginSwap = () => {
             </div>
           </div>
           <br />
-          <br /> <br /> <br />
-          <img src={bordo} style={{ width: "100%" }} />
+          <br /> <br />
         </BoxSupport>
-        ;
+        <img src={bordo} style={{ width: "100%" }} />
         <div
           style={{
             width: "100%",
@@ -210,7 +210,7 @@ const LoginSwap = () => {
             alignContent: "center",
             alignItems: "center",
             justifyContent: "center",
-            marginTop: "-3.4vh",
+            marginTop: "-2.1vh",
           }}
         >
           <p>

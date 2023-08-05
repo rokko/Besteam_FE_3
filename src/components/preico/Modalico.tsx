@@ -355,26 +355,84 @@ const Modalico = (props: any) => {
                 </p>
               </>
             )}
-            <Button
-              onClick={() => {
-                console.log(props);
-                props.setopen(false);
-                props.setAperto(false);
-              }}
-              style={{
-                backgroundColor: "#2dc653",
-                width: isMobile ? 120 : 220,
-                height: 100,
-                color: "#ffffff",
-                fontSize: 40,
-                fontWeight: "bold",
-                fontFamily: "Bonn",
-                borderRadius: 0,
-              }}
-              variant="contained"
-            >
-              OK!
-            </Button>
+            {props.testo === 5 && (
+              <p
+                style={{
+                  fontSize: "45px",
+                  color: "#ffffff",
+                  fontWeight: "bold",
+                  textAlign: "center",
+                }}
+              >
+                Thanks for your support,
+                <br /> let's build virtual football together! <br />
+                Clicking on "OK" <br />
+                you declare to accept Terms and Conditions
+              </p>
+            )}
+            {props.testo === 5 && (
+              <Button
+                onClick={() => {
+                  props.setopen(false);
+                  props.compra();
+                }}
+                style={{
+                  backgroundColor: "#2dc653",
+                  width: isMobile ? 120 : 220,
+                  height: 100,
+                  color: "#ffffff",
+                  fontSize: 40,
+                  fontWeight: "bold",
+                  fontFamily: "Bonn",
+                  borderRadius: 0,
+                }}
+                variant="contained"
+              >
+                OK!
+              </Button>
+            )}
+            {props.testo === 4 && (
+              <Button
+                onClick={() => {
+                  props.setopen(false);
+                }}
+                style={{
+                  backgroundColor: "#2dc653",
+                  width: isMobile ? 120 : 220,
+                  height: 100,
+                  color: "#ffffff",
+                  fontSize: 40,
+                  fontWeight: "bold",
+                  fontFamily: "Bonn",
+                  borderRadius: 0,
+                }}
+                variant="contained"
+              >
+                OK!
+              </Button>
+            )}
+
+            {props.testo !== 5 && props.testo !== 4 && (
+              <Button
+                onClick={() => {
+                  props.setopen(false);
+                  props.aperto(false);
+                }}
+                style={{
+                  backgroundColor: "#2dc653",
+                  width: isMobile ? 120 : 220,
+                  height: 100,
+                  color: "#ffffff",
+                  fontSize: 40,
+                  fontWeight: "bold",
+                  fontFamily: "Bonn",
+                  borderRadius: 0,
+                }}
+                variant="contained"
+              >
+                OK!
+              </Button>
+            )}
           </Box>
         </Modal>
       </>

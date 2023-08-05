@@ -49,6 +49,7 @@ const BoxIscrizione = () => {
   const [utenteAttivo, setUtenteAttivo] = useState(false);
   const [notAccount, setNotAccount] = useState(true);
   const [refCodeExist, setRefCodeExist] = useState();
+  const [openSwap, setOpenSwap] = useState(false);
 
   const config = {
     headers: {
@@ -62,7 +63,7 @@ const BoxIscrizione = () => {
     });
     console.log(x);
   };
-  const compraBTEM = async () => {
+  const apriPopCompra = async () => {
     if (utenteAttivo) {
       if (!refCodeExist) {
         const x = await contract.methods.buyTokensWithoutCode(account).send({
@@ -78,6 +79,9 @@ const BoxIscrizione = () => {
           });
       }
     }
+  };
+  const compraBTEM = async () => {
+    setOpenSwap(true);
   };
   const initialValues = {
     nome: "",
@@ -116,6 +120,12 @@ const BoxIscrizione = () => {
   return (
     <BoxTop>
       <Modalico open={open} setopen={setOpen} testo={4} />
+      <Modalico
+        open={openSwap}
+        setopen={setOpenSwap}
+        compra={apriPopCompra}
+        testo={5}
+      />
       <ContainerIscrizione>
         <BoxSinistra>
           <Formik

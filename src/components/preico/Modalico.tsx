@@ -346,9 +346,12 @@ const Modalico = (props: any) => {
                     textAlign: "center",
                   }}
                 >
-                  Check your email to complete
+                  First Step Completed!
+                  <br /> Now You can support the future of virtual football
+                  11vs11. <br />
+                  Clicking on "OK" you declare that you have read the Privacy
+                  Policy.
                   <br />
-                  the first step and be ready to swap!
                 </p>
               </>
             )}

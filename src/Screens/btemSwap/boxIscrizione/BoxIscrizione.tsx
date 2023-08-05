@@ -56,19 +56,6 @@ const BoxIscrizione = () => {
     },
   };
 
-  useEffect(() => {
-    if (!!account) {
-      axios
-        .post("http://51.158.113.131:8080/user/login", null, {
-          params: { walletCode: account as string },
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        })
-        .then((e) => {
-          if (!!e.data) setUtenteAttivo(true);
-        });
-    }
-  }, [account]);
-
   const takeRef = async () => {
     const x = await contract.methods.getCodeByAddr(account).send({
       from: account,
@@ -116,11 +103,11 @@ const BoxIscrizione = () => {
       lastName: values.cognome,
       firstName: values.nome,
       userEmail: values.mail,
-      walletCode: "fdsafdsafdsafadggffdgsfa", //account as any,
+      walletCode: account as any, //account as any,
     };
 
     console.log(payload);
-    if (account || values.wallet !== "") {
+    /* if (account || values.wallet !== "") {
       axios
         .post("http://51.158.113.131:8080/user/register", payload)
         .then((x) => console.log(x));
@@ -129,6 +116,7 @@ const BoxIscrizione = () => {
     } else {
       setNotAccount(true);
     }
+    */
   };
 
   return (

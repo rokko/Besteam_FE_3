@@ -119,7 +119,7 @@ const BoxDescrizione = () => {
             width: "52vw",
             height: "28vw",
           }}
-          src="https://www.youtube.com/embed/Ze9r6c1OOM4"
+          src="https://www.youtube.com/embed/TiDQrpRmcmg"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

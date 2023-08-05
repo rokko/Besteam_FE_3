@@ -104,7 +104,7 @@ const TestoSwap = styled.p`
 
   color: #2dc653;
   opacity: 1;
-  font-size: 5.2vw;
+  font-size: 4.2vw;
   font-family: DinPROBold;
 `;
 

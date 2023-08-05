@@ -254,7 +254,7 @@ const BoxIscrizione = () => {
           )}
 
           <TestoSwap style={{ marginTop: "1vw", marginBottom: "3vw" }}>
-            SWAP
+            GET BTEM
           </TestoSwap>
           <div
             style={{

@@ -194,14 +194,13 @@ const LoginSwap = () => {
               </Button>
             </div>
           </div>
-          <br /> <br />
           <br />
+          <br /> <br /> <br />
           <img src={bordo} style={{ width: "100%" }} />
         </BoxSupport>
         ;
         <div
           style={{
-            margin: "-3vh",
             width: "100%",
             display: "flex",
             flexDirection: "column",
@@ -211,6 +210,7 @@ const LoginSwap = () => {
             alignContent: "center",
             alignItems: "center",
             justifyContent: "center",
+            marginTop: "-3.4vh",
           }}
         >
           <p>
@@ -219,7 +219,7 @@ const LoginSwap = () => {
             besteamgamesrl@legalmail.it
           </p>
         </div>
-        <div style={{ marginTop: "3vh" }}>
+        <div style={{}}>
           <LastFooter />
         </div>
       </>

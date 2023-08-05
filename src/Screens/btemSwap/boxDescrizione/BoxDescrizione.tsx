@@ -115,7 +115,7 @@ const BoxDescrizione = () => {
           <a
             href="https://discord.gg/Besteam"
             target="_blank"
-            style={{ fontWeight: "bold" }}
+            style={{ fontFamily: "DinProMediumItalic", color: "#31c652" }}
           >
             JOIN OUR DISCORD
           </a>

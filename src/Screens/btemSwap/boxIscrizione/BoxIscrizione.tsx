@@ -107,16 +107,10 @@ const BoxIscrizione = () => {
     };
 
     console.log(payload);
-    /* if (account || values.wallet !== "") {
-      axios
-        .post("http://51.158.113.131:8080/user/register", payload)
-        .then((x) => console.log(x));
+    if (account || values.wallet !== "") {
       setOpen(true);
       setUtenteAttivo(true);
-    } else {
-      setNotAccount(true);
     }
-    */
   };
 
   return (

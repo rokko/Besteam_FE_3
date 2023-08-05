@@ -12,6 +12,7 @@ import {
   ButtonSignUp,
   TestoButton,
 } from "../boxIscrizione/BoxIscrizioneStyled";
+import { Button, TextField } from "@mui/material";
 
 const BoxSupport = styled.div`
   height: 100vh;
@@ -35,8 +36,10 @@ const LoginSwap = () => {
     scrollFunction2();
   };
   const apriPagina = () => {
+    console.log("ciao");
     if (password === "Besteam1!") {
       setAccesso(false);
+      topFunction();
     }
   };
 
@@ -154,23 +157,42 @@ const LoginSwap = () => {
               alignItems: "center",
             }}
           >
-            <input
-              onChange={(e) => setPassword(e.target.value)}
-              style={{
-                width: "40vh",
-                height: "4.5vh",
-                fontSize: "3.08vh",
-                borderRadius: "25px",
-                border: "none",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-              }}
-              placeholder={"password"}
-            ></input>
-            <ButtonSignUp style={{ marginTop: "0.3vw" }} type={"submit"}>
-              <TestoButton onClick={() => apriPagina()}>OK</TestoButton>
-            </ButtonSignUp>
+            <div id="join" className="form-join">
+              <TextField
+                type="password"
+                style={{
+                  width: 200,
+                  backgroundColor: "#ffffff",
+                  borderBottomColor: "#ffffff",
+                }}
+                hiddenLabel
+                placeholder="password"
+                id="inputid"
+                variant="filled"
+                size="small"
+                InputProps={{ disableUnderline: true }}
+                onChange={(v) => {
+                  setPassword(v.target.value);
+                }}
+              />
+              <Button
+                style={{
+                  backgroundColor: "#2dc653",
+                  width: 200,
+                  height: 40,
+                  color: "#ffffff",
+                  fontSize: 28,
+                  fontWeight: "bold",
+                  marginLeft: -3,
+                  fontFamily: "Bonn",
+                  borderRadius: 0,
+                }}
+                variant="contained"
+                onClick={() => apriPagina()}
+              >
+                OK
+              </Button>
+            </div>
           </div>
           <br /> <br />
           <br />

@@ -343,10 +343,13 @@ const BoxIscrizione = () => {
             }}
           >
             <BuyButton
-              style={{ opacity: !utenteAttivo ? "0.5" : "1" }}
+              style={{
+                opacity: !utenteAttivo ? "0.5" : "1",
+                fontSize: "2.85vw",
+              }}
               onClick={() => compraBTEM()}
             >
-              BUY
+              SUPPORT US
             </BuyButton>
             {(maticInv < 50 || maticInv > 2000) && (
               <p style={{ color: "red" }}>Min 50 Max 2000 Matic</p>

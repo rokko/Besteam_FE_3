@@ -39,7 +39,7 @@ const LoginSwap = () => {
   };
   const apriPagina = () => {
     console.log("ciao");
-    if (password === "Besteam1!") {
+    if (password === "Besteam1") {
       setAccesso(false);
       topFunction();
     } else {
@@ -204,7 +204,7 @@ const LoginSwap = () => {
                 </Button>
               </div>
             </div>
-            {error && <p style={{ color: "red" }}>Password incorrect</p>}
+            {error && <p style={{ color: "red" }}>Wrong Password</p>}
           </div>
           <br />
           <br /> <br />

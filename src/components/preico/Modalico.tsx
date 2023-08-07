@@ -349,8 +349,15 @@ const Modalico = (props: any) => {
                   First Step Completed!
                   <br /> Now You can support the future of virtual football
                   11vs11. <br />
-                  Clicking on "OK" you declare that you have read the Privacy
-                  Policy.
+                  <span
+                    style={{
+                      fontFamily: "DinPRONormale",
+                      fontSize: isMobile ? "22px" : "30px",
+                    }}
+                  >
+                    Clicking on "OK" you declare that you have read the Privacy
+                    Policy.
+                  </span>
                   <br />
                 </p>
               </>
@@ -366,8 +373,14 @@ const Modalico = (props: any) => {
               >
                 Thanks for your support,
                 <br /> let's build virtual football together! <br />
-                Clicking on "OK" <br />
-                you declare to accept Terms and Conditions
+                <span
+                  style={{
+                    fontFamily: "DinPRONormale",
+                    fontSize: isMobile ? "22px" : "30px",
+                  }}
+                >
+                  Clicking on "OK" you declare to accept Terms and Conditions
+                </span>
               </p>
             )}
             {props.testo === 5 && (

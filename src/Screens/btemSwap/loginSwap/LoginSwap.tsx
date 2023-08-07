@@ -129,7 +129,10 @@ const LoginSwap = () => {
               style={{ fontFamily: "DinProMediumItalic", color: "#31c652" }}
             >
               {" "}
-              <a href="https://discordapp.com/users/besteamenricocoviello">
+              <a
+                href="https://discordapp.com/users/besteamenricocoviello"
+                target="_blank"
+              >
                 Discord
               </a>{" "}
             </span>

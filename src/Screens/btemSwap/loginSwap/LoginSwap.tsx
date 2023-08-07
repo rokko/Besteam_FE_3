@@ -12,7 +12,7 @@ import {
   ButtonSignUp,
   TestoButton,
 } from "../boxIscrizione/BoxIscrizioneStyled";
-import { Button, TextField } from "@mui/material";
+import { Button, Input, TextField } from "@mui/material";
 
 const BoxSupport = styled.div`
   height: 100vh;
@@ -31,6 +31,7 @@ const LoginSwap = () => {
   const [password, setPassword] = useState("");
   const [attivo2, setAttivo2] = useState(false);
   const [accesso, setAccesso] = useState(true);
+  const [error, setError] = useState(false);
 
   window.onscroll = function () {
     scrollFunction();
@@ -41,6 +42,8 @@ const LoginSwap = () => {
     if (password === "Besteam1!") {
       setAccesso(false);
       topFunction();
+    } else {
+      setError(true);
     }
   };
 
@@ -152,51 +155,56 @@ const LoginSwap = () => {
             :
           </p>
           <div
-            style={{
-              marginTop: "5vh",
-              display: "flex",
-              flexDirection: "row",
-              gap: "1rem",
-              alignContent: "center",
-              alignItems: "center",
-            }}
+            style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
           >
-            <div id="join" className="form-join">
-              <TextField
-                type="password"
-                style={{
-                  width: 200,
-                  backgroundColor: "#ffffff",
-                  borderBottomColor: "#ffffff",
-                }}
-                hiddenLabel
-                placeholder="password"
-                id="inputid"
-                variant="filled"
-                size="small"
-                InputProps={{ disableUnderline: true }}
-                onChange={(v) => {
-                  setPassword(v.target.value);
-                }}
-              />
-              <Button
-                style={{
-                  backgroundColor: "#2dc653",
-                  width: 200,
-                  height: 40,
-                  color: "#ffffff",
-                  fontSize: 28,
-                  fontWeight: "bold",
-                  marginLeft: -3,
-                  fontFamily: "Bonn",
-                  borderRadius: 0,
-                }}
-                variant="contained"
-                onClick={() => apriPagina()}
-              >
-                OK
-              </Button>
+            <div
+              style={{
+                marginTop: "5vh",
+                display: "flex",
+                flexDirection: "row",
+                gap: "1rem",
+                alignContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <div id="join" className="form-join">
+                <input
+                  type="password"
+                  style={{
+                    textAlign: "center",
+                    width: 200,
+                    height: 40,
+                    backgroundColor: "#ffffff",
+                    borderBottomColor: "#ffffff",
+                    border: "none",
+                  }}
+                  maxLength={8}
+                  placeholder="password"
+                  id="inputid"
+                  onChange={(v) => {
+                    setPassword(v.target.value);
+                  }}
+                />
+                <Button
+                  style={{
+                    backgroundColor: "#2dc653",
+                    width: 200,
+                    height: 40,
+                    color: "#ffffff",
+                    fontSize: 28,
+                    fontWeight: "bold",
+                    marginLeft: -3,
+                    fontFamily: "Bonn",
+                    borderRadius: 0,
+                  }}
+                  variant="contained"
+                  onClick={() => apriPagina()}
+                >
+                  OK
+                </Button>
+              </div>
             </div>
+            {error && <p style={{ color: "red" }}>Password incorrect</p>}
           </div>
           <br />
           <br /> <br />

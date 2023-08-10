@@ -81,7 +81,7 @@ const BoxIscrizione = () => {
     }
   };
   const compraBTEM = async () => {
-    if (maticInv > 50 && maticInv < 2000) {
+    if (maticInv >= 50 && maticInv <= 2000) {
       setOpenSwap(true);
     }
   };

@@ -22,7 +22,7 @@ const BoxDescrizione = () => {
   const [copied, setCopied] = useState(false);
   const [copied2, setCopied2] = useState(false);
   const { account } = useWeb3React();
-  const SWAP_ADDRESS = "0x9bd219F280E64701bcec868e3ac428b6D5828Dae";
+  const SWAP_ADDRESS = "0x84038b10b6b61208651AC961BBe432907035E07E";
   Contract2.setProvider(window.ethereum);
   const contract = new Contract2(abiBTEM, SWAP_ADDRESS);
   useEffect(() => {

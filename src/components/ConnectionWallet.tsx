@@ -67,7 +67,9 @@ const ConnectionWallet = () => {
               symbol: "MATIC",
               decimals: 18,
             },
-            rpcUrls: ["https://polygon-rpc.com/"],
+            rpcUrls: [
+              "https://polygon-mainnet.g.alchemy.com/v2/_eHaeadICkJVlxlCIzQk_RabRwDg0xZP",
+            ],
             blockExplorerUrls: ["https://polygonscan.com/"],
           },
         ],

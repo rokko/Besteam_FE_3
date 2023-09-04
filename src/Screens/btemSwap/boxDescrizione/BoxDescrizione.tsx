@@ -21,13 +21,24 @@ var Contract2 = require("web3-eth-contract");
 const BoxDescrizione = () => {
   const [copied, setCopied] = useState(false);
   const [copied2, setCopied2] = useState(false);
+  const [refCodeNew, setRefCodeNew] = useState("");
   const { account } = useWeb3React();
   const SWAP_ADDRESS = "0x77cE91f8a84BC950e79c20Fec0D2e94167A9D409";
   Contract2.setProvider(window.ethereum);
   const contract = new Contract2(abiBTEM, SWAP_ADDRESS);
   useEffect(() => {
     console.log(contract);
+    console.log(account);
+    if (!!account) {
+      getCodeAsync();
+    }
   }, [account]);
+
+  const getCodeAsync = async () => {
+    let address = account;
+    let x = await contract.methods.getCodeByAddr(address).call();
+    setRefCodeNew(x);
+  };
   return (
     <>
       <ContainerDescrizione id="refcode">
@@ -41,8 +52,8 @@ const BoxDescrizione = () => {
           Invite a friends to EARN more BTEM with your ref code:
         </TestoGrassetto>
         <div style={{ display: "flex", flexDirection: "row" }}>
-          <BoxRefCode id="refcode" />
-          <CopyToClipboard text={""}>
+          <BoxRefCode id="refcode">{refCodeNew}</BoxRefCode>
+          <CopyToClipboard text={refCodeNew}>
             <button
               style={{
                 border: "none",

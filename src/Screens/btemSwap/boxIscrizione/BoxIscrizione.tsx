@@ -39,6 +39,8 @@ const BoxIscrizione = () => {
     apiKey: "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",
   });
 
+  const [clickDone, setClickDone] = useState(false);
+
   const SWAP_ADDRESS = "0x77cE91f8a84BC950e79c20Fec0D2e94167A9D409";
   Contract2.setProvider(window.ethereum);
   const contract = new Contract2(abiBTEM, SWAP_ADDRESS);
@@ -100,6 +102,7 @@ const BoxIscrizione = () => {
   };
   const registrazione = (values) => {
     console.log(values);
+    setClickDone(true);
 
     setRefCodeExist(values.refcode);
 
@@ -131,7 +134,9 @@ const BoxIscrizione = () => {
           <Formik
             initialValues={initialValues}
             onSubmit={(values, formikHelper) => {
-              registrazione(values);
+              if (!clickDone) {
+                registrazione(values);
+              }
             }}
             validationSchema={object({
               nome: string()
@@ -204,7 +209,7 @@ const BoxIscrizione = () => {
                   style={{
                     border: errors.refcode
                       ? "1px solid red"
-                      : "1px solid green",
+                      : "1px solid green+",
                   }}
                   name="refcode"
                   onChange={handleChange}

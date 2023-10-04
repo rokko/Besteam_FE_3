@@ -90,13 +90,6 @@ const OurPartners = () => {
               />
             </a>
 
-            <a href={"https://aeternadesign.com/"}>
-              <img
-                src={sei}
-                alt="bestcoin"
-                style={{ width: isMobile ? "13vw" : "7.292vw" }}
-              />
-            </a>
             <a
               href={
                 "https://www.lazioinnova.it/news/i-vincitori-di-multisoccer-la-startup-competition-di-social-football-summit/"
@@ -136,3 +129,11 @@ const OurPartners = () => {
 };
 
 export default OurPartners;
+
+/*<a href={"https://aeternadesign.com/"}>
+<img
+src={sei}
+alt="bestcoin"
+style={{ width: isMobile ? "13vw" : "7.292vw" }}
+/>
+</a>*/

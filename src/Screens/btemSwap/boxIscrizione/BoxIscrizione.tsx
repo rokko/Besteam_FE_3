@@ -114,12 +114,6 @@ const BoxIscrizione = () => {
     };
 
     console.log(payload);
-    if (account || values.wallet !== "") {
-      axios.post("/investor/save", { payload }).then((x) => {
-        setOpen(true);
-        setUtenteAttivo(true);
-      });
-    }
   };
 
   return (

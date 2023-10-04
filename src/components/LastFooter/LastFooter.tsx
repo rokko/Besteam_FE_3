@@ -13,11 +13,7 @@ const LastFooter = () => {
 
   return (
     <>
-      <ContainerLastFooter>
-        <p>Cookie Policy</p>
-        <p>Privacy Policy</p>
-        <p>Terms and Condition</p>
-      </ContainerLastFooter>
+      <ContainerLastFooter></ContainerLastFooter>
       {isMobile && (
         <div>
           <div

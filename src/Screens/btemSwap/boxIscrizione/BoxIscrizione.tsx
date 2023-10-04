@@ -101,9 +101,12 @@ const BoxIscrizione = () => {
     setTotbtem(v.target.value * 30);
   };
   const registrazione = (values) => {
+    console.log(values);
     setClickDone(true);
 
     setRefCodeExist(values.refcode);
+    setOpen(true);
+    setUtenteAttivo(true);
   };
 
   return (

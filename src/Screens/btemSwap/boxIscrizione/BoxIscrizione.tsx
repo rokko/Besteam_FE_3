@@ -101,19 +101,9 @@ const BoxIscrizione = () => {
     setTotbtem(v.target.value * 30);
   };
   const registrazione = (values) => {
-    console.log(values);
     setClickDone(true);
 
     setRefCodeExist(values.refcode);
-
-    const payload: RegisterPayload = {
-      lastName: values.cognome,
-      firstName: values.nome,
-      userEmail: values.mail,
-      walletCode: account as any, //account as any,
-    };
-
-    console.log(payload);
   };
 
   return (

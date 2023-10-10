@@ -3,13 +3,92 @@ import { url } from "inspector";
 import React from "react";
 import styled from "styled-components";
 import photoTeam from "../components/video/fototeam.png";
-
+import arrowright from "../components/video/freccia.png";
+import arrowleft from "../components/video/frecciasinistra.png";
 import team1 from "./video/team/marco.png";
 import team2 from "./video/team/filippo.png";
 import team3 from "./video/team/enrico.png";
 import verde from "./video/simboloverde.jpg";
 import aranc from "./video/simboloarancione.jpg";
 import { useMediaQuery } from "react-responsive";
+import { Slide } from "react-slideshow-image";
+import enrico from '../components/video/enrico.webp'
+import marco from '../components/video/immaginiOurTeam/Card Marco.webp'
+import filippo from '../components/video/immaginiOurTeam/Card Filippo.webp'
+import giulietta from '../components/video/immaginiOurTeam/Card Giulietta.webp'
+import edoardo from '../components/video/immaginiOurTeam/Card Edoardo.webp'
+import ornella from '../components/video/immaginiOurTeam/Card Ornella.webp'
+import eduardo from '../components/video/immaginiOurTeam/Card Eduardo.webp'
+import giovanni from '../components/video/immaginiOurTeam/Card Giovanni.webp'
+import rocco from '../components/video/immaginiOurTeam/Card Rocco.webp'
+import jacopo from '../components/video/immaginiOurTeam/Card Jacopo.webp'
+import eros from '../components/video/immaginiOurTeam/Card Eros.webp'
+import aminul from '../components/video/immaginiOurTeam/Card Aminul.webp'
+import giacomo from '../components/video/immaginiOurTeam/Card Giacomo.webp'
+import mauro from '../components/video/immaginiOurTeam/Card Mauro.webp'
+import gaetano from '../components/video/immaginiOurTeam/Card Gaetano.webp'
+import giuseppe from '../components/video/immaginiOurTeam/Card Giuseppe.webp'
+import emanuele from '../components/video/immaginiOurTeam/Card Emanuele.webp'
+import vinenzo from '../components/video/immaginiOurTeam/Cad Enzo.webp'
+import lorena  from '../components/video/immaginiOurTeam/Card Lorena.webp'
+import mattia from '../components/video/immaginiOurTeam/Card Mattia.webp'
+import riccardo from '../components/video/immaginiOurTeam/Card Riccardo.webp'
+const customOptions = {
+  prevArrow: (
+    <div
+      className="hoverzoom"
+      style={{
+        left: "1rem",
+        top: "8rem",
+        display: "block",
+      }}
+    >
+      <img src={arrowleft} width="23px" height="30px" />
+    </div>
+  ),
+  nextArrow: (
+    <div
+      className="hoverzoom"
+      style={{
+        right: "1rem",
+        top: "8rem",
+        display: "block",
+      }}
+    >
+      <img src={arrowright} width="23px" height="30px" />{" "}
+    </div>
+  ),
+};
+const customOptions2 = {
+  prevArrow: (
+    <div
+      className="hoverzoom"
+      style={{ width: "20px", marginRight: "-20px" }}
+    >
+      <img
+        src={arrowleft}
+        width="20x!important"
+        height="20px"
+        style={{ position: "absolute", left: "20px", top: "-10px" }}
+      />
+    </div>
+  ),
+  nextArrow: (
+    <div className="hoverzoom" style={{ width: "20px", marginLeft: "-20px" }}>
+      <img
+        src={arrowright}
+        width="20px"
+        height="20px"
+        style={{
+          position: "absolute",
+          top: "-10px",
+
+          right: "20px",
+        }}
+      />{" "}
+    </div>
+  ),
+};
 
 const ContainerPersone = styled.div`
   display: flex;
@@ -26,6 +105,51 @@ const containerOurPartner = styled.div`
   background-image: url(${photoTeam});
   background-size: cover;
 `;
+
+const TestoLink = styled.p`
+text-align: left;
+                 font-family: "DINPro";
+                      font-size: 1.4vw;
+                      color: #9B9B9B;
+                      margin-top:-1.5vw;
+
+                      `
+const BoxImageTeam = styled.div`
+  display: flex;
+  flex-direction: column;
+  border: 5px solid #2DC653;
+border-radius: 7.5%;
+opacity: 1;
+width:18.22vw;
+height:26.04vw;
+  `
+const BoxInfoTeam = styled.div
+`
+  display: flex;
+  flex-direction: column;
+  padding:1rem;
+  justify-content: center;
+align-content: center;
+  `
+
+  
+const TestoRuolo = styled.p`
+font-family: 'DINPro';
+color: #2DC653;
+font-size: 1.406vw;
+text-align: left;
+margin-top:-1.5vw
+
+`
+
+const TestoNome = styled.p`
+font-family: 'DINProBold';
+color: white;
+font-size: 1.7vw;
+text-align: left;
+margin-top:0px
+`
+
 const OurTeam = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
 
@@ -39,6 +163,352 @@ const OurTeam = () => {
           >
             OUR TEAM
           </p>
+          <div style={{ width: "80%" }}>
+          <Slide slidesToShow={3} {...customOptions}>
+
+        
+
+<BoxImageTeam> 
+  <img src={enrico} />
+  <BoxInfoTeam>
+  <TestoNome>
+      Enrico Coviello
+  </TestoNome>
+  <TestoRuolo>CEO, Co-founder</TestoRuolo>
+  <TestoLink>  <a href="https://twitter.com/Tedarco96" target="_blank">
+                      Twitter{" "}
+                    </a>
+                    -{" "}
+                    <a
+                      href="https://www.linkedin.com/in/marco-tedesco-a54914227/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={marco} />
+  <BoxInfoTeam>
+  <TestoNome>
+      Marco Tedesco
+  </TestoNome>
+  <TestoRuolo>COO, Co-founder</TestoRuolo>
+  <TestoLink>  <a href="https://twitter.com/Tedarco96" target="_blank">
+                      Twitter{" "}
+                    </a>
+                    -{" "}
+                    <a
+                      href="https://www.linkedin.com/in/marco-tedesco-a54914227/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={filippo} />
+  <BoxInfoTeam>
+  <TestoNome>
+  Filippo  Ballarini  </TestoNome>
+  <TestoRuolo>CMO</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/filippo-ballarini-78363597/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={giulietta} />
+  <BoxInfoTeam>
+  <TestoNome>
+      Giulietta Minucci
+  </TestoNome>
+  <TestoRuolo>CLO</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/giuliettaminucci/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={edoardo} />
+  <BoxInfoTeam>
+  <TestoNome>
+     Edoardo Grassi
+  </TestoNome>
+  <TestoRuolo>Lead 3D</TestoRuolo>
+  <TestoLink> 
+                    <a
+                      href="https://www.linkedin.com/in/edoardo-grassi-278331162/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={ornella} />
+  <BoxInfoTeam>
+  <TestoNome>
+    Ornella Lacovara
+  </TestoNome>
+  <TestoRuolo>Texturing</TestoRuolo>
+  <TestoLink> 
+                    <a
+                      href="https://www.linkedin.com/in/ornella-lacovara-654a80214"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={eduardo} />
+  <BoxInfoTeam>
+  <TestoNome>
+Eduardo Rizzo  </TestoNome>
+  <TestoRuolo>Lighting</TestoRuolo>
+  <TestoLink> 
+                    <a
+                      href="http://linkedin.com/in/eduardo-rizzo90"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={giovanni} />
+  <BoxInfoTeam>
+  <TestoNome>
+Giovanni Liotti  </TestoNome>
+  <TestoRuolo>3D Animator</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/giovanni-liotti/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+
+<BoxImageTeam> 
+  <img src={rocco} />
+  <BoxInfoTeam>
+  <TestoNome>
+Rocco caricola  </TestoNome>
+  <TestoRuolo>Front-End developerr</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/roccocaricola/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={jacopo} />
+  <BoxInfoTeam>
+  <TestoNome>
+  Jacopo Gornati
+  </TestoNome>
+  <TestoRuolo>Back-end developer</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/jacopo-gornati-91955868/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={eros} />
+  <BoxInfoTeam>
+  <TestoNome>
+  Eros Tringali
+  </TestoNome>
+  <TestoRuolo>Back-end developer</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/eros-tringali/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={aminul} />
+  <BoxInfoTeam>
+  <TestoNome>
+  Aminul Hossain
+  </TestoNome>
+  <TestoRuolo>Lead Blockchain</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/aminul-hossain-185a30163/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={giacomo} />
+  <BoxInfoTeam>
+  <TestoNome>
+      Giacomo Colella
+  </TestoNome>
+  <TestoRuolo>Blockchain Developer</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/giacomocolella/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={mauro} />
+  <BoxInfoTeam>
+  <TestoNome>
+  Mauro Gampieri
+  </TestoNome>
+  <TestoRuolo>Game Developer</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/maurogiampieri/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={gaetano} />
+  <BoxInfoTeam>
+  <TestoNome>
+     Gaetano De Pasquale
+  </TestoNome>
+  <TestoRuolo>Game Developer</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/gaetano-de-pasquale/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={giuseppe} />
+  <BoxInfoTeam>
+  <TestoNome>
+  Giuseppe Albertini
+  </TestoNome>
+  <TestoRuolo>PM</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/giuseppe-albertini-734a3244/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={emanuele} />
+  <BoxInfoTeam>
+  <TestoNome>
+      Emanuele Paparella
+  </TestoNome>
+  <TestoRuolo>Sound Producer</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/emanuele-paparella-9a86b024b/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={vinenzo} />
+  <BoxInfoTeam>
+  <TestoNome>
+  Vincenzo Lupo Cosimo  </TestoNome>
+  <TestoRuolo>Esport Supervisor</TestoRuolo>
+  <TestoLink> 
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={lorena} />
+  <BoxInfoTeam>
+  <TestoNome>
+     Lorena Rusu
+  </TestoNome>
+  <TestoRuolo>Esport Caster</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/lorena-rusu-9123471b1/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={mattia} />
+  <BoxInfoTeam>
+  <TestoNome>
+Mattia Meo  </TestoNome>
+  <TestoRuolo>Esport Caster</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/giuseppe-mattia-meo-4999041ba/?originalSubdomain=it"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+
+
+
+          
+              </Slide>
+{/*
           <div
             style={{
               marginTop: "-3.5rem",
@@ -766,7 +1236,9 @@ const OurTeam = () => {
               </div>
             </div>
           </div>
+          */}
         </div>
+       </div>
       </div>
     );
   else
@@ -782,6 +1254,7 @@ const OurTeam = () => {
           >
             OUR TEAM
           </p>
+         
           <div
             style={{
               marginTop: "-3.5rem",

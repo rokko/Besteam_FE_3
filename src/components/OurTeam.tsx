@@ -175,12 +175,12 @@ const OurTeam = () => {
       Enrico Coviello
   </TestoNome>
   <TestoRuolo>CEO, Co-founder</TestoRuolo>
-  <TestoLink>  <a href="https://twitter.com/Tedarco96" target="_blank">
+  <TestoLink>  <a href="https://twitter.com/" target="_blank">
                       Twitter{" "}
                     </a>
                     -{" "}
                     <a
-                      href="https://www.linkedin.com/in/marco-tedesco-a54914227/"
+                      href="https://www.linkedin.com/in/enrico-coviello-352a39225/"
                       target="_blank"
                     >
                       Linkedin
@@ -312,8 +312,8 @@ Giovanni Liotti  </TestoNome>
   <img src={rocco} />
   <BoxInfoTeam>
   <TestoNome>
-Rocco caricola  </TestoNome>
-  <TestoRuolo>Front-End developerr</TestoRuolo>
+Rocco Caricola  </TestoNome>
+  <TestoRuolo>Front-End developer</TestoRuolo>
   <TestoLink>  
                     <a
                       href="https://www.linkedin.com/in/roccocaricola/"

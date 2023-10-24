@@ -418,6 +418,7 @@ Rocco Caricola  </TestoNome>
   <TestoNome style={{fontSize:'1.3vw'}}>
      Gaetano De Pasquale
   </TestoNome>
+  <br/>
   <TestoRuolo>Game Developer</TestoRuolo>
   <TestoLink>  
                     <a
@@ -432,9 +433,10 @@ Rocco Caricola  </TestoNome>
 <BoxImageTeam> 
   <img src={giuseppe} />
   <BoxInfoTeam>
-  <TestoNome>
+  <TestoNome style={{fontSize:'1.3vw'}}>
   Giuseppe Albertini
   </TestoNome>
+  <br/>
   <TestoRuolo>PM</TestoRuolo>
   <TestoLink>  
                     <a
@@ -452,6 +454,7 @@ Rocco Caricola  </TestoNome>
   <TestoNome style={{fontSize:'1.3vw'}}>
       Emanuele Paparella
   </TestoNome>
+  <br/>
   <TestoRuolo>Sound Producer</TestoRuolo>
   <TestoLink>  
                     <a
@@ -468,6 +471,7 @@ Rocco Caricola  </TestoNome>
   <BoxInfoTeam>
   <TestoNome style={{fontSize:'1.3vw'}}>
   Vincenzo Lupo Cosimo  </TestoNome>
+  <br/>
   <TestoRuolo>Esport Supervisor</TestoRuolo>
   <TestoLink> 
     </TestoLink>

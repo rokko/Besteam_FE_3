@@ -1834,7 +1834,7 @@ Mattia Meo  </TestoNome>
                     margin: 0,
                   }}
                 >
-                  Giacomo Colella
+                  Giulietta Minucci
                 </p>
                 <p
                   style={{
@@ -1845,7 +1845,7 @@ Mattia Meo  </TestoNome>
                     margin: 0,
                   }}
                 >
-                  Blockchain Dev
+                  CLO
                 </p>
                 <p
                   style={{
@@ -1858,7 +1858,7 @@ Mattia Meo  </TestoNome>
                 >
                   {" "}
                   <a
-                    href="https://www.linkedin.com/in/giacomocolella/"
+                    href="https://www.linkedin.com/in/giuliettaminucci/"
                     target="_blank"
                   >
                     Linkedin
@@ -1866,303 +1866,6 @@ Mattia Meo  </TestoNome>
                 </p>
               </div>
             </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignContent: "center",
-                alignItems: "center",
-                gap: "0.5rem",
-                width: "100px",
-              }}
-            >
-              <img
-                src={verde}
-                alt="verde"
-                style={{ width: "7vw", height: "7vw" }}
-              />
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <p
-                  style={{
-                    fontFamily: "DINProCondBold",
-                    color: "white",
-                    fontSize: "2.5vw",
-                    textAlign: "left",
-                    margin: 0,
-                  }}
-                >
-                  Rocco Caricola
-                </p>
-                <p
-                  style={{
-                    fontFamily: "DINProCondBold",
-                    color: "#2DC653",
-                    fontSize: "2.5vw",
-                    textAlign: "left",
-                    margin: 0,
-                  }}
-                >
-                  Website Dev
-                </p>
-                <p
-                  style={{
-                    textAlign: "left",
-                    fontFamily: "DINProCondReg",
-                    fontSize: "2.5vw",
-                    color: "#9B9B9B",
-                    margin: 0,
-                  }}
-                >
-                  <a
-                    href="https://www.linkedin.com/in/roccocaricola/"
-                    target="_blank"
-                  >
-                    Linkedin
-                  </a>
-                </p>
-              </div>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignContent: "center",
-                alignItems: "center",
-                gap: "0.5rem",
-                width: "100px",
-              }}
-            >
-              <img
-                src={verde}
-                alt="verde"
-                style={{ width: "7vw", height: "7vw" }}
-              />
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <p
-                  style={{
-                    fontFamily: "DINProCondBold",
-                    color: "white",
-                    fontSize: "2.5vw",
-                    textAlign: "left",
-                    margin: 0,
-                  }}
-                >
-                  Jep Albertini
-                </p>
-                <p
-                  style={{
-                    fontFamily: "DINProCondBold",
-                    color: "#2DC653",
-                    fontSize: "2.5vw",
-                    textAlign: "left",
-                    margin: 0,
-                  }}
-                >
-                  PM
-                </p>
-                <p
-                  style={{
-                    textAlign: "left",
-                    fontFamily: "DINProCondReg",
-                    fontSize: "2.5vw",
-                    color: "#9B9B9B",
-                    margin: 0,
-                  }}
-                >
-                  <a href="https://twitter.com/jep27pr" target="_blank">
-                    Twitter{" "}
-                  </a>
-                  -{" "}
-                  <a
-                    href="https://www.linkedin.com/in/giuseppe-albertini-734a3244/"
-                    target="_blank"
-                  >
-                    Linkedin
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              gap: "0.3rem",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignContent: "center",
-                alignItems: "center",
-                gap: "0.5rem",
-                width: "100px",
-              }}
-            >
-              <img
-                src={verde}
-                alt="verde"
-                style={{ width: "7vw", height: "7vw" }}
-              />
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <p
-                  style={{
-                    fontFamily: "DINProCondBold",
-                    color: "white",
-                    fontSize: "2.5vw",
-                    textAlign: "left",
-                    margin: 0,
-                  }}
-                >
-                  Emanuele
-                </p>
-                <p
-                  style={{
-                    fontFamily: "DINProCondBold",
-                    color: "white",
-                    fontSize: "2.5vw",
-                    textAlign: "left",
-                    margin: 0,
-                  }}
-                >
-                  Paparella
-                </p>
-                <p
-                  style={{
-                    fontFamily: "DINProCondBold",
-                    color: "#2DC653",
-                    fontSize: "2.5vw",
-                    textAlign: "left",
-                    margin: 0,
-                  }}
-                >
-                  ADMIN
-                </p>
-              </div>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignContent: "center",
-                alignItems: "center",
-                gap: "0.5rem",
-                width: "100px",
-              }}
-            >
-              <img
-                src={verde}
-                alt="verde"
-                style={{ width: "7vw", height: "7vw" }}
-              />
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  width: "70px",
-                }}
-              >
-                <p
-                  style={{
-                    fontFamily: "DINProCondBold",
-                    color: "white",
-                    fontSize: "2.5vw",
-                    textAlign: "left",
-                    margin: 0,
-                  }}
-                >
-                  Riccardo
-                </p>
-                <p
-                  style={{
-                    fontFamily: "DINProCondBold",
-                    color: "white",
-                    fontSize: "2.5vw",
-                    textAlign: "left",
-                    margin: 0,
-                  }}
-                >
-                  Ricci
-                </p>
-                <p
-                  style={{
-                    fontFamily: "DINProCondBold",
-                    color: "#2DC653",
-                    fontSize: "2.5vw",
-                    textAlign: "left",
-                    margin: 0,
-                  }}
-                >
-                  ADMIN
-                </p>
-              </div>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignContent: "center",
-                alignItems: "center",
-                gap: "0.5rem",
-                width: "100px",
-              }}
-            >
-              <img
-                src={verde}
-                alt="verde"
-                style={{ width: "7vw", height: "7vw" }}
-              />
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <p
-                  style={{
-                    fontFamily: "DINProCondBold",
-                    color: "white",
-                    fontSize: "2.5vw",
-                    textAlign: "left",
-                    margin: 0,
-                  }}
-                >
-                  Matteo De Nuzzo
-                </p>
-                <p
-                  style={{
-                    fontFamily: "DINProCondBold",
-                    color: "#2DC653",
-                    fontSize: "2.5vw",
-                    textAlign: "left",
-                    margin: 0,
-                  }}
-                >
-                  Game Designer
-                </p>
-                <p
-                  style={{
-                    textAlign: "left",
-                    fontFamily: "DINProCondReg",
-                    fontSize: "2.5vw",
-                    color: "#9B9B9B",
-                    margin: 0,
-                  }}
-                >
-                  <a
-                    href="https://www.linkedin.com/in/matteo-de-nuzzo-93b836197/"
-                    target="_blank"
-                  >
-                    Linkedin
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              gap: "0.3rem",
-            }}
-          >
             <div
               style={{
                 display: "flex",
@@ -2210,6 +1913,7 @@ Mattia Meo  </TestoNome>
                     margin: 0,
                   }}
                 >
+                  {" "}
                   <a
                     href="https://www.linkedin.com/in/edoardo-grassi-278331162/"
                     target="_blank"
@@ -2230,7 +1934,7 @@ Mattia Meo  </TestoNome>
               }}
             >
               <img
-                src={aranc}
+                src={verde}
                 alt="verde"
                 style={{ width: "7vw", height: "7vw" }}
               />
@@ -2244,18 +1948,18 @@ Mattia Meo  </TestoNome>
                     margin: 0,
                   }}
                 >
-                  ...
+                  Ornella Lacovara
                 </p>
                 <p
                   style={{
                     fontFamily: "DINProCondBold",
-                    color: "#F78B21",
+                    color: "#2DC653",
                     fontSize: "2.5vw",
                     textAlign: "left",
                     margin: 0,
                   }}
                 >
-                  Game Developer
+                  Texturing
                 </p>
                 <p
                   style={{
@@ -2266,69 +1970,16 @@ Mattia Meo  </TestoNome>
                     margin: 0,
                   }}
                 >
-                  {" "}
-                  we want you!
+                  <a
+                    href="https://www.linkedin.com/in/ornella-lacovara-654a80214"
+                    target="_blank"
+                  >
+                    Linkedin
+                  </a>
                 </p>
               </div>
             </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignContent: "center",
-                alignItems: "center",
-                gap: "0.5rem",
-                width: "100px",
-              }}
-            >
-              <img
-                src={aranc}
-                alt="verde"
-                style={{ width: "7vw", height: "7vw" }}
-              />
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  width: "70px",
-                }}
-              >
-                <p
-                  style={{
-                    fontFamily: "DINProCondBold",
-                    color: "white",
-                    fontSize: "2.5vw",
-                    textAlign: "left",
-                    margin: 0,
-                  }}
-                >
-                  ...
-                </p>
-                <p
-                  style={{
-                    fontFamily: "DINProCondBold",
-                    color: "#F78B21",
-                    fontSize: "2.5vw",
-                    textAlign: "left",
-                    margin: 0,
-                  }}
-                >
-                  Lead Esport
-                </p>
-                <p
-                  style={{
-                    textAlign: "left",
-                    fontFamily: "DINProCondReg",
-                    fontSize: "2.5vw",
-                    color: "#9B9B9B",
-                    margin: 0,
-                  }}
-                >
-                  {" "}
-                  we want you!
-                </p>
-              </div>
-            </div>
+            
           </div>
           <div
             style={{
@@ -2348,17 +1999,11 @@ Mattia Meo  </TestoNome>
               }}
             >
               <img
-                src={aranc}
+                src={verde}
                 alt="verde"
                 style={{ width: "7vw", height: "7vw" }}
               />
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  width: "70px",
-                }}
-              >
+              <div style={{ display: "flex", flexDirection: "column" }}>
                 <p
                   style={{
                     fontFamily: "DINProCondBold",
@@ -2368,12 +2013,365 @@ Mattia Meo  </TestoNome>
                     margin: 0,
                   }}
                 >
-                  ...
+                  Eduardo Rizzo
                 </p>
                 <p
                   style={{
                     fontFamily: "DINProCondBold",
-                    color: "#F78B21",
+                    color: "#2DC653",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+                  Lighting
+                </p>
+                <p
+                  style={{
+                    textAlign: "left",
+                    fontFamily: "DINProCondReg",
+                    fontSize: "2.5vw",
+                    color: "#9B9B9B",
+                    margin: 0,
+                  }}
+                >
+                  <a
+                    href="http://linkedin.com/in/eduardo-rizzo90"
+                    target="_blank"
+                  >
+                    Linkedin
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignContent: "center",
+                alignItems: "center",
+                gap: "0.5rem",
+                width: "100px",
+              }}
+            >
+              <img
+                src={verde}
+                alt="verde"
+                style={{ width: "7vw", height: "7vw" }}
+              />
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "white",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+                  Aminul Hossain
+                </p>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "#2DC653",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+                  Lead BlockChain
+                </p>
+                <p
+                  style={{
+                    textAlign: "left",
+                    fontFamily: "DINProCondReg",
+                    fontSize: "2.5vw",
+                    color: "#9B9B9B",
+                    margin: 0,
+                  }}
+                >
+                  <a
+                    href="https://www.linkedin.com/in/aminul-hossain-185a30163/"
+                    target="_blank"
+                  >
+                    Linkedin
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignContent: "center",
+                alignItems: "center",
+                gap: "0.5rem",
+                width: "100px",
+              }}
+            >
+              <img
+                src={verde}
+                alt="verde"
+                style={{ width: "7vw", height: "7vw" }}
+              />
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "white",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+                  Giacomo Colella
+                </p>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "#2DC653",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+                  Blockchain Developer
+                </p>
+                <p
+                  style={{
+                    textAlign: "left",
+                    fontFamily: "DINProCondReg",
+                    fontSize: "2.5vw",
+                    color: "#9B9B9B",
+                    margin: 0,
+                  }}
+                >
+                  <a
+                    href="https://www.linkedin.com/in/giacomocolella/"
+                    target="_blank"
+                  >
+                    Linkedin
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "0.3rem",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignContent: "center",
+                alignItems: "center",
+                gap: "0.5rem",
+                width: "100px",
+              }}
+            >
+              <img
+                src={verde}
+                alt="verde"
+                style={{ width: "7vw", height: "7vw" }}
+              />
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "white",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+                  Giovanni Liotti
+                </p>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "#2DC653",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+                  3D Animator
+                </p>
+                <p
+                  style={{
+                    textAlign: "left",
+                    fontFamily: "DINProCondReg",
+                    fontSize: "2.5vw",
+                    color: "#9B9B9B",
+                    margin: 0,
+                  }}
+                >
+                  <a
+                    href="https://www.linkedin.com/in/giovanni-liotti/"
+                    target="_blank"
+                  >
+                    Linkedin
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignContent: "center",
+                alignItems: "center",
+                gap: "0.5rem",
+                width: "100px",
+              }}
+            >
+              <img
+                src={verde}
+                alt="verde"
+                style={{ width: "7vw", height: "7vw" }}
+              />
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "white",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+                  Mauro Giampieri
+                </p>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "#2DC653",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+                  Game Developer
+                </p>
+                <p
+                  style={{
+                    textAlign: "left",
+                    fontFamily: "DINProCondReg",
+                    fontSize: "2.5vw",
+                    color: "#9B9B9B",
+                    margin: 0,
+                  }}
+                >
+                  <a
+                    href="https://www.linkedin.com/in/maurogiampieri/"
+                    target="_blank"
+                  >
+                    Linkedin
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignContent: "center",
+                alignItems: "center",
+                gap: "0.5rem",
+                width: "100px",
+              }}
+            >
+              <img
+                src={verde}
+                alt="verde"
+                style={{ width: "7vw", height: "7vw" }}
+              />
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "white",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+                 Gaetano De Pasquale
+                </p>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "#2DC653",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+                  Game Developer
+                </p>
+                <p
+                  style={{
+                    textAlign: "left",
+                    fontFamily: "DINProCondReg",
+                    fontSize: "2.5vw",
+                    color: "#9B9B9B",
+                    margin: 0,
+                  }}
+                >
+                  <a
+                    href="https://www.linkedin.com/in/gaetano-de-pasquale/"
+                    target="_blank"
+                  >
+                    Linkedin
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "0.3rem",
+            }}
+          >
+              <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignContent: "center",
+                alignItems: "center",
+                gap: "0.5rem",
+                width: "100px",
+              }}
+            >
+              <img
+                src={verde}
+                alt="verde"
+                style={{ width: "7vw", height: "7vw" }}
+              />
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "white",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+                Eros Tringali
+                </p>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "#2DC653",
                     fontSize: "2.5vw",
                     textAlign: "left",
                     margin: 0,
@@ -2390,8 +2388,12 @@ Mattia Meo  </TestoNome>
                     margin: 0,
                   }}
                 >
-                  {" "}
-                  we want you!
+                  <a
+                    href="https://www.linkedin.com/in/eros-tringali/"
+                    target="_blank"
+                  >
+                    Linkedin
+                  </a>
                 </p>
               </div>
             </div>
@@ -2406,17 +2408,11 @@ Mattia Meo  </TestoNome>
               }}
             >
               <img
-                src={aranc}
+                src={verde}
                 alt="verde"
                 style={{ width: "7vw", height: "7vw" }}
               />
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  width: "70px",
-                }}
-              >
+              <div style={{ display: "flex", flexDirection: "column" }}>
                 <p
                   style={{
                     fontFamily: "DINProCondBold",
@@ -2426,18 +2422,18 @@ Mattia Meo  </TestoNome>
                     margin: 0,
                   }}
                 >
-                  ...
+                 Jacopo Gornati
                 </p>
                 <p
                   style={{
                     fontFamily: "DINProCondBold",
-                    color: "#F78B21",
+                    color: "#2DC653",
                     fontSize: "2.5vw",
                     textAlign: "left",
                     margin: 0,
                   }}
                 >
-                  Online Dev
+                  Backend Dev
                 </p>
                 <p
                   style={{
@@ -2448,8 +2444,12 @@ Mattia Meo  </TestoNome>
                     margin: 0,
                   }}
                 >
-                  {" "}
-                  we want you!
+                  <a
+                    href="https://www.linkedin.com/in/jacopo-gornati-91955868/"
+                    target="_blank"
+                  >
+                    Linkedin
+                  </a>
                 </p>
               </div>
             </div>
@@ -2464,17 +2464,11 @@ Mattia Meo  </TestoNome>
               }}
             >
               <img
-                src={aranc}
+                src={verde}
                 alt="verde"
                 style={{ width: "7vw", height: "7vw" }}
               />
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  width: "70px",
-                }}
-              >
+              <div style={{ display: "flex", flexDirection: "column" }}>
                 <p
                   style={{
                     fontFamily: "DINProCondBold",
@@ -2484,18 +2478,18 @@ Mattia Meo  </TestoNome>
                     margin: 0,
                   }}
                 >
-                  ...
+                 Rocco Caricola
                 </p>
                 <p
                   style={{
                     fontFamily: "DINProCondBold",
-                    color: "#F78B21",
+                    color: "#2DC653",
                     fontSize: "2.5vw",
                     textAlign: "left",
                     margin: 0,
                   }}
                 >
-                  Full-Stack Dev
+                  Frontend Dev
                 </p>
                 <p
                   style={{
@@ -2506,11 +2500,304 @@ Mattia Meo  </TestoNome>
                     margin: 0,
                   }}
                 >
-                  {" "}
-                  we want you!
+                  <a
+                    href="https://www.linkedin.com/in/roccocaricola/"
+                    target="_blank"
+                  >
+                    Linkedin
+                  </a>
                 </p>
               </div>
             </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "0.3rem",
+            }}
+          >
+              <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignContent: "center",
+                alignItems: "center",
+                gap: "0.5rem",
+                width: "100px",
+              }}
+            >
+              <img
+                src={verde}
+                alt="verde"
+                style={{ width: "7vw", height: "7vw" }}
+              />
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "white",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+                Giuseppe Albertini
+                </p>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "#2DC653",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+                  PM
+                </p>
+                <p
+                  style={{
+                    textAlign: "left",
+                    fontFamily: "DINProCondReg",
+                    fontSize: "2.5vw",
+                    color: "#9B9B9B",
+                    margin: 0,
+                  }}
+                >
+                  <a
+                    href="https://www.linkedin.com/in/giuseppe-albertini-734a3244/"
+                    target="_blank"
+                  >
+                    Linkedin
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignContent: "center",
+                alignItems: "center",
+                gap: "0.5rem",
+                width: "100px",
+              }}
+            >
+              <img
+                src={verde}
+                alt="verde"
+                style={{ width: "7vw", height: "7vw" }}
+              />
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "white",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+                 Emanuele Paparella
+                </p>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "#2DC653",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+                  Sound Producer
+                </p>
+                <p
+                  style={{
+                    textAlign: "left",
+                    fontFamily: "DINProCondReg",
+                    fontSize: "2.5vw",
+                    color: "#9B9B9B",
+                    margin: 0,
+                  }}
+                >
+                  <a
+                    href="https://www.linkedin.com/in/emanuele-paparella-9a86b024b/"
+                    target="_blank"
+                  >
+                    Linkedin
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignContent: "center",
+                alignItems: "center",
+                gap: "0.5rem",
+                width: "100px",
+              }}
+            >
+              <img
+                src={verde}
+                alt="verde"
+                style={{ width: "7vw", height: "7vw" }}
+              />
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "white",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+Vincenzo Lupo Cosimo
+
+</p>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "#2DC653",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+Esport Supervisor
+
+</p>
+                <p
+                  style={{
+                    textAlign: "left",
+                    fontFamily: "DINProCondReg",
+                    fontSize: "2.5vw",
+                    color: "#9B9B9B",
+                    margin: 0,
+                  }}
+                >
+                 
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "0.3rem",
+            }}
+          >
+              <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignContent: "center",
+                alignItems: "center",
+                gap: "0.5rem",
+                width: "100px",
+              }}
+            >
+              <img
+                src={verde}
+                alt="verde"
+                style={{ width: "7vw", height: "7vw" }}
+              />
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "white",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+Lorena                </p>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "#2DC653",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+                  Esport Caster
+                </p>
+                <p
+                  style={{
+                    textAlign: "left",
+                    fontFamily: "DINProCondReg",
+                    fontSize: "2.5vw",
+                    color: "#9B9B9B",
+                    margin: 0,
+                  }}
+                >
+                  <a
+                    href="https://www.linkedin.com/in/lorena-rusu-9123471b1/"
+                    target="_blank"
+                  >
+                    Linkedin
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignContent: "center",
+                alignItems: "center",
+                gap: "0.5rem",
+                width: "100px",
+              }}
+            >
+              <img
+                src={verde}
+                alt="verde"
+                style={{ width: "7vw", height: "7vw" }}
+              />
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "white",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+                 Vincenzo Lupo Cosimo
+                </p>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "#2DC653",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+Esport Supervisor
+
+</p>
+                <p
+                  style={{
+                    textAlign: "left",
+                    fontFamily: "DINProCondReg",
+                    fontSize: "2.5vw",
+                    color: "#9B9B9B",
+                    margin: 0,
+                  }}
+                >
+                
+                </p>
+              </div>
+            </div>
+         
           </div>
         </div>
       </div>

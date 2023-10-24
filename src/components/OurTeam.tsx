@@ -119,7 +119,8 @@ const BoxImageTeam = styled.div`
   display: flex;
   flex-direction: column;
   border: 5px solid #2DC653;
-border-radius: 7.5%;
+border-radius:26px;
+z-index:100;
 opacity: 1;
 width:18.22vw;
 height:26.04vw;
@@ -171,7 +172,7 @@ const OurTeam = () => {
         
 
 <BoxImageTeam > 
-  <img src={enrico} />
+  <img src={enrico} style={{zIndex:'-100'}}/>
   <BoxInfoTeam>
   <TestoNome>
       Enrico Coviello

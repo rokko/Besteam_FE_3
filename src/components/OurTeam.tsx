@@ -118,7 +118,7 @@ text-align: left;
 const BoxImageTeam = styled.div`
   display: flex;
   flex-direction: column;
-  border: 5px solid #2DC653;
+  border: 6px solid #2DC653;
 border-radius:1.4541666666666667vw;
 z-index:100;
 opacity: 1;
@@ -1272,6 +1272,7 @@ Mattia Meo  </TestoNome>
           >
             OUR TEAM
           </p>
+          {/*
           <div style={{ width: "80%", display:'flex',  flexDirection:'column'}}>
           <Slide slidesToShow={3} {...customOptions}>
 
@@ -1618,7 +1619,7 @@ Mattia Meo  </TestoNome>
           
               </Slide>
               </div>
-         
+    */}
           <div
             style={{
               marginTop: "-3.5rem",

@@ -5,20 +5,17 @@ const FormIscrizione = styled.div`
   align-content: center;
   justify-content: center;
   align-items: center;
-  background-color: #dfe5e1;
-  width: 600px;
-  height: 500px;
+  width: 33.85vw;
+  height: 35.93vw;
   gap: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: #E8E8E8;
 `;
 
 const InputIscrizione = styled.input`
-  background-color: #124921;
   width: 400px;
   height: 30px;
   border: none;
+  border : 1px solid green
 `;
 
 const ButtonIscrizione = styled.div`
@@ -37,9 +34,9 @@ const ButtonIscrizione = styled.div`
 `;
 
 const TestoIscrizione = styled.div`
-  color: #0a471d;
-  font-size: 40px;
-  font-weight: bold;
+  color: #10451d;
+  font-size: 1.71vw;
+  font-family: 'DIN-ProMedium';
 `;
 
 const TestoPiccolo = styled.div`

@@ -13,15 +13,20 @@ const Iscrizione = () => {
     <Container>
       <FormIscrizione>
         <div>
-          <TestoIscrizione>*METAMASK</TestoIscrizione>
+          <TestoIscrizione>NICKNAME*</TestoIscrizione>
           <InputIscrizione />
         </div>
         <div>
-          <TestoIscrizione>*NICKNAME</TestoIscrizione>
+          <TestoIscrizione>EMAIL*</TestoIscrizione>
           <InputIscrizione />
         </div>
         <div>
-          <TestoIscrizione>*DISCORD</TestoIscrizione>
+          <TestoIscrizione>WALLET*</TestoIscrizione>
+
+          <InputIscrizione />
+        </div>
+        <div>
+          <TestoIscrizione>DISCORD*</TestoIscrizione>
 
           <InputIscrizione />
         </div>

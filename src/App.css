@@ -73,6 +73,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "DIN-PROMedium";
+  src: local("DIN-PROMedium"), url(./fonts/DINPro-Medium.ttf) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 @font-face {
   font-family: "DINProCondBold";

@@ -176,7 +176,7 @@ const OurTeam = () => {
       Enrico Coviello
   </TestoNome>
   <TestoRuolo>CEO, Co-founder</TestoRuolo>
-  <TestoLink>  <a href="https://twitter.com/" target="_blank">
+  <TestoLink>  <a href="https://twitter.com/Enrico_Coviello" target="_blank">
                       Twitter{" "}
                     </a>
                     -{" "}

@@ -34,6 +34,7 @@ import lorena  from '../components/video/immaginiOurTeam/Card Lorena.webp'
 import mattia from '../components/video/immaginiOurTeam/Card Mattia.webp'
 import riccardo from '../components/video/immaginiOurTeam/Card Riccardo.webp'
 const customOptions = {
+
   prevArrow: (
     <div
       className="hoverzoom"
@@ -163,7 +164,7 @@ const OurTeam = () => {
           >
             OUR TEAM
           </p>
-          <div style={{ width: "80%" }}>
+          <div style={{ width: "80%", display:'flex',  flexDirection:'column'}}>
           <Slide slidesToShow={3} {...customOptions}>
 
         
@@ -412,7 +413,7 @@ Rocco Caricola  </TestoNome>
 <BoxImageTeam> 
   <img src={gaetano} />
   <BoxInfoTeam>
-  <TestoNome>
+  <TestoNome style={{fontSize:'1.3vw'}}>
      Gaetano De Pasquale
   </TestoNome>
   <TestoRuolo>Game Developer</TestoRuolo>
@@ -446,7 +447,7 @@ Rocco Caricola  </TestoNome>
 <BoxImageTeam> 
   <img src={emanuele} />
   <BoxInfoTeam>
-  <TestoNome>
+  <TestoNome style={{fontSize:'1.3vw'}}>
       Emanuele Paparella
   </TestoNome>
   <TestoRuolo>Sound Producer</TestoRuolo>
@@ -463,7 +464,7 @@ Rocco Caricola  </TestoNome>
 <BoxImageTeam> 
   <img src={vinenzo} />
   <BoxInfoTeam>
-  <TestoNome>
+  <TestoNome style={{fontSize:'1.3vw'}}>
   Vincenzo Lupo Cosimo  </TestoNome>
   <TestoRuolo>Esport Supervisor</TestoRuolo>
   <TestoLink> 
@@ -1254,6 +1255,352 @@ Mattia Meo  </TestoNome>
           >
             OUR TEAM
           </p>
+          <div style={{ width: "80%", display:'flex',  flexDirection:'column'}}>
+          <Slide slidesToShow={3} {...customOptions}>
+
+        
+
+<BoxImageTeam> 
+  <img src={enrico} />
+  <BoxInfoTeam>
+  <TestoNome>
+      Enrico Coviello
+  </TestoNome>
+  <TestoRuolo>CEO, Co-founder</TestoRuolo>
+  <TestoLink>  <a href="https://twitter.com/" target="_blank">
+                      Twitter{" "}
+                    </a>
+                    -{" "}
+                    <a
+                      href="https://www.linkedin.com/in/enrico-coviello-352a39225/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={marco} />
+  <BoxInfoTeam>
+  <TestoNome>
+      Marco Tedesco
+  </TestoNome>
+  <TestoRuolo>COO, Co-founder</TestoRuolo>
+  <TestoLink>  <a href="https://twitter.com/Tedarco96" target="_blank">
+                      Twitter{" "}
+                    </a>
+                    -{" "}
+                    <a
+                      href="https://www.linkedin.com/in/marco-tedesco-a54914227/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={filippo} />
+  <BoxInfoTeam>
+  <TestoNome>
+  Filippo  Ballarini  </TestoNome>
+  <TestoRuolo>CMO</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/filippo-ballarini-78363597/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={giulietta} />
+  <BoxInfoTeam>
+  <TestoNome>
+      Giulietta Minucci
+  </TestoNome>
+  <TestoRuolo>CLO</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/giuliettaminucci/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={edoardo} />
+  <BoxInfoTeam>
+  <TestoNome>
+     Edoardo Grassi
+  </TestoNome>
+  <TestoRuolo>Lead 3D</TestoRuolo>
+  <TestoLink> 
+                    <a
+                      href="https://www.linkedin.com/in/edoardo-grassi-278331162/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={ornella} />
+  <BoxInfoTeam>
+  <TestoNome>
+    Ornella Lacovara
+  </TestoNome>
+  <TestoRuolo>Texturing</TestoRuolo>
+  <TestoLink> 
+                    <a
+                      href="https://www.linkedin.com/in/ornella-lacovara-654a80214"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={eduardo} />
+  <BoxInfoTeam>
+  <TestoNome>
+Eduardo Rizzo  </TestoNome>
+  <TestoRuolo>Lighting</TestoRuolo>
+  <TestoLink> 
+                    <a
+                      href="http://linkedin.com/in/eduardo-rizzo90"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={giovanni} />
+  <BoxInfoTeam>
+  <TestoNome>
+Giovanni Liotti  </TestoNome>
+  <TestoRuolo>3D Animator</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/giovanni-liotti/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+
+<BoxImageTeam> 
+  <img src={rocco} />
+  <BoxInfoTeam>
+  <TestoNome>
+Rocco Caricola  </TestoNome>
+  <TestoRuolo>Front-End developer</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/roccocaricola/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={jacopo} />
+  <BoxInfoTeam>
+  <TestoNome>
+  Jacopo Gornati
+  </TestoNome>
+  <TestoRuolo>Back-end developer</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/jacopo-gornati-91955868/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={eros} />
+  <BoxInfoTeam>
+  <TestoNome>
+  Eros Tringali
+  </TestoNome>
+  <TestoRuolo>Back-end developer</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/eros-tringali/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={aminul} />
+  <BoxInfoTeam>
+  <TestoNome>
+  Aminul Hossain
+  </TestoNome>
+  <TestoRuolo>Lead Blockchain</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/aminul-hossain-185a30163/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={giacomo} />
+  <BoxInfoTeam>
+  <TestoNome>
+      Giacomo Colella
+  </TestoNome>
+  <TestoRuolo>Blockchain Developer</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/giacomocolella/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={mauro} />
+  <BoxInfoTeam>
+  <TestoNome>
+  Mauro Gampieri
+  </TestoNome>
+  <TestoRuolo>Game Developer</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/maurogiampieri/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={gaetano} />
+  <BoxInfoTeam>
+  <TestoNome>
+     Gaetano De Pasquale
+  </TestoNome>
+  <TestoRuolo>Game Developer</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/gaetano-de-pasquale/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={giuseppe} />
+  <BoxInfoTeam>
+  <TestoNome>
+  Giuseppe Albertini
+  </TestoNome>
+  <TestoRuolo>PM</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/giuseppe-albertini-734a3244/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={emanuele} />
+  <BoxInfoTeam>
+  <TestoNome>
+      Emanuele Paparella
+  </TestoNome>
+  <TestoRuolo>Sound Producer</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/emanuele-paparella-9a86b024b/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={vinenzo} />
+  <BoxInfoTeam>
+  <TestoNome>
+  Vincenzo Lupo Cosimo  </TestoNome>
+  <TestoRuolo>Esport Supervisor</TestoRuolo>
+  <TestoLink> 
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={lorena} />
+  <BoxInfoTeam>
+  <TestoNome>
+     Lorena Rusu
+  </TestoNome>
+  <TestoRuolo>Esport Caster</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/lorena-rusu-9123471b1/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={mattia} />
+  <BoxInfoTeam>
+  <TestoNome>
+Mattia Meo  </TestoNome>
+  <TestoRuolo>Esport Caster</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/giuseppe-mattia-meo-4999041ba/?originalSubdomain=it"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+
+
+
+          
+              </Slide>
+              </div>
          
           <div
             style={{

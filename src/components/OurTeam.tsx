@@ -119,12 +119,12 @@ const BoxImageTeam = styled.div`
   display: flex;
   flex-direction: column;
   border: 5px solid #2DC653;
-border-radius:26px;
+border-radius:1.4541666666666667vw;
 z-index:100;
 opacity: 1;
-width:18.22vw;
+width:16.22vw;
 height:26.04vw;
-margin-left:3.5vw;
+margin-left:4.5vw;
   `
 const BoxInfoTeam = styled.div
 `

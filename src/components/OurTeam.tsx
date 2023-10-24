@@ -384,7 +384,7 @@ Rocco Caricola  </TestoNome>
   <TestoNome>
       Giacomo Colella
   </TestoNome>
-  <TestoRuolo>Blockchain Developer</TestoRuolo>
+  <TestoRuolo>Blockchain Dev</TestoRuolo>
   <TestoLink>  
                     <a
                       href="https://www.linkedin.com/in/giacomocolella/"
@@ -1262,6 +1262,12 @@ Mattia Meo  </TestoNome>
   else
     return (
       <div id="team">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
         <div
           className="container-page"
           style={{ height: "400px", marginTop: "15vh" }}
@@ -2136,7 +2142,7 @@ Mattia Meo  </TestoNome>
                     margin: 0,
                   }}
                 >
-                  Blockchain Developer
+                  Blockchain Dev
                 </p>
                 <p
                   style={{
@@ -2297,7 +2303,7 @@ Mattia Meo  </TestoNome>
                   style={{
                     fontFamily: "DINProCondBold",
                     color: "white",
-                    fontSize: "2.5vw",
+                    fontSize: "2.2vw",
                     textAlign: "left",
                     margin: 0,
                   }}
@@ -2593,7 +2599,7 @@ Mattia Meo  </TestoNome>
                   style={{
                     fontFamily: "DINProCondBold",
                     color: "white",
-                    fontSize: "2.5vw",
+                    fontSize: "2.3vw",
                     textAlign: "left",
                     margin: 0,
                   }}
@@ -2649,7 +2655,7 @@ Mattia Meo  </TestoNome>
                   style={{
                     fontFamily: "DINProCondBold",
                     color: "white",
-                    fontSize: "2.5vw",
+                    fontSize: "2.1vw",
                     textAlign: "left",
                     margin: 0,
                   }}
@@ -2715,7 +2721,7 @@ Esport Supervisor
                     margin: 0,
                   }}
                 >
-Lorena                </p>
+Lorena Rusu              </p>
                 <p
                   style={{
                     fontFamily: "DINProCondBold",
@@ -2770,8 +2776,7 @@ Lorena                </p>
                     margin: 0,
                   }}
                 >
-                 Vincenzo Lupo Cosimo
-                </p>
+Mattia Meo          </p>
                 <p
                   style={{
                     fontFamily: "DINProCondBold",
@@ -2781,9 +2786,8 @@ Lorena                </p>
                     margin: 0,
                   }}
                 >
-Esport Supervisor
-
-</p>
+                  Esport Caster
+                </p>
                 <p
                   style={{
                     textAlign: "left",
@@ -2793,12 +2797,71 @@ Esport Supervisor
                     margin: 0,
                   }}
                 >
-                
+                  <a
+                    href="https://www.linkedin.com/in/giuseppe-mattia-meo-4999041ba/"
+                    target="_blank"
+                  >
+                    Linkedin
+                  </a>
+                </p>
+              </div>
+              
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignContent: "center",
+                alignItems: "center",
+                gap: "0.5rem",
+                width: "100px",
+              }}
+            >
+              <img
+                src={aranc}
+                alt="verde"
+                style={{ width: "7vw", height: "7vw" }}
+              />
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "white",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+          </p>
+                <p
+                  style={{
+                    fontFamily: "DINProCondBold",
+                    color: "#2DC653",
+                    fontSize: "2.5vw",
+                    textAlign: "left",
+                    margin: 0,
+                  }}
+                >
+                  We Want You
+                </p>
+                <p
+                  style={{
+                    textAlign: "left",
+                    fontFamily: "DINProCondReg",
+                    fontSize: "2.5vw",
+                    color: "#9B9B9B",
+                    margin: 0,
+                  }}
+                >
+                 
                 </p>
               </div>
             </div>
          
           </div>
+
+
+          
         </div>
       </div>
     );

@@ -123,6 +123,7 @@ border-radius: 7.5%;
 opacity: 1;
 width:18.22vw;
 height:26.04vw;
+margin-left:3.5vw;
   `
 const BoxInfoTeam = styled.div
 `
@@ -164,12 +165,12 @@ const OurTeam = () => {
           >
             OUR TEAM
           </p>
-          <div style={{ width: "80%", display:'flex',  flexDirection:'column'}}>
+          <div style={{ width: "80%", display:'flex',  flexDirection:'column',alignContent:'center',justifyContent:'center'}}>
           <Slide slidesToShow={3} {...customOptions}>
 
         
 
-<BoxImageTeam> 
+<BoxImageTeam > 
   <img src={enrico} />
   <BoxInfoTeam>
   <TestoNome>

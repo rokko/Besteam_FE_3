@@ -102,7 +102,7 @@ const HeaderBar = () => {
           <Route path="/sesso" element={<Sesso />} />
           <Route path="/creazioneclub" element={<CreazioneClub />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/swap" element={<BtemSwap />} />
+          <Route path="/supportus" element={<BtemSwap />} />
         </Routes>
       </Router>
     </>

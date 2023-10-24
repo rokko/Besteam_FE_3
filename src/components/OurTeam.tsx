@@ -120,9 +120,9 @@ const BoxImageTeam = styled.div`
   flex-direction: column;
   border: 6px solid #2DC653;
 border-radius:1.4541666666666667vw;
-z-index:100;
+z-index:10000;
 opacity: 1;
-width:16.22vw;
+width:15.22vw;
 height:26.04vw;
 margin-left:4.5vw;
   `
@@ -172,7 +172,7 @@ const OurTeam = () => {
         
 
 <BoxImageTeam > 
-  <img src={enrico} style={{zIndex:'-100'}}/>
+  <img src={enrico} style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
   <BoxInfoTeam>
   <TestoNome>
       Enrico Coviello
@@ -192,7 +192,7 @@ const OurTeam = () => {
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={marco} />
+  <img src={marco}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
   <BoxInfoTeam>
   <TestoNome>
       Marco Tedesco
@@ -212,7 +212,7 @@ const OurTeam = () => {
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={filippo} />
+  <img src={filippo}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
   <BoxInfoTeam>
   <TestoNome>
   Filippo  Ballarini  </TestoNome>
@@ -228,7 +228,7 @@ const OurTeam = () => {
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={giulietta} />
+  <img src={giulietta}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
   <BoxInfoTeam>
   <TestoNome>
       Giulietta Minucci
@@ -245,7 +245,7 @@ const OurTeam = () => {
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={edoardo} />
+  <img src={edoardo}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
   <BoxInfoTeam>
   <TestoNome>
      Edoardo Grassi
@@ -262,7 +262,7 @@ const OurTeam = () => {
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={ornella} />
+  <img src={ornella} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
   <TestoNome>
     Ornella Lacovara
@@ -279,7 +279,7 @@ const OurTeam = () => {
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={eduardo} />
+  <img src={eduardo}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
   <TestoNome>
 Eduardo Rizzo  </TestoNome>
@@ -295,7 +295,7 @@ Eduardo Rizzo  </TestoNome>
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={giovanni} />
+  <img src={giovanni}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
   <BoxInfoTeam>
   <TestoNome>
 Giovanni Liotti  </TestoNome>
@@ -312,7 +312,7 @@ Giovanni Liotti  </TestoNome>
 </BoxImageTeam> 
 
 <BoxImageTeam> 
-  <img src={rocco} />
+  <img src={rocco}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
   <BoxInfoTeam>
   <TestoNome>
 Rocco Caricola  </TestoNome>
@@ -328,7 +328,7 @@ Rocco Caricola  </TestoNome>
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={jacopo} />
+  <img src={jacopo}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
   <BoxInfoTeam>
   <TestoNome>
   Jacopo Gornati
@@ -345,7 +345,7 @@ Rocco Caricola  </TestoNome>
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={eros} />
+  <img src={eros}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
   <BoxInfoTeam>
   <TestoNome>
   Eros Tringali
@@ -362,7 +362,7 @@ Rocco Caricola  </TestoNome>
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={aminul} />
+  <img src={aminul}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
   <TestoNome>
   Aminul Hossain
@@ -379,7 +379,7 @@ Rocco Caricola  </TestoNome>
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={giacomo} />
+  <img src={giacomo} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
   <TestoNome>
       Giacomo Colella
@@ -396,7 +396,7 @@ Rocco Caricola  </TestoNome>
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={mauro} />
+  <img src={mauro}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
   <BoxInfoTeam>
   <TestoNome>
   Mauro Gampieri
@@ -412,8 +412,8 @@ Rocco Caricola  </TestoNome>
     </TestoLink>
   </BoxInfoTeam>
 </BoxImageTeam> 
-<BoxImageTeam> 
-  <img src={gaetano} />
+<BoxImageTeam > 
+  <img src={gaetano} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
   <TestoNome style={{fontSize:'1.3vw'}}>
      Gaetano De Pasquale
@@ -431,7 +431,7 @@ Rocco Caricola  </TestoNome>
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={giuseppe} />
+  <img src={giuseppe}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
   <TestoNome style={{fontSize:'1.3vw'}}>
   Giuseppe Albertini
@@ -449,7 +449,7 @@ Rocco Caricola  </TestoNome>
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={emanuele} />
+  <img src={emanuele}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
   <TestoNome style={{fontSize:'1.3vw'}}>
       Emanuele Paparella
@@ -467,7 +467,7 @@ Rocco Caricola  </TestoNome>
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={vinenzo} />
+  <img src={vinenzo} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
   <TestoNome style={{fontSize:'1.3vw'}}>
   Vincenzo Lupo Cosimo  </TestoNome>
@@ -478,7 +478,7 @@ Rocco Caricola  </TestoNome>
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={lorena} />
+  <img src={lorena}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
   <BoxInfoTeam>
   <TestoNome>
      Lorena Rusu
@@ -495,7 +495,7 @@ Rocco Caricola  </TestoNome>
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={mattia} />
+  <img src={mattia}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
   <TestoNome>
 Mattia Meo  </TestoNome>

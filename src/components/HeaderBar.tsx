@@ -80,7 +80,7 @@ const HeaderBar = () => {
             */}
             <VerticalMenu />
             <a
-              href="/swap"
+              href="/suppportus"
               style={{ textDecoration: "none", marginLeft: "-0.6vw" }}
             >
               <p className="testo">SupportUS</p>

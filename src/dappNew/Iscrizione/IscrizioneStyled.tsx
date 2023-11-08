@@ -21,10 +21,10 @@ const InputIscrizione = styled.input`
 const ButtonIscrizione = styled.div`
   background-color: #2bc251;
   border: none;
-  height: 30px;
-  width: 120px;
+  height: 2.74vw;
+  width: 13.38vw;
   font-size: 22px;
-  color: black;
+  color: white;
   font-weight: bold;
   padding: 0.3rem;
   display: flex;

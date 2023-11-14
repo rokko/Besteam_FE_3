@@ -36,10 +36,13 @@ const useStyles  =makeStyles({
   },
 });
 const Iscrizione = () => {
-  
+  const [firstForm, setFirstForm]=React.useState(true)
+  const [secondForm, setSecondForm]=React.useState(false)
+  const [thirdForm, setThirdForm] = React.useState(false)
   const classes = useStyles();
   return (
     <Container>
+      {firstForm &&
       <FormIscrizione>
         <div>
           <TestoIscrizione>NICKNAME*</TestoIscrizione>
@@ -69,10 +72,46 @@ const Iscrizione = () => {
           label="I agree to subscribe to Besteam newsletter." // Add your label here
         />
         </div>
-        <ButtonIscrizione>NEXT</ButtonIscrizione>
-        <TestoPiccolo>* SONO CAMPI OBBLIGATORI </TestoPiccolo>
+        <ButtonIscrizione onClick={()=>{setFirstForm(false), setSecondForm(true)}}>NEXT</ButtonIscrizione>
+        <TestoPiccolo>*MADANTORY FIELD </TestoPiccolo>
+      
 
       </FormIscrizione>
+}
+      {secondForm &&  <FormIscrizione>
+        <div>
+          <TestoIscrizione>NATIONALITY*</TestoIscrizione>
+          <InputIscrizione />
+        </div>
+        <div>
+          <TestoIscrizione>Where are you playing from?*</TestoIscrizione>
+          <InputIscrizione />
+        </div>
+        <div>
+          <TestoIscrizione>PLATFORM ACCOUNT</TestoIscrizione>
+
+          <InputIscrizione />
+        </div>
+        <div>
+          <TestoIscrizione>PLATFORM*</TestoIscrizione>
+
+          <InputIscrizione />
+        </div>
+        <div>
+          <div>
+          <TestoIscrizione>FIRST ROLE</TestoIscrizione>
+          </div>
+          <div>
+            <TestoIscrizione>SECOND ROLE</TestoIscrizione>
+          </div>
+        </div>
+        
+        <ButtonIscrizione onClick={()=>{setSecondForm(false), setThirdForm(true)}}>SEND</ButtonIscrizione>
+        <TestoPiccolo>*MADANTORY FIELD </TestoPiccolo>
+      
+
+      </FormIscrizione>
+}
     </Container>
   );
 };

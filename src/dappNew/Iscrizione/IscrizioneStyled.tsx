@@ -5,17 +5,22 @@ const FormIscrizione = styled.div`
   align-content: center;
   justify-content: center;
   align-items: center;
-  width: 33.85vw;
+  width: 33.02vw;
   height: 35.93vw;
   gap: 2rem;
   background-color: #E8E8E8;
 `;
 
 const InputIscrizione = styled.input`
-  width: 400px;
-  height: 30px;
+border: 0.75px solid #2DC653;
+  width: 25.85vw;
+  height: 1.727vw;
   border: none;
-  border : 1px solid green
+  border : 1px solid green;
+  font-family: 'DIN-Pro';
+  color:#7C7C7C;
+  text-align:center;
+  font-size: 1.05vw;
 `;
 
 const ButtonIscrizione = styled.div`
@@ -40,9 +45,10 @@ const TestoIscrizione = styled.div`
 `;
 
 const TestoPiccolo = styled.div`
+  margin-top: -30px;
   color: #0a471d;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 12px;
+  font-style: italic;
 `;
 export {
   FormIscrizione,

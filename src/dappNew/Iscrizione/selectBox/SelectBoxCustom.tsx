@@ -5,7 +5,7 @@ import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl'
 
 
-const SelectBoxCustom = ({list}) => {
+const SelectBoxCustom = ({list,role}) => {
     const [selectedValue, setSelectedValue] = useState('Italy');
 
     const handleChange =(e)=>{ 
@@ -15,7 +15,7 @@ const SelectBoxCustom = ({list}) => {
     return(
     <FormControl >
       <Select
-      style={{ width: '25.85vw', height:'1.727vw',backgroundColor:'white',border :'1px solid green', borderRadius:'0px'}}
+      style={{ width:role? '11.967vw': '25.85vw', height:'1.727vw',backgroundColor:'white',border :'1px solid green', borderRadius:'0px'}}
         labelId="search-select-label"
         id="select"
         value={selectedValue}

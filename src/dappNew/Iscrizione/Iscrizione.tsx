@@ -89,13 +89,15 @@ const Iscrizione = () => {
       </FormIscrizione>
 }
       {secondForm &&  <FormIscrizione>
+        <img src={barralaterale} height='100%' style={{position:'absolute',left:'0px'}} alt='cornice'/>
+        <img src={barralaterale} height='100%' style={{position:'absolute',right:'0px'}} alt='cornice'/>
         <div>
           <TestoIscrizione>NATIONALITY*</TestoIscrizione>
-          <SelectBoxCustom list={country_list}/>
+          <SelectBoxCustom list={country_list} role={false}/>
         </div>
         <div>
           <TestoIscrizione>Where are you playing from?*</TestoIscrizione>
-          <SelectBoxCustom list={country_list}/>
+          <SelectBoxCustom list={country_list} role={false}/>
         </div>
         <div>
           <TestoIscrizione>PLATFORM ACCOUNT</TestoIscrizione>
@@ -116,11 +118,11 @@ const Iscrizione = () => {
         <div style={{display:'flex', flexDirection:'row', justifyContent:'center', gap:'3rem'}}>
           <div>
           <TestoIscrizione>First Role?</TestoIscrizione>
-          <SelectBoxCustom list={country_list}></SelectBoxCustom>
+          <SelectBoxCustom list={country_list} role={true}></SelectBoxCustom>
           </div>
           <div>
             <TestoIscrizione>Second Role?</TestoIscrizione>
-            <SelectBoxCustom list={country_list}></SelectBoxCustom>
+            <SelectBoxCustom list={country_list} role={true}></SelectBoxCustom>
 
           </div>
         </div>

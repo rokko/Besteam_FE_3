@@ -18,6 +18,8 @@ interface CheckboxProps {
 import PC from '../media/pc.png'
 import PS from '../media/ps.png'
 import Xbox from '../media/xbx.png'
+
+import barralaterale from '../media/cornice.png'
 import { Checkbox, FormControlLabel } from "@mui/material";
 import {makeStyles} from '@material-ui/core/styles'
 import SelectBoxCustom from "./selectBox/SelectBoxCustom";
@@ -49,6 +51,9 @@ const Iscrizione = () => {
     <Container>
       {firstForm &&
       <FormIscrizione>
+        <img src={barralaterale} height='100%' style={{position:'absolute',left:'0px'}} alt='cornice'/>
+        <img src={barralaterale} height='100%' style={{position:'absolute',right:'0px'}} alt='cornice'/>
+
         <div>
           <TestoIscrizione>NICKNAME*</TestoIscrizione>
           <InputIscrizione />

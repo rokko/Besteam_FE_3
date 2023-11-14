@@ -9,7 +9,9 @@ const FormIscrizione = styled.div`
   height: 35.93vw;
   gap: 2rem;
   background-color: #E8E8E8;
+  position:relative;
 `;
+
 
 const InputIscrizione = styled.input`
 border: 0.75px solid #2DC653;

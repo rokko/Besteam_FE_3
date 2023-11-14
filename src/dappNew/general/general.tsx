@@ -7,9 +7,12 @@ const Container = styled.div`
   align-items: center;
   align-content: center;
   justify-content: center;
+  position: relative;
   background-image: url(${SfondoDapp});
   background-repeat: no-repeat;
   background-size: cover;
 `;
+
+
 
 export { Container };

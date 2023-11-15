@@ -4,16 +4,15 @@ import { pink } from '@mui/material/colors';
 
 
 
-const CustomRadioGroup = ({prima,seconda,terza,primovalore,secondovalore,terzovalore}) => {
+const CustomRadioGroup = ({prima,seconda,terza,primovalore,secondovalore,terzovalore, platform,setPlatform}) => {
     const options = [
         { value:primovalore ,image: prima },
         { value:secondovalore, image: seconda },
         { value:terzovalore ,image: terza },
       ];
-  const [selectedValue, setSelectedValue] = React.useState('');
 
   const handleChange = (event) => {
-    setSelectedValue(event.target.value);
+    setPlatform(event.target.value);
   };
 
   return (
@@ -21,7 +20,7 @@ const CustomRadioGroup = ({prima,seconda,terza,primovalore,secondovalore,terzova
      
       <RadioGroup
         name="customRadioGroup"
-        value={selectedValue}
+        value={platform}
         style={{justifyContent:'center', gap:'5rem'}}
         onChange={handleChange}
         row

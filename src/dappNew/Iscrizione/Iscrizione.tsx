@@ -27,6 +27,7 @@ import { country_list, role_list } from "../utilis/utils";
 import CustomRadioGroup from "./optionsCustom/OptionsCustom";
 import CarouselWithSelect from "./carouselSelect/CarouselSelect";
 import { Mandatory } from "../../Screens/btemSwap/boxIscrizione/BoxIscrizioneStyled";
+import { useWeb3React } from "@web3-react/core";
 const useStyles  =makeStyles({
   checkbox: {
     color: 'green', // Change the color of the checkbox
@@ -47,20 +48,102 @@ const useStyles  =makeStyles({
 });
 const Iscrizione = () => {
 
-  const headerTop = document.getElementsByClassName("navbar-header")
-  console.log(headerTop)
+
+  const { account } = useWeb3React();
+
   const [firstForm, setFirstForm]=React.useState(true)
   const [secondForm, setSecondForm]=React.useState(false)
   const [thirdForm, setThirdForm] = React.useState(false)
+  const [walletAccount, setWalletAccount] = React.useState('')
+  const [nickname, setNickname]=React.useState('')
+  const [email, setEmail] = React.useState('');
+  const [discord, setDiscord] = React.useState('');
+  const [regolamento, setRegolamento] = React.useState(false);
+  const [nationality,setNationality] =React.useState('Italy');
+  const [place, setPlace] = React.useState('Italy')
+  const [platform, setPlatform] = React.useState('')
+  const [newsletter, setNewsletter] = React.useState(false); 
+  const [platformAccount, setPlatformAccount] = React.useState('')
+  const [isValidEmail, setIsValidEmail] = React.useState(false);
+  const [firstRole, setFirstRole] = React.useState('')
+  const [secondRole, setSecondRole] = React.useState('')
   const classes = useStyles();
+  const handleEmailChange = (event) => {
+    const newEmail = event.target.value.replace(/\s/g, ''); // Rimuovi gli spazi
 
+    setEmail(newEmail);
+    // Verifica l'indirizzo email e imposta lo stato di validità
+    setIsValidEmail(verificaEmail(newEmail));
+  };
+
+  const handleNickname = (event)=>{
+    const newNickname = event.target.value.replace(/\s/g, ''); // Rimuovi gli spazi
+    setNickname(newNickname)
+  }
+
+  const handleRegolamentoChange = (event) => {
+    setRegolamento(event.target.checked);
+  };
+
+
+  const handleNewsletterChange = (event) => {
+    console.log(event.target.checked)
+    setNewsletter(event.target.checked);
+  }
+
+  const handlePlatformAccountChange = (event) => {
+    const newPlatformAccount = event.target.value.replace(/\s/g, ''); // Rimuovi gli spazi
+    console.log(newPlatformAccount)
+    setPlatformAccount(newPlatformAccount)
+  }
+
+  const handleDiscordChange = (event)=>{
+    const newDiscord = event.target.value.replace(/\s/g, ''); // Rimuovi gli spazi
+    console.log(newDiscord)
+    setDiscord(newDiscord)
+
+  }
+
+  const handleWalletChange = (event)=>{
+    const newWallet = event.target.value.replace(/\s/g, ''); // Rimuovi gli spazi
+    setWalletAccount(newWallet)
+  }
+
+  const verificaEmail = (email) => {
+    // Definisci il pattern regex per un indirizzo email
+    const pattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    // Restituisci True se c'è un match, altrimenti False
+    return pattern.test(email);
+  };
+
+
+  const vaiASecondoStep = () => {
+
+    if(nickname.length<3 || !isValidEmail || !regolamento || discord.length<3 ){
+      console.log('ERROR')
+    }
+    else{
+      setFirstForm(false)
+      setSecondForm(true)
+    }
+  
+  }
   useEffect(()=>{
     const headerTop = document.getElementsByClassName("navbar-header")as unknown as HTMLElement[]
     const footer = document.getElementsByClassName("iub__us-widget") as unknown as HTMLElement[]
     headerTop[0].style.display='none'
     footer[0].style.display='none'
+    if(account){
+      setWalletAccount(account)
+    }
+   
+  
 
-  })
+  },[])
+
+  useEffect(()=>{
+    console.log(platform)
+  },[platform])
   return (
     <Container>
       {firstForm &&
@@ -70,33 +153,65 @@ const Iscrizione = () => {
 
         <div>
           <TestoIscrizione>NICKNAME*</TestoIscrizione>
-          <InputIscrizione />
+          <InputIscrizione type="text" id='nickname' value={nickname}  onChange={handleNickname}/>
         </div>
         <div>
           <TestoIscrizione>EMAIL*</TestoIscrizione>
-          <InputIscrizione />
+          <InputIscrizione
+              type="email"
+              id="emailInput"
+              value={email}
+              onChange={handleEmailChange}
+          /> 
         </div>
         <div>
           <TestoIscrizione>WALLET*</TestoIscrizione>
 
-          <InputIscrizione />
+          <InputIscrizione 
+            type="text" 
+            id="walletInput"
+            value={walletAccount}
+            onChange={handleWalletChange}
+            />
+
         </div>
         <div>
           <TestoIscrizione>DISCORD*</TestoIscrizione>
 
-          <InputIscrizione />
+          <InputIscrizione 
+            type="text"
+            id="discordInput"
+            value={discord}
+            onChange={handleDiscordChange}
+            />
         </div>
         <div style={{display:'flex', justifyContent:'center', flexDirection:'column', alignContent:'flex-start'}}>
         <FormControlLabel
+          onChange={handleRegolamentoChange}
           control={<Checkbox icon={<CircleUnchecked />} checkedIcon={<CircleChecked />} classes={{ root: classes.checkbox }} />}
-          label="I accept the Terms and conditions and Privacy Policy." // Add your label here
-        />
+          label={<span style={{
+            fontSize:'1.04vw',
+            fontFamily:'Dinproregular',
+            color:'#7C7C7C',
+            textAlign: 'left',
+            letterSpacing: '-0.21px',
+          }}>
+I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFamily:'DinLightItalic',fontStyle:'italic'}}>Terms and conditions</a> and <a style={{textDecoration:'none', color:'#208B3A', fontFamily:'DinLightItalic', fontStyle:'italic'}} href="#">Privacy Policy.</a>          </span>}         />
         <FormControlLabel
+          onChange={handleNewsletterChange}
           control={<Checkbox icon={<CircleUnchecked />} checkedIcon={<CircleChecked />} classes={{ root: classes.checkbox }} />}
-          label="I agree to subscribe to Besteam newsletter." // Add your label here
+          label={<span style={{
+            fontSize:'1.04vw',
+            fontFamily:'Dinproregular',
+            color:'#7C7C7C',
+            textAlign: 'left',
+            letterSpacing: '-0.21px',
+          }}>
+            I agree to subscribe to Besteam newsletter.
+          </span>} // Add your label here
         />
         </div>
-        <ButtonIscrizione onClick={()=>{setFirstForm(false), setSecondForm(true)}}>NEXT</ButtonIscrizione>
+        <ButtonIscrizione onClick={()=>{vaiASecondoStep()}}>NEXT</ButtonIscrizione>
         <Mandatory style={{fontStyle:'italic', marginTop:'-3vh'}}>*MADANTORY FIELD </Mandatory>
       
 
@@ -107,30 +222,29 @@ const Iscrizione = () => {
         <img src={barralaterale} height='100%' style={{position:'absolute',right:'0px'}} alt='cornice'/>
         <div>
           <TestoIscrizione>NATIONALITY*</TestoIscrizione>
-          <SelectBoxCustom list={country_list} role={false}/>
+          <SelectBoxCustom list={country_list} role={false} setNationality={setNationality} nationality={nationality}/>
         </div>
         <div>
           <TestoIscrizione>Where are you playing from?*</TestoIscrizione>
-          <SelectBoxCustom list={country_list} role={false}/>
+          <SelectBoxCustom list={country_list} role={false} setNationality={setPlace} nationality={place}/>
         </div>
         <div>
           <TestoIscrizione>PLATFORM ACCOUNT</TestoIscrizione>
-
-          <InputIscrizione />
+          <InputIscrizione type='text' value={platformAccount} id='platformAccount' onChange={handlePlatformAccountChange}/>
         </div>
         <div>
           <TestoIscrizione>PLATFORM*</TestoIscrizione>
-        <CustomRadioGroup prima={Xbox} seconda={PC} terza={PS} terzovalore={'PS'} secondovalore={'PC'} primovalore={'XB'} />
+        <CustomRadioGroup prima={Xbox} seconda={PC} terza={PS} terzovalore={'PS'} secondovalore={'PC'} primovalore={'XB'} platform={platform} setPlatform={setPlatform}/>
        
         </div>
         <div style={{display:'flex', flexDirection:'row', justifyContent:'center', gap:'3rem'}}>
           <div>
           <TestoIscrizione>First Role?</TestoIscrizione>
-          <SelectBoxCustom list={role_list} role={true}></SelectBoxCustom>
+          <SelectBoxCustom list={role_list} role={true} setNationality={setFirstRole} nationality={firstRole}></SelectBoxCustom>
           </div>
           <div>
             <TestoIscrizione>Second Role?</TestoIscrizione>
-            <SelectBoxCustom list={role_list} role={true}></SelectBoxCustom>
+            <SelectBoxCustom list={role_list} role={true} setNationality={setSecondRole} nationality={secondRole}></SelectBoxCustom>
 
           </div>
         </div>

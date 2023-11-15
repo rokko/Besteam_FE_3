@@ -25,6 +25,7 @@ import {makeStyles} from '@material-ui/core/styles'
 import SelectBoxCustom from "./selectBox/SelectBoxCustom";
 import { country_list, role_list } from "../utilis/utils";
 import CustomRadioGroup from "./optionsCustom/OptionsCustom";
+import CarouselWithSelect from "./carouselSelect/CarouselSelect";
 const useStyles  =makeStyles({
   checkbox: {
     color: 'green', // Change the color of the checkbox
@@ -128,8 +129,12 @@ const Iscrizione = () => {
 
       </FormIscrizione>
 }
+{thirdForm && <FormIscrizione>
+ <CarouselWithSelect/>
+</FormIscrizione>} 
     </Container>
   );
+
 };
 
 export default Iscrizione;

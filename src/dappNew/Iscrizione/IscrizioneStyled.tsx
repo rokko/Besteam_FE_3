@@ -38,6 +38,7 @@ const ButtonIscrizione = styled.div`
   align-items: center;
   align-content: center;
   justify-content: center;
+  font-family: DinPROBlack2;
 `;
 
 const TestoIscrizione = styled.div`

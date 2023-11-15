@@ -19,6 +19,8 @@ const SelectBoxCustom = ({list,role}) => {
         labelId="search-select-label"
         id="select"
         value={selectedValue}
+        color='primary'
+       
         onChange={(e)=>setSelectedValue(e?.target.value as any)}
       >
           <ListSubheader>

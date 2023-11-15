@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container } from "../general/general";
 import {
   ButtonIscrizione,
@@ -46,10 +46,21 @@ const useStyles  =makeStyles({
   },
 });
 const Iscrizione = () => {
+
+  const headerTop = document.getElementsByClassName("navbar-header")
+  console.log(headerTop)
   const [firstForm, setFirstForm]=React.useState(true)
   const [secondForm, setSecondForm]=React.useState(false)
   const [thirdForm, setThirdForm] = React.useState(false)
   const classes = useStyles();
+
+  useEffect(()=>{
+    const headerTop = document.getElementsByClassName("navbar-header")as unknown as HTMLElement[]
+    const footer = document.getElementsByClassName("iub__us-widget") as unknown as HTMLElement[]
+    headerTop[0].style.display='none'
+    footer[0].style.display='none'
+
+  })
   return (
     <Container>
       {firstForm &&

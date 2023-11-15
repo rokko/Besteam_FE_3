@@ -2,7 +2,7 @@ import styled from "styled-components";
 import SfondoDapp from "../../dappNew/media/sfondodapp.jpg";
 const Container = styled.div`
   width: 100%;
-  height: 800px;
+  height: 100vh;
   display: flex;
   align-items: center;
   align-content: center;

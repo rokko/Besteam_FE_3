@@ -24,6 +24,7 @@ import { Checkbox, FormControlLabel } from "@mui/material";
 import {makeStyles} from '@material-ui/core/styles'
 import SelectBoxCustom from "./selectBox/SelectBoxCustom";
 import { country_list, role_list } from "../utilis/utils";
+import CustomRadioGroup from "./optionsCustom/OptionsCustom";
 const useStyles  =makeStyles({
   checkbox: {
     color: 'green', // Change the color of the checkbox
@@ -106,14 +107,8 @@ const Iscrizione = () => {
         </div>
         <div>
           <TestoIscrizione>PLATFORM*</TestoIscrizione>
-
-          <div>
-            <img src={PS} />
-            <img src={PC} />
-            <img src={Xbox} />
-
-
-          </div>
+        <CustomRadioGroup prima={Xbox} seconda={PC} terza={PS} terzovalore={'PS'} secondovalore={'PC'} primovalore={'XB'} />
+       
         </div>
         <div style={{display:'flex', flexDirection:'row', justifyContent:'center', gap:'3rem'}}>
           <div>

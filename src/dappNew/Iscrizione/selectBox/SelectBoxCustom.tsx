@@ -20,15 +20,14 @@ const SelectBoxCustom = ({list,role}) => {
         id="select"
         value={selectedValue}
         color='primary'
-       
-        onChange={(e)=>setSelectedValue(e?.target.value as any)}
-      >
+        onChange={(e)=>setSelectedValue((e?.target as HTMLInputElement)?.value)}
+        >
           <ListSubheader>
 
         {
-            list.map((item,value)=>{
+            list.map((item)=>{
                 return(
-                <MenuItem key={value} value={item}>{item}</MenuItem>
+                <MenuItem onClick={(e)=>setSelectedValue((e?.target as HTMLInputElement).value)} value={item}>{item}</MenuItem>
                 )
                 
             })

@@ -141,9 +141,8 @@ const Mandatory = styled.p`
   margin-top: -0.75vh;
   text-align: center;
   letter-spacing: 0px;
-  color: #10451d;
+  color: #10451D;
   font-family: DinLightItalic;
-  font-style: italic;
   opacity: 1;
   font-size: 1.64vh;
 `;

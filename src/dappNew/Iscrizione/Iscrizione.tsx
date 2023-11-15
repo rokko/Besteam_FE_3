@@ -26,6 +26,7 @@ import SelectBoxCustom from "./selectBox/SelectBoxCustom";
 import { country_list, role_list } from "../utilis/utils";
 import CustomRadioGroup from "./optionsCustom/OptionsCustom";
 import CarouselWithSelect from "./carouselSelect/CarouselSelect";
+import { Mandatory } from "../../Screens/btemSwap/boxIscrizione/BoxIscrizioneStyled";
 const useStyles  =makeStyles({
   checkbox: {
     color: 'green', // Change the color of the checkbox
@@ -85,7 +86,7 @@ const Iscrizione = () => {
         />
         </div>
         <ButtonIscrizione onClick={()=>{setFirstForm(false), setSecondForm(true)}}>NEXT</ButtonIscrizione>
-        <TestoPiccolo>*MADANTORY FIELD </TestoPiccolo>
+        <Mandatory style={{fontStyle:'italic', marginTop:'-3vh'}}>*MADANTORY FIELD </Mandatory>
       
 
       </FormIscrizione>
@@ -124,7 +125,7 @@ const Iscrizione = () => {
         </div>
         
         <ButtonIscrizione onClick={()=>{setSecondForm(false), setThirdForm(true)}}>SEND</ButtonIscrizione>
-        <TestoPiccolo>*MADANTORY FIELD </TestoPiccolo>
+        <Mandatory style={{fontStyle:'italic', marginTop:'-3vh'}}>*MADANTORY FIELD </Mandatory>
       
 
       </FormIscrizione>

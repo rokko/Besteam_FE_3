@@ -1,5 +1,6 @@
 import React from 'react'
 import { Radio, RadioGroup, FormControlLabel, Typography } from '@mui/material';
+import { pink } from '@mui/material/colors';
 
 
 
@@ -30,7 +31,17 @@ const CustomRadioGroup = ({prima,seconda,terza,primovalore,secondovalore,terzova
             key={option.value}
             value={option.value}
             
-            control={<Radio   style={{color:'green'}}/>}
+            control={<Radio   sx={{ 
+              fontSize:40,
+              backgroundColor:'white',
+              color:'white',
+              border:'none'
+              ,
+              '&.Mui-checked': {
+                border:'white',
+                color: '#2DC653',
+                backgroundColor:'white'
+              },}} />}
             label={
               <div>
                 <img

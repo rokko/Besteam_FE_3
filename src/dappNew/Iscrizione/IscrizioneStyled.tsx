@@ -28,12 +28,11 @@ border: 0.75px solid #2DC653;
 const ButtonIscrizione = styled.div`
   background-color: #2bc251;
   border: none;
-  height: 2.74vw;
+  height: 2.590vw;
   width: 13.38vw;
-  font-size: 22px;
+  font-size: 2.072vw;
   color: white;
   font-weight: bold;
-  padding: 0.3rem;
   display: flex;
   align-items: center;
   align-content: center;

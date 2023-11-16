@@ -275,7 +275,7 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
           <SelectBoxCustom list={country_list} role={false} setNationality={setPlace} nationality={place}/>
         </div>
         <div>
-          <TestoIscrizione>PLATFORM ACCOUNT</TestoIscrizione>
+          <TestoIscrizione>PLATFORM ACCOUNT*</TestoIscrizione>
           <InputIscrizione type='text' value={platformAccount} id='platformAccount' onChange={handlePlatformAccountChange}/>
         </div>
         <div>
@@ -285,11 +285,11 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
         </div>
         <div style={{display:'flex', flexDirection:'row', justifyContent:'center', gap:'3rem'}}>
           <div>
-          <TestoIscrizione>First Role?</TestoIscrizione>
+          <TestoIscrizione>First Role?*</TestoIscrizione>
           <SelectBoxCustom list={role_list} role={true} setNationality={setFirstRole} nationality={firstRole}></SelectBoxCustom>
           </div>
           <div>
-            <TestoIscrizione>Second Role?</TestoIscrizione>
+            <TestoIscrizione>Second Role?*</TestoIscrizione>
             <SelectBoxCustom list={role_list} role={true} setNationality={setSecondRole} nationality={secondRole}></SelectBoxCustom>
 
           </div>

@@ -20,7 +20,7 @@ import PS from '../media/ps.png'
 import Xbox from '../media/xbx.png'
 
 import barralaterale from '../media/cornice.png'
-import { Checkbox, FormControlLabel } from "@mui/material";
+import { Checkbox, FormControl, FormControlLabel, InputLabel, MenuItem, Radio, RadioGroup, Select } from "@mui/material";
 import {makeStyles} from '@material-ui/core/styles'
 import SelectBoxCustom from "./selectBox/SelectBoxCustom";
 import { country_list, role_list } from "../utilis/utils";
@@ -28,6 +28,7 @@ import CustomRadioGroup from "./optionsCustom/OptionsCustom";
 import CarouselWithSelect from "./carouselSelect/CarouselSelect";
 import { Mandatory } from "../../Screens/btemSwap/boxIscrizione/BoxIscrizioneStyled";
 import { useWeb3React } from "@web3-react/core";
+import axios from "axios";
 const useStyles  =makeStyles({
   checkbox: {
     color: 'green', // Change the color of the checkbox
@@ -50,7 +51,7 @@ const Iscrizione = () => {
 
 
   const { account } = useWeb3React();
-
+  const [avatar, setAvatar] = React.useState('')
   const [firstForm, setFirstForm]=React.useState(true)
   const [secondForm, setSecondForm]=React.useState(false)
   const [thirdForm, setThirdForm] = React.useState(false)
@@ -78,6 +79,40 @@ const Iscrizione = () => {
       setSecondForm(false)
     }
     
+  }
+
+
+  const registrati = () => {
+    if(avatar==''){
+      console.log('ERRORE')
+    }
+    else{
+      const request ={
+        walletCode: walletAccount ,
+        nickname:nickname,
+        discord:discord,
+        email:email,
+        nationality:nationality,
+        playerLocation:place,
+        platform:platform,
+        consoleAccount:platformAccount,
+        mainRole:firstRole,
+        secondaryRole: secondRole,
+        newsletterCheck: newsletter,
+        avatarImg: avatar
+
+      }
+      axios.post('http://localhost:3001/register', request).then((x)=>{
+        if( !!x ){
+
+          console.log('REGISTRAZIONE EFFETTUATA')
+
+        }else{
+          console.error('ERRORE')
+          console.log(x)
+        }
+      })
+    }
   }
   const handleEmailChange = (event) => {
     const newEmail = event.target.value.replace(/\s/g, ''); // Rimuovi gli spazi
@@ -269,8 +304,19 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
 {thirdForm && <>
 <div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100%', height:'100%', gap:'1.5rem', marginTop:'2rem'}}>
   <p style={{fontSize:'33px', color:'white', fontFamily:'DinPROBold'}}>CHOOSE YOUR AVATAR</p>
-  
-  <div style={{width:'13.18vw', display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center',height:'2.60vw', background:' #2DC653 0% 0% no-repeat padding-box'}}>
+  <FormControl component="fieldset">
+  <RadioGroup
+    aria-label="gender"
+    name="gender"
+    value={avatar}
+    onChange={(e) => setAvatar(e.target.value)}
+    style={{display:'flex', flexDirection:'row', color:'white', fontSize:'30px', fontFamily:'DinPROBold', fontWeight:'bold'}}
+  >
+    <FormControlLabel value="uomo" control={<Radio />} label="Uomo" />
+    <FormControlLabel value="donna" control={<Radio />} label="Donna" />
+  </RadioGroup>
+</FormControl>
+  <div onClick={()=>{registrati()}} style={{width:'13.18vw', display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center',height:'2.60vw', background:' #2DC653 0% 0% no-repeat padding-box'}}>
     <p style={{fontSize:'2.08vw', fontFamily:'DinPROBlack2', color:'white'}}>CREATE</p>
   </div>
   <p style={{ fontSize: '1.6vw', fontFamily:'DinLightItalic', color: '#ffffff',fontStyle:'italic'}}>

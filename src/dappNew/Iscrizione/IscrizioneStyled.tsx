@@ -44,7 +44,7 @@ const ButtonIscrizione = styled.div`
 const TestoIscrizione = styled.div`
   color: #10451d;
   font-size: 1.71vw;
-  font-family: 'DIN-ProMedium';
+  font-family: 'DinPRO';
 `;
 
 const TestoPiccolo = styled.div`

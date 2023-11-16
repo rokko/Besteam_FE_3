@@ -258,7 +258,7 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
         />
         </div>
         <ButtonIscrizione onClick={()=>{vaiASecondoStep()}}>NEXT</ButtonIscrizione>
-        <Mandatory style={{fontStyle:'italic', marginTop:'-3vh'}}>*MADANTORY FIELD </Mandatory>
+        <Mandatory style={{fontStyle:'italic', marginTop:'-3vh'}}>*MANDATORY FIELD </Mandatory>
       
 
       </FormIscrizione>
@@ -296,7 +296,7 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
         </div>
         
         <ButtonIscrizione onClick={()=>{vaiUltimoStep()}}>SEND</ButtonIscrizione>
-        <Mandatory style={{fontStyle:'italic', marginTop:'-3vh'}}>*MADANTORY FIELD </Mandatory>
+        <Mandatory style={{fontStyle:'italic', marginTop:'-3vh'}}>*MANDATORY FIELD </Mandatory>
       
 
       </FormIscrizione>

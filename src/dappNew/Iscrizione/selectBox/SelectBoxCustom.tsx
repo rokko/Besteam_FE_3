@@ -1,14 +1,26 @@
-import { MenuItem } from '@mui/material'
+import { Menu, MenuItem } from '@mui/material'
 import { InputLabel, ListSubheader } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl'
 
 
 const SelectBoxCustom = ({list,role,setNationality,nationality}) => {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const menuRef = useRef(null);
 
+    const cambiaValore = (item)=>{
+      setNationality(item)
+      chiudiMenu()
+    }
+
+    const chiudiMenu = () =>{
+      const test = menuRef.current as any
+      test.style.display='none';
+      console.log(menuRef.current)
+    }
     const handleChange =(e)=>{ 
-        console.log(e)
+        setNationality(e.target.value)
     }
 
     return(
@@ -19,20 +31,29 @@ const SelectBoxCustom = ({list,role,setNationality,nationality}) => {
         id="select"
         value={nationality}
         color='primary'
-        onChange={(e)=>console.log(e)}
+        onChange={handleChange}
+        renderValue={(nationality) => `${nationality}`}
         >
-          <ListSubheader>
+          <ListSubheader ref={menuRef}>
 
         {
             list.map((item)=>{
                 return(
-                <MenuItem  onClick={handleChange} value={item}>{item}</MenuItem>
+                <MenuItem  onClick={()=>cambiaValore(item)} value={item}>{item}</MenuItem>
                 )
                 
             })
         }
         </ListSubheader>
        
+        <Menu
+        anchorEl={anchorEl}
+        open={Boolean(anchorEl)}
+        onClose={chiudiMenu}
+        MenuListProps={{
+          'aria-labelledby': 'elementi-label',
+        }}
+      />
        
       </Select>
      

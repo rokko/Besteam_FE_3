@@ -68,6 +68,17 @@ const Iscrizione = () => {
   const [firstRole, setFirstRole] = React.useState('')
   const [secondRole, setSecondRole] = React.useState('')
   const classes = useStyles();
+
+  const vaiUltimoStep = () => {
+    if(nationality=='' || firstRole==''|| secondRole=='' ||platformAccount=='' || place=='' || platform=='' ){
+      console.log('ERROR')
+    }
+    else{
+      setThirdForm(true)
+      setSecondForm(false)
+    }
+    
+  }
   const handleEmailChange = (event) => {
     const newEmail = event.target.value.replace(/\s/g, ''); // Rimuovi gli spazi
 
@@ -249,15 +260,25 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
           </div>
         </div>
         
-        <ButtonIscrizione onClick={()=>{setSecondForm(false), setThirdForm(true)}}>SEND</ButtonIscrizione>
+        <ButtonIscrizione onClick={()=>{vaiUltimoStep()}}>SEND</ButtonIscrizione>
         <Mandatory style={{fontStyle:'italic', marginTop:'-3vh'}}>*MADANTORY FIELD </Mandatory>
       
 
       </FormIscrizione>
 }
-{thirdForm && <FormIscrizione>
- <CarouselWithSelect/>
-</FormIscrizione>} 
+{thirdForm && <>
+<div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100%', height:'100%', gap:'1.5rem', marginTop:'2rem'}}>
+  <p style={{fontSize:'33px', color:'white', fontFamily:'DinPROBold'}}>CHOOSE YOUR AVATAR</p>
+  
+  <div style={{width:'13.18vw', display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center',height:'2.60vw', background:' #2DC653 0% 0% no-repeat padding-box'}}>
+    <p style={{fontSize:'2.08vw', fontFamily:'DinPROBlack2', color:'white'}}>CREATE</p>
+  </div>
+  <p style={{ fontSize: '1.6vw', fontFamily:'DinLightItalic', color: '#ffffff',fontStyle:'italic'}}>
+  and <span style={{color:'#2DC653'}}>JOIN</span> Besteam Metaverse!
+  </p>
+  </div>
+
+</>} 
     </Container>
   );
 

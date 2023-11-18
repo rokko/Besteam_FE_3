@@ -45,12 +45,20 @@ const SelectBoxCustom = ({list,role,setNationality,nationality}) => {
         onChange={handleChange}
         renderValue={(nationality) => `${nationality}`}
         >
-          <ListSubheader sx={{ backgroundColor: 'white', padding:'0px' }} style={{backgroundColor:'white', height:'8.5vw'}} id="elementi-label" ref={menuRef}>
+          <ListSubheader  sx={{ backgroundColor: 'white', padding:'0px' }} style={{backgroundColor:'white', height:'8.5vw'}} id="elementi-label" ref={menuRef}>
 
         {
             list.map((item)=>{
                 return(
-                <MenuItem  sx={{ backgroundColor: 'white' }} onClick={()=>cambiaValore(item)} value={item}>{item}</MenuItem>
+                <MenuItem dense sx={{ backgroundColor: 'white',
+                  marginLeft:'0.5vw',
+                  fontFamily: 'DIN-Pro',
+                  color:'#7C7C7C',
+                  textAlign:'center',
+                  fontSize: '0.90vw',
+                  padding:'0px'
+                
+                }} onClick={()=>cambiaValore(item)} value={item}>{item}</MenuItem>
                 )
                 
             })
@@ -63,6 +71,9 @@ const SelectBoxCustom = ({list,role,setNationality,nationality}) => {
         onClose={chiudiMenu}
         MenuListProps={{
           'aria-labelledby': 'elementi-label',
+        }}
+        sx={{
+          backgroundColor:'white'
         }}
       />
        

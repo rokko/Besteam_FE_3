@@ -7,14 +7,14 @@ const FormIscrizione = styled.div`
   align-items: center;
   width: 33.02vw;
   height: 35.93vw;
-  gap: 2rem;
+  gap: 1.5rem;
   background-color: #E8E8E8;
   position:relative;
 `;
 
 
 const InputIscrizione = styled.input`
-border: 0.75px solid #2DC653;
+  border: 0.75px solid #2DC653;
   width: 25.85vw;
   height: 1.727vw;
   border: none;
@@ -23,6 +23,7 @@ border: 0.75px solid #2DC653;
   color:#7C7C7C;
   text-align:center;
   font-size: 1.05vw;
+
 `;
 
 const ButtonIscrizione = styled.div`

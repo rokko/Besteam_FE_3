@@ -21,7 +21,7 @@ const CustomRadioGroup = ({prima,seconda,terza,primovalore,secondovalore,terzova
       <RadioGroup
         name="customRadioGroup"
         value={platform}
-        style={{justifyContent:'center', gap:'5rem'}}
+        style={{justifyContent:'center', gap:'1rem'}}
         onChange={handleChange}
         row
       >
@@ -46,7 +46,7 @@ const CustomRadioGroup = ({prima,seconda,terza,primovalore,secondovalore,terzova
                 <img
                   src={option.image}
                   alt={option.value}
-                  style={{ marginRight: '8px', width: '45.15px', height: '45.15px' }}
+                  style={{ marginRight: '8px', width: '100.15px', height: '45.15px' }}
                 />
                 
               </div>

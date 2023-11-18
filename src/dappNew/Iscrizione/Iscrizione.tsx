@@ -61,8 +61,8 @@ const Iscrizione = () => {
   const [email, setEmail] = React.useState('');
   const [discord, setDiscord] = React.useState('');
   const [regolamento, setRegolamento] = React.useState(false);
-  const [nationality,setNationality] =React.useState('Italy');
-  const [place, setPlace] = React.useState('Italy')
+  const [nationality,setNationality] =React.useState('');
+  const [place, setPlace] = React.useState('')
   const [platform, setPlatform] = React.useState('')
   const [newsletter, setNewsletter] = React.useState(false); 
   const [platformAccount, setPlatformAccount] = React.useState('')

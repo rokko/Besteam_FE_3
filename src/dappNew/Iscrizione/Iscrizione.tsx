@@ -15,6 +15,7 @@ interface CheckboxProps {
     label: string;
   };
 }
+import CircleIcon from '@mui/icons-material/Circle';
 import PC from '../media/pc.png'
 import PS from '../media/ps.png'
 import Xbox from '../media/xbx.png'
@@ -234,7 +235,7 @@ const Iscrizione = () => {
         <div style={{display:'flex', justifyContent:'center', flexDirection:'column', alignContent:'flex-start'}}>
         <FormControlLabel
           onChange={handleRegolamentoChange}
-          control={<Checkbox icon={<CircleUnchecked />} checkedIcon={<CircleChecked />} classes={{ root: classes.checkbox }} />}
+          control={<Checkbox icon={<CircleUnchecked style={{fill:'white', backgroundColor:'white'}} />} checkedIcon={<CircleIcon  style={{color:'#2DC653', backgroundColor:'white', padding:'5px'}}/>} classes={{ root: classes.checkbox }} />}
           label={<span style={{
             fontSize:'1.04vw',
             fontFamily:'Dinproregular',
@@ -245,7 +246,7 @@ const Iscrizione = () => {
 I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFamily:'DinLightItalic',fontStyle:'italic'}}>Terms and conditions</a> and <a style={{textDecoration:'none', color:'#208B3A', fontFamily:'DinLightItalic', fontStyle:'italic'}} href="#">Privacy Policy.</a>          </span>}         />
         <FormControlLabel
           onChange={handleNewsletterChange}
-          control={<Checkbox icon={<CircleUnchecked />} checkedIcon={<CircleChecked />} classes={{ root: classes.checkbox }} />}
+          control={<Checkbox icon={<CircleUnchecked style={{fill:'white', backgroundColor:'white'}} />} checkedIcon={<CircleIcon  style={{color:'#2DC653', backgroundColor:'white', padding:'5px'}}/>} classes={{ root: classes.checkbox }} />}
           label={<span style={{
             fontSize:'1.04vw',
             fontFamily:'Dinproregular',

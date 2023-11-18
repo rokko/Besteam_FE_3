@@ -31,15 +31,26 @@ const SelectBoxCustom = ({list,role,setNationality,nationality}) => {
         id="select"
         value={nationality}
         color='primary'
+        sx={{
+          border:'0.75px solid #2DC653!important' ,
+          width: '25.85vw',
+          height: '1.727vw',
+          fontFamily: 'DIN-Pro',
+          color:'#7C7C7C',
+          textAlign:'center',
+          fontSize: '1.05vw',
+          padding:'0px'
+        
+        }}
         onChange={handleChange}
         renderValue={(nationality) => `${nationality}`}
         >
-          <ListSubheader ref={menuRef}>
+          <ListSubheader sx={{ backgroundColor: 'white', padding:'0px' }} style={{backgroundColor:'white', height:'8.5vw'}} id="elementi-label" ref={menuRef}>
 
         {
             list.map((item)=>{
                 return(
-                <MenuItem  onClick={()=>cambiaValore(item)} value={item}>{item}</MenuItem>
+                <MenuItem  sx={{ backgroundColor: 'white' }} onClick={()=>cambiaValore(item)} value={item}>{item}</MenuItem>
                 )
                 
             })

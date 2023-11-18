@@ -285,19 +285,19 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
         <CustomRadioGroup prima={Xbox} seconda={PC} terza={PS} terzovalore={'PS'} secondovalore={'PC'} primovalore={'XB'} platform={platform} setPlatform={setPlatform}/>
        
         </div>
-        <div style={{display:'flex', flexDirection:'row', justifyContent:'center', gap:'3rem'}}>
+        <div style={{display:'flex', flexDirection:'row', justifyContent:'center', gap:'2.5rem'}}>
           <div>
-          <TestoIscrizione>First Role?*</TestoIscrizione>
+          <TestoIscrizione style={{marginBottom:'0.5vw'}}>First Role?*</TestoIscrizione>
           <SelectBoxCustom list={role_list} role={true} setNationality={setFirstRole} nationality={firstRole}></SelectBoxCustom>
           </div>
           <div>
-            <TestoIscrizione>Second Role?*</TestoIscrizione>
+            <TestoIscrizione style={{marginBottom:'0.5vw'}}>Second Role?*</TestoIscrizione>
             <SelectBoxCustom list={role_list} role={true} setNationality={setSecondRole} nationality={secondRole}></SelectBoxCustom>
 
           </div>
         </div>
         
-        <ButtonIscrizione onClick={()=>{vaiUltimoStep()}}>SEND</ButtonIscrizione>
+        <ButtonIscrizione style={{marginTop:'1vw'}} onClick={()=>{vaiUltimoStep()}}>SEND</ButtonIscrizione>
         <Mandatory style={{fontStyle:'italic', marginTop:'-2vh'}}>*MANDATORY FIELD </Mandatory>
       
 

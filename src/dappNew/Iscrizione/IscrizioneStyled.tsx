@@ -17,8 +17,6 @@ const InputIscrizione = styled.input`
   border: 0.75px solid #2DC653;
   width: 25.85vw;
   height: 1.727vw;
-  border: none;
-  border : 1px solid green;
   font-family: 'DIN-Pro';
   color:#7C7C7C;
   text-align:center;

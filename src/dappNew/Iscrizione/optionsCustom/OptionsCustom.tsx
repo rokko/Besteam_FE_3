@@ -1,7 +1,9 @@
 import React from 'react'
 import { Radio, RadioGroup, FormControlLabel, Typography } from '@mui/material';
 import { pink } from '@mui/material/colors';
+import CircleIcon from '@mui/icons-material/Circle';
 
+import CircleUnchecked from "@material-ui/icons/RadioButtonUnchecked";
 
 
 const CustomRadioGroup = ({prima,seconda,terza,primovalore,secondovalore,terzovalore, platform,setPlatform}) => {
@@ -16,27 +18,34 @@ const CustomRadioGroup = ({prima,seconda,terza,primovalore,secondovalore,terzova
   };
 
   return (
-    <div>
+    <div style={{display:'flex', alignContent:'center', alignItems:'center', justifyContent:'center', flexDirection:'column', width:'100%'}} >
      
       <RadioGroup
         name="customRadioGroup"
         value={platform}
-        style={{justifyContent:'center', gap:'1rem'}}
+        style={{flexDirection:'row',justifyContent:'center', margin:'0px',justifyItems:'space-around',marginTop:'0.3vw',display:'flex', gap:'4rem'}}
         onChange={handleChange}
-        row
+        
       >
         {options.map((option) => (
           <FormControlLabel
+         
+          
             key={option.value}
             value={option.value}
             
-            control={<Radio   sx={{ 
+            control={<Radio
+              icon={<CircleUnchecked style={{color:'white',fill:'white', backgroundColor:'white', padding:'0px', borderRadius:'50px', border:'none'}}/>}
+              checkedIcon={<CircleIcon  style={{color:'#2DC653', backgroundColor:'white', padding:'0px', borderRadius:'50px'}}/>}
+               sx={{ 
               fontSize:40,
+              width:32,
+              height:32,
               backgroundColor:'white',
               color:'white',
               border:'none'
               ,
-              '&.Mui-checked': {
+              '&.Mui-checked:hover': {
                 border:'white',
                 color: '#2DC653',
                 backgroundColor:'white'
@@ -46,7 +55,7 @@ const CustomRadioGroup = ({prima,seconda,terza,primovalore,secondovalore,terzova
                 <img
                   src={option.image}
                   alt={option.value}
-                  style={{ marginRight: '8px', width: '100.15px', height: '45.15px' }}
+                  style={{  width: '100.15px', height: '45.15px' , marginLeft:'-2vw'}}
                 />
                 
               </div>

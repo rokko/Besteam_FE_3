@@ -259,7 +259,7 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
         />
         </div>
         <ButtonIscrizione onClick={()=>{vaiASecondoStep()}}>NEXT</ButtonIscrizione>
-        <Mandatory style={{fontStyle:'italic', marginTop:'-3vh'}}>*MANDATORY FIELD </Mandatory>
+        <Mandatory style={{fontStyle:'italic', marginTop:'-2vh'}}>*MANDATORY FIELD </Mandatory>
       
 
       </FormIscrizione>
@@ -279,8 +279,9 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
           <TestoIscrizione>PLATFORM ACCOUNT*</TestoIscrizione>
           <InputIscrizione type='text' value={platformAccount} id='platformAccount' onChange={handlePlatformAccountChange}/>
         </div>
-        <div>
+        <div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignContent:'center', alignItems:'center'}}>
           <TestoIscrizione>PLATFORM*</TestoIscrizione>
+          
         <CustomRadioGroup prima={Xbox} seconda={PC} terza={PS} terzovalore={'PS'} secondovalore={'PC'} primovalore={'XB'} platform={platform} setPlatform={setPlatform}/>
        
         </div>
@@ -297,7 +298,7 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
         </div>
         
         <ButtonIscrizione onClick={()=>{vaiUltimoStep()}}>SEND</ButtonIscrizione>
-        <Mandatory style={{fontStyle:'italic', marginTop:'-3vh'}}>*MANDATORY FIELD </Mandatory>
+        <Mandatory style={{fontStyle:'italic', marginTop:'-2vh'}}>*MANDATORY FIELD </Mandatory>
       
 
       </FormIscrizione>
@@ -313,7 +314,7 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
     onChange={(e) => setAvatar(e.target.value)}
     style={{display:'flex', flexDirection:'row', color:'white', fontSize:'30px', fontFamily:'DinPROBold', fontWeight:'bold'}}
   >
-    <FormControlLabel value="uomo" control={<Radio />} label="Uomo" />
+    <FormControlLabel value="uomo" control={<Radio />}  label="Uomo" />
     <FormControlLabel value="donna" control={<Radio />} label="Donna" />
   </RadioGroup>
 </FormControl>

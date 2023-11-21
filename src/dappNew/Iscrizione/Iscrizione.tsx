@@ -1,5 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "../general/general";
+import Slider from 'react-slick';
+
 import {
   ButtonIscrizione,
   FormIscrizione,
@@ -15,6 +17,9 @@ interface CheckboxProps {
     label: string;
   };
 }
+
+import uomo from '../media/uomo.jpg'
+import donna from '../media/donna.jpg'
 import CircleIcon from '@mui/icons-material/Circle';
 import PC from '../media/pc.png'
 import PS from '../media/ps.png'
@@ -51,6 +56,21 @@ const useStyles  =makeStyles({
 const Iscrizione = () => {
 
 
+  const handleChange = (index) => {
+    setCurrentSlide(index);
+  };
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const images = [uomo, donna];
+
+  const nextSlide = () => {
+    setCurrentSlide((currentSlide + 1) % images.length);
+  };
+
+  const previousSlide = () => {
+    setCurrentSlide((currentSlide - 1 + images.length) % images.length);
+  };
+
+
   const { account } = useWeb3React();
   const [avatar, setAvatar] = React.useState('')
   const [firstForm, setFirstForm]=React.useState(true)
@@ -82,7 +102,13 @@ const Iscrizione = () => {
     
   }
 
-
+  const handleMouseEnter = (event) => {
+    event.target.style.transform = 'scale(1.2)';
+  };
+  
+  const handleMouseLeave = (event) => {
+    event.target.style.transform = 'scale(1)';
+  };
   const registrati = () => {
     if(avatar==''){
       console.log('ERRORE')
@@ -103,7 +129,19 @@ const Iscrizione = () => {
         avatarImg: avatar
 
       }
-      axios.post('http://localhost:3001/register', request).then((x)=>{
+
+      fetch('http://41581f56-cccf-431e-8174-021113cddd2d.pub.instances.scw.cloud:8000/user/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(request),
+      }).then((response) => response.json()).then((data) => {
+        console.log('Success:', data);
+      }).catch((error) => {
+        console.error('Error:', error);
+      });
+      axios.post('http://51.158.103.51:8000/user/register', request).then((x)=>{
         if( !!x ){
 
           console.log('REGISTRAZIONE EFFETTUATA')
@@ -307,6 +345,10 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
 <div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'100%', height:'100%', gap:'1.5rem', marginTop:'2rem'}}>
   <p style={{fontSize:'33px', color:'white', fontFamily:'DinPROBold'}}>CHOOSE YOUR AVATAR</p>
   <FormControl component="fieldset">
+    <div style={{display:'flex', flexDirection:'row', gap:'4rem'}}>
+ <img src={uomo} style={{height:'400px', transition: 'transform 0.3s'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
+ <img src={donna} style={{height:'400px', transition: 'transform 0.3s'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
+ </div>
   <RadioGroup
     aria-label="gender"
     name="gender"

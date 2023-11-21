@@ -26,6 +26,7 @@ const SelectBoxCustom = ({list,role,setNationality,nationality}) => {
     return(
     <FormControl >
       <Select
+      
         style={{ width:role? '11.967vw': '25.85vw', height:'1.727vw',backgroundColor:'white',border :'1px solid green', borderRadius:'0px'}}
         labelId="search-select-label"
         id="select"
@@ -39,7 +40,10 @@ const SelectBoxCustom = ({list,role,setNationality,nationality}) => {
           color:'#7C7C7C',
           textAlign:'center',
           fontSize: '1.05vw',
-          padding:'0px'
+          padding:'0px',
+          '.MuiList-root.MuiList-padding': {
+            padding: 0 /* Set the padding to 0 or your desired value */
+          }
         
         }}
         onChange={handleChange}
@@ -56,7 +60,8 @@ const SelectBoxCustom = ({list,role,setNationality,nationality}) => {
                   color:'#7C7C7C',
                   textAlign:'center',
                   fontSize: '0.90vw',
-                  padding:'0px'
+                  padding:'0px',
+                  
                 
                 }} onClick={()=>cambiaValore(item)} value={item}>{item}</MenuItem>
                 )

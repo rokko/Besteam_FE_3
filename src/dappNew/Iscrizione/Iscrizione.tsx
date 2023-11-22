@@ -109,7 +109,8 @@ const Iscrizione = () => {
   const handleMouseLeave = (event) => {
     event.target.style.transform = 'scale(1)';
   };
-  const registrati = () => {
+  const registrati = (event) => {
+    event.preventDefault()
     if(avatar==''){
       console.log('ERRORE')
     }
@@ -130,27 +131,13 @@ const Iscrizione = () => {
 
       }
 
-      fetch('http://41581f56-cccf-431e-8174-021113cddd2d.pub.instances.scw.cloud:8000/user/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(request),
-      }).then((response) => response.json()).then((data) => {
+      axios.post('http://51.158.103.51:8080/user/register', request
+      ).then((response) => console.log(response)).then((data) => {
         console.log('Success:', data);
       }).catch((error) => {
         console.error('Error:', error);
       });
-      axios.post('http://51.158.103.51:8000/user/register', request).then((x)=>{
-        if( !!x ){
-
-          console.log('REGISTRAZIONE EFFETTUATA')
-
-        }else{
-          console.error('ERRORE')
-          console.log(x)
-        }
-      })
+     
     }
   }
   const handleEmailChange = (event) => {
@@ -360,7 +347,7 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
     <FormControlLabel value="donna" control={<Radio />} label="Donna" />
   </RadioGroup>
 </FormControl>
-  <div onClick={()=>{registrati()}} style={{width:'13.18vw', display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center',height:'2.60vw', background:' #2DC653 0% 0% no-repeat padding-box'}}>
+  <div onClick={(event)=>{registrati(event)}} style={{width:'13.18vw', display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center',height:'2.60vw', background:' #2DC653 0% 0% no-repeat padding-box'}}>
     <p style={{fontSize:'2.08vw', fontFamily:'DinPROBlack2', color:'white'}}>CREATE</p>
   </div>
   <p style={{ fontSize: '1.6vw', fontFamily:'DinLightItalic', color: '#ffffff',fontStyle:'italic'}}>

@@ -2565,7 +2565,7 @@ Mattia Meo  </TestoNome>
                     margin: 0,
                   }}
                 >
-                Giuseppe Albertini
+                JEP
                 </p>
                 <p
                   style={{
@@ -2621,7 +2621,7 @@ Mattia Meo  </TestoNome>
                     margin: 0,
                   }}
                 >
-                 Emanuele Paparella
+                 Emax
                 </p>
                 <p
                   style={{

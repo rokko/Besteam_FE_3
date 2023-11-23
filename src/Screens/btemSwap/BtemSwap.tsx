@@ -5,6 +5,7 @@ import { BoxDescrizione } from "./boxDescrizione";
 import { BoxIscrizione } from "./boxIscrizione";
 import freccia2 from "../../components/video/freccia2.png";
 import LoginSwap from "./loginSwap/LoginSwap";
+import { useMediaQuery } from "react-responsive";
 
 const BtemSwap = () => {
   const [attivo, setAttivo] = useState(false);
@@ -39,9 +40,11 @@ const BtemSwap = () => {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
+
+  const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
   return (
     <>
-      <LoginSwap />
+    { isMobile ? ( <p style={{color:'white', fontWeight:'bold', fontSize:'30px'}}> Only from Desktop </p>) : ( <LoginSwap />)}
     </>
   );
 };

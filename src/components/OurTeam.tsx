@@ -416,7 +416,7 @@ Rocco Caricola  </TestoNome>
 <BoxImageTeam > 
   <img src={eduardo} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
-  <TestoNome style={{fontSize:'1.3vw'}}>
+  <TestoNome >
   Francesco D'Urso
     </TestoNome>
   <br/>
@@ -434,7 +434,7 @@ Rocco Caricola  </TestoNome>
 <BoxImageTeam> 
   <img src={giuseppe}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
-  <TestoNome style={{fontSize:'1.3vw'}}>
+  <TestoNome >
   Giuseppe Albertini
   </TestoNome>
   <br/>
@@ -452,7 +452,7 @@ Rocco Caricola  </TestoNome>
 <BoxImageTeam> 
   <img src={emanuele}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
-  <TestoNome style={{fontSize:'1.3vw'}}>
+  <TestoNome >
       Emanuele Paparella
   </TestoNome>
   <br/>
@@ -470,7 +470,7 @@ Rocco Caricola  </TestoNome>
 <BoxImageTeam> 
   <img src={vinenzo} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
-  <TestoNome style={{fontSize:'1.3vw'}}>
+  <TestoNome >
   Vincenzo Lupo Cosimo  </TestoNome>
   <br/>
   <TestoRuolo>Esport Supervisor</TestoRuolo>
@@ -2835,7 +2835,7 @@ Mattia Meo          </p>
               }}
             >
               <img
-                src={aranc}
+                src={verde}
                 alt="verde"
                 style={{ width: "7vw", height: "7vw" }}
               />
@@ -2849,7 +2849,7 @@ Mattia Meo          </p>
                     margin: 0,
                   }}
                 >
-          </p>
+Alessio Di Iorio         </p>
                 <p
                   style={{
                     fontFamily: "DINProCondBold",
@@ -2859,7 +2859,7 @@ Mattia Meo          </p>
                     margin: 0,
                   }}
                 >
-                  We Want You
+                  Game Developer
                 </p>
                 <p
                   style={{
@@ -2870,9 +2870,15 @@ Mattia Meo          </p>
                     margin: 0,
                   }}
                 >
-                 
+                  <a
+                    href="https://www.linkedin.com/in/di-iorio-alessio/"
+                    target="_blank"
+                  >
+                    Linkedin
+                  </a>
                 </p>
               </div>
+              
             </div>
          
           </div>

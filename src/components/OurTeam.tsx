@@ -27,6 +27,7 @@ import aminul from '../components/video/immaginiOurTeam/Card Aminul.webp'
 import giacomo from '../components/video/immaginiOurTeam/Card Giacomo.webp'
 import mauro from '../components/video/immaginiOurTeam/Card Mauro.webp'
 import gaetano from '../components/video/immaginiOurTeam/Card Gaetano.webp'
+import ale from '../components/video/ale.webp'
 import giuseppe from '../components/video/immaginiOurTeam/Card Giuseppe.webp'
 import emanuele from '../components/video/immaginiOurTeam/Card Emanuele.webp'
 import vinenzo from '../components/video/immaginiOurTeam/Cad Enzo.webp'
@@ -396,15 +397,15 @@ Rocco Caricola  </TestoNome>
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={mauro}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
+  <img src={eduardo}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
   <BoxInfoTeam>
   <TestoNome>
-  Mauro Gampieri
+  Filippo Vetro
   </TestoNome>
-  <TestoRuolo>Game Developer</TestoRuolo>
+  <TestoRuolo>Character designer</TestoRuolo>
   <TestoLink>  
                     <a
-                      href="https://www.linkedin.com/in/maurogiampieri/"
+                      href="http://linkedin.com/in/filippovetro3d"
                       target="_blank"
                     >
                       Linkedin
@@ -413,16 +414,16 @@ Rocco Caricola  </TestoNome>
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam > 
-  <img src={gaetano} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
+  <img src={eduardo} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
   <TestoNome style={{fontSize:'1.3vw'}}>
-     Gaetano De Pasquale
-  </TestoNome>
+  Francesco D'Urso
+    </TestoNome>
   <br/>
-  <TestoRuolo>Game Developer</TestoRuolo>
+  <TestoRuolo>Character designer</TestoRuolo>
   <TestoLink>  
                     <a
-                      href="https://www.linkedin.com/in/gaetano-de-pasquale/"
+                      href="https://www.linkedin.com/in/francesco-d-urso-686035235/"
                       target="_blank"
                     >
                       Linkedin
@@ -510,6 +511,23 @@ Mattia Meo  </TestoNome>
     </TestoLink>
   </BoxInfoTeam>
 </BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={ale}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
+  <BoxInfoTeam>
+  <TestoNome>
+  Alessio Di Iorio </TestoNome>
+  <TestoRuolo>Game Developer</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/di-iorio-alessio/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+
 
 
 
@@ -2252,7 +2270,7 @@ Mattia Meo  </TestoNome>
                     margin: 0,
                   }}
                 >
-                  Mauro Giampieri
+                  Filippo Vetro
                 </p>
                 <p
                   style={{
@@ -2263,7 +2281,7 @@ Mattia Meo  </TestoNome>
                     margin: 0,
                   }}
                 >
-                  Game Developer
+                 Character designer
                 </p>
                 <p
                   style={{
@@ -2275,7 +2293,7 @@ Mattia Meo  </TestoNome>
                   }}
                 >
                   <a
-                    href="https://www.linkedin.com/in/maurogiampieri/"
+                    href="http://linkedin.com/in/filippovetro3d"
                     target="_blank"
                   >
                     Linkedin
@@ -2307,8 +2325,7 @@ Mattia Meo  </TestoNome>
                     textAlign: "left",
                     margin: 0,
                   }}
-                >
-                 Gaetano De Pasquale
+                >Francesco D'Urso
                 </p>
                 <p
                   style={{
@@ -2319,7 +2336,7 @@ Mattia Meo  </TestoNome>
                     margin: 0,
                   }}
                 >
-                  Game Developer
+                Character Designer
                 </p>
                 <p
                   style={{
@@ -2331,7 +2348,7 @@ Mattia Meo  </TestoNome>
                   }}
                 >
                   <a
-                    href="https://www.linkedin.com/in/gaetano-de-pasquale/"
+                    href="https://www.linkedin.com/in/francesco-d-urso-686035235/"
                     target="_blank"
                   >
                     Linkedin

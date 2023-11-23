@@ -29,6 +29,8 @@ const BoxDescrizione = () => {
   useEffect(() => {
     console.log(contract);
     console.log(account);
+
+    
     if (!!account) {
       getCodeAsync();
     }
@@ -37,6 +39,7 @@ const BoxDescrizione = () => {
   const getCodeAsync = async () => {
     let address = account;
     let x = await contract.methods.getCodeByAddr(address).call();
+    console.log(x);
     setRefCodeNew(x);
   };
   return (

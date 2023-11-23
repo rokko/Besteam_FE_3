@@ -2281,7 +2281,7 @@ Mattia Meo  </TestoNome>
                     margin: 0,
                   }}
                 >
-                 Character designer
+                 Character
                 </p>
                 <p
                   style={{
@@ -2336,7 +2336,7 @@ Mattia Meo  </TestoNome>
                     margin: 0,
                   }}
                 >
-                Character Designer
+                Character
                 </p>
                 <p
                   style={{
@@ -2672,12 +2672,12 @@ Mattia Meo  </TestoNome>
                   style={{
                     fontFamily: "DINProCondBold",
                     color: "white",
-                    fontSize: "2.1vw",
+                    fontSize: "2.5vw",
                     textAlign: "left",
                     margin: 0,
                   }}
                 >
-Vincenzo Lupo Cosimo
+Vincenzo Lupo
 
 </p>
                 <p

@@ -312,7 +312,7 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
         </div>
         <div style={{display:'flex', flexDirection:'row', justifyContent:'center', gap:'2.5rem'}}>
           <div>
-          <TestoIscrizione style={{marginBottom:'0.5vw'}}>First Role?*</TestoIscrizione>
+          <TestoIscrizione style={{marginBottom:'0.5vw'}}>First Role?* </TestoIscrizione>
           <SelectBoxCustom list={role_list} role={true} setNationality={setFirstRole} nationality={firstRole}></SelectBoxCustom>
           </div>
           <div>

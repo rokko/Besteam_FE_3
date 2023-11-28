@@ -98,7 +98,7 @@ const HeaderBar = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           {/*<Route path="/ico" element={<Preico />} />*/}
-          {/*<Route path="/dapp" element={<Iscrizione />} />*/}
+          <Route path="/dapp" element={<Iscrizione />} />
           <Route path="/sesso" element={<Sesso />} />
           <Route path="/creazioneclub" element={<CreazioneClub />} />
           <Route path="/home" element={<Home />} />

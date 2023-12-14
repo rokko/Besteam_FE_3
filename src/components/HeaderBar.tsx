@@ -103,6 +103,7 @@ const HeaderBar = () => {
           <Route path="/creazioneclub" element={<CreazioneClub />} />
           <Route path="/home" element={<Home />} />
           <Route path="/supportus" element={<BtemSwap />} />
+          <Route path="/dapp/creaclub" element={<CreazioneClub />} />
         </Routes>
       </Router>
     </>

@@ -14,5 +14,12 @@ const Container = styled.div`
 `;
 
 
+const HeaderDapp = styled.div`
+  width: 100%;
+  height:5.208vw;
+  `
 
-export { Container };
+
+
+
+export { Container , HeaderDapp};

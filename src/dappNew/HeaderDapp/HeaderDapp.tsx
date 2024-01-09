@@ -1,10 +1,27 @@
 import React from "react";
-import { HeaderContainerDapp } from "./HeaderDappStyled";
+import { ButtonConnessioneDapp, HeaderContainerDapp } from "./HeaderDappStyled";
+import { TestoButton } from "../../Screens/btemSwap/boxIscrizione/BoxIscrizioneStyled";
 
 const HeaderDapp = () => {
   return (
     <>
-      <HeaderContainerDapp></HeaderContainerDapp>
+      <HeaderContainerDapp>
+        <ButtonConnessioneDapp>
+      <TestoButton style={{ fontFamily: "DinPRONormale" }}>
+            METAVERSE
+          </TestoButton>
+          </ButtonConnessioneDapp>
+          <ButtonConnessioneDapp>
+      <TestoButton style={{ fontFamily: "DinPRONormale" }}>
+            NFT
+          </TestoButton>
+          </ButtonConnessioneDapp>
+          <p>EVENTS</p>
+          <p>MARKET</p>
+          <p>TEAM</p>
+          <p>PLAYER</p>
+          
+      </HeaderContainerDapp>
     </>
   );
 };

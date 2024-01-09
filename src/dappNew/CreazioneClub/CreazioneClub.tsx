@@ -13,6 +13,12 @@ import {
 } from "./CreazioneClubStyled";
 import { Height } from "@material-ui/icons";
 import axios from "axios";
+import HeaderBar from "../../components/HeaderBar";
+import { HeaderContainerDapp } from "../HeaderDapp/HeaderDappStyled";
+import createTeam from '../media/createTeam.jpg'
+import joinTeam from '../media/joinTeam.jpg'
+import { HeaderDapp } from "../HeaderDapp";
+import { LeftMenu } from "../LeftMenu";
 
 const CreazioneClub = () => {
   const [name,setName]=useState("")
@@ -26,10 +32,13 @@ const CreazioneClub = () => {
   const [trainingCenterName, setTrainingCenterName]=useState("")
   const [stadiumName, setStadiumName]=useState("")
   const [metaverseZone, setMetaverseZone]=useState("")
+  const [start,setStart] = useState(false)
+
 
 
   const createam = () => {
-    axios.post('http://51.158.103.51:8080/club/create', {
+    
+    axios.post('http://localhost:8080/team/create', {
       name:name,
       twitterPage:twitterPage,
       clubsName:clubsName,
@@ -45,13 +54,23 @@ const CreazioneClub = () => {
     {
       headers: {
        
-        'Token': 'Bearer your_token_here'
+        'bt-auth-token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyV2FsbGV0Q29kZSI6ImNjY2NjY2MiLCJ1c2VyUm9sZSI6Ik1BTkFHRVIiLCJleHAiOjE3MDI2NTkzOTgsInVzZXJJZCI6MTQsInVzZXJuYW1lIjoiYXNkc2FkIn0.NqlY9MGM_dFkrzkWJhHHnooU0_TcibrdTQH5wq24Two'
       }
   })
 }
-  return (
+
+  if (!!start) return (
     <Container >
+      
       <CreazioneClubForm style={{backgroundColor:'#dfe5e1'}}>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+
         <div>
           <TestoIscrizione>*NOME TEAM</TestoIscrizione>
 
@@ -116,6 +135,21 @@ const CreazioneClub = () => {
       </CreazioneClubForm>
     </Container>
   );
+  else return(
+    <>
+    <HeaderDapp/>
+    <LeftMenu/>
+ <div style={{background:'grey', height:'100vh', justifyContent:'center', alignItems:'center', alignContent:'center', marginLeft:'8.250vw'}}>
+    <div style={{display:'flex', flexDirection:'row', gap:'3rem',marginTop:'5.208vw'}}>
+      <div onClick={()=>setStart(true)} style={{width:'42.708vw', height:'44.271vw',backgroundImage:`url(${createTeam})`, backgroundSize:'contain'}}>
+      </div>
+      <div style={{width:'42.708vw', height:'44.271vw', backgroundImage:`url(${joinTeam})`, backgroundSize:'contain'}}>
+        
+        </div>
+    </div>
+    </div>
+    </>
+  )
 };
 
 export default CreazioneClub;

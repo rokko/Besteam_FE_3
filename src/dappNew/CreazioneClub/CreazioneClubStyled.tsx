@@ -34,4 +34,5 @@ const InputClub = styled.input`
   height: 30px;
   border: none;
 `;
+
 export { CreazioneClubForm, InputClub, ButtonLogo };

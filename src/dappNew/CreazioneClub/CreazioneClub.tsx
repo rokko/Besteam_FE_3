@@ -61,6 +61,8 @@ const CreazioneClub = () => {
 
   if (!!start) return (
     <Container >
+      <HeaderDapp/>
+    <LeftMenu/>
       
       <CreazioneClubForm style={{backgroundColor:'#dfe5e1'}}>
         <br></br>
@@ -139,13 +141,14 @@ const CreazioneClub = () => {
     <>
     <HeaderDapp/>
     <LeftMenu/>
- <div style={{background:'grey', height:'100vh', justifyContent:'center', alignItems:'center', alignContent:'center', marginLeft:'8.250vw'}}>
+    <div style={{background:'grey', height:'100vh', justifyContent:'center', alignItems:'center', alignContent:'center', marginLeft:'8.250vw'}}>
     <div style={{display:'flex', flexDirection:'row', gap:'3rem',marginTop:'5.208vw'}}>
-      <div onClick={()=>setStart(true)} style={{width:'42.708vw', height:'44.271vw',backgroundImage:`url(${createTeam})`, backgroundSize:'contain'}}>
-      </div>
-      <div style={{width:'42.708vw', height:'44.271vw', backgroundImage:`url(${joinTeam})`, backgroundSize:'contain'}}>
+    <div style={{width:'42.708vw', height:'44.271vw', backgroundImage:`url(${joinTeam})`, backgroundSize:'contain'}}>
         
         </div>
+      <div onClick={()=>setStart(true)} style={{width:'42.708vw', height:'44.271vw',backgroundImage:`url(${createTeam})`, backgroundSize:'contain'}}>
+      </div>
+     
     </div>
     </div>
     </>

@@ -35,6 +35,8 @@ const CreazioneClub = () => {
   const [start,setStart] = useState(false)
 
 
+  const testoRicerca = styled.p`
+  `
 
   const createam = () => {
     
@@ -60,11 +62,50 @@ const CreazioneClub = () => {
 }
 
   if (!!start) return (
-    <Container >
+    < >
       <HeaderDapp/>
-    <LeftMenu/>
+      <LeftMenu/>
+
+      <div style={{width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-around', marginLeft:'3vw', marginTop:'6vw', backgroundColor:'grey'}}>
+        <div style={{width:'42.708vw' , height:'44.271vw',display:'flex', flexDirection:'column' ,backgroundColor:'#141414'}}>
+          <p>Logo</p>
+          <p>Shape</p>
+          <p>Main color</p>
+          <p>Secondary color</p>
+
+        </div>
+        <div style={{width:'42.708vw' , height:'44.271vw',display:'flex', flexDirection:'column',backgroundColor:'#141414'}}>
+
+        </div>
+      </div>
       
-      <CreazioneClubForm style={{backgroundColor:'#dfe5e1'}}>
+     
+    </>
+  );
+  else return(
+    <>
+    <HeaderDapp/>
+    <LeftMenu/>
+    <div style={{background:'grey', height:'100vh', justifyContent:'center', alignItems:'center', alignContent:'center', marginLeft:'8.250vw'}}>
+    <div style={{display:'flex', flexDirection:'row', gap:'3rem',marginTop:'5.208vw'}}>
+    <div style={{width:'42.708vw', height:'44.271vw', backgroundImage:`url(${joinTeam})`, backgroundSize:'contain'}}>
+        
+        </div>
+      <div onClick={()=>setStart(true)} style={{width:'42.708vw', height:'44.271vw',backgroundImage:`url(${createTeam})`, backgroundSize:'contain'}}>
+      </div>
+     
+    </div>
+    </div>
+    </>
+  )
+};
+
+export default CreazioneClub;
+
+
+
+/*
+ <CreazioneClubForm style={{backgroundColor:'#dfe5e1'}}>
         <br></br>
         <br></br>
         <br></br>
@@ -134,25 +175,4 @@ const CreazioneClub = () => {
 
           <ButtonIscrizione onClick={()=>{createam()}}>AVANTI</ButtonIscrizione>
         </div>
-      </CreazioneClubForm>
-    </Container>
-  );
-  else return(
-    <>
-    <HeaderDapp/>
-    <LeftMenu/>
-    <div style={{background:'grey', height:'100vh', justifyContent:'center', alignItems:'center', alignContent:'center', marginLeft:'8.250vw'}}>
-    <div style={{display:'flex', flexDirection:'row', gap:'3rem',marginTop:'5.208vw'}}>
-    <div style={{width:'42.708vw', height:'44.271vw', backgroundImage:`url(${joinTeam})`, backgroundSize:'contain'}}>
-        
-        </div>
-      <div onClick={()=>setStart(true)} style={{width:'42.708vw', height:'44.271vw',backgroundImage:`url(${createTeam})`, backgroundSize:'contain'}}>
-      </div>
-     
-    </div>
-    </div>
-    </>
-  )
-};
-
-export default CreazioneClub;
+      </CreazioneClubForm>*/

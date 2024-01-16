@@ -35,8 +35,7 @@ const CreazioneClub = () => {
   const [start,setStart] = useState(false)
 
 
-  const testoRicerca = styled.p`
-  `
+
 
   const createam = () => {
     

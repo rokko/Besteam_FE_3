@@ -8,7 +8,6 @@ const LeftMenuContainer = styled.div`
   position: fixed;
   left: 0;
   display:flex;
-  flex-direction:column-reverse;
-  gap:1rem;
+  flex-direction:column;
 `;
 export { LeftMenuContainer };

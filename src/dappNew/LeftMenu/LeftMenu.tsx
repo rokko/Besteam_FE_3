@@ -1,14 +1,32 @@
 import React from "react";
 import { LeftMenuContainer } from "./LeftMenuStyled";
 import iconaNotifica from './iconaNotifica.png'
+import locker from './locker.png'
+import btem from './btem.png'
+import matic from './matic.png'
+import settings from './settings.png'
+import exit from './exit.png'
 const LeftMenu = () => {
   return (
   <LeftMenuContainer>
-    <div>
-      <div style={{}}>
-      </div>
-      <p></p>
+      <div style={{position:'absolute',top:'5vw',}}>
+     
+     <p>Back</p>
+     </div>
+    <div style={{width:'100%',position:'absolute',bottom:'8vw',display:'flex', flexDirection:'column',gap:'2rem', alignContent:'center', alignItems:'center',justifyContent:'center'}}>
+    
+    
+    
+    <img style={{width:'2.552vw', height:'1.771vw'}}src={iconaNotifica} alt='iconaNotifica' />
+    <img style={{width: '2.604vw', height: '3.125vw'}} src={locker} alt='locker' />
+    <img  style={{width: '2.083vw', height: '2.083vw'}} src={btem} alt='locker' />
+    <img  style={{width: '2.083vw', height: '2.083vw'}} src={matic} alt='locker' />
+    <img style={{width: '2.083vw', height: '2.083vw'}} src={settings} alt="settings" />
+    <img style={{width: '2.39vw', height: '2.39vw'}} src={exit} alt="exit" />
     </div>
+
+
+
     
            
   </LeftMenuContainer>)

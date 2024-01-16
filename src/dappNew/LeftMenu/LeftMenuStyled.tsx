@@ -9,5 +9,6 @@ const LeftMenuContainer = styled.div`
   left: 0;
   display:flex;
   flex-direction:column;
+  
 `;
 export { LeftMenuContainer };

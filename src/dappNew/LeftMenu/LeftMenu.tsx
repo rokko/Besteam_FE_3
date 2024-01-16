@@ -6,18 +6,18 @@ import btem from './btem.png'
 import matic from './matic.png'
 import settings from './settings.png'
 import exit from './exit.png'
+import back from './back.png'
 const LeftMenu = () => {
   return (
   <LeftMenuContainer>
-      <div style={{position:'absolute',top:'5vw',}}>
-     
-     <p>Back</p>
-     </div>
+    <div style={{width:'100%',position:'absolute',top:'3vw',display:'flex', flexDirection:'column',alignContent:'center', alignItems:'center',justifyContent:'center'}}>
+    <img src={back} alt='back' style={{ width:'3.385vw'}}/>
+    </div>
     <div style={{width:'100%',position:'absolute',bottom:'8vw',display:'flex', flexDirection:'column',gap:'2rem', alignContent:'center', alignItems:'center',justifyContent:'center'}}>
     
     
     
-    <img style={{width:'2.552vw', height:'1.771vw'}}src={iconaNotifica} alt='iconaNotifica' />
+    <img style={{width:'2.552vw', height:'2.052vw'}}src={iconaNotifica} alt='iconaNotifica' />
     <img style={{width: '2.604vw', height: '3.125vw'}} src={locker} alt='locker' />
     <img  style={{width: '2.083vw', height: '2.083vw'}} src={btem} alt='locker' />
     <img  style={{width: '2.083vw', height: '2.083vw'}} src={matic} alt='locker' />

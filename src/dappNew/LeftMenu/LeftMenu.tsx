@@ -4,7 +4,21 @@ import iconaNotifica from './iconaNotifica.png'
 const LeftMenu = () => {
   return (
   <LeftMenuContainer>
-            <img
+    <div>
+      <div style={{}}>
+      </div>
+      <p></p>
+    </div>
+    
+           
+  </LeftMenuContainer>)
+};
+
+export default LeftMenu;
+
+
+/*
+ <img
             style={{width: '2.29vw', height: '2.39vw'}}
               alt="Simbolo exit"
               src="https://cdn.animaapp.com/projects/65a160879aa2a391615fe61e/releases/65a163c8b74d79d9e9bb466d/img/simbolo-exit@1x.png"
@@ -65,17 +79,8 @@ const LeftMenu = () => {
             </div>
             <div className="simbolo-NOTIFICHE">
               <div className="overlap-3">
-                <div className="simbolo-fischietto">
-                  <div className="overlap-group-4">
-                    <img style={{width: '2.545vw', height: '3.0vw'}} src={iconaNotifica} alt="Icona notifica" />
-                    <div className="ellisse" />
-                  </div>
-                </div>
+               
                 
               </div>
               <div className="text-wrapper-8">DM</div>
-            </div>
-  </LeftMenuContainer>)
-};
-
-export default LeftMenu;
+            </div>*/

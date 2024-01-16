@@ -9,8 +9,8 @@ const HeaderDapp = () => {
       <HeaderContainerDapp>
             
       
-              <img src={logoBe} alt={'logoBe'} style={{width:'2.823vw', height:'2.823vw', alignContent:'center', justifyContent:'center',alignItems:'center'}} />
-              <div style={{display:'flex', gap:'2rem',fontSize:'1.823vw', fontFamily:'Bonn', color:'white'}} className="testi-bottoni">
+              <img src={logoBe} alt={'logoBe'} style={{width:'5.823vw', height:'4.823vw', alignContent:'center', justifyContent:'center',alignItems:'center',position:'fixed',left:'0vw'}} />
+              <div style={{display:'flex', gap:'4rem',fontSize:'1.823vw', fontFamily:'Bonn', color:'white', position:'fixed',right:'2vw',justifyContent:'center',alignContent:'center',alignItems:'center'}} className="testi-bottoni">
                 <div style={{backgroundColor:'#2DC653', width:'12.5vw', height:'2.94vw', display:'flex',justifyContent:'center', alignContent:'center',alignItems:'center'}}>
                 <div className="text-wrapper-11">METAVERSE</div>
                 </div>

@@ -7,9 +7,13 @@ import matic from './matic.png'
 import settings from './settings.png'
 import exit from './exit.png'
 import back from './back.png'
+import laterale from '../media/laterale.jpg'
 const LeftMenu = () => {
   return (
+
   <LeftMenuContainer>
+  <img src={laterale} style={{position:'fixed',left:0,width:'5px',height:'100vh'}} alt='laterale'/>
+
     <div style={{width:'100%',position:'absolute',top:'3vw',display:'flex', flexDirection:'column',alignContent:'center', alignItems:'center',justifyContent:'center'}}>
     <img src={back} alt='back' style={{ width:'3.385vw'}}/>
     </div>
@@ -46,7 +50,8 @@ const LeftMenu = () => {
 
     
            
-  </LeftMenuContainer>)
+  </LeftMenuContainer>
+  )
 };
 
 export default LeftMenu;

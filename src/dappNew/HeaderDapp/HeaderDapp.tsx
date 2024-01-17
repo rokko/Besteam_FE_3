@@ -3,6 +3,7 @@ import { ButtonConnessioneDapp, HeaderContainerDapp } from "./HeaderDappStyled";
 import { TestoButton } from "../../Screens/btemSwap/boxIscrizione/BoxIscrizioneStyled";
 import logoBe from './logoBe.png'
 import support from './support.png'
+import { Link } from "react-router-dom";
 const HeaderDapp = () => {
   return (
     <>
@@ -20,8 +21,9 @@ const HeaderDapp = () => {
 
                 <div className="text-wrapper-13">EVENTS</div>
                 <div className="text-wrapper-12">MARKET</div>
-
+                <Link to='/dapp/creaclub'>
                 <div className="text-wrapper-15">TEAM</div>
+                </Link>
                 <div className="text-wrapper-14">PLAYER</div>
                 <img src={support} alt='supporto' style={{width:'3.125vw', height:'3.125vw'}} />
 

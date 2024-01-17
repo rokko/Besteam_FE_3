@@ -89,7 +89,10 @@ const CreazioneClub = () => {
 
 <InputClub onChange={(e)=>setClubsName(e.target.value)} />
 </div>
+<div><p>*Stadium NAME</p>
 
+<InputClub onChange={(e)=>setStadiumName(e.target.value)} />
+        </div>
         </div>
           <div>
           <p>*TWITTER PAGE</p>
@@ -119,10 +122,7 @@ const CreazioneClub = () => {
 
 <InputClub onChange={(e)=>setTrainingCenterName(e.target.value)} />
         </div>
-        <div><p>*Stadium NAME</p>
-
-<InputClub onChange={(e)=>setStadiumName(e.target.value)} />
-        </div>
+       
         <div><p>*Metaversezone NAME</p>
 
 <InputClub onChange={(e)=>setMetaverseZone(e.target.value)} />

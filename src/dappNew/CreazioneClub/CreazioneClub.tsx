@@ -93,7 +93,7 @@ const CreazioneClub = () => {
 
 <InputClub onChange={(e)=>setStadiumName(e.target.value)} />
         </div>
-        </div>
+       
           <div>
           <p>*TWITTER PAGE</p>
 
@@ -130,6 +130,7 @@ const CreazioneClub = () => {
        
 
         </div>
+      </div>
       </div>
       
      

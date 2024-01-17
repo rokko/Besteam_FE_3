@@ -15,6 +15,7 @@ import { Sesso } from "../dappNew/Sesso";
 import { CreazioneClub } from "../dappNew/CreazioneClub";
 import { Home } from "../dappNew/Home";
 import { BtemSwap } from "../Screens/btemSwap";
+import { DappDashboard } from "../dappNew/Dashboard";
 
 const goToRegister = () => {
   document.body.scrollTop = 10000; // For Safari
@@ -104,6 +105,7 @@ const HeaderBar = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/supportus" element={<BtemSwap />} />
           <Route path="/dapp/creaclub" element={<CreazioneClub />} />
+          <Route path="/dapp/dashboard" element={<DappDashboard />} />
         </Routes>
       </Router>
     </>

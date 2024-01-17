@@ -29,9 +29,9 @@ const ButtonLogo = styled.div`
 `;
 
 const InputClub = styled.input`
-  background-color: #124921;
-  width: 400px;
-  height: 30px;
+  background-color: white;
+  width:35.57vw ;
+  height: 1.727vw;
   border: none;
 `;
 

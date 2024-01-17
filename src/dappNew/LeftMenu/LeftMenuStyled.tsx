@@ -9,6 +9,9 @@ const LeftMenuContainer = styled.div`
   left: 0;
   display:flex;
   flex-direction:column;
+  font-size: 0.625vw;
+  color:#ffffff;
+  font-family: 'DIN-Pro';
   
 `;
 export { LeftMenuContainer };

@@ -219,7 +219,7 @@ const Iscrizione = () => {
   },[platform])
   return (
     <Container>
-      <Link to='/dapp/creaclub'>CreaClub</Link>
+      <Link to='/dapp/dashboard'>Dashboard</Link>
       {firstForm &&
       <FormIscrizione>
         <img src={barralaterale} height='100%' style={{position:'absolute',left:'0px'}} alt='cornice'/>

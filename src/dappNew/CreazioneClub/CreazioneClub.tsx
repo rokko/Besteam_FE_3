@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { Container } from "../general/general";
 import {
   ButtonIscrizione,
-  TestoIscrizione,
   TestoPiccolo,
 } from "../Iscrizione/IscrizioneStyled";
 import {
@@ -61,11 +60,11 @@ const CreazioneClub = () => {
 }
 
   if (!!start) return (
-    < >
+    <div style={{backgroundColor:'1C1C1C', display:'flex', flexDirection:'column', alignContent:'center',alignItems:'center',justifyContent:'center'}}>
       <HeaderDapp/>
       <LeftMenu/>
 
-      <div style={{width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-around', marginLeft:'3vw', marginTop:'6vw', backgroundColor:'grey'}}>
+      <div style={{background:'#1C1C1C', justifyContent:'center', alignItems:'center', alignContent:'center', marginLeft:'8.250vw', display:'flex', flexDirection:'row', gap:'5vw', marginTop:'3vw', color:'#FFFFFF', fontFamily:'DinPRO', fontSize:'1.302vw'}}>
         <div style={{width:'42.708vw' , height:'44.271vw',display:'flex', flexDirection:'column' ,backgroundColor:'#141414'}}>
           <p>Logo</p>
           <p>Shape</p>
@@ -75,18 +74,74 @@ const CreazioneClub = () => {
         </div>
         <div style={{width:'42.708vw' , height:'44.271vw',display:'flex', flexDirection:'column',backgroundColor:'#141414'}}>
 
+
+        <div style={{ display:'flex', flexDirection:'row', gap:'1.5vw',justifyContent:'center',alignContent:'center',alignItems:'center'}}>
+          <div>
+          <p>Team Name</p>
+
+          <InputClub style={{width:'21.875vw'}} onChange={(e)=>setName(e.target.value)}/>
+        </div>
+        <div><p>abbrevation</p>
+
+<InputClub style={{width:'12.135vw'}} onChange={(e)=>setAbbreviation(e.target.value)} />
+        </div>
+        <p>Clubs Name</p>
+
+<InputClub onChange={(e)=>setClubsName(e.target.value)} />
+</div>
+
+        </div>
+          <div>
+          <p>*TWITTER PAGE</p>
+
+          <InputClub onChange={(e)=>setTwitterPage(e.target.value)} />
+        </div>
+        <div>
+         
+        <div>
+          <p>*LIVE PAGE</p>
+          <InputClub onChange={(e)=>setLivePage(e.target.value)}/>
+        </div>
+        <div><p>*logo</p>
+
+<InputClub onChange={(e)=>setLogo(e.target.value)} />
+        </div>
+       
+        <div><p>*COLOR ONE</p>
+
+<InputClub onChange={(e)=>setClubColorOne(e.target.value)} />
+        </div>
+        <div><p>*COLOR TWO</p>
+
+<InputClub onChange={(e)=>setClubColorTwo(e.target.value)} />
+        </div>
+        <div><p>*Traing center NAME</p>
+
+<InputClub onChange={(e)=>setTrainingCenterName(e.target.value)} />
+        </div>
+        <div><p>*Stadium NAME</p>
+
+<InputClub onChange={(e)=>setStadiumName(e.target.value)} />
+        </div>
+        <div><p>*Metaversezone NAME</p>
+
+<InputClub onChange={(e)=>setMetaverseZone(e.target.value)} />
+        </div>
+       
+
         </div>
       </div>
       
      
-    </>
+    </div>
   );
   else return(
-    <>
+    <div style={{backgroundColor:'#1C1C1C', display:'flex', flexDirection:'column',height:'100%' }}>
+
     <HeaderDapp/>
     <LeftMenu/>
-    <div style={{background:'grey', height:'100vh', justifyContent:'center', alignItems:'center', alignContent:'center', marginLeft:'8.250vw'}}>
-    <div style={{display:'flex', flexDirection:'row', gap:'3rem',marginTop:'5.208vw'}}>
+    <div style={{background:'#1C1C1C', justifyContent:'center', alignItems:'center', alignContent:'center', marginLeft:'8.250vw'}}>
+    <div style={{display:'flex', flexDirection:'row', gap:'3rem',marginTop:'2.208vw'}}>
     <div style={{width:'42.708vw', height:'44.271vw', backgroundImage:`url(${joinTeam})`, backgroundSize:'contain'}}>
         
         </div>
@@ -95,7 +150,7 @@ const CreazioneClub = () => {
      
     </div>
     </div>
-    </>
+    </div>
   )
 };
 
@@ -113,51 +168,46 @@ export default CreazioneClub;
         <br></br>
         <br></br>
 
-        <div>
-          <TestoIscrizione>*NOME TEAM</TestoIscrizione>
-
-          <InputClub onChange={(e)=>setName(e.target.value)}/>
-        </div>
-        <div>
-          <TestoIscrizione>*TWITTER PAGE</TestoIscrizione>
+       <div>
+          <p>*TWITTER PAGE</p>
 
           <InputClub onChange={(e)=>setTwitterPage(e.target.value)} />
         </div>
         <div>
-          <TestoIscrizione>*CLUBS NAME</TestoIscrizione>
+          <p>*CLUBS NAME</p>
 
           <InputClub onChange={(e)=>setClubsName(e.target.value)} />
         </div>
       
         <div>
-          <TestoIscrizione>*LIVE PAGE</TestoIscrizione>
+          <p>*LIVE PAGE</p>
           <InputClub onChange={(e)=>setLivePage(e.target.value)}/>
         </div>
-        <div><TestoIscrizione>*logo</TestoIscrizione>
+        <div><p>*logo</p>
 
 <InputClub onChange={(e)=>setLogo(e.target.value)} />
         </div>
-        <div><TestoIscrizione>*ABBREVATION</TestoIscrizione>
+        <div><p>*ABBREVATION</p>
 
 <InputClub onChange={(e)=>setAbbreviation(e.target.value)} />
         </div>
-        <div><TestoIscrizione>*COLOR ONE</TestoIscrizione>
+        <div><p>*COLOR ONE</p>
 
 <InputClub onChange={(e)=>setClubColorOne(e.target.value)} />
         </div>
-        <div><TestoIscrizione>*COLOR TWO</TestoIscrizione>
+        <div><p>*COLOR TWO</p>
 
 <InputClub onChange={(e)=>setClubColorTwo(e.target.value)} />
         </div>
-        <div><TestoIscrizione>*Traing center NAME</TestoIscrizione>
+        <div><p>*Traing center NAME</p>
 
 <InputClub onChange={(e)=>setTrainingCenterName(e.target.value)} />
         </div>
-        <div><TestoIscrizione>*Stadium NAME</TestoIscrizione>
+        <div><p>*Stadium NAME</p>
 
 <InputClub onChange={(e)=>setStadiumName(e.target.value)} />
         </div>
-        <div><TestoIscrizione>*Metaversezone NAME</TestoIscrizione>
+        <div><p>*Metaversezone NAME</p>
 
 <InputClub onChange={(e)=>setMetaverseZone(e.target.value)} />
         </div>

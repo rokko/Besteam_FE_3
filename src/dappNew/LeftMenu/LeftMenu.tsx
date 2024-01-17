@@ -13,16 +13,33 @@ const LeftMenu = () => {
     <div style={{width:'100%',position:'absolute',top:'3vw',display:'flex', flexDirection:'column',alignContent:'center', alignItems:'center',justifyContent:'center'}}>
     <img src={back} alt='back' style={{ width:'3.385vw'}}/>
     </div>
-    <div style={{width:'100%',position:'absolute',bottom:'8vw',display:'flex', flexDirection:'column',gap:'2rem', alignContent:'center', alignItems:'center',justifyContent:'center'}}>
+    <div style={{width:'100%',position:'absolute',bottom:'5vw',display:'flex', flexDirection:'column',gap:'0.5rem', alignContent:'center', alignItems:'center',justifyContent:'center'}}>
     
     
-    
-    <img style={{width:'2.552vw', height:'2.052vw'}}src={iconaNotifica} alt='iconaNotifica' />
-    <img style={{width: '2.604vw', height: '3.125vw'}} src={locker} alt='locker' />
-    <img  style={{width: '2.083vw', height: '2.083vw'}} src={btem} alt='locker' />
-    <img  style={{width: '2.083vw', height: '2.083vw'}} src={matic} alt='locker' />
-    <img style={{width: '2.083vw', height: '2.083vw'}} src={settings} alt="settings" />
-    <img style={{width: '2.39vw', height: '2.39vw'}} src={exit} alt="exit" />
+    <div style={{display:'flex',flexDirection:'column',gap:'0.2rem'}}>
+      <img style={{width:'2.552vw', height:'2.052vw'}}src={iconaNotifica} alt='iconaNotifica' />
+      <p>DM</p>
+    </div>
+    <div>
+      <img style={{width: '2.604vw', height: '3.125vw'}} src={locker} alt='locker' />
+      <p>LOCKER</p>
+    </div>
+    <div>
+     <img  style={{width: '2.083vw', height: '2.083vw'}} src={matic} alt='locker' />
+     <div style={{display:'flex', flexDirection:'column',}}>
+      <p>MATIC<br/>
+      0,00</p>
+      </div>
+    </div>
+    <div>
+      <img  style={{width: '2.083vw', height: '2.083vw'}} src={btem} alt='locker' />
+      <div>
+      <p>BTEM <br/>0,00</p>
+      </div>
+    </div>
+   
+    <img style={{width: '2.083vw', height: '2.083vw', }} src={settings} alt="settings" />
+    <img style={{width: '2.39vw', height: '2.39vw',marginTop:'1.0vw'}} src={exit} alt="exit" />
     </div>
 
 

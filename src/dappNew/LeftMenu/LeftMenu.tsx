@@ -12,10 +12,10 @@ const LeftMenu = () => {
   return (
 
   <LeftMenuContainer>
-  <img src={laterale} style={{position:'fixed',left:0,width:'5px',height:'100vh'}} alt='laterale'/>
+  <img src={laterale} style={{position:'fixed',left:0,width:'0.556vw',height:'100vh'}} alt='laterale'/>
 
     <div style={{width:'100%',position:'absolute',top:'3vw',display:'flex', flexDirection:'column',alignContent:'center', alignItems:'center',justifyContent:'center'}}>
-    <img src={back} alt='back' style={{ width:'3.385vw'}}/>
+    <img src={back} alt='back' style={{ width:'3.385vw', marginTop:'2.5vw'}}/>
     </div>
     <div style={{width:'100%',position:'absolute',bottom:'5vw',display:'flex', flexDirection:'column',gap:'0.5rem', alignContent:'center', alignItems:'center',justifyContent:'center'}}>
     

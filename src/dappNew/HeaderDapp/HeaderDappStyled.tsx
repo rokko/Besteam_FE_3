@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const HeaderContainerDapp = styled.div`
-  height: 5.208vw;
+  height: 4.167vw;
   width: 100%;
   background-color: black;
   display: flex;

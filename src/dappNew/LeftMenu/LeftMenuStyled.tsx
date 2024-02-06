@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const LeftMenuContainer = styled.div`
-  width: 6.250vw;
+  width: 5vw;
   height: 100%;
   background-color: #07260D;
   height:100%;

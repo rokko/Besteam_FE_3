@@ -10,6 +10,7 @@ module.exports = function override(config) {
     url: require.resolve("url"),
   });
   config.resolve.fallback = fallback;
+  resolve.fallback: { "zlib": false }
 
   return config;
 };

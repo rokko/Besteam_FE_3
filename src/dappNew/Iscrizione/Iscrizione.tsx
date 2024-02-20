@@ -18,6 +18,9 @@ interface CheckboxProps {
   };
 }
 
+import { useAddress } from "@thirdweb-dev/react";
+
+
 import uomo from '../media/uomo.jpg'
 import donna from '../media/donna.jpg'
 import CircleIcon from '@mui/icons-material/Circle';
@@ -73,11 +76,12 @@ const Iscrizione = () => {
 
 
   const { account } = useWeb3React();
+
   const [avatar, setAvatar] = React.useState('')
   const [firstForm, setFirstForm]=React.useState(true)
   const [secondForm, setSecondForm]=React.useState(false)
   const [thirdForm, setThirdForm] = React.useState(false)
-  const [walletAccount, setWalletAccount] = React.useState('')
+  const [walletAccount, setWalletAccount] = React.useState(useAddress())
   const [nickname, setNickname]=React.useState('')
   const [email, setEmail] = React.useState('');
   const [discord, setDiscord] = React.useState('');
@@ -117,7 +121,7 @@ const Iscrizione = () => {
     }
     else{
       const request ={
-        walletCode: walletAccount ,
+        walletCode: useAddress() ,
         nickname:nickname,
         discord:discord,
         email:email,

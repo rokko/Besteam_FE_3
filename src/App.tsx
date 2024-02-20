@@ -4,6 +4,17 @@ import { Web3ReactProvider } from "@web3-react/core";
 import Web3 from "web3";
 import HeaderBar from "../src/components/HeaderBar";
 import { HelmetProvider, Helmet } from "react-helmet-async";
+import {
+  ThirdwebProvider,
+  ConnectWallet,
+  metamaskWallet,
+  coinbaseWallet,
+  walletConnect,
+  localWallet,
+  trustWallet,
+} from "@thirdweb-dev/react";
+
+
 
 const getLibrary = (provider?: any) => {
   return new Web3(provider);
@@ -12,6 +23,18 @@ function App() {
   // When the user clicks on the button, scroll to the top of the document
 
   return (
+    <ThirdwebProvider
+    activeChain="mumbai"
+    clientId="YOUR_CLIENT_ID"
+    locale={en()}
+    supportedWallets={[
+      metamaskWallet(),
+      coinbaseWallet({ recommended: true }),
+      walletConnect(),
+      localWallet(),
+      trustWallet(),
+    ]}
+  >
     <Web3ReactProvider getLibrary={getLibrary}>
       <HelmetProvider>
         <div className="App">
@@ -25,6 +48,7 @@ function App() {
         </div>
       </HelmetProvider>
     </Web3ReactProvider>
+    </ThirdwebProvider>
   );
 }
 

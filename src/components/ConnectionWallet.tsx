@@ -2,6 +2,7 @@ import { injected } from "../components/wallet/connection";
 import { useWeb3React } from "@web3-react/core";
 import React from "react";
 import styled from "styled-components";
+
 declare global {
   interface Window {
     ethereum: any;
@@ -81,7 +82,7 @@ const ConnectionWallet = () => {
 
   return (
     <>
-      {!active ? (
+      {/*!active ? (
         <ButtonConnessione onClick={() => connect()}>
           <TestoButton style={{ fontFamily: "DinPRONormale" }}>
             CONNECT WALLET
@@ -91,7 +92,13 @@ const ConnectionWallet = () => {
         <ButtonConnessione onClick={() => disconnect()}>
           <TestoButton>DISCONNECT</TestoButton>
         </ButtonConnessione>
-      )}
+      )*/}
+        <ConnectWallet
+        theme={"dark"}
+        switchToActiveChain={true}
+        modalSize={"wide"}
+      />
+  
     </>
   );
 };

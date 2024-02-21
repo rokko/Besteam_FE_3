@@ -12,6 +12,7 @@ import {
   walletConnect,
   localWallet,
   trustWallet,
+  embeddedWallet,
 } from "@thirdweb-dev/react";
 
 
@@ -27,11 +28,22 @@ function App() {
     activeChain="mumbai"
     clientId="YOUR_CLIENT_ID"
     supportedWallets={[
+      
       metamaskWallet(),
       coinbaseWallet({ recommended: true }),
       walletConnect(),
       localWallet(),
       trustWallet(),
+      embeddedWallet({
+        auth: {
+          options: [
+            "email",
+            "google",
+            "apple",
+            "facebook",
+          ],
+        },
+      }),
     ]}
   >
     <Web3ReactProvider getLibrary={getLibrary}>

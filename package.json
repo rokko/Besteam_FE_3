@@ -25,6 +25,7 @@
     "@web3-react/network-connector": "^6.1.9",
     "add": "^2.0.6",
     "axios": "^1.4.0",
+    "browserify": "^17.0.0",
     "browserify-zlib": "^0.2.0",
     "firebase": "^9.4.1",
     "formik": "^2.2.9",

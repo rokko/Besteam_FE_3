@@ -26,7 +26,6 @@ function App() {
     <ThirdwebProvider
     activeChain="mumbai"
     clientId="YOUR_CLIENT_ID"
-    locale={en()}
     supportedWallets={[
       metamaskWallet(),
       coinbaseWallet({ recommended: true }),

@@ -249,6 +249,7 @@ const Iscrizione = () => {
             type="text" 
             id="walletInput"
             value={walletAccount}
+            readOnly
             onChange={handleWalletChange}
             />
 

@@ -1,13 +1,9 @@
+import { ConnectWallet } from "@thirdweb-dev/react";
 import { injected } from "../components/wallet/connection";
 import { useWeb3React } from "@web3-react/core";
 import React from "react";
 import styled from "styled-components";
 
-declare global {
-  interface Window {
-    ethereum: any;
-  }
-}
 
 const TestoButton = styled.p`
   letter-spacing: var(--unnamed-character-spacing-0);

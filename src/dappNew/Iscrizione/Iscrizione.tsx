@@ -226,8 +226,8 @@ const Iscrizione = () => {
       <Link to='/dapp/dashboard'>Dashboard</Link>
       {firstForm &&
       <FormIscrizione>
-        <img src={barralaterale} height='100%' style={{position:'absolute',left:'0px'}} alt='cornice'/>
-        <img src={barralaterale} height='100%' style={{position:'absolute',right:'0px'}} alt='cornice'/>
+        <img src={barralaterale} height='100%' style={{position:'absolute',left:'0px',width:'0.417vw'}} alt='cornice'/>
+        <img src={barralaterale} height='100%' style={{position:'absolute',right:'0px',width:'0.417vw'}} alt='cornice'/>
 
         <div>
           <TestoIscrizione>NICKNAME*</TestoIscrizione>
@@ -267,9 +267,9 @@ const Iscrizione = () => {
         <div style={{display:'flex', justifyContent:'center', flexDirection:'column', alignContent:'flex-start'}}>
         <FormControlLabel
           onChange={handleRegolamentoChange}
-          control={<Checkbox icon={<CircleUnchecked style={{fill:'white', backgroundColor:'white'}} />} checkedIcon={<CircleIcon  style={{color:'#2DC653', backgroundColor:'white', padding:'5px'}}/>} classes={{ root: classes.checkbox }} />}
+          control={<Checkbox icon={<CircleUnchecked style={{width:'1.806vw', height:'1.806vw',fill:'white', backgroundColor:'white'}} />} checkedIcon={<CircleIcon  style={{width:'1.806vw', height:'1.806vw',color:'#2DC653', backgroundColor:'white', padding:'5px'}}/>} classes={{ root: classes.checkbox }} />}
           label={<span style={{
-            fontSize:'1.04vw',
+            fontSize:'1.11vw',
             fontFamily:'Dinproregular',
             color:'#7C7C7C',
             textAlign: 'left',
@@ -278,9 +278,9 @@ const Iscrizione = () => {
 I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFamily:'DinLightItalic',fontStyle:'italic'}}>Terms and conditions</a> and <a style={{textDecoration:'none', color:'#208B3A', fontFamily:'DinLightItalic', fontStyle:'italic'}} href="#">Privacy Policy.</a>          </span>}         />
         <FormControlLabel
           onChange={handleNewsletterChange}
-          control={<Checkbox icon={<CircleUnchecked style={{fill:'white', backgroundColor:'white'}} />} checkedIcon={<CircleIcon  style={{color:'#2DC653', backgroundColor:'white', padding:'5px'}}/>} classes={{ root: classes.checkbox }} />}
+          control={<Checkbox icon={<CircleUnchecked style={{width:'1.806vw', height:'1.806vw',fill:'white', backgroundColor:'white'}} />} checkedIcon={<CircleIcon  style={{width:'1.806vw', height:'1.806vw',color:'#2DC653', backgroundColor:'white', padding:'5px'}}/>} classes={{ root: classes.checkbox }} />}
           label={<span style={{
-            fontSize:'1.04vw',
+            fontSize:'1.11vw',
             fontFamily:'Dinproregular',
             color:'#7C7C7C',
             textAlign: 'left',

@@ -35,4 +35,15 @@ const InputClub = styled.input`
   border: none;
 `;
 
-export { CreazioneClubForm, InputClub, ButtonLogo };
+const TestoLeftInput = styled.p`
+  font-size:1.13vw;
+  font-family: DINPro;
+  text-align: left;
+  letter-spacing: 0px;
+  color: white;
+  opacity: 1;
+  font-weight:400;
+
+`
+
+export { CreazioneClubForm, InputClub, ButtonLogo, TestoLeftInput };

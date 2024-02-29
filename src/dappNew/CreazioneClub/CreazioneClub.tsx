@@ -9,6 +9,7 @@ import {
   ButtonLogo,
   CreazioneClubForm,
   InputClub,
+  TestoLeftInput,
 } from "./CreazioneClubStyled";
 import { Height } from "@material-ui/icons";
 import axios from "axios";
@@ -65,11 +66,19 @@ const CreazioneClub = () => {
       <LeftMenu/>
 
       <div style={{background:'#1C1C1C', justifyContent:'center', alignItems:'center', alignContent:'center', marginLeft:'8.250vw', display:'flex', flexDirection:'row', gap:'5vw', marginTop:'3vw', color:'#FFFFFF', fontFamily:'DinPRO', fontSize:'1.302vw'}}>
-        <div style={{width:'42.708vw' , height:'44.271vw',display:'flex', flexDirection:'column' ,backgroundColor:'#141414'}}>
-          <p>Logo</p>
-          <p>Shape</p>
-          <p>Main color</p>
-          <p>Secondary color</p>
+        <div style={{width:'40.069vw' , height:'37.5vw',display:'flex', flexDirection:'column' ,backgroundColor:'#141414', padding:'4.514vw'}}>
+          <TestoLeftInput>Logo</TestoLeftInput>
+          <div style={{width:'31.042vw',height:'15.486vw', backgroundColor:'white'}}>
+
+          </div>
+          <TestoLeftInput>Shape</TestoLeftInput>
+          <div style={{width:'31.042vw', height:'6.215vw', backgroundColor:'white'}}>
+
+          </div>
+          <div style={{display:'flex',flexDirection:'row'}}>
+          <TestoLeftInput>Main color</TestoLeftInput>
+          <TestoLeftInput>Secondary color</TestoLeftInput>
+          </div>
 
         </div>
         <div style={{width:'42.708vw' , height:'44.271vw',display:'flex', flexDirection:'column',backgroundColor:'#141414'}}>

@@ -61,11 +61,11 @@ const CreazioneClub = () => {
   }
 
   if (!!start) return (
-    <div style={{ backgroundColor: '1C1C1C', display: 'flex', flexDirection: 'column', alignContent: 'center', alignItems: 'center', justifyContent: 'center' }}>
+    <div style={{ backgroundColor: '#1C1C1C', display: 'flex', flexDirection: 'column', height: '100%' }}>
       <HeaderDapp />
       <LeftMenu />
 
-      <div style={{ background: '#1C1C1C', justifyContent: 'center', alignItems: 'center', alignContent: 'center', marginLeft: '8.250vw', display: 'flex', flexDirection: 'row', gap: '5vw', marginTop: '3vw', color: '#FFFFFF', fontFamily: 'DinPRO', fontSize: '1.302vw' }}>
+      <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'row', position: 'fixed', top: '4.167vw', left: ' 5vw', gap: '3.125vw', backgroundColor: '#1C1C1C', alignContent: 'center', alignItems: 'center', justifyContent: 'center' }}>
         <div style={{ width: '40.069vw', height: '37.5vw', display: 'flex', flexDirection: 'column', backgroundColor: '#141414', padding: '4.514vw' }}>
           <TestoLeftInput>Logo</TestoLeftInput>
           <div style={{ width: '31.042vw', height: '15.486vw', backgroundColor: 'white' }}>
@@ -81,7 +81,7 @@ const CreazioneClub = () => {
           </div>
 
         </div>
-        <div style={{ width: '40.069vw', height: '37.5vw',  display: 'flex', flexDirection: 'column', backgroundColor: '#141414' }}>
+        <div style={{ width: '40.069vw', height: '37.5vw', display: 'flex', flexDirection: 'column', backgroundColor: '#141414', justifyContent: 'center', alignContent: 'center' , alignItems:'center',gap:'1.217vw'}}>
 
 
           <div style={{ display: 'flex', flexDirection: 'row', gap: '1.5vw', justifyContent: 'center', alignContent: 'center', alignItems: 'center' }}>
@@ -95,11 +95,11 @@ const CreazioneClub = () => {
 
               <InputClub style={{ width: '12.135vw' }} onChange={(e) => setAbbreviation(e.target.value)} />
             </div>
-            
+
           </div>
           <TestoLeftInput>Clubs Name</TestoLeftInput>
 
-            <InputClub onChange={(e) => setClubsName(e.target.value)} />
+          <InputClub onChange={(e) => setClubsName(e.target.value)} />
           <div><TestoLeftInput>HUB Name</TestoLeftInput>
 
             <InputClub onChange={(e) => setStadiumName(e.target.value)} />
@@ -116,8 +116,8 @@ const CreazioneClub = () => {
               <TestoLeftInput>Main Social Page</TestoLeftInput>
               <InputClub onChange={(e) => setLivePage(e.target.value)} />
             </div>
-           
-            
+
+
 
             <div><TestoLeftInput>Official Live Page</TestoLeftInput>
 
@@ -137,12 +137,12 @@ const CreazioneClub = () => {
 
       <HeaderDapp />
       <LeftMenu />
-      <div style={{ background: '#1C1C1C', justifyContent: 'center', alignItems: 'center', alignContent: 'center', marginLeft: '8.250vw' }}>
+      <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'row', position: 'fixed', top: '4.167vw', left: ' 5vw', gap: '3.125vw', backgroundColor: '#1C1C1C', alignContent: 'center', alignItems: 'center', justifyContent: 'center' }}>
         <div style={{ display: 'flex', flexDirection: 'row', gap: '3rem', marginTop: '2.208vw' }}>
-          <div style={{ width: '42.708vw', height: '44.271vw', backgroundImage: `url(${joinTeam})`, backgroundSize: 'contain' }}>
+          <div style={{ width: '40.069vw', height: '37.5vw', backgroundImage: `url(${joinTeam})`, backgroundSize: 'contain' }}>
 
           </div>
-          <div onClick={() => setStart(true)} style={{ width: '42.708vw', height: '44.271vw', backgroundImage: `url(${createTeam})`, backgroundSize: 'contain' }}>
+          <div onClick={() => setStart(true)} style={{ width: '40.069vw', height: '37.5vw', backgroundImage: `url(${createTeam})`, backgroundSize: 'contain' }}>
           </div>
 
         </div>

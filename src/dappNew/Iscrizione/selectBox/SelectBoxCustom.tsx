@@ -27,7 +27,7 @@ const SelectBoxCustom = ({list,role,setNationality,nationality}) => {
     <FormControl >
       <Select
       
-        style={{ width:role? '11.967vw': '25.85vw', height:'1.727vw',backgroundColor:'white',border :'1px solid green', borderRadius:'0px'}}
+        style={{ width:role? '12.5vw': '27.08vw', height:'1.727vw',backgroundColor:'white',border :'1px solid green', borderRadius:'0px'}}
         labelId="search-select-label"
         id="select"
         value={nationality}

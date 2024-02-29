@@ -55,7 +55,7 @@ const CustomRadioGroup = ({prima,seconda,terza,primovalore,secondovalore,terzova
                 <img
                   src={option.image}
                   alt={option.value}
-                  style={{  width: '100.15px', height: '45.15px' , marginLeft:'-2vw'}}
+                  style={{  width: '1.8vw ', height: '1.806vw' , marginLeft:'-2vw'}}
                 />
                 
               </div>

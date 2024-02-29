@@ -39,11 +39,12 @@ const CustomRadioGroup = ({prima,seconda,terza,primovalore,secondovalore,terzova
               checkedIcon={<CircleIcon  style={{color:'#2DC653', backgroundColor:'white', padding:'0px', borderRadius:'50px'}}/>}
                sx={{ 
               fontSize:40,
-              width:32,
-              height:32,
+              width:'1.8vw',
+              height:'1.8vw',
               backgroundColor:'white',
               color:'white',
-              border:'none'
+              border:'none',
+              padding:'0.5vw'
               ,
               '&.Mui-checked:hover': {
                 border:'white',
@@ -55,7 +56,7 @@ const CustomRadioGroup = ({prima,seconda,terza,primovalore,secondovalore,terzova
                 <img
                   src={option.image}
                   alt={option.value}
-                  style={{  width: '1.8vw ', height: '1.806vw' , marginLeft:'-2vw'}}
+                  style={{  width: '4.5vw ', height: '1.08' , marginLeft:'-2vw'}}
                 />
                 
               </div>

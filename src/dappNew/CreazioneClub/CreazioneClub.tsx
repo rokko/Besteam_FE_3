@@ -15,8 +15,9 @@ import { Height } from "@material-ui/icons";
 import axios from "axios";
 import HeaderBar from "../../components/HeaderBar";
 import { HeaderContainerDapp } from "../HeaderDapp/HeaderDappStyled";
-import createTeam from '../media/createTeam.jpg'
-import joinTeam from '../media/joinTeam.jpg'
+import createTeam from '../media/create.png'
+import joinTeam from '../media/join.png'
+import buyTeam from '../media/buy.png'
 import { HeaderDapp } from "../HeaderDapp";
 import { LeftMenu } from "../LeftMenu";
 
@@ -34,7 +35,7 @@ const CreazioneClub = () => {
   const [metaverseZone, setMetaverseZone] = useState("")
   const [start, setStart] = useState(false)
   const [firstStep, setFirstStep] = useState(false)
-  const [secondStep, setSecondstep] = useState(true)
+  const [secondStep, setSecondstep] = useState(false)
 
 
 
@@ -151,11 +152,11 @@ const CreazioneClub = () => {
       <LeftMenu />
       <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'row', position: 'fixed', top: '4.167vw', left: ' 5vw', gap: '3.125vw', backgroundColor: '#1C1C1C', alignContent: 'center', alignItems: 'center', justifyContent: 'center' }}>
         <div style={{ display: 'flex', flexDirection: 'row', gap: '3rem', marginTop: '2.208vw' }}>
-          <div style={{ width: '40.069vw', height: '37.5vw', backgroundImage: `url(${joinTeam})`, backgroundSize: 'contain' }}>
+          <div style={{ width: '24.74vw', height: '28.125vw', backgroundImage: `url(${joinTeam})`, backgroundSize: 'contain' }}>
 
           </div>
-          <div onClick={() => setStart(true)} style={{ width: '40.069vw', height: '37.5vw', backgroundImage: `url(${createTeam})`, backgroundSize: 'contain' }}>
-          </div>
+          <div onClick={() => setStart(true)} style={{ width: '22.396vw', height: '28.125vw', backgroundImage: `url(${createTeam})`, backgroundSize: 'contain' }}/>
+          <div onClick={()=> console.log('COMPRA')} style={{ width: '10.677vw', height: '28.125vw', backgroundImage: `url(${buyTeam})`, backgroundSize: 'contain' }}></div>
 
         </div>
       </div>

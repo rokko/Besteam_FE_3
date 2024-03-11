@@ -29,8 +29,9 @@ import tank from '../media/metaverseLoghi/tank.png';
 import tactic from '../media/metaverseLoghi/tactic.png';
 import speed from '../media/metaverseLoghi/speed.png';
 import skill from '../media/metaverseLoghi/skill.png';
-
+import teamValue from './TeamValue.png'
 import ColorSelect from "./ColorSelect";
+import TeamInfo from "./TeamInfo";
 
 const CreazioneClub = () => {
   const [name, setName] = useState("")
@@ -47,6 +48,7 @@ const CreazioneClub = () => {
   const [start, setStart] = useState(false)
   const [firstStep, setFirstStep] = useState(true)
   const [secondStep, setSecondstep] = useState(false)
+  const [thirdStep, setThirdStep] = useState(false)
 
 
 
@@ -155,7 +157,7 @@ const CreazioneClub = () => {
 
       {(!!secondStep) &&
         <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'row', position: 'fixed', top: '4.167vw', left: ' 5vw', gap: '3.125vw', backgroundColor: '#1C1C1C', alignContent: 'center', alignItems: 'center', justifyContent: 'center' }}>
-          <div style={{ width: '83.33vw', height: '37.5vw', backgroundColor: '#141414' , display:'flex',flexDirection:'row', justifyContent:'center', alignContent:'center', alignItems:'center'}}>
+          <div style={{ width: '83.33vw', height: '37.5vw', backgroundColor: '#141414', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignContent: 'center', alignItems: 'center' }}>
             <div>
               <div>
                 <p>Metaverse Zone</p>
@@ -163,33 +165,33 @@ const CreazioneClub = () => {
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', backgroundColor: 'white', width: '41.667vw', height: '20.83vw' }}>
                 <div style={{ display: 'flex', flexDirection: 'row' }}>
-                  <div onClick={() => setMetaverseZone('skill')} style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white' , display:'flex', justifyContent:'center', alignContent:'center', alignItems:'center', border: metaverseZone === 'skill' ? '2px solid #2DC653' : 'none' }}>
-                    <img src={skill} style={{width:'13.542vw'}}></img>
+                  <div onClick={() => setMetaverseZone('skill')} style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center', border: metaverseZone === 'skill' ? '2px solid #2DC653' : 'none' }}>
+                    <img src={skill} style={{ width: '13.542vw' }}></img>
                   </div>
-                  <div  onClick={() => setMetaverseZone('tank')} style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white' , display:'flex', justifyContent:'center', alignContent:'center', alignItems:'center',border: metaverseZone === 'tank' ? '2px solid #2DC653' : 'none'}}>
-                    <img src={tank} style={{width:'13.542vw'}}></img>
+                  <div onClick={() => setMetaverseZone('tank')} style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center', border: metaverseZone === 'tank' ? '2px solid #2DC653' : 'none' }}>
+                    <img src={tank} style={{ width: '13.542vw' }}></img>
                   </div>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'row' }}>
-                  <div  onClick={() => setMetaverseZone('tactic')} style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white' , display:'flex', justifyContent:'center', alignContent:'center', alignItems:'center',border: metaverseZone === 'tactic' ? '2px solid #2DC653' : 'none'}}>
-                    <img src={tactic} style={{width:'13.542vw'}}></img>
+                  <div onClick={() => setMetaverseZone('tactic')} style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center', border: metaverseZone === 'tactic' ? '2px solid #2DC653' : 'none' }}>
+                    <img src={tactic} style={{ width: '13.542vw' }}></img>
                   </div>
-                  <div onClick={() => setMetaverseZone('speed')} style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white' , display:'flex', justifyContent:'center', alignContent:'center', alignItems:'center',border: metaverseZone === 'speed' ? '2px solid #2DC653' : 'none'}}>
-                    <img src={speed} style={{width:'13.542vw'}}></img>
+                  <div onClick={() => setMetaverseZone('speed')} style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignContent: 'center', alignItems: 'center', border: metaverseZone === 'speed' ? '2px solid #2DC653' : 'none' }}>
+                    <img src={speed} style={{ width: '13.542vw' }}></img>
                   </div>
                 </div>
 
 
               </div>
             </div>
-            <div style={{display:'flex',flexDirection:'column'}}>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
               <p>Skill</p>
-              <p>Lorem ipsum dolor sit amet, 
-aliquip ex ea com vero.</p>
+              <p>Lorem ipsum dolor sit amet,
+                aliquip ex ea com vero.</p>
 
 
 
-          <button>Start</button>
+              <button onClick={() => { setThirdStep(true), setSecondstep(false) }}>Start</button>
 
 
             </div>
@@ -198,6 +200,40 @@ aliquip ex ea com vero.</p>
           </div>
         </div>
       }
+      {thirdStep &&
+        <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', position: 'fixed', top: '4.167vw', left: ' 5vw', gap: '3.125vw', backgroundColor: '#1C1C1C', alignContent: 'center', alignItems: 'center', justifyContent: 'center' }}>
+          <div id="first-row" style={{ display: 'flex', flexDirection: 'row' , justifyContent:'space-between', gap:'2.083vw'}}>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '10.417vw', height: '10.417vw', backgroundColor: '#141414' }}>
+                <img src={logo1} style={{ width: '10.417vw' }}></img>
+            </div>
+            <div style={{display: 'flex', flexDirection: 'column', width: '34.375vw', height: '10.417vw', backgroundColor: '#141414' }}>
+              <TeamInfo />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '15.625vw', height: '10.417vw', backgroundColor: '#141414' }}>
+            </div>
+          </div>
+          <div id="second-row" style={{ display: 'flex', flexDirection: 'row' , justifyContent:'space-between', gap:'2.083vw'}}>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '10.417vw', height: '6.71vw', backgroundColor: '#141414' }}>
+            </div>
+            <div style={{display: 'flex', flexDirection: 'column', width: '34.375vw', height: '6.71vw', backgroundColor: '#141414' }}>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '15.625vw', height: '6.71vw', backgroundColor: '#141414' }}>
+              <img src={teamValue} style={{ width: '15.625vw', height:'6.71vw' }}></img>
+            </div>
+
+          </div>
+          <div id="third-row" style={{ display: 'flex', flexDirection: 'row' , justifyContent:'space-between', gap:'2.083vw'}}>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '10.417vw',  height: '8.85vw', backgroundColor: '#141414' }}>
+            </div>
+            <div style={{display: 'flex', flexDirection: 'column', width: '34.375vw',  height: '8.85vw', backgroundColor: '#141414' }}>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '15.625vw', height: '8.85vw', backgroundColor: '#141414' }}>
+              <img src="" />
+            </div>
+
+          </div>
+
+        </div>}
 
 
 

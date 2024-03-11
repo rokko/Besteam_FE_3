@@ -323,11 +323,11 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
         <div style={{display:'flex', flexDirection:'row', justifyContent:'center', gap:'2.5rem'}}>
           <div>
           <TestoIscrizione style={{marginBottom:'0.5vw'}}>First Role?* </TestoIscrizione>
-          <SelectBoxCustom list={role_list} role={true} setNationality={setFirstRole} nationality={firstRole}></SelectBoxCustom>
+          <SelectBoxCustom list={role_list.filter(elemento => elemento !== secondRole)} role={true} setNationality={setFirstRole} nationality={firstRole}></SelectBoxCustom>
           </div>
           <div>
             <TestoIscrizione style={{marginBottom:'0.5vw'}}>Second Role?*</TestoIscrizione>
-            <SelectBoxCustom list={role_list} role={true} setNationality={setSecondRole} nationality={secondRole}></SelectBoxCustom>
+            <SelectBoxCustom list={role_list.filter(elemento => elemento !== firstRole)} role={true} setNationality={setSecondRole} nationality={secondRole}></SelectBoxCustom>
 
           </div>
         </div>

@@ -340,19 +340,10 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
   <p style={{fontSize:'33px', color:'white', fontFamily:'DinPROBold'}}>CHOOSE YOUR AVATAR</p>
   <FormControl component="fieldset">
     <div style={{display:'flex', flexDirection:'row', gap:'4rem'}}>
- <img src={uomo} style={{height:'400px', transition: 'transform 0.3s'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
- <img src={donna} style={{height:'400px', transition: 'transform 0.3s'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
+ <img src={uomo}           className={`${avatar}=== 'male' ? 'selected' : ''}`}style={{height:'400px', transition: 'transform 0.3s'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={()=>{setAvatar('uomo')}} />
+ <img src={donna} style={{height:'400px', transition: 'transform 0.3s'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={()=>{setAvatar('donna')}}/>
  </div>
-  <RadioGroup
-    aria-label="gender"
-    name="gender"
-    value={avatar}
-    onChange={(e) => setAvatar(e.target.value)}
-    style={{display:'flex', flexDirection:'row', color:'white', fontSize:'30px', fontFamily:'DinPROBold', fontWeight:'bold'}}
-  >
-    <FormControlLabel value="uomo" control={<Radio />}  label="Uomo" />
-    <FormControlLabel value="donna" control={<Radio />} label="Donna" />
-  </RadioGroup>
+ 
 </FormControl>
   <div onClick={(event)=>{registrati(event)}} style={{width:'13.18vw', display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center',height:'2.60vw', background:' #2DC653 0% 0% no-repeat padding-box'}}>
     <p style={{fontSize:'2.08vw', fontFamily:'DinPROBlack2', color:'white'}}>CREATE</p>

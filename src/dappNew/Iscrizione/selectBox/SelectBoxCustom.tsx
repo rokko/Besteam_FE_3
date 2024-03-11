@@ -31,7 +31,6 @@ const SelectBoxCustom = ({list,role,setNationality,nationality}) => {
         labelId="search-select-label"
         id="select"
         value={nationality}
-        color='primary'
         sx={{
           border:'0.75px solid #2DC653!important' ,
           width: '25.85vw',
@@ -43,14 +42,18 @@ const SelectBoxCustom = ({list,role,setNationality,nationality}) => {
           fontSize: '1.05vw',
           padding:'0px',
           '.MuiList-root.MuiList-padding': {
+            backgroundColor: 'white',
             padding: 0 /* Set the padding to 0 or your desired value */
+          },
+          '.MuiMenu-list':{
+            backgroundColor:'#ffffff',
           }
         
         }}
         onChange={handleChange}
         renderValue={(nationality) => `${nationality}`}
         >
-          <ListSubheader  sx={{ backgroundColor: 'white', padding:'0px' }} style={{backgroundColor:'white', height:'8.5vw'}} id="elementi-label" ref={menuRef}>
+          <ListSubheader  sx={{ backgroundColor: '#ffffff', padding:'0px' }} style={{backgroundColor:'white', height:'8.5vw'}} id="elementi-label" ref={menuRef}>
 
         {
             list.map((item)=>{

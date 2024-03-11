@@ -340,8 +340,8 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
   <p style={{fontSize:'33px', color:'white', fontFamily:'DinPROBold'}}>CHOOSE YOUR AVATAR</p>
   <FormControl component="fieldset">
     <div style={{display:'flex', flexDirection:'row', gap:'4rem'}}>
- <img src={uomo}           className={`${avatar}=== 'male' ? 'selected' : ''}`}style={{height:'400px', transition: 'transform 0.3s'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={()=>{setAvatar('uomo')}} />
- <img src={donna} style={{height:'400px', transition: 'transform 0.3s'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={()=>{setAvatar('donna')}}/>
+ <img src={uomo}  className={`${avatar}=== 'uomo' ? 'selected' : ''`} style={{height:'14.58vw', transition: 'transform 0.3s'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={()=>{setAvatar('donna')}} />
+ <img src={donna} className={`${avatar}=== 'donna' ? 'selected' : ''`} style={{height:'14.58vw', transition: 'transform 0.3s'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={()=>{setAvatar('uomo')}}/>
  </div>
  
 </FormControl>

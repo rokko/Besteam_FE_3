@@ -24,7 +24,12 @@ import logo1 from '../media/shapes/logo1.png';
 import logo2 from '../media/shapes/logo2.png';
 import logo3 from '../media/shapes/logo3.png';
 import logo4 from '../media/shapes/logo4.png';
-import logo5 from '../media/shapes/logo5.png'
+import logo5 from '../media/shapes/logo5.png';
+import tank from '../media/metaverseLoghi/tank.png';
+import tactic from '../media/metaverseLoghi/tactic.png';
+import speed from '../media/metaverseLoghi/speed.png';
+import skill from '../media/metaverseLoghi/skill.png';
+
 import ColorSelect from "./ColorSelect";
 
 const CreazioneClub = () => {
@@ -79,8 +84,8 @@ const CreazioneClub = () => {
         <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'row', position: 'fixed', top: '4.167vw', left: ' 5vw', gap: '3.125vw', backgroundColor: '#1C1C1C', alignContent: 'center', alignItems: 'center', justifyContent: 'center' }}>
           <div style={{ width: '40.069vw', height: '37.5vw', display: 'flex', flexDirection: 'column', backgroundColor: '#141414', padding: '4.514vw' }}>
             <TestoLeftInput>Logo</TestoLeftInput>
-            <div style={{ width: '31.042vw', height: '15.48vw', backgroundColor: 'white' , display:'flex',justifyContent:'center', alignItems:'center',alignContent:'center'}}>
-            <img src={`/loghiSquadre/${logo}11.png`}  style={{width:'9.375vw', height:'9.375vw'}} alt="Composed Selection" />
+            <div style={{ width: '31.042vw', height: '15.48vw', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
+              <img src={`/loghiSquadre/${logo}11.png`} style={{ width: '9.375vw', height: '9.375vw' }} alt="Composed Selection" />
 
             </div>
             <TestoLeftInput>Shape</TestoLeftInput>
@@ -143,14 +148,45 @@ const CreazioneClub = () => {
                 <InputClub onChange={(e) => setMetaverseZone(e.target.value)} />
               </div>
 
-
+              <button onClick={() => { setSecondstep(true), setFirstStep(false) }}>Avanti</button>
             </div>
           </div>
         </div>}
 
       {(!!secondStep) &&
         <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'row', position: 'fixed', top: '4.167vw', left: ' 5vw', gap: '3.125vw', backgroundColor: '#1C1C1C', alignContent: 'center', alignItems: 'center', justifyContent: 'center' }}>
-          <div style={{ width: '83.33vw', height: '37.5vw', backgroundColor: '#141414' }}></div>
+          <div style={{ width: '83.33vw', height: '37.5vw', backgroundColor: '#141414' }}>
+            <div>
+              <div>
+                <p>Metaverse Zone</p>
+                <p>Qui</p>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', backgroundColor: 'white', width: '41.667vw', height: '20.83vw' }}>
+                <div style={{ display: 'flex', flexDirection: 'row' }}>
+                  <div style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white' , display:'flex', justifyContent:'center', alignContent:'center', alignItems:'center'}}>
+                    <img src={skill} style={{width:'13.542vw'}}></img>
+                  </div>
+                  <div style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white' , display:'flex', justifyContent:'center', alignContent:'center', alignItems:'center'}}>
+                    <img src={tank} style={{width:'13.542vw'}}></img>
+                  </div>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'row' }}>
+                  <div style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white' , display:'flex', justifyContent:'center', alignContent:'center', alignItems:'center'}}>
+                    <img src={tactic} style={{width:'13.542vw'}}></img>
+                  </div>
+                  <div style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white' , display:'flex', justifyContent:'center', alignContent:'center', alignItems:'center'}}>
+                    <img src={speed} style={{width:'13.542vw'}}></img>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+            <div>
+
+            </div>
+
+          </div>
         </div>
       }
 

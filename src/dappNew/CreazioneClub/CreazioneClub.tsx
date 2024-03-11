@@ -84,21 +84,18 @@ const CreazioneClub = () => {
         <div style={{ width: '40.069vw', height: '37.5vw', display: 'flex', flexDirection: 'column', backgroundColor: '#141414', justifyContent: 'center', alignContent: 'center' , alignItems:'center',gap:'1.217vw'}}>
 
 
-          <div style={{ display: 'flex', flexDirection: 'row', gap: '1.5vw', justifyContent: 'center', alignContent: 'center', alignItems: 'center' }}>
-            <div>
+          <div style={{ display: 'flex', flexDirection: 'row', gap: '1.5vw', justifyContent: 'center'}}>
+            <div style={{display:'flex', flexDirection:'column', gap :'0.519vw'}}>
               <TestoLeftInput>Team name</TestoLeftInput>
-
               <InputClub style={{ width: '21.875vw' }} onChange={(e) => setName(e.target.value)} />
             </div>
             <div>
               <TestoLeftInput>abbreviation</TestoLeftInput>
-
               <InputClub style={{ width: '12.135vw' }} onChange={(e) => setAbbreviation(e.target.value)} />
             </div>
 
           </div>
           <TestoLeftInput>Clubs Name</TestoLeftInput>
-
           <InputClub onChange={(e) => setClubsName(e.target.value)} />
           <div><TestoLeftInput>HUB Name</TestoLeftInput>
 

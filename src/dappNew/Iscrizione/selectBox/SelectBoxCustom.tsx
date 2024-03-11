@@ -38,6 +38,7 @@ const SelectBoxCustom = ({list,role,setNationality,nationality}) => {
           height: '1.727vw',
           fontFamily: 'DIN-Pro',
           color:'#7C7C7C',
+          backgroundColor:'#ffffff',
           textAlign:'center',
           fontSize: '1.05vw',
           padding:'0px',

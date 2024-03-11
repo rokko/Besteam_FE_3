@@ -155,7 +155,7 @@ const CreazioneClub = () => {
 
       {(!!secondStep) &&
         <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'row', position: 'fixed', top: '4.167vw', left: ' 5vw', gap: '3.125vw', backgroundColor: '#1C1C1C', alignContent: 'center', alignItems: 'center', justifyContent: 'center' }}>
-          <div style={{ width: '83.33vw', height: '37.5vw', backgroundColor: '#141414' }}>
+          <div style={{ width: '83.33vw', height: '37.5vw', backgroundColor: '#141414' , display:'flex',flexDirection:'row', justifyContent:'center', alignContent:'center', alignItems:'center'}}>
             <div>
               <div>
                 <p>Metaverse Zone</p>
@@ -163,18 +163,18 @@ const CreazioneClub = () => {
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', backgroundColor: 'white', width: '41.667vw', height: '20.83vw' }}>
                 <div style={{ display: 'flex', flexDirection: 'row' }}>
-                  <div style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white' , display:'flex', justifyContent:'center', alignContent:'center', alignItems:'center'}}>
+                  <div onClick={() => setMetaverseZone('skill')} style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white' , display:'flex', justifyContent:'center', alignContent:'center', alignItems:'center', border: metaverseZone === 'skill' ? '2px solid #2DC653' : 'none' }}>
                     <img src={skill} style={{width:'13.542vw'}}></img>
                   </div>
-                  <div style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white' , display:'flex', justifyContent:'center', alignContent:'center', alignItems:'center'}}>
+                  <div  onClick={() => setMetaverseZone('tank')} style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white' , display:'flex', justifyContent:'center', alignContent:'center', alignItems:'center',border: metaverseZone === 'tank' ? '2px solid #2DC653' : 'none'}}>
                     <img src={tank} style={{width:'13.542vw'}}></img>
                   </div>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'row' }}>
-                  <div style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white' , display:'flex', justifyContent:'center', alignContent:'center', alignItems:'center'}}>
+                  <div  onClick={() => setMetaverseZone('tactic')} style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white' , display:'flex', justifyContent:'center', alignContent:'center', alignItems:'center',border: metaverseZone === 'tactic' ? '2px solid #2DC653' : 'none'}}>
                     <img src={tactic} style={{width:'13.542vw'}}></img>
                   </div>
-                  <div style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white' , display:'flex', justifyContent:'center', alignContent:'center', alignItems:'center'}}>
+                  <div onClick={() => setMetaverseZone('speed')} style={{ width: '20.83vw', height: '10.41vw', backgroundColor: 'white' , display:'flex', justifyContent:'center', alignContent:'center', alignItems:'center',border: metaverseZone === 'speed' ? '2px solid #2DC653' : 'none'}}>
                     <img src={speed} style={{width:'13.542vw'}}></img>
                   </div>
                 </div>
@@ -182,9 +182,18 @@ const CreazioneClub = () => {
 
               </div>
             </div>
-            <div>
+            <div style={{display:'flex',flexDirection:'column'}}>
+              <p>Skill</p>
+              <p>Lorem ipsum dolor sit amet, 
+aliquip ex ea com vero.</p>
+
+
+
+          <button>Start</button>
+
 
             </div>
+
 
           </div>
         </div>

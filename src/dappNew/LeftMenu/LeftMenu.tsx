@@ -21,7 +21,7 @@ const LeftMenu = () => {
     
     
     <div style={{display:'flex',flexDirection:'column',gap:'0.2rem'}}>
-      <img style={{width:'2.552vw', height:'2.052vw'}}src={iconaNotifica} alt='iconaNotifica' />
+      <img style={{width:'2.45vw', height:'2.13vw'}}src={iconaNotifica} alt='iconaNotifica' />
       <p>DM</p>
     </div>
     <div>

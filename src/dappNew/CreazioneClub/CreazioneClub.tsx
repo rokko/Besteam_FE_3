@@ -20,6 +20,12 @@ import joinTeam from '../media/join.png'
 import buyTeam from '../media/buy.png'
 import { HeaderDapp } from "../HeaderDapp";
 import { LeftMenu } from "../LeftMenu";
+import logo1 from '../media/shapes/logo1.png';
+import logo2 from '../media/shapes/logo2.png';
+import logo3 from '../media/shapes/logo3.png';
+import logo4 from '../media/shapes/logo4.png';
+import logo5 from '../media/shapes/logo5.png'
+import ColorSelect from "./ColorSelect";
 
 const CreazioneClub = () => {
   const [name, setName] = useState("")
@@ -34,7 +40,7 @@ const CreazioneClub = () => {
   const [stadiumName, setStadiumName] = useState("")
   const [metaverseZone, setMetaverseZone] = useState("")
   const [start, setStart] = useState(false)
-  const [firstStep, setFirstStep] = useState(false)
+  const [firstStep, setFirstStep] = useState(true)
   const [secondStep, setSecondstep] = useState(false)
 
 
@@ -70,77 +76,88 @@ const CreazioneClub = () => {
       <LeftMenu />
 
       {(!!firstStep) &&
-         <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'row', position: 'fixed', top: '4.167vw', left: ' 5vw', gap: '3.125vw', backgroundColor: '#1C1C1C', alignContent: 'center', alignItems: 'center', justifyContent: 'center' }}>
-         <div style={{ width: '40.069vw', height: '37.5vw', display: 'flex', flexDirection: 'column', backgroundColor: '#141414', padding: '4.514vw' }}>
-           <TestoLeftInput>Logo</TestoLeftInput>
-           <div style={{ width: '31.042vw', height: '15.486vw', backgroundColor: 'white' }}>
- 
-           </div>
-           <TestoLeftInput>Shape</TestoLeftInput>
-           <div style={{ width: '31.042vw', height: '6.215vw', backgroundColor: 'white' }}>
- 
-           </div>
-           <div style={{ display: 'flex', flexDirection: 'row' }}>
-             <TestoLeftInput>Main color</TestoLeftInput>
-             <TestoLeftInput>Secondary color</TestoLeftInput>
-           </div>
- 
-         </div>
-         <div style={{ width: '40.069vw', height: '37.5vw', display: 'flex', flexDirection: 'column', backgroundColor: '#141414', justifyContent: 'center', alignContent: 'center' , alignItems:'center',gap:'1.217vw'}}>
- 
- 
-           <div style={{ display: 'flex', flexDirection: 'row', gap: '1.5vw', justifyContent: 'center'}}>
-             <div style={{display:'flex', flexDirection:'column', gap :'0.519vw'}}>
-               <TestoLeftInput>Team name</TestoLeftInput>
-               <InputClub style={{ width: '21.875vw' }} onChange={(e) => setName(e.target.value)} />
-             </div>
-             <div>
-               <TestoLeftInput>abbreviation</TestoLeftInput>
-               <InputClub style={{ width: '12.135vw' }} onChange={(e) => setAbbreviation(e.target.value)} />
-             </div>
- 
-           </div>
-           <TestoLeftInput>Clubs Name</TestoLeftInput>
-           <InputClub onChange={(e) => setClubsName(e.target.value)} />
-           <div><TestoLeftInput>HUB Name</TestoLeftInput>
- 
-             <InputClub onChange={(e) => setStadiumName(e.target.value)} />
-           </div>
- 
-           <div>
-             <TestoLeftInput>Stadium Name</TestoLeftInput>
- 
-             <InputClub onChange={(e) => setTwitterPage(e.target.value)} />
-           </div>
-           <div>
- 
-             <div>
-               <TestoLeftInput>Main Social Page</TestoLeftInput>
-               <InputClub onChange={(e) => setLivePage(e.target.value)} />
-             </div>
- 
- 
- 
-             <div><TestoLeftInput>Official Live Page</TestoLeftInput>
- 
-               <InputClub onChange={(e) => setMetaverseZone(e.target.value)} />
-             </div>
- 
- 
-           </div>
-         </div>
-       </div>}
+        <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'row', position: 'fixed', top: '4.167vw', left: ' 5vw', gap: '3.125vw', backgroundColor: '#1C1C1C', alignContent: 'center', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ width: '40.069vw', height: '37.5vw', display: 'flex', flexDirection: 'column', backgroundColor: '#141414', padding: '4.514vw' }}>
+            <TestoLeftInput>Logo</TestoLeftInput>
+            <div style={{ width: '31.042vw', height: '15.48vw', backgroundColor: 'white' , display:'flex',justifyContent:'center', alignItems:'center',alignContent:'center'}}>
+            <img src={`/loghiSquadre/${logo}11.png`}  style={{width:'9.375vw', height:'9.375vw'}} alt="Composed Selection" />
+
+            </div>
+            <TestoLeftInput>Shape</TestoLeftInput>
+            <div style={{ display: 'flex', flexDirection: 'row', backgroundColor: 'white', justifyContent: 'space-evenly' }}>
+              <div onClick={() => setLogo('R')} style={{ width: '4.661vw', height: '4.661vw', backgroundImage: `url(${logo1})`, backgroundSize: 'contain' }} />
+              <div onClick={() => setLogo('C')} style={{ width: '4.661vw', height: '4.661vw', backgroundImage: `url(${logo2})`, backgroundSize: 'contain' }} />
+              <div onClick={() => setLogo('O')} style={{ width: '4.661vw', height: '4.661vw', backgroundImage: `url(${logo3})`, backgroundSize: 'contain' }} />
+              <div onClick={() => setLogo('S')} style={{ width: '4.661vw', height: '4.661vw', backgroundImage: `url(${logo4})`, backgroundSize: 'contain' }} />
+              <div onClick={() => setLogo('B')} style={{ width: '4.661vw', height: '4.661vw', backgroundImage: `url(${logo5})`, backgroundSize: 'contain' }} />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'row' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.519vw' }}>
+                <TestoLeftInput>Main color</TestoLeftInput>
+                <ColorSelect />
+              </div>
+              <div>
+                <TestoLeftInput>Secondary color</TestoLeftInput>
+                <ColorSelect />
+              </div>
+            </div>
+
+          </div>
+          <div style={{ width: '40.069vw', height: '37.5vw', display: 'flex', flexDirection: 'column', backgroundColor: '#141414', justifyContent: 'center', alignContent: 'center', alignItems: 'center', gap: '1.217vw' }}>
+
+
+            <div style={{ display: 'flex', flexDirection: 'row', gap: '1.5vw', justifyContent: 'center' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.519vw' }}>
+                <TestoLeftInput>Team name</TestoLeftInput>
+                <InputClub style={{ width: '21.875vw' }} onChange={(e) => setName(e.target.value)} />
+              </div>
+              <div>
+                <TestoLeftInput>abbreviation</TestoLeftInput>
+                <InputClub style={{ width: '12.135vw' }} onChange={(e) => setAbbreviation(e.target.value)} />
+              </div>
+
+            </div>
+            <TestoLeftInput>Clubs Name</TestoLeftInput>
+            <InputClub onChange={(e) => setClubsName(e.target.value)} />
+            <div><TestoLeftInput>HUB Name</TestoLeftInput>
+
+              <InputClub onChange={(e) => setStadiumName(e.target.value)} />
+            </div>
+
+            <div>
+              <TestoLeftInput>Stadium Name</TestoLeftInput>
+
+              <InputClub onChange={(e) => setTwitterPage(e.target.value)} />
+            </div>
+            <div>
+
+              <div>
+                <TestoLeftInput>Main Social Page</TestoLeftInput>
+                <InputClub onChange={(e) => setLivePage(e.target.value)} />
+              </div>
+
+
+
+              <div><TestoLeftInput>Official Live Page</TestoLeftInput>
+
+                <InputClub onChange={(e) => setMetaverseZone(e.target.value)} />
+              </div>
+
+
+            </div>
+          </div>
+        </div>}
 
       {(!!secondStep) &&
-         <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'row', position: 'fixed', top: '4.167vw', left: ' 5vw', gap: '3.125vw', backgroundColor: '#1C1C1C', alignContent: 'center', alignItems: 'center', justifyContent: 'center' }}>
-      <div style={{width:'83.33vw',height:'37.5vw', backgroundColor:'#141414'}}></div>
-      </div>
+        <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'row', position: 'fixed', top: '4.167vw', left: ' 5vw', gap: '3.125vw', backgroundColor: '#1C1C1C', alignContent: 'center', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ width: '83.33vw', height: '37.5vw', backgroundColor: '#141414' }}></div>
+        </div>
       }
 
 
 
-      
-     
+
+
 
 
     </div>
@@ -155,8 +172,8 @@ const CreazioneClub = () => {
           <div style={{ width: '24.74vw', height: '28.125vw', backgroundImage: `url(${joinTeam})`, backgroundSize: 'contain' }}>
 
           </div>
-          <div onClick={() => setStart(true)} style={{ width: '22.396vw', height: '28.125vw', backgroundImage: `url(${createTeam})`, backgroundSize: 'contain' }}/>
-          <div onClick={()=> console.log('COMPRA')} style={{ width: '10.677vw', height: '28.125vw', backgroundImage: `url(${buyTeam})`, backgroundSize: 'contain' }}></div>
+          <div onClick={() => setStart(true)} style={{ width: '22.396vw', height: '28.125vw', backgroundImage: `url(${createTeam})`, backgroundSize: 'contain' }} />
+          <div onClick={() => console.log('COMPRA')} style={{ width: '10.677vw', height: '28.125vw', backgroundImage: `url(${buyTeam})`, backgroundSize: 'contain' }}></div>
 
         </div>
       </div>

@@ -112,7 +112,10 @@ const Iscrizione = () => {
   };
   
   const handleMouseLeave = (event) => {
+    console.log(event.target.id)
+    if (event.target.id !== avatar) {
     event.target.style.transform = 'scale(1)';
+  }
   };
   const registrati = (event) => {
     event.preventDefault()
@@ -340,8 +343,8 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
   <p style={{fontSize:'33px', color:'white', fontFamily:'DinPROBold'}}>CHOOSE YOUR AVATAR</p>
   <FormControl component="fieldset">
     <div style={{display:'flex', flexDirection:'row', gap:'4rem'}}>
- <img src={uomo}  className={`${avatar}=== 'uomo' ? 'selected' : ''`} style={{height:'14.58vw', transition: 'transform 0.3s'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={()=>{setAvatar('donna')}} />
- <img src={donna} className={`${avatar}=== 'donna' ? 'selected' : ''`} style={{height:'14.58vw', transition: 'transform 0.3s'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={()=>{setAvatar('uomo')}}/>
+ <img src={uomo} id="donna" style={{height:'14.58vw', transition: 'transform 0.3s'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={()=>{setAvatar('donna')}} />
+ <img src={donna} id="uomo" style={{height:'14.58vw', transition: 'transform 0.3s'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={()=>{setAvatar('uomo')}}/>
  </div>
  
 </FormControl>

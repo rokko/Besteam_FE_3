@@ -30,8 +30,8 @@ const ButtonLogo = styled.div`
 
 const InputClub = styled.input`
   background-color: white;
-  width:35.57vw ;
-  height: 1.727vw;
+  width:31.042vw ;
+  height: 1.528vw;
   border: none;
 `;
 
@@ -43,6 +43,7 @@ const TestoLeftInput = styled.p`
   color: white;
   opacity: 1;
   font-weight:400;
+  line-height:0
 
 `
 

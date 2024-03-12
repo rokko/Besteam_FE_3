@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Select, MenuItem, FormControl, Box } from '@mui/material';
 
 export default function ColorSelect({ color, setColor, type }) {
+    const [coloreRiga, setColoreRiga] = useState('#ffffff')
 
     const handleChange = (event) => {
+    setColoreRiga(event.target.value)
         if (type === 1) {
+
             setColor(colors.filter((color) => { return color.color == event.target.value })[0].id);
 
         } else {
@@ -40,6 +43,13 @@ export default function ColorSelect({ color, setColor, type }) {
     return (
         <FormControl fullWidth>
             <Select
+                sx={
+            {
+                width:'14.306vw',            
+                height:'1.528vw',
+                backgroundColor:coloreRiga
+            }
+                }
                 value={color}
                 onChange={handleChange}
                 displayEmpty

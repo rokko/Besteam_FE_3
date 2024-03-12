@@ -102,12 +102,12 @@ const CreazioneClub = () => {
               <div onClick={() => setLogo('S')} style={{ width: '4.661vw', height: '4.661vw', backgroundImage: `url(${logo4})`, backgroundSize: 'contain' }} />
               <div onClick={() => setLogo('B')} style={{ width: '4.661vw', height: '4.661vw', backgroundImage: `url(${logo5})`, backgroundSize: 'contain' }} />
             </div>
-            <div style={{ display: 'flex', flexDirection: 'row' }}>
+            <div style={{ display: 'flex', flexDirection: 'row', alignContent:'center' , alignItems:'center', justifyContent:'space-between'}}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.519vw' }}>
                 <TestoLeftInput>Main color</TestoLeftInput>
                 <ColorSelect setColor={setClubColorOne}  color={clubColorOne} type= {1}/>
               </div>
-              <div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.519vw' }}>
                 <TestoLeftInput>Secondary color</TestoLeftInput>
                 <ColorSelect setColor={setClubColorTwo}  color={clubColorTwo} type={2}/>
               </div>

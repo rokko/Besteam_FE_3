@@ -1,5 +1,5 @@
 import { flexbox } from "@mui/system";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "../general/general";
 import {
   ButtonIscrizione,
@@ -38,10 +38,10 @@ const CreazioneClub = () => {
   const [twitterPage, setTwitterPage] = useState("")
   const [clubsName, setClubsName] = useState("")
   const [livePage, setLivePage] = useState("")
-  const [logo, setLogo] = useState("")
+  const [logo, setLogo] = useState("R")
   const [abbreviation, setAbbreviation] = useState("")
-  const [clubColorOne, setClubColorOne] = useState("")
-  const [clubColorTwo, setClubColorTwo] = useState("")
+  const [clubColorOne, setClubColorOne] = useState("1")
+  const [clubColorTwo, setClubColorTwo] = useState("1")
   const [trainingCenterName, setTrainingCenterName] = useState("")
   const [stadiumName, setStadiumName] = useState("")
   const [metaverseZone, setMetaverseZone] = useState("")
@@ -52,6 +52,10 @@ const CreazioneClub = () => {
 
 
 
+  useEffect(()=>{
+    console.log(clubColorOne,clubColorTwo,logo)
+
+  },[clubColorOne,clubColorTwo,logo])
 
   const createam = () => {
 
@@ -87,7 +91,7 @@ const CreazioneClub = () => {
           <div style={{ width: '40.069vw', height: '37.5vw', display: 'flex', flexDirection: 'column', backgroundColor: '#141414', padding: '4.514vw' }}>
             <TestoLeftInput>Logo</TestoLeftInput>
             <div style={{ width: '31.042vw', height: '15.48vw', backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', alignContent: 'center' }}>
-              <img src={`/loghiSquadre/${logo}11.png`} style={{ width: '9.375vw', height: '9.375vw' }} alt="Composed Selection" />
+              <img src={`/loghiSquadre/${logo}${clubColorOne}${clubColorTwo}.png`} style={{ width: '9.375vw', height: '9.375vw' }} alt="Composed Selection" />
 
             </div>
             <TestoLeftInput>Shape</TestoLeftInput>
@@ -101,11 +105,11 @@ const CreazioneClub = () => {
             <div style={{ display: 'flex', flexDirection: 'row' }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.519vw' }}>
                 <TestoLeftInput>Main color</TestoLeftInput>
-                <ColorSelect />
+                <ColorSelect setColor={setClubColorOne}  color={clubColorOne} type= {1}/>
               </div>
               <div>
                 <TestoLeftInput>Secondary color</TestoLeftInput>
-                <ColorSelect />
+                <ColorSelect setColor={setClubColorTwo}  color={clubColorTwo} type={2}/>
               </div>
             </div>
 
@@ -234,6 +238,8 @@ const CreazioneClub = () => {
           </div>
 
         </div>}
+
+        
 
 
 

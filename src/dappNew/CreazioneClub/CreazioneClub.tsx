@@ -33,6 +33,9 @@ import nextButton from '../media/nextButton.png'
 import teamValue from './TeamValue.png'
 import ColorSelect from "./ColorSelect";
 import TeamInfo from "./TeamInfo";
+import CreateNo from '../media/CreateNo.png'
+import JoinNo from '../media/JoinNo.png'
+import BuyNo from '../media/BuyNo.png'
 
 const CreazioneClub = () => {
   const [name, setName] = useState("")
@@ -259,15 +262,14 @@ const CreazioneClub = () => {
 
     <HeaderDapp />
     <LeftMenu />
-    <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'row', position: 'fixed', top: '4.167vw', left: ' 5vw', gap: '3.125vw', backgroundColor: '#1C1C1C', alignContent: 'center', alignItems: 'center', justifyContent: 'center' }}>
-      <div style={{ display: 'flex', flexDirection: 'row', gap: '3rem', marginTop: '2.208vw' }}>
-        <div style={{ width: '24.74vw', height: '28.125vw', backgroundImage: `url(${joinTeam})`, backgroundSize: 'contain' }}>
+    <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'row', position: 'fixed', top: '4.167vw', left: ' 5vw', gap: '4.125vw', backgroundColor: '#1C1C1C'}}>
+        <div style={{ width: '28.74vw', height: '32.125vw', backgroundImage: `url(${JoinNo})`,marginTop:'40px' , marginLeft:'80px',backgroundSize: 'contain' }}>
 
         </div>
-        <div onClick={() => setStart(true)} style={{ width: '22.396vw', height: '28.125vw', backgroundImage: `url(${createTeam})`, backgroundSize: 'contain' }} />
-        <div onClick={() => console.log('COMPRA')} style={{ width: '10.677vw', height: '28.125vw', backgroundImage: `url(${buyTeam})`, backgroundSize: 'contain' }}></div>
+        <div onClick={() => setStart(true)} style={{ width: '26.396vw', height: '32.125vw', marginTop:'40px',backgroundImage: `url(${CreateNo})`, backgroundSize: 'contain' }} />
+        <div onClick={() => console.log('COMPRA')} style={{ width: '14.677vw', height: '32.125vw',marginTop:'40px', backgroundImage: `url(${BuyNo})`, backgroundSize: 'contain' }}></div>
 
-      </div>
+    
     </div>
   </div>
 )

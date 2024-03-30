@@ -227,11 +227,9 @@ const SecondHeader = () => {
             <br />
             and <span style={{ fontStyle: "italic" }}>be the first!</span>
           </BoxText>
-         <Link to={"/dapp"}>
-          <ButtonPlayNew >
+          <ButtonPlayNew onClick={() => setOpen(true)} >
             <img style={{ width: "70%" }} src={testoplay} alt="testoplay" />
           </ButtonPlayNew>
-          </Link>
       
         </ImmagineIniziale>
 

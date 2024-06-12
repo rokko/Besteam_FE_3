@@ -65,6 +65,8 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin-top:68px;
+    margin-bottom: 68px;
 }
 
 .listaCard {
@@ -197,8 +199,8 @@ line-height: normal;
   .searchAndFilter{
     display: flex;
     flex-direction: row;
+    margin-bottom: 72px;
   
-    gap:35px
   }
 
   .filterButton{
@@ -231,4 +233,32 @@ font-style: normal;
 font-weight: 500;
 line-height: normal; 
 margin-top:91px
+  }
+
+  .immagineContactUs{
+    width:24px;
+    height:24px;
+  }
+
+  .sectionContactUs{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .riga{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .testoContactUs{
+    color: var(--icon-color, #FFF);
+text-align: center;
+font-family: DINPro;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
   }

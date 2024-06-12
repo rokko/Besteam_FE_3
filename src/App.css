@@ -154,6 +154,35 @@ input.MuiInput-input.MuiInputBase-input.css-1x51dt5-MuiInputBase-input-MuiInput-
   align-items: center;
   width: 30px;
   height: 30px;
+  position:relative;
+ 
+}
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 25px; /* Offset to the right of the icon */
+  transform: translateY(-50%);
+  background-color: #fff;
+  padding: 5px 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  z-index: 100;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: black;
+}
+
+.testoInternoTikTok{
+  color: var(--icon-color, #FFF);
+text-align: center;
+font-family: DINPro;
+font-size: 10px;
+font-style: normal;
+font-weight: 500;
+line-height: normal; 
 }
 .colore:hover {
   background-color: black;

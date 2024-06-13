@@ -238,6 +238,7 @@ margin-top:91px
   .immagineContactUs{
     width:24px;
     height:24px;
+    margin:0px;
   }
 
   .sectionContactUs{
@@ -245,6 +246,7 @@ margin-top:91px
     flex-direction: column;
     gap: 40px;
   }
+
   .riga{
     display: flex;
     flex-direction: row;
@@ -253,7 +255,7 @@ margin-top:91px
     justify-content: center;
   }
 
-  .testoContactUs{
+  .testoContactUs2{
     color: var(--icon-color, #FFF);
 text-align: center;
 font-family: DINPro;

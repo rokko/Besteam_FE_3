@@ -6,7 +6,7 @@ import Settembrino from '../media/staff/ProfilePic Collaboratore -  Giuseppe Set
 export const Staff : StaffType[]=[{
     id:1,
     nome: 'Davide Sodano',
-    ruolo:'Creator Manager',
+    ruolo:'Creator Supporter',
     linkedin:'https://www.linkedin.com/in/davide-sodano-11b652213/',
     tiktok:'https://www.tiktok.com/@jsoda_',
     src:Sodano
@@ -15,7 +15,7 @@ export const Staff : StaffType[]=[{
 {
     id:2,
     nome: 'Ivan Ieno',
-    ruolo:'Creator Supporter',
+    ruolo:'Creator Manager',
     linkedin:'https://www.linkedin.com/in/ivan-ieno-169381178/',
     tiktok:'https://www.tiktok.com/@onizuka86rm',
     src:Ieno

@@ -13,14 +13,51 @@ import CardCreator from './components/CardCreator/CardCreator';
 import discord from './media/discord 2.png'
 import mail from './media/Frame 99.png'
 import whatsapp from './media/—Pngtree—white whatsapp icon png_3562063 (1) 1.png'
+import { Box, Button, Checkbox, FormControlLabel, Popover, Typography } from '@mui/material'
 
 const HomeTikTok = () => {
   const [activeCardId, setActiveCardId] = useState<number | null>(null);
   const [searchTerm, setSearchTerm] = useState<string>('')
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const [filtriAttivi, setFiltriAttivi] = useState<boolean>(false);
+
+  const handleClickFiltri = () => {
+    setFiltriAttivi(!filtriAttivi);
+  }
+
+  const [selectedFilters, setSelectedFilters] = useState({
+    relazioni: false,
+    viaggi: false,
+    shopping: false,
+    educazione: false,
+    cucina: false,
+    fotografia: false,
+    musica: false,
+    ecologia: false,
+  });
 
   const handleCardClick = (id: number) => {
     setActiveCardId(activeCardId === id ? null : id);
   };
+
+  const handleFilterClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleFilterClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleFilterChange = (event) => {
+    setSelectedFilters({
+      ...selectedFilters,
+      [event.target.name]: event.target.checked,
+    });
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? 'simple-popover' : undefined;
 
   const filteredCreators = creators.filter((creator) => {
     const matchesSearch = creator.nome.toLowerCase().includes(searchTerm.toLowerCase());
@@ -54,7 +91,7 @@ const HomeTikTok = () => {
         </div>
         <p className='ourStaff'>OUR CREATORS</p>
 
-        <div className='searchAndFilter'>
+        <div style={{ display: 'flex', flexDirection:'row',width:'100%',gap:'620px', justifyContent:'center' }}>
           <div className='search-container'>
             <input placeholder='Search creators here..' className='inputStyle' onChange={(x) => setSearchTerm(x.target.value)}>
 
@@ -76,8 +113,373 @@ const HomeTikTok = () => {
               </svg>
             </div>
           </div>
-          <div className='filterButton'>
-            <p className='testoFiltri'>+ FILTERS</p>
+          <div>
+            {filtriAttivi && (<button aria-describedby={id} style={{
+              width: '200px',
+              height: '90px',
+              padding: '24px',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              background: '#192C1E',
+              border: '1px solid #2DC653',
+              color: '#2DC653'
+            }} onClick={() => {
+              handleFilterClick(event);
+              handleClickFiltri();
+            }}>
+              SAVE
+            </button>
+            )}
+            {!filtriAttivi && (
+              <button aria-describedby={id} style={{
+                width: '200px',
+                height: '90px',
+                padding: '24px',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                background: '#4E4E4E',
+                color: '#A1A1A1'
+              }} onClick={() => {
+                handleFilterClick(event);
+                handleClickFiltri();
+              }}>
+                + FILTERS
+              </button>
+            )}
+            <Popover
+              id={id}
+              open={open}
+              anchorEl={anchorEl}
+              onClose={handleFilterClose}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+            >
+              <Box sx={{ p: 2, backgroundColor: '#292929', color: 'white', minWidth: '800px', display: 'flex', flexDirection: 'column-reverse' }}>
+
+              <FormControlLabel
+      labelPlacement="start"
+      label="Relazioni e Consigli di coppia"
+      control={
+        <Checkbox
+          checked={selectedFilters.relazioni}
+          onChange={handleFilterChange}
+          name="relazioni"
+          sx={{
+            padding: '0 8px',
+            color: 'white',
+            '& .MuiSvgIcon-root': {
+              fill: 'none',
+              stroke: '#B0B0B0', // Bordo grigio chiaro quando non selezionato
+              strokeWidth: 1.5,
+              borderRadius: '4px',
+              width: '20px',
+              height: '20px',
+            },
+            '&.Mui-checked .MuiSvgIcon-root': {
+              fill: '#1F8F42', // Sfondo verde quando selezionato
+              stroke: 'black', // Spunta nera
+              strokeWidth: 2, // Spessore della spunta
+            },
+            '&:hover': {
+              '& .MuiSvgIcon-root': {
+                stroke: '#1F8F42', // Cambia il bordo al passaggio del mouse quando non è selezionato
+              }
+            }
+          }}
+        />
+      }
+      sx={{ 
+        color: 'white', 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        width: '100%',
+        padding: '5px 0',
+      }}
+    />
+    <FormControlLabel
+      labelPlacement="start"
+      label="Viaggi"
+      control={
+        <Checkbox
+          checked={selectedFilters.viaggi}
+          onChange={handleFilterChange}
+          name="viaggi"
+          sx={{
+            padding: '0 8px',
+            color: 'white',
+            '& .MuiSvgIcon-root': {
+              fill: 'none',
+              stroke: '#B0B0B0',
+              strokeWidth: 1.5,
+              borderRadius: '4px',
+              width: '20px',
+              height: '20px',
+            },
+            '&.Mui-checked .MuiSvgIcon-root': {
+              fill: '#1F8F42',
+              stroke: 'black',
+              strokeWidth: 2,
+            },
+            '&:hover': {
+              '& .MuiSvgIcon-root': {
+                stroke: '#1F8F42',
+              }
+            }
+          }}
+        />
+      }
+      sx={{ 
+        color: 'white', 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        width: '100%',
+        padding: '5px 0',
+      }}
+    />
+    <FormControlLabel
+      labelPlacement="start"
+      label="Shopping"
+      control={
+        <Checkbox
+          checked={selectedFilters.shopping}
+          onChange={handleFilterChange}
+          name="shopping"
+          sx={{
+            padding: '0 8px',
+            color: 'white',
+            '& .MuiSvgIcon-root': {
+              fill: 'none',
+              stroke: '#B0B0B0',
+              strokeWidth: 1.5,
+              borderRadius: '4px',
+              width: '20px',
+              height: '20px',
+            },
+            '&.Mui-checked .MuiSvgIcon-root': {
+              fill: '#1F8F42',
+              stroke: 'black',
+              strokeWidth: 2,
+            },
+            '&:hover': {
+              '& .MuiSvgIcon-root': {
+                stroke: '#1F8F42',
+              }
+            }
+          }}
+        />
+      }
+      sx={{ 
+        color: 'white', 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        width: '100%',
+        padding: '5px 0',
+      }}
+    />
+    <FormControlLabel
+      labelPlacement="start"
+      label="Educazione e informazione"
+      control={
+        <Checkbox
+          checked={selectedFilters.educazione}
+          onChange={handleFilterChange}
+          name="educazione"
+          sx={{
+            padding: '0 8px',
+            color: 'white',
+            '& .MuiSvgIcon-root': {
+              fill: 'none',
+              stroke: '#B0B0B0',
+              strokeWidth: 1.5,
+              borderRadius: '4px',
+              width: '20px',
+              height: '20px',
+            },
+            '&.Mui-checked .MuiSvgIcon-root': {
+              fill: '#1F8F42',
+              stroke: 'black',
+              strokeWidth: 2,
+            },
+            '&:hover': {
+              '& .MuiSvgIcon-root': {
+                stroke: '#1F8F42',
+              }
+            }
+          }}
+        />
+      }
+      sx={{ 
+        color: 'white', 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        width: '100%',
+        padding: '5px 0',
+      }}
+    />
+    <FormControlLabel
+      labelPlacement="start"
+      label="Cucina"
+      control={
+        <Checkbox
+          checked={selectedFilters.cucina}
+          onChange={handleFilterChange}
+          name="cucina"
+          sx={{
+            padding: '0 8px',
+            color: 'white',
+            '& .MuiSvgIcon-root': {
+              fill: 'none',
+              stroke: '#B0B0B0',
+              strokeWidth: 1.5,
+              borderRadius: '4px',
+              width: '20px',
+              height: '20px',
+            },
+            '&.Mui-checked .MuiSvgIcon-root': {
+              fill: '#1F8F42',
+              stroke: 'black',
+              strokeWidth: 2,
+            },
+            '&:hover': {
+              '& .MuiSvgIcon-root': {
+                stroke: '#1F8F42',
+              }
+            }
+          }}
+        />
+      }
+      sx={{ 
+        color: 'white', 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        width: '100%',
+        padding: '5px 0',
+      }}
+    />
+    <FormControlLabel
+      labelPlacement="start"
+      label="Fotografia e video"
+      control={
+        <Checkbox
+          checked={selectedFilters.fotografia}
+          onChange={handleFilterChange}
+          name="fotografia"
+          sx={{
+            padding: '0 8px',
+            color: 'white',
+            '& .MuiSvgIcon-root': {
+              fill: 'none',
+              stroke: '#B0B0B0',
+              strokeWidth: 1.5,
+              borderRadius: '4px',
+              width: '20px',
+              height: '20px',
+            },
+            '&.Mui-checked .MuiSvgIcon-root': {
+              fill: '#1F8F42',
+              stroke: 'black',
+              strokeWidth: 2,
+            },
+            '&:hover': {
+              '& .MuiSvgIcon-root': {
+                stroke: '#1F8F42',
+              }
+            }
+          }}
+        />
+      }
+      sx={{ 
+        color: 'white', 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        width: '100%',
+        padding: '5px 0',
+      }}
+    />
+    <FormControlLabel
+      labelPlacement="start"
+      label="Musica e canto"
+      control={
+        <Checkbox
+          checked={selectedFilters.musica}
+          onChange={handleFilterChange}
+          name="musica"
+          sx={{
+            padding: '0 8px',
+            color: 'white',
+            '& .MuiSvgIcon-root': {
+              fill: 'none',
+              stroke: '#B0B0B0',
+              strokeWidth: 1.5,
+              borderRadius: '4px',
+              width: '20px',
+              height: '20px',
+            },
+            '&.Mui-checked .MuiSvgIcon-root': {
+              fill: '#1F8F42',
+              stroke: 'black',
+              strokeWidth: 2,
+            },
+            '&:hover': {
+              '& .MuiSvgIcon-root': {
+                stroke: '#1F8F42',
+              }
+            }
+          }}
+        />
+      }
+      sx={{ 
+        color: 'white', 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        width: '100%',
+        padding: '5px 0',
+      }}
+    />
+    <FormControlLabel
+      labelPlacement="start"
+      label="Ecologia e sostenibilità"
+      control={
+        <Checkbox
+          checked={selectedFilters.ecologia}
+          onChange={handleFilterChange}
+          name="ecologia"
+          sx={{
+            padding: '0 8px',
+            color: 'white',
+            '& .MuiSvgIcon-root': {
+              fill: 'none',
+              stroke: '#B0B0B0',
+              strokeWidth: 1.5,
+              borderRadius: '4px',
+              width: '20px',
+              height: '20px',
+            },
+            '&.Mui-checked .MuiSvgIcon-root': {
+              fill: '#1F8F42',
+              stroke: 'black',
+              strokeWidth: 2,
+            },
+            '&:hover': {
+              '& .MuiSvgIcon-root': {
+                stroke: '#1F8F42',
+              }
+            }
+          }}
+        />
+      }
+      sx={{ 
+        color: 'white', 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        width: '100%',
+        padding: '5px 0',
+      }}
+    />
+              </Box>
+            </Popover>
           </div>
         </div>
 

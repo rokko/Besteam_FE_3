@@ -9,7 +9,7 @@ import Paragrafo2 from "../components/Paragrafo2";
 import Paragrafo1 from "../components/Paragrafo1";
 import up from "../components/video/freccia.jpg";
 import freccia2 from "../components/video/freccia2.png";
-import { FaInstagram, FaDiscord, FaTelegram, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaDiscord, FaTelegram, FaTwitter, FaTiktok } from "react-icons/fa";
 //import OurTeam from "../components/OurTeam";
 import gifPallone from "../components/video/bb.gif";
 import OurPartners from "../components/OurPartners";
@@ -25,11 +25,14 @@ const HomePage: React.FC = () => {
   const [attivo, setAttivo] = useState(false);
   const [attivo2, setAttivo2] = useState(false);
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
-
+  const [apriTesto, setApriTesto] = useState(false);
   window.onscroll = function () {
     scrollFunction();
     scrollFunction2();
   };
+
+
+
   const bgScrollLeft = keyframes`
 
     from {
@@ -141,6 +144,18 @@ const HomePage: React.FC = () => {
                   <div className="colore">
                     <FaTwitter style={{ width: "20px", height: "20px" }} />
                   </div>
+                </a>
+                <a href="/tiktokagency" style={{ display: 'flex', flexDirection: 'row',width:'200px' , height:'30px', justifyItems:'center', alignContent:'center', alignItems:'center' }}>
+                  <div className="colore"  onMouseEnter={() =>  setApriTesto(!apriTesto)}       onMouseLeave={() => setApriTesto(!apriTesto)}>
+                    <FaTiktok style={{ width: "20px", height: "20px" }} />
+                  </div>
+                  {apriTesto && (
+                    <div   onMouseOver={() => setApriTesto(true)}
+                    onMouseOut={() => setApriTesto(false)} style={{ width: '114px', height: '30px', backgroundColor: '#000000' , display:'flex', alignContent:'center', alignItems:'center'}}>
+                      <p style={{fontSize:'15px', fontWeight:'500', marginLeft:'5px'}}>  TikTok Agency</p>
+                    </div>
+                  )}
+
                 </a>
               </div>
             </div>

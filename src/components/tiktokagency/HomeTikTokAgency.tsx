@@ -61,10 +61,17 @@ const HomeTikTok = () => {
 
   const filteredCreators = creators.filter((creator) => {
     const matchesSearch = creator.nome.toLowerCase().includes(searchTerm.toLowerCase());
-    //const matchesCategory = selectedCategory ? creator.category === selectedCategory : true;
-    return matchesSearch;
+  
+    // Trova tutte le categorie che sono state selezionate
+    const selectedCategories = Object.keys(selectedFilters).filter((key) => selectedFilters[key]);
+  
+    // Verifica se il creator appartiene a una delle categorie selezionate
+    const matchesCategory = selectedCategories.length === 0 || selectedCategories.every((category) => 
+      creator.categorie.includes(category)
+    );
+  
+    return matchesSearch ;
   });
-
   return (
     <>
       <div className={'topLanding'}>

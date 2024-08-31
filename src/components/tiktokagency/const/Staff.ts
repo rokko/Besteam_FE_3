@@ -4,7 +4,7 @@ import Ieno from '../media/staff/ProfilePic Collaboratore -  Ivan Ieno.webp'
 import Ricci from '../media/staff/ProfilePic Collaboratore - Riccardo Ricci.webp'
 import Settembrino from '../media/staff/ProfilePic Collaboratore -  Giuseppe Settembrino.webp'
 export const Staff : StaffType[]=[{
-    id:1,
+    id:1111,
     nome: 'Davide Sodano',
     ruolo:'Creator Supporter',
     linkedin:'https://www.linkedin.com/in/davide-sodano-11b652213/',
@@ -13,7 +13,7 @@ export const Staff : StaffType[]=[{
 
 },
 {
-    id:2,
+    id:2222,
     nome: 'Ivan Ieno',
     ruolo:'Creator Manager',
     linkedin:'https://www.linkedin.com/in/ivan-ieno-169381178/',
@@ -23,7 +23,7 @@ export const Staff : StaffType[]=[{
 
 },
 {
-    id:3,
+    id:3333,
     nome: 'Riccardo Ricci',
     ruolo:'Onboarding Operator',
     linkedin:'https://www.linkedin.com/in/riccardo-ricci-a2b6a7224/',
@@ -33,7 +33,7 @@ export const Staff : StaffType[]=[{
 
 },
 {
-    id:4,
+    id:4444,
     nome: 'Giuseppe Settembrino',
     ruolo:'Scouting Operator',
     linkedin:'https://www.linkedin.com/in/giuseppe-settembrino-97022430b/',

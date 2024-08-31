@@ -58,27 +58,32 @@ const HomeTikTok = () => {
   };
 
   const handleFilterChange = (event) => {
-    setSelectedFilters({
-      ...selectedFilters,
-      [event.target.name]: event.target.checked,
-    });
+    const { name, checked } = event.target;
+  
+    // Convertiamo il nome del filtro in minuscolo per uniformare la gestione dei nomi
+    const lowerCaseName = name.toLowerCase();
+  
+    setSelectedFilters((prevFilters) => ({
+      ...prevFilters,
+      [lowerCaseName]: checked,
+    }));
   };
 
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
-
   const filteredCreators = creators.filter((creator) => {
     const matchesSearch = creator.nome.toLowerCase().includes(searchTerm.toLowerCase());
   
     // Trova tutte le categorie che sono state selezionate
-    const selectedCategories = Object.keys(selectedFilters).filter((key) => selectedFilters[key]);
+    const selectedCategories = Object.keys(selectedFilters)
+      .filter((key) => selectedFilters[key]);
   
     // Verifica se il creator appartiene a una delle categorie selezionate
-    const matchesCategory = selectedCategories.length === 0 || selectedCategories.every((category) => 
-      creator.categorie.includes(category)
+    const matchesCategory = selectedCategories.length === 0 || selectedCategories.some((category) => 
+      creator.categorie.map(c => c.toLowerCase()).includes(category)
     );
   
-    return matchesSearch ;
+    return matchesSearch && matchesCategory;
   });
   return (
     <>
@@ -180,7 +185,7 @@ const HomeTikTok = () => {
         <Checkbox
           checked={selectedFilters.relazioni}
           onChange={handleFilterChange}
-          name="relazioni"
+          name="Relazioni"
           sx={{
             padding: '0 8px',
             color: 'white',
@@ -220,7 +225,7 @@ const HomeTikTok = () => {
         <Checkbox
           checked={selectedFilters.viaggi}
           onChange={handleFilterChange}
-          name="viaggi"
+          name="Viaggi"
           sx={{
             padding: '0 8px',
             color: 'white',
@@ -340,7 +345,7 @@ const HomeTikTok = () => {
         <Checkbox
           checked={selectedFilters.cucina}
           onChange={handleFilterChange}
-          name="cucina"
+          name="Cucina"
           sx={{
             padding: '0 8px',
             color: 'white',
@@ -420,7 +425,7 @@ const HomeTikTok = () => {
         <Checkbox
           checked={selectedFilters.musica}
           onChange={handleFilterChange}
-          name="musica"
+          name="Musica"
           sx={{
             padding: '0 8px',
             color: 'white',

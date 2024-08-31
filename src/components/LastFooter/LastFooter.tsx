@@ -1,6 +1,6 @@
 import React from "react";
 import { ContainerLastFooter } from "./LastFooterStyled";
-import { FaInstagram, FaDiscord, FaTelegram, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaDiscord, FaTelegram, FaTwitter, FaTiktok } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
 import freccia2 from "../video/freccia2.png";
 
@@ -51,6 +51,7 @@ const LastFooter = () => {
                 <FaTwitter style={{ width: "20px", height: "20px" }} />
               </div>
             </a>
+        
             <button
               onClick={topFunction}
               style={{
@@ -62,6 +63,18 @@ const LastFooter = () => {
             >
               <img src={freccia2} alt="arrow" />
             </button>
+            <a href="/tiktokagency" style={{ display: 'flex', flexDirection: 'row',width:'200px' , height:'30px', justifyItems:'center', alignContent:'center', alignItems:'center' }}>
+                  <div className="colore"  >
+                    <FaTiktok style={{ width: "20px", height: "20px" }} />
+                  </div>
+                  
+                    <div   
+                 style={{ width: '114px', height: '30px', backgroundColor: 'trasparent' , display:'flex', alignContent:'center', alignItems:'center'}}>
+                      <p style={{fontSize:'15px', fontWeight:'500', marginLeft:'5px'}}>  TikTok Agency</p>
+                    </div>
+                 
+
+                </a>
           </div>
         </div>
       )}

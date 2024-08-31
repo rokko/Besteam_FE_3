@@ -142,7 +142,9 @@ const HomeTikTok = () => {
               alignItems: 'center',
               background: '#192C1E',
               border: '1px solid #2DC653',
-              color: '#2DC653'
+              color: '#2DC653',
+              fontSize: '20px',
+              fontWeight:'700',
             }} onClick={() => {
               handleFilterClick(event);
               handleClickFiltri();
@@ -158,7 +160,9 @@ const HomeTikTok = () => {
                 justifyContent: 'space-between',
                 alignItems: 'center',
                 background: '#4E4E4E',
-                color: '#A1A1A1'
+                color: '#A1A1A1',
+                fontSize: '20px',
+                fontWeight:'700',
               }} onClick={() => {
                 handleFilterClick(event);
                 handleClickFiltri();
@@ -517,7 +521,7 @@ const HomeTikTok = () => {
         </div>
 
         <img style={{ marginTop: '91px', height: '40px', width: '40px', alignSelf: 'center' }} src={frecciaSu} onClick={handleScrollToCreators} />
-        <p className='testoContactUs'>Contact Us</p>
+        <p className='ourStaff'>CONTACT US</p>
         <div className="sectionContactUs">
           <div className='riga'>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

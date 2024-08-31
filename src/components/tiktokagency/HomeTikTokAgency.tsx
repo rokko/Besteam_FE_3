@@ -22,6 +22,14 @@ const HomeTikTok = () => {
 
   const [filtriAttivi, setFiltriAttivi] = useState<boolean>(false);
 
+
+
+  const handleScrollToCreators = () => {
+    const creatorsSection = document.getElementById('ourCreators');
+    if (creatorsSection) {
+      creatorsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   const handleClickFiltri = () => {
     setFiltriAttivi(!filtriAttivi);
   }
@@ -80,7 +88,7 @@ const HomeTikTok = () => {
           WELCOME IN <br />
           BESTEAM TikTok Agency</p>
         <p className='testoPiccoloLanding'>meet our CREATORS and discover our CONTENT!</p>
-        <img className='frecciaImmagine' src={freccia} />
+        <img className='frecciaImmagine' src={freccia}  onClick={handleScrollToCreators}/>
       </div>
       <div className={'secondaParte'}>
         <p className='ourStaff'>OUR STAFF</p>
@@ -96,9 +104,9 @@ const HomeTikTok = () => {
           })}
 
         </div>
-        <p className='ourStaff'>OUR CREATORS</p>
+        <p className='ourStaff' id='ourCreators'>OUR CREATORS</p>
 
-        <div style={{ display: 'flex', flexDirection:'row',width:'100%',gap:'620px', justifyContent:'center' }}>
+        <div style={{ display: 'flex', flexDirection:'row',width:'100%',gap:'640px', justifyContent:'center', marginBottom:'30px' }}>
           <div className='search-container'>
             <input placeholder='Search creators here..' className='inputStyle' onChange={(x) => setSearchTerm(x.target.value)}>
 
@@ -503,7 +511,7 @@ const HomeTikTok = () => {
 
         </div>
 
-        <img style={{ marginTop: '91px', height: '40px', width: '40px', alignSelf: 'center' }} src={frecciaSu} />
+        <img style={{ marginTop: '91px', height: '40px', width: '40px', alignSelf: 'center' }} src={frecciaSu} onClick={handleScrollToCreators} />
         <p className='testoContactUs'>Contact Us</p>
         <div className="sectionContactUs">
           <div className='riga'>
@@ -529,9 +537,13 @@ const HomeTikTok = () => {
 
 
         </div>
+        <br/>
+        <br/> <br/>
+        <br/> <br/>
+        <br/>
 
       </div>
-      <img src={bordo} style={{ width: "100%", marginTop: '-40px' }} />
+      <img src={bordo} style={{ width: "100%", marginTop: '-30px' }} />
       <div
         style={{
           width: "100%",

@@ -513,17 +513,17 @@ const HomeTikTok = () => {
               </g>
             </svg>
 
-            <p className='testoContactUs2'>Prova</p>
+            <p className='testoContactUs2'>agency@besteam.io</p>
           </div>
-          <a className='riga'>
+          <a className='riga' href='https://discord.gg/besteam'>
             <img src={discord} style={{ height: '26px', width: '25px' }} />
-            <p className='testoContactUs2'>Prova</p>
+            <p className='testoContactUs2'>https://discord.gg/besteam</p>
           </a>
-          <a className='riga'>
+          <a className='riga' href=' https://chat.whatsapp.com/DVEsaNrgU8JKH45c53DMbO'>
 
 
-            <img src={whatsapp} style={{ width: '32px', height: '32px' }} />
-            <p className='testoContactUs2'>Prova</p>
+            <img src={whatsapp}  style={{ width: '32px', height: '32px' }} />
+            <p className='testoContactUs2'>Messaggio su whatsapp</p>
           </a>
 
 

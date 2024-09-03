@@ -25,7 +25,7 @@ export const Staff : StaffType[]=[{
 {
     id:3333,
     nome: 'Riccardo Ricci',
-    ruolo:'Onboarding Operator',
+    ruolo:'Onboarding / Data Analyst',
     linkedin:'https://www.linkedin.com/in/riccardo-ricci-a2b6a7224/',
     tiktok:'https://www.tiktok.com/@the.dunk3r',
     src:Ricci

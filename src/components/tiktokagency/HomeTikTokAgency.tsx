@@ -33,16 +33,32 @@ const HomeTikTok = () => {
   const handleClickFiltri = () => {
     setFiltriAttivi(!filtriAttivi);
   }
-
   const [selectedFilters, setSelectedFilters] = useState({
-    relazioni: false,
-    viaggi: false,
-    shopping: false,
-    educazione: false,
+    balli: false,
+    commedia: false,
+    beauty: false,
+    moda: false,
+    fitness: false,
     cucina: false,
-    fotografia: false,
+    gaming: false,
     musica: false,
+    educazione: false,
+    viaggi: false,
+    diy: false,
+    recensioni: false,
+    lifehacks: false,
+    vlog: false,
+    animali: false,
+    sport: false,
+    intrattenimento: false,
+    letteratura: false,
+    fotografia: false,
+    startup: false,
     ecologia: false,
+    relazioni: false,
+    nuovetecnologie: false,
+    altro: false,
+    shopping:false,
   });
 
   const handleCardClick = (id: number) => {
@@ -133,7 +149,7 @@ const HomeTikTok = () => {
               </svg>
             </div>
           </div>
-          <div>
+          <div style={{position:'relative'}}>
             {filtriAttivi && (<button aria-describedby={id} style={{
               width: '200px',
               height: '90px',
@@ -170,340 +186,990 @@ const HomeTikTok = () => {
                 + FILTERS
               </button>
             )}
-            <Popover
-              id={id}
-              open={open}
-              anchorEl={anchorEl}
-              onClose={handleFilterClose}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-            >
-              <Box sx={{ p: 2, backgroundColor: '#292929', color: 'white', minWidth: '800px', display: 'flex', flexDirection: 'column-reverse' }}>
-
-              <FormControlLabel
-      labelPlacement="start"
-      label="Relazioni e Consigli di coppia"
-      control={
-        <Checkbox
-          checked={selectedFilters.relazioni}
-          onChange={handleFilterChange}
-          name="Relazioni"
-          sx={{
-            padding: '0 8px',
-            color: 'white',
-            '& .MuiSvgIcon-root': {
-              fill: 'none',
-              stroke: '#B0B0B0', // Bordo grigio chiaro quando non selezionato
-              strokeWidth: 1.5,
-              borderRadius: '4px',
-              width: '20px',
-              height: '20px',
-            },
-            '&.Mui-checked .MuiSvgIcon-root': {
-              fill: '#1F8F42', // Sfondo verde quando selezionato
-              stroke: 'black', // Spunta nera
-              strokeWidth: 2, // Spessore della spunta
-            },
-            '&:hover': {
-              '& .MuiSvgIcon-root': {
-                stroke: '#1F8F42', // Cambia il bordo al passaggio del mouse quando non è selezionato
-              }
-            }
-          }}
-        />
-      }
-      sx={{ 
-        color: 'white', 
-        display: 'flex', 
-        justifyContent: 'space-between', 
-        width: '100%',
-        padding: '5px 0',
+          <Popover
+    id={id}
+    open={open}
+    anchorEl={anchorEl}
+    onClose={handleFilterClose}
+    anchorOrigin={{
+      vertical: 'center',
+      horizontal: 'right',
+    }}
+  >
+    <Box
+      sx={{
+        p: 2,
+        backgroundColor: '#292929',
+        color: 'white',
+        minWidth: '800px',
+        height:'410px',
+        display: 'flex',
+        flexDirection: 'column-reverse',
+     
       }}
-    />
-    <FormControlLabel
-      labelPlacement="start"
-      label="Viaggi"
-      control={
-        <Checkbox
-          checked={selectedFilters.viaggi}
-          onChange={handleFilterChange}
-          name="Viaggi"
-          sx={{
-            padding: '0 8px',
-            color: 'white',
-            '& .MuiSvgIcon-root': {
-              fill: 'none',
-              stroke: '#B0B0B0',
-              strokeWidth: 1.5,
-              borderRadius: '4px',
-              width: '20px',
-              height: '20px',
-            },
-            '&.Mui-checked .MuiSvgIcon-root': {
-              fill: '#1F8F42',
-              stroke: 'black',
-              strokeWidth: 2,
-            },
-            '&:hover': {
+    >
+      <FormControlLabel
+        labelPlacement="start"
+        label="Balli e Coreografie"
+        control={
+          <Checkbox
+            checked={selectedFilters.balli}
+            onChange={handleFilterChange}
+            name="Balli e Coreografie"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
               '& .MuiSvgIcon-root': {
-                stroke: '#1F8F42',
-              }
-            }
-          }}
-        />
-      }
-      sx={{ 
-        color: 'white', 
-        display: 'flex', 
-        justifyContent: 'space-between', 
-        width: '100%',
-        padding: '5px 0',
-      }}
-    />
-    <FormControlLabel
-      labelPlacement="start"
-      label="Shopping"
-      control={
-        <Checkbox
-          checked={selectedFilters.shopping}
-          onChange={handleFilterChange}
-          name="shopping"
-          sx={{
-            padding: '0 8px',
-            color: 'white',
-            '& .MuiSvgIcon-root': {
-              fill: 'none',
-              stroke: '#B0B0B0',
-              strokeWidth: 1.5,
-              borderRadius: '4px',
-              width: '20px',
-              height: '20px',
-            },
-            '&.Mui-checked .MuiSvgIcon-root': {
-              fill: '#1F8F42',
-              stroke: 'black',
-              strokeWidth: 2,
-            },
-            '&:hover': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Commedia"
+        control={
+          <Checkbox
+            checked={selectedFilters.commedia}
+            onChange={handleFilterChange}
+            name="Commedia"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
               '& .MuiSvgIcon-root': {
-                stroke: '#1F8F42',
-              }
-            }
-          }}
-        />
-      }
-      sx={{ 
-        color: 'white', 
-        display: 'flex', 
-        justifyContent: 'space-between', 
-        width: '100%',
-        padding: '5px 0',
-      }}
-    />
-    <FormControlLabel
-      labelPlacement="start"
-      label="Educazione e informazione"
-      control={
-        <Checkbox
-          checked={selectedFilters.educazione}
-          onChange={handleFilterChange}
-          name="educazione"
-          sx={{
-            padding: '0 8px',
-            color: 'white',
-            '& .MuiSvgIcon-root': {
-              fill: 'none',
-              stroke: '#B0B0B0',
-              strokeWidth: 1.5,
-              borderRadius: '4px',
-              width: '20px',
-              height: '20px',
-            },
-            '&.Mui-checked .MuiSvgIcon-root': {
-              fill: '#1F8F42',
-              stroke: 'black',
-              strokeWidth: 2,
-            },
-            '&:hover': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Beauty e Makeup"
+        control={
+          <Checkbox
+            checked={selectedFilters.beauty}
+            onChange={handleFilterChange}
+            name="Beauty e Makeup"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
               '& .MuiSvgIcon-root': {
-                stroke: '#1F8F42',
-              }
-            }
-          }}
-        />
-      }
-      sx={{ 
-        color: 'white', 
-        display: 'flex', 
-        justifyContent: 'space-between', 
-        width: '100%',
-        padding: '5px 0',
-      }}
-    />
-    <FormControlLabel
-      labelPlacement="start"
-      label="Cucina"
-      control={
-        <Checkbox
-          checked={selectedFilters.cucina}
-          onChange={handleFilterChange}
-          name="Cucina"
-          sx={{
-            padding: '0 8px',
-            color: 'white',
-            '& .MuiSvgIcon-root': {
-              fill: 'none',
-              stroke: '#B0B0B0',
-              strokeWidth: 1.5,
-              borderRadius: '4px',
-              width: '20px',
-              height: '20px',
-            },
-            '&.Mui-checked .MuiSvgIcon-root': {
-              fill: '#1F8F42',
-              stroke: 'black',
-              strokeWidth: 2,
-            },
-            '&:hover': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Moda (incluso Cucito e Moda DIY)"
+        control={
+          <Checkbox
+            checked={selectedFilters.moda}
+            onChange={handleFilterChange}
+            name="Moda"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
               '& .MuiSvgIcon-root': {
-                stroke: '#1F8F42',
-              }
-            }
-          }}
-        />
-      }
-      sx={{ 
-        color: 'white', 
-        display: 'flex', 
-        justifyContent: 'space-between', 
-        width: '100%',
-        padding: '5px 0',
-      }}
-    />
-    <FormControlLabel
-      labelPlacement="start"
-      label="Fotografia e video"
-      control={
-        <Checkbox
-          checked={selectedFilters.fotografia}
-          onChange={handleFilterChange}
-          name="fotografia"
-          sx={{
-            padding: '0 8px',
-            color: 'white',
-            '& .MuiSvgIcon-root': {
-              fill: 'none',
-              stroke: '#B0B0B0',
-              strokeWidth: 1.5,
-              borderRadius: '4px',
-              width: '20px',
-              height: '20px',
-            },
-            '&.Mui-checked .MuiSvgIcon-root': {
-              fill: '#1F8F42',
-              stroke: 'black',
-              strokeWidth: 2,
-            },
-            '&:hover': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Fitness e Benessere (incluso Spiritualità e Benessere Mentale)"
+        control={
+          <Checkbox
+            checked={selectedFilters.fitness}
+            onChange={handleFilterChange}
+            name="Fitness"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
               '& .MuiSvgIcon-root': {
-                stroke: '#1F8F42',
-              }
-            }
-          }}
-        />
-      }
-      sx={{ 
-        color: 'white', 
-        display: 'flex', 
-        justifyContent: 'space-between', 
-        width: '100%',
-        padding: '5px 0',
-      }}
-    />
-    <FormControlLabel
-      labelPlacement="start"
-      label="Musica e canto"
-      control={
-        <Checkbox
-          checked={selectedFilters.musica}
-          onChange={handleFilterChange}
-          name="Musica"
-          sx={{
-            padding: '0 8px',
-            color: 'white',
-            '& .MuiSvgIcon-root': {
-              fill: 'none',
-              stroke: '#B0B0B0',
-              strokeWidth: 1.5,
-              borderRadius: '4px',
-              width: '20px',
-              height: '20px',
-            },
-            '&.Mui-checked .MuiSvgIcon-root': {
-              fill: '#1F8F42',
-              stroke: 'black',
-              strokeWidth: 2,
-            },
-            '&:hover': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Cucina"
+        control={
+          <Checkbox
+            checked={selectedFilters.cucina}
+            onChange={handleFilterChange}
+            name="Cucina"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
               '& .MuiSvgIcon-root': {
-                stroke: '#1F8F42',
-              }
-            }
-          }}
-        />
-      }
-      sx={{ 
-        color: 'white', 
-        display: 'flex', 
-        justifyContent: 'space-between', 
-        width: '100%',
-        padding: '5px 0',
-      }}
-    />
-    <FormControlLabel
-      labelPlacement="start"
-      label="Ecologia e sostenibilità"
-      control={
-        <Checkbox
-          checked={selectedFilters.ecologia}
-          onChange={handleFilterChange}
-          name="ecologia"
-          sx={{
-            padding: '0 8px',
-            color: 'white',
-            '& .MuiSvgIcon-root': {
-              fill: 'none',
-              stroke: '#B0B0B0',
-              strokeWidth: 1.5,
-              borderRadius: '4px',
-              width: '20px',
-              height: '20px',
-            },
-            '&.Mui-checked .MuiSvgIcon-root': {
-              fill: '#1F8F42',
-              stroke: 'black',
-              strokeWidth: 2,
-            },
-            '&:hover': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Gaming"
+        control={
+          <Checkbox
+            checked={selectedFilters.gaming}
+            onChange={handleFilterChange}
+            name="Gaming"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
               '& .MuiSvgIcon-root': {
-                stroke: '#1F8F42',
-              }
-            }
-          }}
-        />
-      }
-      sx={{ 
-        color: 'white', 
-        display: 'flex', 
-        justifyContent: 'space-between', 
-        width: '100%',
-        padding: '5px 0',
-      }}
-    />
-              </Box>
-            </Popover>
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Musica e Canto"
+        control={
+          <Checkbox
+            checked={selectedFilters.musica}
+            onChange={handleFilterChange}
+            name="Musica"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
+              '& .MuiSvgIcon-root': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Educazione e Informazione (incluso Lingue e Traduzioni)"
+        control={
+          <Checkbox
+            checked={selectedFilters.educazione}
+            onChange={handleFilterChange}
+            name="Educazione"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
+              '& .MuiSvgIcon-root': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Viaggi e Avventure"
+        control={
+          <Checkbox
+            checked={selectedFilters.viaggi}
+            onChange={handleFilterChange}
+            name="Viaggi"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
+              '& .MuiSvgIcon-root': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="DIY e Crafting (incluso Arte e Disegno)"
+        control={
+          <Checkbox
+            checked={selectedFilters.diy}
+            onChange={handleFilterChange}
+            name="DIY"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
+              '& .MuiSvgIcon-root': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Recensioni e Unboxing (incluso Tecnologia e Gadget)"
+        control={
+          <Checkbox
+            checked={selectedFilters.recensioni}
+            onChange={handleFilterChange}
+            name="Recensioni"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
+              '& .MuiSvgIcon-root': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Life Hacks"
+        control={
+          <Checkbox
+            checked={selectedFilters.lifehacks}
+            onChange={handleFilterChange}
+            name="Life Hacks"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
+              '& .MuiSvgIcon-root': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Vlog Personali (incluso Lifestyle e Routine Quotidiana)"
+        control={
+          <Checkbox
+            checked={selectedFilters.vlog}
+            onChange={handleFilterChange}
+            name="Vlog"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
+              '& .MuiSvgIcon-root': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Animali"
+        control={
+          <Checkbox
+            checked={selectedFilters.animali}
+            onChange={handleFilterChange}
+            name="Animali"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
+              '& .MuiSvgIcon-root': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Sport (incluso Calcio)"
+        control={
+          <Checkbox
+            checked={selectedFilters.sport}
+            onChange={handleFilterChange}
+            name="Sport"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
+              '& .MuiSvgIcon-root': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Intrattenimento (incluso Cinema, TV e Cultura Pop)"
+        control={
+          <Checkbox
+            checked={selectedFilters.intrattenimento}
+            onChange={handleFilterChange}
+            name="Intrattenimento"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
+              '& .MuiSvgIcon-root': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Letteratura e Libri"
+        control={
+          <Checkbox
+            checked={selectedFilters.letteratura}
+            onChange={handleFilterChange}
+            name="Letteratura"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
+              '& .MuiSvgIcon-root': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Fotografia e Video Editing"
+        control={
+          <Checkbox
+            checked={selectedFilters.fotografia}
+            onChange={handleFilterChange}
+            name="Fotografia"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
+              '& .MuiSvgIcon-root': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Startup e Imprenditoria"
+        control={
+          <Checkbox
+            checked={selectedFilters.startup}
+            onChange={handleFilterChange}
+            name="Startup"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
+              '& .MuiSvgIcon-root': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Ecologia e Sostenibilità (incluso Giardinaggio e Piante)"
+        control={
+          <Checkbox
+            checked={selectedFilters.ecologia}
+            onChange={handleFilterChange}
+            name="Ecologia"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
+              '& .MuiSvgIcon-root': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Relazioni e Consigli di Coppia"
+        control={
+          <Checkbox
+            checked={selectedFilters.relazioni}
+            onChange={handleFilterChange}
+            name="Relazioni"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
+              '& .MuiSvgIcon-root': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Nuove Tecnologie (incluso Realtà Virtuale, Aumentata, Metaverso e Intelligenza Artificiale)"
+        control={
+          <Checkbox
+            checked={selectedFilters.nuovetecnologie}
+            onChange={handleFilterChange}
+            name="Nuove Tecnologie"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
+              '& .MuiSvgIcon-root': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+      <FormControlLabel
+        labelPlacement="start"
+        label="Altro"
+        control={
+          <Checkbox
+            checked={selectedFilters.altro}
+            onChange={handleFilterChange}
+            name="Altro"
+            sx={{
+              padding: '0 8px',
+              color: 'white',
+              '& .MuiSvgIcon-root': {
+                fill: 'none',
+                stroke: '#B0B0B0',
+                strokeWidth: 1.5,
+                borderRadius: '4px',
+                width: '20px',
+                height: '20px',
+              },
+              '&.Mui-checked .MuiSvgIcon-root': {
+                fill: '#1F8F42',
+                stroke: 'black',
+                strokeWidth: 2,
+              },
+              '&:hover': {
+                '& .MuiSvgIcon-root': {
+                  stroke: '#1F8F42',
+                },
+              },
+            }}
+          />
+        }
+        sx={{
+          color: 'white',
+          display: 'flex',
+          justifyContent: 'space-between',
+          width: '100%',
+          padding: '5px 0',
+        }}
+      />
+    </Box>
+  </Popover>
           </div>
         </div>
 

@@ -47,13 +47,13 @@ import altro from './media/categories/Altro.png'
 
 const HomeTikTok = () => {
   const itemsPerPage = 16;
-  var   totalPages = 0
- 
+  const [totalPages, setTotalPages] = useState(0);  // Stato per il numero totale di pagine
+
   var startIndex = 0
   const [activeCardId, setActiveCardId] = useState<number | null>(null);
   const [searchTerm, setSearchTerm] = useState<string>('')
   const [anchorEl, setAnchorEl] = useState(null);
-  const [paginatedCreators, setPaginatedCreators] = useState(creators.slice(0, itemsPerPage));
+  const [paginatedCreators, setPaginatedCreators] = useState<CreatorType[]>([]);
   const [filtriAttivi, setFiltriAttivi] = useState<boolean>(false);
 
 
@@ -68,19 +68,10 @@ const HomeTikTok = () => {
     setFiltriAttivi(!filtriAttivi);
   }
   const [currentPage, setCurrentPage] = useState(0);
+   // Stato per i creator paginati
 
 
-  const handleNextPage = () => {
-    if (currentPage < totalPages - 1) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
 
-  const handlePreviousPage = () => {
-    if (currentPage > 0) {
-      setCurrentPage(currentPage - 1);
-    }
-  };
 
   const [selectedFilters, setSelectedFilters] = useState({
     balli: false,
@@ -138,7 +129,7 @@ const HomeTikTok = () => {
   const id = open ? 'simple-popover' : undefined;
   const filteredCreators = creators.filter((creator) => {
     const matchesSearch = creator.nome.toLowerCase().includes(searchTerm.toLowerCase());
-   
+
     // Trova tutte le categorie che sono state selezionate
     const selectedCategories = Object.keys(selectedFilters)
       .filter((key) => selectedFilters[key]);
@@ -150,14 +141,31 @@ const HomeTikTok = () => {
 
     return matchesSearch && matchesCategory;
   });
+  const handleNextPage = () => {
+    if (currentPage < totalPages - 1) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 0) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+  const handlePageClick = (page: number) => {
+    setCurrentPage(page);
+  };
 
   useEffect(() => {
-   totalPages= Math.ceil(filteredCreators.length / itemsPerPage);
-   console.log('PAGINE TOTALI',totalPages)
-   startIndex = currentPage * itemsPerPage;
-   setPaginatedCreators(filteredCreators.slice(startIndex, startIndex + itemsPerPage))
-   console.log(paginatedCreators)
-  },[filteredCreators])
+    const startIndex = currentPage * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+
+    // Aggiorna i creator da visualizzare in base alla pagina corrente
+    setPaginatedCreators(filteredCreators.slice(startIndex, endIndex));
+
+    // Calcola il numero totale di pagine
+    setTotalPages(Math.ceil(filteredCreators.length / itemsPerPage));
+  }, [filteredCreators, currentPage]);
   return (
     <>
       <div className={'topLanding'}>
@@ -1328,29 +1336,32 @@ const HomeTikTok = () => {
 
 
         <div className='cardCreatorContainer'>
-        {paginatedCreators.map((userCreator: CreatorType) => {
-          return (
-            <CardCreator
-              key={userCreator.id}
-              userCreator={userCreator}
-              isActive={userCreator.id === activeCardId}
-              onClick={() => handleCardClick(userCreator.id)}
-            />
-          );
-        })}
-      </div>
-      <div>
-           <div className="paginationControls">
-        <button onClick={handlePreviousPage} disabled={currentPage === 0}>
-          Previous
+      {paginatedCreators.map((userCreator: CreatorType) => (
+        <CardCreator
+          key={userCreator.id}
+          userCreator={userCreator}
+          isActive={userCreator.id === activeCardId}
+          onClick={() => handleCardClick(userCreator.id)}
+        />
+      ))}
+    </div>
+    <div className="paginationControls">
+      <button onClick={handlePreviousPage} disabled={currentPage === 0}>
+        Previous
+      </button>
+      {Array.from({ length: totalPages }, (_, i) => (
+        <button
+          key={i}
+          onClick={() => handlePageClick(i)}
+          style={{ fontWeight: currentPage === i ? 'bold' : 'normal' }}
+        >
+          {i + 1}
         </button>
-        <span>Page {currentPage + 1} of {totalPages}</span>
-        <button onClick={handleNextPage} disabled={currentPage === totalPages - 1}>
-          Next
-        </button>
-      </div>
-
-        </div>
+      ))}
+      <button onClick={handleNextPage} disabled={currentPage === totalPages - 1}>
+        Next
+      </button>
+    </div>
 
         <img style={{ marginTop: '91px', height: '40px', width: '40px', alignSelf: 'center' }} src={frecciaSu} onClick={handleScrollToCreators} />
         <p className='ourStaff'>CONTACT US</p>

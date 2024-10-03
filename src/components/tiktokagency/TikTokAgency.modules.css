@@ -53,8 +53,10 @@
 
 .secondaParte {
   display: flex;
+  height: 100%;
   flex-direction: column;
   background-color: #1c1c1c;
+  margin-bottom: -100px;
 }
 
 .ourStaff {

@@ -67,9 +67,10 @@ const HomeTikTok = () => {
   };
   const handleClickFiltri = () => {
     setFiltriAttivi(!filtriAttivi);
+
   }
   const [currentPage, setCurrentPage] = useState(0);
-   // Stato per i creator paginati
+  // Stato per i creator paginati
 
 
 
@@ -112,6 +113,7 @@ const HomeTikTok = () => {
 
   const handleFilterClose = () => {
     setAnchorEl(null);
+
   };
 
   const handleFilterChange = (event) => {
@@ -139,6 +141,7 @@ const HomeTikTok = () => {
     const matchesCategory = selectedCategories.length === 0 || selectedCategories.some((category) =>
       creator.categorie.map(c => c.toLowerCase()).includes(category)
     );
+    console.log(selectedCategories)
 
     return matchesSearch && matchesCategory;
   });
@@ -252,1115 +255,1126 @@ const HomeTikTok = () => {
                 + FILTERS
               </button>
             )}
-            <Popover
-              id={id}
-              open={open}
-              anchorEl={anchorEl}
-              onClose={handleFilterClose}
-              anchorOrigin={{
-                vertical: 'center',
-                horizontal: 'right',
-              }}
-            >
-              <Box
+            {filtriAttivi && (
+              <Popover
+                id={id}
+                open={open}
+                onClose={handleFilterClose}
+                anchorEl={null} // Non ancorarlo a un elemento
                 sx={{
-                  p: 2,
-                  backgroundColor: '#292929',
-                  color: 'white',
-                  minWidth: '800px',
-                  maxWidth: '800px',
-                  height: '410px',
-                  display: 'flex',
-                  maxHeight: '410px', // Imposta un'altezza massima
-                  overflowY: 'auto', // Aggiungi lo scorrimento verticale
-                  overflowX: 'hidden',
-                  flexDirection: 'column-reverse',
-
+                  position: 'fixed',  // Posizionamento fisso
+                  top: '89%',         // Posizione fissa verticale
+                  left: '70%',        // Posizione fissa orizzontale
+                  transform: 'translate(-50%, -50%)', // Centrato rispetto alla pagina
+                  width: '1000px',
+                  height: '800px',
                 }}
+
+
               >
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={balliecoreografie} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}> Balli e Coreografie</span>
-                  </Box>}
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.balli}
-                      onChange={handleFilterChange}
-                      name="Balli e Coreografie"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
-                          '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
-                          },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={commedia} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}> Commedia</span>
-                  </Box>}
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.commedia}
-                      onChange={handleFilterChange}
-                      name="Commedia"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
-                          '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
-                          },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={beauty} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}> Beauty e MakeUp</span>
-                  </Box>}
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.beauty}
-                      onChange={handleFilterChange}
-                      name="Beauty e Makeup"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
-                          '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
-                          },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={moda} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}>Moda (incluso Cucito e Moda DIY)</span>
-                  </Box>}
-
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.moda}
-                      onChange={handleFilterChange}
-                      name="Moda"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
-                          '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
-                          },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={fitnessEBenessere} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}>Fitness e Benessere (incluso Spiritualità e Benessere Mentale)</span>
-                  </Box>}
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.fitness}
-                      onChange={handleFilterChange}
-                      name="Fitness"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
-                          '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
-                          },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={cucina} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}> Cucina</span>
-                  </Box>}
-
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.cucina}
-                      onChange={handleFilterChange}
-                      name="Cucina"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
-                          '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
-                          },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={gaming} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}> Gaming</span>
-                  </Box>}
-
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.gaming}
-                      onChange={handleFilterChange}
-                      name="Gaming"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
-                          '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
-                          },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={musicaecanto} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}>Musica e Canto</span>
-                  </Box>}
-
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.musica}
-                      onChange={handleFilterChange}
-                      name="Musica"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
-                          '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
-                          },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={educazione} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}>Educazione e Informazione (incluso Lingue e Traduzioni)</span>
-                  </Box>}
-
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.educazione}
-                      onChange={handleFilterChange}
-                      name="Educazione"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
-                          '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
-                          },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={viaggi} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}>  Viaggi e Avventure</span>
-                  </Box>}
-
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.viaggi}
-                      onChange={handleFilterChange}
-                      name="Viaggi"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
-                          '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
-                          },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={daay} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}>DIY e Crafting (incluso Arte e Disegno)</span>
-                  </Box>}
-
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.diy}
-                      onChange={handleFilterChange}
-                      name="DIY"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
-                          '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
-                          },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={recensioni} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}>Recensioni e Unboxing (incluso Tecnologia e Gadget)</span>
-                  </Box>}
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.recensioni}
-                      onChange={handleFilterChange}
-                      name="Recensioni"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
-                          '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
-                          },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={lifehacks} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}> Life hacks</span>
-                  </Box>}
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.lifehacks}
-                      onChange={handleFilterChange}
-                      name="Life Hacks"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
-                          '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
-                          },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={vlog} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}>Vlog Personali (incluso Lifestyle e Routine Quotidiana)</span>
-                  </Box>}
-
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.vlog}
-                      onChange={handleFilterChange}
-                      name="Vlog"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
-                          '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
-                          },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={animali} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}>Animali</span>
-                  </Box>}
 
 
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.animali}
-                      onChange={handleFilterChange}
-                      name="Animali"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
-                          '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
-                          },
-                        },
-                      }}
-                    />
-                  }
+                <Box
                   sx={{
+                    p: 2,
+                    backgroundColor: '#292929',
                     color: 'white',
+                    minWidth: '800px',
+                    maxWidth: '800px',
+                    height: '410px', // Altezza fissa
+                    overflowY: 'auto',
+                    overflowX: 'hidden',
                     display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
+                    flexDirection: 'column', // Mantieni la direzione normale della colonna
+                    justifyContent: 'space-between', // Assicura che il contenuto sia allineato
                   }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={sport} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}> Sport (incluso Calcio)</span>
-                  </Box>}
-
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.sport}
-                      onChange={handleFilterChange}
-                      name="Sport"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
-                          '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
-                          },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={intrattenimento} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}>Intrattenimento (incluso Cinema, TV e Cultura Pop)</span>
-                  </Box>}
+                >
 
 
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.intrattenimento}
-                      onChange={handleFilterChange}
-                      name="Intrattenimento"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={balliecoreografie} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}> Balli e Coreografie</span>
+                    </Box>}
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.balli}
+                        onChange={handleFilterChange}
+                        name="Balli e Coreografie"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
                           '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
                           },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={commedia} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}> Commedia</span>
+                    </Box>}
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.commedia}
+                        onChange={handleFilterChange}
+                        name="Commedia"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
+                          '& .MuiSvgIcon-root': {
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
+                          },
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={beauty} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}> Beauty e MakeUp</span>
+                    </Box>}
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.beauty}
+                        onChange={handleFilterChange}
+                        name="Beauty e Makeup"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
+                          '& .MuiSvgIcon-root': {
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
+                          },
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={moda} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}>Moda (incluso Cucito e Moda DIY)</span>
+                    </Box>}
 
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={letteratura} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}>Letteratura e Libri</span>
-                  </Box>}
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.letteratura}
-                      onChange={handleFilterChange}
-                      name="Letteratura"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.moda}
+                        onChange={handleFilterChange}
+                        name="Moda"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
                           '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
                           },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={fotografia} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}>Fotografia e Video Editing</span>
-                  </Box>}
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={fitnessEBenessere} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}>Fitness e Benessere (incluso Spiritualità e Benessere Mentale)</span>
+                    </Box>}
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.fitness}
+                        onChange={handleFilterChange}
+                        name="Fitness"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
+                          '& .MuiSvgIcon-root': {
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
+                          },
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={cucina} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}> Cucina</span>
+                    </Box>}
 
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.fotografia}
-                      onChange={handleFilterChange}
-                      name="Fotografia"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.cucina}
+                        onChange={handleFilterChange}
+                        name="Cucina"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
                           '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
                           },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={startup} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}> Startup e Imprenditoria</span>
-                  </Box>}
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={gaming} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}> Gaming</span>
+                    </Box>}
 
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.startup}
-                      onChange={handleFilterChange}
-                      name="Startup"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.gaming}
+                        onChange={handleFilterChange}
+                        name="Gaming"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
                           '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
                           },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={ecologia} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}>Ecologia e Sostenibilità (incluso Giardinaggio e Piante)</span>
-                  </Box>}
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={musicaecanto} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}>Musica e Canto</span>
+                    </Box>}
 
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.ecologia}
-                      onChange={handleFilterChange}
-                      name="Ecologia"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.musica}
+                        onChange={handleFilterChange}
+                        name="Musica"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
                           '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
                           },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={relazioni} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}>Relazioni e Consigli di Coppia</span>
-                  </Box>}
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={educazione} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}>Educazione e Informazione (incluso Lingue e Traduzioni)</span>
+                    </Box>}
 
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.relazioni}
-                      onChange={handleFilterChange}
-                      name="Relazioni"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.educazione}
+                        onChange={handleFilterChange}
+                        name="Educazione"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
                           '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
                           },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={nuovetecnologie} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}>Nuove Tecnologie (incluso Realtà Virtuale, Aumentata, Metaverso e Intelligenza Artificiale)</span>
-                  </Box>}
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={viaggi} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}>  Viaggi e Avventure</span>
+                    </Box>}
 
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.nuovetecnologie}
-                      onChange={handleFilterChange}
-                      name="Nuove Tecnologie"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.viaggi}
+                        onChange={handleFilterChange}
+                        name="Viaggi"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
                           '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
                           },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-                <FormControlLabel
-                  labelPlacement="start"
-                  label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={altro} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
-                    <span style={{ marginLeft: '5px' }}> Altro</span>
-                  </Box>}
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={daay} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}>DIY e Crafting (incluso Arte e Disegno)</span>
+                    </Box>}
 
-                  control={
-                    <Checkbox
-                      checked={selectedFilters.altro}
-                      onChange={handleFilterChange}
-                      name="Altro"
-                      sx={{
-                        padding: '0 8px',
-                        color: 'white',
-                        '& .MuiSvgIcon-root': {
-                          fill: 'none',
-                          stroke: '#B0B0B0',
-                          strokeWidth: 1.5,
-                          borderRadius: '4px',
-                          width: '20px',
-                          height: '20px',
-                        },
-                        '&.Mui-checked .MuiSvgIcon-root': {
-                          fill: '#1F8F42',
-                          stroke: 'black',
-                          strokeWidth: 2,
-                        },
-                        '&:hover': {
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.diy}
+                        onChange={handleFilterChange}
+                        name="DIY"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
                           '& .MuiSvgIcon-root': {
-                            stroke: '#1F8F42',
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
                           },
-                        },
-                      }}
-                    />
-                  }
-                  sx={{
-                    color: 'white',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    padding: '5px 0',
-                  }}
-                />
-              </Box>
-            </Popover>
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={recensioni} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}>Recensioni e Unboxing (incluso Tecnologia e Gadget)</span>
+                    </Box>}
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.recensioni}
+                        onChange={handleFilterChange}
+                        name="Recensioni"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
+                          '& .MuiSvgIcon-root': {
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
+                          },
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={lifehacks} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}> Life hacks</span>
+                    </Box>}
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.lifehacks}
+                        onChange={handleFilterChange}
+                        name="Life Hacks"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
+                          '& .MuiSvgIcon-root': {
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
+                          },
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={vlog} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}>Vlog Personali (incluso Lifestyle e Routine Quotidiana)</span>
+                    </Box>}
+
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.vlog}
+                        onChange={handleFilterChange}
+                        name="Vlog"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
+                          '& .MuiSvgIcon-root': {
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
+                          },
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={animali} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}>Animali</span>
+                    </Box>}
+
+
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.animali}
+                        onChange={handleFilterChange}
+                        name="Animali"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
+                          '& .MuiSvgIcon-root': {
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
+                          },
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={sport} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}> Sport (incluso Calcio)</span>
+                    </Box>}
+
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.sport}
+                        onChange={handleFilterChange}
+                        name="Sport"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
+                          '& .MuiSvgIcon-root': {
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
+                          },
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={intrattenimento} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}>Intrattenimento (incluso Cinema, TV e Cultura Pop)</span>
+                    </Box>}
+
+
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.intrattenimento}
+                        onChange={handleFilterChange}
+                        name="Intrattenimento"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
+                          '& .MuiSvgIcon-root': {
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
+                          },
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={letteratura} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}>Letteratura e Libri</span>
+                    </Box>}
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.letteratura}
+                        onChange={handleFilterChange}
+                        name="Letteratura"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
+                          '& .MuiSvgIcon-root': {
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
+                          },
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={fotografia} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}>Fotografia e Video Editing</span>
+                    </Box>}
+
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.fotografia}
+                        onChange={handleFilterChange}
+                        name="Fotografia"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
+                          '& .MuiSvgIcon-root': {
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
+                          },
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={startup} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}> Startup e Imprenditoria</span>
+                    </Box>}
+
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.startup}
+                        onChange={handleFilterChange}
+                        name="Startup"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
+                          '& .MuiSvgIcon-root': {
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
+                          },
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={ecologia} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}>Ecologia e Sostenibilità (incluso Giardinaggio e Piante)</span>
+                    </Box>}
+
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.ecologia}
+                        onChange={handleFilterChange}
+                        name="Ecologia"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
+                          '& .MuiSvgIcon-root': {
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
+                          },
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={relazioni} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}>Relazioni e Consigli di Coppia</span>
+                    </Box>}
+
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.relazioni}
+                        onChange={handleFilterChange}
+                        name="Relazioni"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
+                          '& .MuiSvgIcon-root': {
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
+                          },
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={nuovetecnologie} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}>Nuove Tecnologie (incluso Realtà Virtuale, Aumentata, Metaverso e Intelligenza Artificiale)</span>
+                    </Box>}
+
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.nuovetecnologie}
+                        onChange={handleFilterChange}
+                        name="Nuove Tecnologie"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
+                          '& .MuiSvgIcon-root': {
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
+                          },
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                  <FormControlLabel
+                    labelPlacement="start"
+                    label={<Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={altro} ></img> {/* Sostituisci 'brush' con l'icona desiderata */}
+                      <span style={{ marginLeft: '5px' }}> Altro</span>
+                    </Box>}
+
+                    control={
+                      <Checkbox
+                        checked={selectedFilters.altro}
+                        onChange={handleFilterChange}
+                        name="Altro"
+                        sx={{
+                          padding: '0 8px',
+                          color: 'white',
+                          '& .MuiSvgIcon-root': {
+                            fill: 'none',
+                            stroke: '#B0B0B0',
+                            strokeWidth: 1.5,
+                            borderRadius: '4px',
+                            width: '20px',
+                            height: '20px',
+                          },
+                          '&.Mui-checked .MuiSvgIcon-root': {
+                            fill: '#1F8F42',
+                            stroke: 'black',
+                            strokeWidth: 2,
+                          },
+                          '&:hover': {
+                            '& .MuiSvgIcon-root': {
+                              stroke: '#1F8F42',
+                            },
+                          },
+                        }}
+                      />
+                    }
+                    sx={{
+                      color: 'white',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      width: '100%',
+                      padding: '5px 0',
+                    }}
+                  />
+                </Box>
+              </Popover>
+            )}
           </div>
         </div>
 
 
         <div className='cardCreatorContainer'>
-      {paginatedCreators.map((userCreator: CreatorType) => (
-        <CardCreator
-          key={userCreator.id}
-          userCreator={userCreator}
-          isActive={userCreator.id === activeCardId}
-          onClick={() => handleCardClick(userCreator.id)}
-        />
-      ))}
-    </div>
-    <div className="paginationControls">
-    
-      {Array.from({ length: totalPages }, (_, i) => (
-        <button
-          key={i}
-          onClick={() => handlePageClick(i)}
-          style={{ fontWeight: '500', color: currentPage === i ? '#2DC653' : 'white', fontFamily:'DinPRO' , fontSize:'24px'}}
-        >
-          {i + 1}
-        </button>
-      ))}
-      <button onClick={handleNextPage} disabled={currentPage === totalPages - 1}>
-       <img src={frecciaRight} style={{width:'18px', height:'25px'}}></img>
-      </button>
-    </div>
+          {paginatedCreators.map((userCreator: CreatorType) => (
+            <CardCreator
+              key={userCreator.id}
+              userCreator={userCreator}
+              isActive={userCreator.id === activeCardId}
+              onClick={() => handleCardClick(userCreator.id)}
+            />
+          ))}
+        </div>
+        <div className="paginationControls">
+
+          {Array.from({ length: totalPages }, (_, i) => (
+            <button
+              key={i}
+              onClick={() => handlePageClick(i)}
+              style={{ fontWeight: '500', color: currentPage === i ? '#2DC653' : 'white', fontFamily: 'DinPRO', fontSize: '24px' }}
+            >
+              {i + 1}
+            </button>
+          ))}
+          <button onClick={handleNextPage} disabled={currentPage === totalPages - 1}>
+            <img src={frecciaRight} style={{ width: '18px', height: '25px' }}></img>
+          </button>
+        </div>
 
         <img style={{ marginTop: '91px', height: '40px', width: '40px', alignSelf: 'center' }} src={frecciaSu} onClick={handleScrollToCreators} />
         <p className='ourStaff'>CONTACT US</p>

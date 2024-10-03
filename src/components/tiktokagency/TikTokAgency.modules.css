@@ -285,15 +285,14 @@
 }
 
 .paginationControls button {
+  background-color: transparent;
   padding: 10px 20px;
   margin: 0 10px;
-  background-color: #1F8F42;
-  color: white;
   border: none;
   cursor: pointer;
 }
 
 .paginationControls button:disabled {
-  background-color: #ccc;
+  
   cursor: not-allowed;
 }

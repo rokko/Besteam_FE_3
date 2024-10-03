@@ -3,6 +3,7 @@ import './TikTokAgency.modules.css'
 import TikTokAgencyLogo from './media/TikTokAgency.png'
 import freccia from './media/Freccia.png'
 import frecciaSu from './media/Frecciasu.png'
+import frecciaRight from './media/frecciaright.png'
 import bordo from "./media/bordo2.png";
 import CardStaff from './components/CardStaff/CardStaff';
 import { Staff } from './const/Staff'
@@ -1346,20 +1347,18 @@ const HomeTikTok = () => {
       ))}
     </div>
     <div className="paginationControls">
-      <button onClick={handlePreviousPage} disabled={currentPage === 0}>
-        Previous
-      </button>
+    
       {Array.from({ length: totalPages }, (_, i) => (
         <button
           key={i}
           onClick={() => handlePageClick(i)}
-          style={{ fontWeight: currentPage === i ? 'bold' : 'normal' }}
+          style={{ fontWeight: '500', color: currentPage === i ? '#2DC653' : 'white', fontFamily:'DinPRO' , fontSize:'24px'}}
         >
           {i + 1}
         </button>
       ))}
       <button onClick={handleNextPage} disabled={currentPage === totalPages - 1}>
-        Next
+       <img src={frecciaRight} style={{width:'18px', height:'25px'}}></img>
       </button>
     </div>
 

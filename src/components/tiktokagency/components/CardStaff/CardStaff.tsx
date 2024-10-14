@@ -13,7 +13,7 @@ const CardStaff :React.FC<CardStaffProps> = ({ userStaff, isActive, onClick })=>
     return (
         <div className={`cardStyle cardLayout ${isActive ? 'active' : ''}`} 
         onClick={onClick}>
-            <img className='immagineCard' src={userStaff.src}>
+            <img className='immagineCardStaff' src={userStaff.src}>
 
             </img>
             <p className='testoNome'>{userStaff.nome}</p>

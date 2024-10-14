@@ -27,11 +27,14 @@ const HomePage: React.FC = () => {
   const [attivo2, setAttivo2] = useState(false);
   const [hoveredIcon, setHoveredIcon] = useState<string>('')
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
-
+  const [apriTesto, setApriTesto] = useState(false);
   window.onscroll = function () {
     scrollFunction();
     scrollFunction2();
   };
+
+
+
   const bgScrollLeft = keyframes`
 
     from {
@@ -144,17 +147,18 @@ const HomePage: React.FC = () => {
                     <FaTwitter style={{ width: "20px", height: "20px" }} />
                   </div>
                 </a>
-                <Link to={'/tiktokagency'} 
-                  onMouseEnter={() => setHoveredIcon('tiktok')}
-                  onMouseLeave={() => setHoveredIcon('')}>
-                  <div className="colore">
+                <a href="/tiktokagency" style={{ display: 'flex', flexDirection: 'row',width:'200px' , height:'30px', justifyItems:'center', alignContent:'center', alignItems:'center' }}>
+                  <div className="colore"  onMouseEnter={() =>  setApriTesto(!apriTesto)}       onMouseLeave={() => setApriTesto(!apriTesto)}>
                     <FaTiktok style={{ width: "20px", height: "20px" }} />
-                    {hoveredIcon === 'tiktok' && (
-                      <div className="hover-text testoInternoTikTok">Follow us on TikTok!</div>
-                    )}
                   </div>
-                </Link>
+                  {apriTesto && (
+                    <div   onMouseOver={() => setApriTesto(true)}
+                    onMouseOut={() => setApriTesto(false)} style={{ width: '114px', height: '30px', backgroundColor: '#000000' , display:'flex', alignContent:'center', alignItems:'center'}}>
+                      <p style={{fontSize:'15px', fontWeight:'500', marginLeft:'5px'}}>  TikTok Agency</p>
+                    </div>
+                  )}
 
+                </a>
               </div>
             </div>
             <button

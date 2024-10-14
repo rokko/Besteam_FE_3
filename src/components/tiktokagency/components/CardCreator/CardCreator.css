@@ -20,6 +20,8 @@
     align-self: stretch;
     border-radius: 12px;
     background: lightgray 50% / cover no-repeat;
+    margin-top: -20px;
+    margin-bottom: 20px;
 }
 
 .testoNome {
@@ -28,7 +30,7 @@
     font-family: DINPro;
     font-size: 20px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     line-height: normal;
     margin: 0px;
 }

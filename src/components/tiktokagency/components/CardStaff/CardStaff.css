@@ -14,12 +14,13 @@
 
 
 
-.immagineCard {
+.immagineCardStaff {
     height: 251px;
     flex-shrink: 0;
     align-self: stretch;
     border-radius: 12px;
     background: lightgray 50% / cover no-repeat;
+    margin-top: -20px;
 }
 
 .testoNome {

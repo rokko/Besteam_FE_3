@@ -17,6 +17,7 @@ import { Home } from "../dappNew/Home";
 import { BtemSwap } from "../Screens/btemSwap";
 import { DappDashboard } from "../dappNew/Dashboard";
 import HomeTikTok from "./tiktokagency/HomeTikTokAgency";
+import VerifyPage from "../communityCup/VerifyPage";
 
 const goToRegister = () => {
   document.body.scrollTop = 10000; // For Safari
@@ -97,6 +98,7 @@ const HeaderBar = () => {
         </div>
         <Routes>
           <Route path="/whitepaper" element={<WhitePaper />} />
+          <Route path="/verify" element={<VerifyPage />}/>
           <Route path="/" element={<HomePage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           {/*<Route path="/ico" element={<Preico />} />*/}

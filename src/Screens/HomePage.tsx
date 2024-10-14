@@ -9,7 +9,7 @@ import Paragrafo2 from "../components/Paragrafo2";
 import Paragrafo1 from "../components/Paragrafo1";
 import up from "../components/video/freccia.jpg";
 import freccia2 from "../components/video/freccia2.png";
-import { FaInstagram, FaDiscord, FaTelegram, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaDiscord, FaTelegram, FaTwitter, FaTiktok } from "react-icons/fa";
 //import OurTeam from "../components/OurTeam";
 import gifPallone from "../components/video/bb.gif";
 import OurPartners from "../components/OurPartners";
@@ -20,10 +20,12 @@ import Nft from "../components/video/fasciasimboli1.png";
 import styled, { keyframes } from "styled-components";
 import { NFTTicker1, NFTTicker2 } from "../components/NFTTicker";
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 
 const HomePage: React.FC = () => {
   const [attivo, setAttivo] = useState(false);
   const [attivo2, setAttivo2] = useState(false);
+  const [hoveredIcon, setHoveredIcon] = useState<string>('')
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
 
   window.onscroll = function () {
@@ -142,6 +144,17 @@ const HomePage: React.FC = () => {
                     <FaTwitter style={{ width: "20px", height: "20px" }} />
                   </div>
                 </a>
+                <Link to={'/tiktokagency'} 
+                  onMouseEnter={() => setHoveredIcon('tiktok')}
+                  onMouseLeave={() => setHoveredIcon('')}>
+                  <div className="colore">
+                    <FaTiktok style={{ width: "20px", height: "20px" }} />
+                    {hoveredIcon === 'tiktok' && (
+                      <div className="hover-text testoInternoTikTok">Follow us on TikTok!</div>
+                    )}
+                  </div>
+                </Link>
+
               </div>
             </div>
             <button

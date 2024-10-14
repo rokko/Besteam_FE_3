@@ -170,9 +170,10 @@ line-height: normal;
 }
 
 .search-container {
-    position: relative;
+  
     width: 100%;
     max-width: 400px;
+    width:400px;
     margin-bottom: 16px;
   }
   
@@ -198,8 +199,11 @@ line-height: normal;
 
   .searchAndFilter{
     display: flex;
+  
     flex-direction: row;
     margin-bottom: 72px;
+    width: 100%;
+   
   
   }
 

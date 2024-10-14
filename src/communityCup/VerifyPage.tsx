@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import communitybackground from './sfondoCommunity.jpeg'
 import { BloccoTesto, ButtonVerify, SpanTesto } from './VerifyPageStyled'
-import ButtonConnessione from './ButtonVerifyThirdWeb'
 
 
 

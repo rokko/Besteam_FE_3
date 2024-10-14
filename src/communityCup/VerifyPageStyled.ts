@@ -16,7 +16,33 @@ justify-content:center;
 align-items:center;
 align-content:center;
 color:white;
+cursor: pointer;
 `
 
 
-export { ButtonVerify }
+
+const BloccoTesto = styled.div`
+font-family: Roboto;
+font-size: 16px;
+font-weight: 400;
+line-height: 18.75px;
+text-align: center;
+width: 215px;
+height: 38px;
+top: 465px;
+left: 613px;
+gap: 0px;
+opacity: 0px;
+
+
+`
+
+const SpanTesto = styled.span`
+font-family: Roboto;
+font-size: 16px;
+font-weight: 800;
+line-height: 18.75px;
+text-align: center;
+`
+
+export { ButtonVerify, BloccoTesto ,SpanTesto}

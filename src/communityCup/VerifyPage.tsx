@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import communitybackground from './sfondoCommunity.jpeg'
-import { ButtonVerify } from './VerifyPageStyled'
+import { BloccoTesto, ButtonVerify, SpanTesto } from './VerifyPageStyled'
 
 
 
 
 const VerifyPage = () => {
+    const [verified, setVerified] = useState(false)
+
+    const verifyUser=()=>{
+        setVerified(true)
+    }
     return (
         <div 
             style={{
@@ -20,10 +25,36 @@ const VerifyPage = () => {
                 color: 'white' // Modifica il colore del testo se necessario
             }}
         >
+            <div style={{display:'flex',gap:'1.5rem', flexDirection:'column',marginTop:'70px' ,justifyContent:'center', alignContent:'center', alignItems:'center'
+            }}>
+                {!verified && (
+                    <>
+                          <ButtonVerify onClick={verifyUser()}>
+                          <p>VERIFY</p>
+                          </ButtonVerify>
+                          <BloccoTesto>
+                              By clicking Verify, 
+              you accept the <SpanTesto>Privacy Policy</SpanTesto>
+                          </BloccoTesto>
+                          </>
 
-            <ButtonVerify>
-            <p>VERIFY</p>
-            </ButtonVerify>
+                )}
+                {verified &&(
+                          <>
+                          <ButtonVerify>
+                          <p>NEXT</p>
+                          </ButtonVerify>
+                           <SpanTesto>Verify completed,
+                           Join Community Cup!</SpanTesto>
+                          
+                          </>
+                    
+                )}
+
+      
+            </div>
+
+
         </div>
     );
 };

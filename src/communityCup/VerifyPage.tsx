@@ -1,13 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import communitybackground from './sfondoCommunity.jpeg'
 import { BloccoTesto, ButtonVerify, SpanTesto } from './VerifyPageStyled'
+import ButtonConnessione from './ButtonVerifyThirdWeb'
 
 
 
 
 const VerifyPage = () => {
     const [verified, setVerified] = useState(false)
-
+    useEffect(()=>{
+        const headerTop = document.getElementsByClassName("navbar-header")as unknown as HTMLElement[]
+        const footer = document.getElementsByClassName("iub__us-widget") as unknown as HTMLElement[]
+        headerTop[0].style.display='none'
+        footer[0].style.display='none'
+       
+      
+    
+      },[])
     const verifyUser = () => {
         setVerified(true)
     }
@@ -37,6 +46,7 @@ const VerifyPage = () => {
                         <ButtonVerify onClick={()=>verifyUser()}>
                             <p>VERIFY</p>
                         </ButtonVerify>
+                        <ButtonConnessione/>
                         <BloccoTesto>
                             By clicking Verify,
                             you accept the <SpanTesto><a href="/BesteamPrivacyPolicy.pdf" download="PrivacyPolicyBesteam" target='_blank' >Privacy Policy</a></SpanTesto>

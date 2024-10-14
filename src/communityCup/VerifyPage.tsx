@@ -39,7 +39,7 @@ const VerifyPage = () => {
                         </ButtonVerify>
                         <BloccoTesto>
                             By clicking Verify,
-                            you accept the <SpanTesto>Privacy Policy</SpanTesto>
+                            you accept the <SpanTesto><a href="/BesteamPrivacyPolicy.pdf" download="PrivacyPolicyBesteam" target='_blank' >Privacy Policy</a></SpanTesto>
                         </BloccoTesto>
                     </>
 
@@ -47,7 +47,9 @@ const VerifyPage = () => {
                 {verified && (
                     <>
                         <ButtonVerify>
+                            <a href="https://discord.gg/besteam">
                             <p>NEXT</p>
+                            </a>
                         </ButtonVerify>
                         <SpanTesto>Verify completed<br/>
                             Join Community Cup!</SpanTesto>

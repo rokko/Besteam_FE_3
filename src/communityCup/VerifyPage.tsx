@@ -46,7 +46,7 @@ const VerifyPage = () => {
                         <ButtonVerify onClick={()=>verifyUser()}>
                             <p>VERIFY</p>
                         </ButtonVerify>
-                        <ButtonConnessione/>
+              
                         <BloccoTesto>
                             By clicking Verify,
                             you accept the <SpanTesto><a href="/BesteamPrivacyPolicy.pdf" download="PrivacyPolicyBesteam" target='_blank' >Privacy Policy</a></SpanTesto>

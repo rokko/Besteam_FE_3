@@ -7,15 +7,18 @@ import { BloccoTesto, ButtonVerify, SpanTesto } from './VerifyPageStyled'
 
 const VerifyPage = () => {
     const [verified, setVerified] = useState(false)
-    useEffect(()=>{
-        const headerTop = document.getElementsByClassName("navbar-header")as unknown as HTMLElement[]
-        const footer = document.getElementsByClassName("iub__us-widget") as unknown as HTMLElement[]
-        console.log(headerTop)
-        console.log(footer)
-        headerTop[0].style.display='none'
-        footer[0].style.display='none'
-      },[])
+    useEffect(() => {
+        const headerTop = document.getElementsByClassName("navbar-header") as unknown as HTMLElement[];
+        const footer = document.getElementsByClassName("iub__us-widget") as unknown as HTMLElement[];
 
+        if (headerTop.length > 0) {
+            headerTop[0].style.display = 'none';
+        }
+
+        if (footer.length > 0) {
+            footer[0].style.display = 'none';
+        }
+    }, []);
     const verifyUser = () => {
         setVerified(true)
     }

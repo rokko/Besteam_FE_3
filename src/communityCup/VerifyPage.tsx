@@ -10,12 +10,12 @@ const VerifyPage = () => {
     useEffect(()=>{
         const headerTop = document.getElementsByClassName("navbar-header")as unknown as HTMLElement[]
         const footer = document.getElementsByClassName("iub__us-widget") as unknown as HTMLElement[]
+        console.log(headerTop)
+        console.log(footer)
         headerTop[0].style.display='none'
         footer[0].style.display='none'
-       
-      
-    
       },[])
+
     const verifyUser = () => {
         setVerified(true)
     }
@@ -37,9 +37,7 @@ const VerifyPage = () => {
                 color: 'white' // Modifica il colore del testo se necessario
             }}
         >
-            <div style={{
-                display: 'flex', gap: '1.5rem', flexDirection: 'column', marginTop: '70px', justifyContent: 'center', alignContent: 'center', alignItems: 'center'
-            }}>
+            <div style={{ display: 'flex', gap: '1.5rem', flexDirection: 'column', marginTop: '70px', justifyContent: 'center', alignContent: 'center', alignItems: 'center'}}>
                 {!verified && (
                     <>
                         <ButtonVerify onClick={()=>verifyUser()}>
@@ -66,8 +64,6 @@ const VerifyPage = () => {
                     </>
 
                 )}
-
-
             </div>
 
 

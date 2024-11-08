@@ -185,7 +185,7 @@ const SecondHeader = () => {
   if (!isMobile)
     return (
       <>
-        <ImmagineIniziale id="iniziale">
+        <ImmagineIniziale id="home">
           <img
             className="avatar"
             src={avatarsfuma}

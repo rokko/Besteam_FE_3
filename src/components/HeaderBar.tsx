@@ -33,7 +33,7 @@ const HeaderBar = () => {
               onClick={() => {
                 document.documentElement.scrollTop = 0;
               }}
-              to="/#iniziale"
+              to="/#home"
               style={{ textDecoration: "none" }}
             >
               {" "}

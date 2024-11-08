@@ -20,10 +20,12 @@ import Nft from "../components/video/fasciasimboli1.png";
 import styled, { keyframes } from "styled-components";
 import { NFTTicker1, NFTTicker2 } from "../components/NFTTicker";
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 
 const HomePage: React.FC = () => {
   const [attivo, setAttivo] = useState(false);
   const [attivo2, setAttivo2] = useState(false);
+  const [hoveredIcon, setHoveredIcon] = useState<string>('')
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
   const [apriTesto, setApriTesto] = useState(false);
   window.onscroll = function () {

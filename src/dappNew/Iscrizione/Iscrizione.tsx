@@ -18,7 +18,6 @@ interface CheckboxProps {
   };
 }
 
-import { useAddress } from "@thirdweb-dev/react";
 
 
 import uomo from '../media/uomo.jpg'
@@ -81,7 +80,7 @@ const Iscrizione = () => {
   const [firstForm, setFirstForm]=React.useState(true)
   const [secondForm, setSecondForm]=React.useState(false)
   const [thirdForm, setThirdForm] = React.useState(false)
-  const [walletAccount, setWalletAccount] = React.useState(useAddress())
+  const [walletAccount, setWalletAccount] = React.useState('')
   const [nickname, setNickname]=React.useState('')
   const [email, setEmail] = React.useState('');
   const [discord, setDiscord] = React.useState('');
@@ -124,7 +123,7 @@ const Iscrizione = () => {
     }
     else{
       const request ={
-        walletCode: useAddress() ,
+        walletCode: 'testiescrizione',
         nickname:nickname,
         discord:discord,
         email:email,

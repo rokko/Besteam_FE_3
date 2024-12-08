@@ -76,9 +76,9 @@ const HomeTikTok = () => {
 
 
   const [selectedFilters, setSelectedFilters] = useState({
-    balli: false,
+    balliecoreografie: false,
     commedia: false,
-    beauty: false,
+    beautyemakeup: false,
     moda: false,
     fitness: false,
     cucina: false,
@@ -120,7 +120,7 @@ const HomeTikTok = () => {
     const { name, checked } = event.target;
 
     // Convertiamo il nome del filtro in minuscolo per uniformare la gestione dei nomi
-    const lowerCaseName = name.toLowerCase();
+    const lowerCaseName = name.toLowerCase().replace(/ /g, '');
 
     setSelectedFilters((prevFilters) => ({
       ...prevFilters,
@@ -299,7 +299,7 @@ const HomeTikTok = () => {
                     </Box>}
                     control={
                       <Checkbox
-                        checked={selectedFilters.balli}
+                        checked={selectedFilters.balliecoreografie}
                         onChange={handleFilterChange}
                         name="Balli e Coreografie"
                         sx={{
@@ -385,7 +385,7 @@ const HomeTikTok = () => {
                     </Box>}
                     control={
                       <Checkbox
-                        checked={selectedFilters.beauty}
+                        checked={selectedFilters.beautyemakeup}
                         onChange={handleFilterChange}
                         name="Beauty e Makeup"
                         sx={{

@@ -19,6 +19,7 @@ import { Hidden } from "@mui/material";
 var Contract2 = require("web3-eth-contract");
 
 const BoxDescrizione = () => {
+  /*
   const [copied, setCopied] = useState(false);
   const [copied2, setCopied2] = useState(false);
   const [refCodeNew, setRefCodeNew] = useState("");
@@ -191,7 +192,8 @@ const BoxDescrizione = () => {
 
       <LastFooter />
     </>
-  );
+  );*/
+  return(<p>Prova</p>)
 };
 
 export default BoxDescrizione;

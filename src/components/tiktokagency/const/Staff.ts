@@ -32,14 +32,5 @@ export const Staff : StaffType[]=[{
 
 
 },
-{
-    id:4444,
-    nome: 'Giuseppe Settembrino',
-    ruolo:'Scouting Operator',
-    linkedin:'https://www.linkedin.com/in/giuseppe-settembrino-97022430b/',
-    tiktok:'https://www.tiktok.com/@peppewolf7',
-    src:Settembrino
 
-
-}
 ]

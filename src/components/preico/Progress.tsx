@@ -17,6 +17,7 @@ const StyledLinearProgress = withStyles({
 })(LinearProgress);
 
 const Progress = () => {
+  /*
   const [invest, setInvest] = useState(0);
   const [percent, setPercent] = useState(0);
   const PREICO_ADDRESS = "0x9bd219F280E64701bcec868e3ac428b6D5828Dae";
@@ -147,7 +148,8 @@ const Progress = () => {
         </div>
       </div>
     </>
-  );
+  );*/
+  return <p>ProgressBar</p>
 };
 
 export default Progress;

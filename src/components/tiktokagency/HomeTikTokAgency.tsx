@@ -1354,7 +1354,7 @@ const HomeTikTok = () => {
        </div>
             </>
           ) }
-          {isMobile &&(<p>Ciao</p>)}
+          {isMobile &&(<p></p>)}
        
 
 

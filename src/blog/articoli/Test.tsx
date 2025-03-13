@@ -434,7 +434,7 @@ const BlogPostCard = () => {
 Are you ready to step into the future of football?        </SliderTextContainer>
       <div style={{marginTop:'80px'}}>
 
-        <div style={{width:'100%', height:'700px', display:'flex', flexDirection:'column', justifyContent:'center', alignContent:'center',alignItems:'center'}}>
+        <div style={{width:'100%', height:'700px', display:'flex', flexDirection:'column', justifyContent:'center', alignContent:'center',alignItems:'center', backgroundColor:'#2d2d2d'}}>
             <Title style={{fontSize:'40px'}}>Articoli Correlati</Title>
             <div style={{display:'flex', flexDirection:'row',gap:'45px',marginTop:'78px'}}>
             <CardArticolo/>

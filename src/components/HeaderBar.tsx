@@ -18,6 +18,8 @@ import { BtemSwap } from "../Screens/btemSwap";
 import { DappDashboard } from "../dappNew/Dashboard";
 import HomeTikTok from "./tiktokagency/HomeTikTokAgency";
 import VerifyPage from "../communityCup/VerifyPage";
+import Blog from "../blog/Blog";
+import Test from "../blog/articoli/Test";
 
 const goToRegister = () => {
   document.body.scrollTop = 10000; // For Safari
@@ -88,6 +90,13 @@ const HeaderBar = () => {
             >
               <p className="testo">SupportUS</p>
             </a>
+            <a
+              href="/blog"
+              style={{ textDecoration: "none", marginLeft: "-0.6vw" }}
+            >
+              <p className="testo">Blog</p>
+            </a>
+
             <div className="wallet">
               <ConnectionWallet />
             </div>
@@ -110,6 +119,8 @@ const HeaderBar = () => {
           <Route path="/dapp/creaclub" element={<CreazioneClub />} />
           <Route path="/dapp/dashboard" element={<DappDashboard />} />
           <Route path="/tiktokagency" element={<HomeTikTok/>} />
+          <Route path="/blog" element={<Blog/>}/>
+          <Route path="/articolo-test" element={<Test/>}/>
         </Routes>
       </Router>
     </>

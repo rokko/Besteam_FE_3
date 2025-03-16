@@ -133,7 +133,7 @@ const HomeTikTok = () => {
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
   const filteredCreators = creators.filter((creator) => {
-    const matchesSearch = creator.nome.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch = creator.Username.toLowerCase().includes(searchTerm.toLowerCase());
 
     // Trova tutte le categorie che sono state selezionate
     const selectedCategories = Object.keys(selectedFilters)
@@ -141,7 +141,7 @@ const HomeTikTok = () => {
 
     // Verifica se il creator appartiene a una delle categorie selezionate
     const matchesCategory = selectedCategories.length === 0 || selectedCategories.some((category) =>
-      creator.categorie.map(c => c.toLowerCase()).includes(category)
+      creator.Categoria.map(c => c.toLowerCase()).includes(category)
     );
     console.log(selectedCategories)
 
@@ -167,7 +167,15 @@ const HomeTikTok = () => {
     const endIndex = startIndex + itemsPerPage;
 
     // Aggiorna i creator da visualizzare in base alla pagina corrente
-    setPaginatedCreators(filteredCreators.slice(startIndex, endIndex));
+    setPaginatedCreators(filteredCreators.slice(startIndex, endIndex).map(creator => ({
+      id: creator.id,
+      nome: creator.Username, // Assumiamo che "Username" sia equivalente a "nome"
+      Username: creator.Username,
+      URL: creator.URL,
+      categorie: creator.Categoria, // Assumiamo che "Categoria" sia equivalente a "categorie"
+      src: creator.src,
+      tiktok: creator.URL, // Se non hai un campo "tiktok", assegna un valore predefinito
+    })));
 
     // Calcola il numero totale di pagine
     setTotalPages(Math.ceil(filteredCreators.length / itemsPerPage));
@@ -234,7 +242,7 @@ const HomeTikTok = () => {
              color: '#2DC653',
              fontSize: '20px',
              fontWeight: '700',
-           }} onClick={() => {
+           }} onClick={(event) => {
              handleFilterClick(event);
              handleClickFiltri();
            }}>
@@ -252,7 +260,7 @@ const HomeTikTok = () => {
                color: '#A1A1A1',
                fontSize: '20px',
                fontWeight: '700',
-             }} onClick={() => {
+             }} onClick={(event) => {
                handleFilterClick(event);
                handleClickFiltri();
              }}>

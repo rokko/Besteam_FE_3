@@ -104,23 +104,8 @@ const OurPartners = () => {
             </a>
           </div>
           <div style={{ display: "flex", flexDirection: "row" }}>
-            <a href="https://www.innovup.net/socio/besteam/" target={"_blank"}>
-              <img
-                src={otto}
-                alt="alt"
-                style={{ width: isMobile ? "30vw" : "20.833vw" }}
-              />
-            </a>
-            <a
-              href="https://www.scaleway.com/en/startup-program/"
-              target={"_blank"}
-            >
-              <img
-                src={nove}
-                alt="alt"
-                style={{ width: isMobile ? "30vw" : "20.833vw" }}
-              />
-            </a>
+           
+           
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
-import { Button } from "@mui/material";
+import { Button, Checkbox, FormControlLabel } from "@mui/material";
 import telegram from "../video/logotelegram.png";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { flexbox } from "@mui/system";
@@ -27,6 +27,7 @@ const Modalico = (props: any) => {
     emailsCollectionRef: any,
     setEmail: any
   ) => {
+    if(!!checked){
     if (validator.isEmail(email)) {
       await addDoc(emailsCollectionRef, { email: email });
       setEmail("e-mail");
@@ -34,15 +35,22 @@ const Modalico = (props: any) => {
       setErrorEmail(2);
     } else {
       setErrorEmail(1);
+    }}
+    else{
+      setErrorEmail(3);
     }
   };
+  const [checked, setChecked] = useState(false);
 
   const [email, setEmail] = useState("e-mail");
   const emailsCollectionRef = collection(db, "emails");
   const [errorEmail, setErrorEmail] = useState(0);
   const [pop, setPop] = useState(false);
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
-
+  const handleChange = (event) => {
+    setChecked(event.target.checked);
+    // Utilizza il valore di checked come necessario
+  };
   const style = {
     position: "absolute" as "absolute",
     top: "50%",
@@ -136,6 +144,11 @@ const Modalico = (props: any) => {
                 Well done. You have successfully sent your email!
               </p>
             )}
+            {errorEmail ===3 && (
+              <p style={{ color: "rgb(45, 198, 83)", fontFamily: "Bonn" }}>
+                You must check policy privacy
+              </p>
+            )}
             <p
               style={{
                 fontSize: "24px",
@@ -147,6 +160,36 @@ const Modalico = (props: any) => {
               Sign up for the newsletter and receive a welcome NFT when our
               metaverse is released.
             </p>
+            <FormControlLabel
+      control={
+        <Checkbox
+          checked={checked}
+          onChange={handleChange}
+          inputProps={{ 'aria-label': 'controlled' }}
+          sx={{
+            color: 'white', // Colore di default per il bordo non selezionato
+            '&.Mui-checked': {
+              color: 'green', // Cambia il colore quando la checkbox è selezionata
+            },
+            '&:hover': {
+              bgcolor: 'transparent', // Mantiene lo sfondo trasparente al passaggio del mouse
+            },
+          }}
+        />
+      }
+      label={
+        <span>
+         <p
+              style={{
+                fontSize: "24px",
+                fontFamily: "Bonn",
+                color: "#ffffff",
+                textAlign: "center",
+              }}
+            > I have read the  <a href="" target="_blank" rel="noopener noreferrer" style={{ marginLeft: '4px', textDecoration: 'none', color: '#007bff' }}>privacy policy  </a> and I want to subscribe to the newsletter.   </p>      
+        </span>
+      }
+    />
             <Modalico
               testo={3}
               open={pop}

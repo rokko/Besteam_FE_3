@@ -27,29 +27,33 @@ const SelectBoxCustom = ({list,role,setNationality,nationality}) => {
     <FormControl >
       <Select
       
-        style={{ width:role? '11.967vw': '25.85vw', height:'1.727vw',backgroundColor:'white',border :'1px solid green', borderRadius:'0px'}}
+        style={{ width:role? '12.5vw': '27.08vw', height:'1.727vw',backgroundColor:'white',border :'1px solid green', borderRadius:'0px'}}
         labelId="search-select-label"
         id="select"
         value={nationality}
-        color='primary'
         sx={{
           border:'0.75px solid #2DC653!important' ,
           width: '25.85vw',
           height: '1.727vw',
           fontFamily: 'DIN-Pro',
           color:'#7C7C7C',
+          backgroundColor:'#ffffff',
           textAlign:'center',
           fontSize: '1.05vw',
           padding:'0px',
           '.MuiList-root.MuiList-padding': {
+            backgroundColor: 'white',
             padding: 0 /* Set the padding to 0 or your desired value */
+          },
+          '.MuiMenu-list':{
+            backgroundColor:'#ffffff',
           }
         
         }}
         onChange={handleChange}
         renderValue={(nationality) => `${nationality}`}
         >
-          <ListSubheader  sx={{ backgroundColor: 'white', padding:'0px' }} style={{backgroundColor:'white', height:'8.5vw'}} id="elementi-label" ref={menuRef}>
+          <ListSubheader  sx={{ backgroundColor: '#ffffff', padding:'0px' }} style={{backgroundColor:'white', height:'8.5vw'}} id="elementi-label" ref={menuRef}>
 
         {
             list.map((item)=>{

@@ -2,11 +2,7 @@ import { injected } from "../components/wallet/connection";
 import { useWeb3React } from "@web3-react/core";
 import React from "react";
 import styled from "styled-components";
-declare global {
-  interface Window {
-    ethereum: any;
-  }
-}
+
 
 const TestoButton = styled.p`
   letter-spacing: var(--unnamed-character-spacing-0);
@@ -37,6 +33,7 @@ const ButtonConnessione = styled.div`
   }
 `;
 const ConnectionWallet = () => {
+  const windowNew = window as any
   const { active, activate, deactivate, account } = useWeb3React();
   const disconnect = async () => {
     try {
@@ -48,15 +45,15 @@ const ConnectionWallet = () => {
 
   const connect = async () => {
     try {
-      await window.ethereum.enable();
-      await window.ethereum.request({
+      await windowNew.ethereum.enable();
+      await windowNew.ethereum.request({
         method: "wallet_switchEthereumChain",
         params: [{ chainId: `0x${Number(137).toString(16)}` }],
       });
     } catch (switchError: any) {
       // This error code indicates that the chain has not been added to MetaMask.
 
-      await window.ethereum?.request({
+      await windowNew.ethereum?.request({
         method: "wallet_addEthereumChain",
         params: [
           {
@@ -92,6 +89,7 @@ const ConnectionWallet = () => {
           <TestoButton>DISCONNECT</TestoButton>
         </ButtonConnessione>
       )}
+       
     </>
   );
 };

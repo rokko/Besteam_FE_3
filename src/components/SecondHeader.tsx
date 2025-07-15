@@ -185,7 +185,7 @@ const SecondHeader = () => {
   if (!isMobile)
     return (
       <>
-        <ImmagineIniziale id="iniziale">
+        <ImmagineIniziale id="home">
           <img
             className="avatar"
             src={avatarsfuma}
@@ -227,8 +227,7 @@ const SecondHeader = () => {
             <br />
             and <span style={{ fontStyle: "italic" }}>be the first!</span>
           </BoxText>
-         
-          <ButtonPlayNew onClick={() => setOpen(true)}>
+          <ButtonPlayNew onClick={() => setOpen(true)} >
             <img style={{ width: "70%" }} src={testoplay} alt="testoplay" />
           </ButtonPlayNew>
       

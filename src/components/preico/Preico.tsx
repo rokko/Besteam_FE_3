@@ -87,7 +87,6 @@ const Preico = () => {
             <img  src={Schemavesting} alt="schema vesting" />
             <div style={{display:'flex', flexDirection:'row', marginTop:'65px'}}>
             <FirstForm setref={setCodiceRef} />
-            <SecondForm refer={codiceRef}/>
             </div>
           </Box>
         </Box>

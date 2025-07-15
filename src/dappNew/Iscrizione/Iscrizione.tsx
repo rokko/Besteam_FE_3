@@ -18,6 +18,8 @@ interface CheckboxProps {
   };
 }
 
+
+
 import uomo from '../media/uomo.jpg'
 import donna from '../media/donna.jpg'
 import CircleIcon from '@mui/icons-material/Circle';
@@ -35,6 +37,7 @@ import CarouselWithSelect from "./carouselSelect/CarouselSelect";
 import { Mandatory } from "../../Screens/btemSwap/boxIscrizione/BoxIscrizioneStyled";
 import { useWeb3React } from "@web3-react/core";
 import axios from "axios";
+import { Link } from "react-router-dom";
 const useStyles  =makeStyles({
   checkbox: {
     color: 'green', // Change the color of the checkbox
@@ -72,6 +75,7 @@ const Iscrizione = () => {
 
 
   const { account } = useWeb3React();
+
   const [avatar, setAvatar] = React.useState('')
   const [firstForm, setFirstForm]=React.useState(true)
   const [secondForm, setSecondForm]=React.useState(false)
@@ -107,7 +111,10 @@ const Iscrizione = () => {
   };
   
   const handleMouseLeave = (event) => {
+    console.log(event.target.id)
+    if (event.target.id !== avatar) {
     event.target.style.transform = 'scale(1)';
+  }
   };
   const registrati = (event) => {
     event.preventDefault()
@@ -116,7 +123,7 @@ const Iscrizione = () => {
     }
     else{
       const request ={
-        walletCode: walletAccount ,
+        walletCode: 'testiescrizione',
         nickname:nickname,
         discord:discord,
         email:email,
@@ -218,10 +225,11 @@ const Iscrizione = () => {
   },[platform])
   return (
     <Container>
+      <Link to='/dapp/dashboard'>Dashboard</Link>
       {firstForm &&
       <FormIscrizione>
-        <img src={barralaterale} height='100%' style={{position:'absolute',left:'0px'}} alt='cornice'/>
-        <img src={barralaterale} height='100%' style={{position:'absolute',right:'0px'}} alt='cornice'/>
+        <img src={barralaterale} height='100%' style={{position:'absolute',left:'0px',width:'0.417vw'}} alt='cornice'/>
+        <img src={barralaterale} height='100%' style={{position:'absolute',right:'0px',width:'0.417vw'}} alt='cornice'/>
 
         <div>
           <TestoIscrizione>NICKNAME*</TestoIscrizione>
@@ -243,6 +251,7 @@ const Iscrizione = () => {
             type="text" 
             id="walletInput"
             value={walletAccount}
+            readOnly
             onChange={handleWalletChange}
             />
 
@@ -260,9 +269,9 @@ const Iscrizione = () => {
         <div style={{display:'flex', justifyContent:'center', flexDirection:'column', alignContent:'flex-start'}}>
         <FormControlLabel
           onChange={handleRegolamentoChange}
-          control={<Checkbox icon={<CircleUnchecked style={{fill:'white', backgroundColor:'white'}} />} checkedIcon={<CircleIcon  style={{color:'#2DC653', backgroundColor:'white', padding:'5px'}}/>} classes={{ root: classes.checkbox }} />}
+          control={<Checkbox icon={<CircleUnchecked style={{width:'1.806vw', height:'1.806vw',fill:'white', backgroundColor:'white'}} />} checkedIcon={<CircleIcon  style={{width:'1.806vw', height:'1.806vw',color:'#2DC653', backgroundColor:'white', padding:'5px'}}/>} classes={{ root: classes.checkbox }} />}
           label={<span style={{
-            fontSize:'1.04vw',
+            fontSize:'1.11vw',
             fontFamily:'Dinproregular',
             color:'#7C7C7C',
             textAlign: 'left',
@@ -271,9 +280,9 @@ const Iscrizione = () => {
 I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFamily:'DinLightItalic',fontStyle:'italic'}}>Terms and conditions</a> and <a style={{textDecoration:'none', color:'#208B3A', fontFamily:'DinLightItalic', fontStyle:'italic'}} href="#">Privacy Policy.</a>          </span>}         />
         <FormControlLabel
           onChange={handleNewsletterChange}
-          control={<Checkbox icon={<CircleUnchecked style={{fill:'white', backgroundColor:'white'}} />} checkedIcon={<CircleIcon  style={{color:'#2DC653', backgroundColor:'white', padding:'5px'}}/>} classes={{ root: classes.checkbox }} />}
+          control={<Checkbox icon={<CircleUnchecked style={{width:'1.806vw', height:'1.806vw',fill:'white', backgroundColor:'white'}} />} checkedIcon={<CircleIcon  style={{width:'1.806vw', height:'1.806vw',color:'#2DC653', backgroundColor:'white', padding:'5px'}}/>} classes={{ root: classes.checkbox }} />}
           label={<span style={{
-            fontSize:'1.04vw',
+            fontSize:'1.11vw',
             fontFamily:'Dinproregular',
             color:'#7C7C7C',
             textAlign: 'left',
@@ -312,12 +321,12 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
         </div>
         <div style={{display:'flex', flexDirection:'row', justifyContent:'center', gap:'2.5rem'}}>
           <div>
-          <TestoIscrizione style={{marginBottom:'0.5vw'}}>First Role?*</TestoIscrizione>
-          <SelectBoxCustom list={role_list} role={true} setNationality={setFirstRole} nationality={firstRole}></SelectBoxCustom>
+          <TestoIscrizione style={{marginBottom:'0.5vw'}}>First Role?* </TestoIscrizione>
+          <SelectBoxCustom list={role_list.filter(elemento => elemento !== secondRole)} role={true} setNationality={setFirstRole} nationality={firstRole}></SelectBoxCustom>
           </div>
           <div>
             <TestoIscrizione style={{marginBottom:'0.5vw'}}>Second Role?*</TestoIscrizione>
-            <SelectBoxCustom list={role_list} role={true} setNationality={setSecondRole} nationality={secondRole}></SelectBoxCustom>
+            <SelectBoxCustom list={role_list.filter(elemento => elemento !== firstRole)} role={true} setNationality={setSecondRole} nationality={secondRole}></SelectBoxCustom>
 
           </div>
         </div>
@@ -333,19 +342,10 @@ I accept the <a href='#' style={{textDecoration:'none', color:'#208B3A', fontFam
   <p style={{fontSize:'33px', color:'white', fontFamily:'DinPROBold'}}>CHOOSE YOUR AVATAR</p>
   <FormControl component="fieldset">
     <div style={{display:'flex', flexDirection:'row', gap:'4rem'}}>
- <img src={uomo} style={{height:'400px', transition: 'transform 0.3s'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
- <img src={donna} style={{height:'400px', transition: 'transform 0.3s'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
+ <img src={uomo} id="donna" style={{height:'14.58vw', transition: 'transform 0.3s'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={()=>{setAvatar('donna')}} />
+ <img src={donna} id="uomo" style={{height:'14.58vw', transition: 'transform 0.3s'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={()=>{setAvatar('uomo')}}/>
  </div>
-  <RadioGroup
-    aria-label="gender"
-    name="gender"
-    value={avatar}
-    onChange={(e) => setAvatar(e.target.value)}
-    style={{display:'flex', flexDirection:'row', color:'white', fontSize:'30px', fontFamily:'DinPROBold', fontWeight:'bold'}}
-  >
-    <FormControlLabel value="uomo" control={<Radio />}  label="Uomo" />
-    <FormControlLabel value="donna" control={<Radio />} label="Donna" />
-  </RadioGroup>
+ 
 </FormControl>
   <div onClick={(event)=>{registrati(event)}} style={{width:'13.18vw', display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center',height:'2.60vw', background:' #2DC653 0% 0% no-repeat padding-box'}}>
     <p style={{fontSize:'2.08vw', fontFamily:'DinPROBlack2', color:'white'}}>CREATE</p>

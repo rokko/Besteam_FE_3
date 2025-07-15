@@ -35,6 +35,7 @@ var Contract2 = require("web3-eth-contract");
 const { Configuration, OpenAIApi } = require("openai");
 
 const BoxIscrizione = () => {
+  /*
   const configuration = new Configuration({
     apiKey: "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",
   });
@@ -372,7 +373,8 @@ const BoxIscrizione = () => {
         </a>
       </div>
     </BoxTop>
-  );
+  );*/
+  return(<p>Box</p>)
 };
 
 export default BoxIscrizione;

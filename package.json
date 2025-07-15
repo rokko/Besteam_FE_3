@@ -2,7 +2,18 @@
   "name": "labesteeam",
   "version": "0.1.0",
   "private": true,
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
+  },
   "dependencies": {
+    "@babel/runtime": "^7.23.9",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@material-ui/core": "^4.12.4",
@@ -13,10 +24,11 @@
     "@mui/icons-material": "^5.14.16",
     "@mui/material": "^5.14.17",
     "@mui/styles": "^5.2.3",
-    "@reduxjs/toolkit": "^1.9.3",
+    "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@thirdweb-dev/react": "^4.4.8",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
     "@web3-react/core": "^6.1.9",
@@ -24,11 +36,15 @@
     "@web3-react/network-connector": "^6.1.9",
     "add": "^2.0.6",
     "axios": "^1.4.0",
+    "babel": "^6.23.0",
+    "browserify": "^17.0.0",
+    "browserify-zlib": "^0.2.0",
     "firebase": "^9.4.1",
     "formik": "^2.2.9",
     "jquery": "^3.6.1",
     "mui": "^0.0.1",
     "next": "^13.2.3",
+    "node-sass": "^9.0.0",
     "openai": "^3.2.1",
     "prop-types": "^15.8.0",
     "react": "^18.2.0",
@@ -63,7 +79,7 @@
     "yup": "^1.0.0"
   },
   "scripts": {
-    "start": "DISABLE_ESLINT_PLUGIN=true GENERATE_SOURCEMAP=false react-app-rewired start",
+    "start": "react-app-rewired start",
     "build": "DISABLE_ESLINT_PLUGIN=true react-app-rewired build",
     "test": "DISABLE_ESLINT_PLUGIN=true react-scripts test",
     "eject": "DISABLE_ESLINT_PLUGIN=true react-scripts eject"

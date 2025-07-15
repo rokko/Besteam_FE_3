@@ -15,6 +15,11 @@ import { Sesso } from "../dappNew/Sesso";
 import { CreazioneClub } from "../dappNew/CreazioneClub";
 import { Home } from "../dappNew/Home";
 import { BtemSwap } from "../Screens/btemSwap";
+import { DappDashboard } from "../dappNew/Dashboard";
+import HomeTikTok from "./tiktokagency/HomeTikTokAgency";
+import VerifyPage from "../communityCup/VerifyPage";
+import Blog from "../blog/Blog";
+import Test from "../blog/articoli/Test";
 
 const goToRegister = () => {
   document.body.scrollTop = 10000; // For Safari
@@ -31,7 +36,7 @@ const HeaderBar = () => {
               onClick={() => {
                 document.documentElement.scrollTop = 0;
               }}
-              to="/#iniziale"
+              to="/#home"
               style={{ textDecoration: "none" }}
             >
               {" "}
@@ -85,6 +90,13 @@ const HeaderBar = () => {
             >
               <p className="testo">SupportUS</p>
             </a>
+            <a
+              href="/blog"
+              style={{ textDecoration: "none", marginLeft: "-0.6vw" }}
+            >
+              <p className="testo">Blog</p>
+            </a>
+
             <div className="wallet">
               <ConnectionWallet />
             </div>
@@ -95,14 +107,20 @@ const HeaderBar = () => {
         </div>
         <Routes>
           <Route path="/whitepaper" element={<WhitePaper />} />
+          <Route path="/verify" element={<VerifyPage />}/>
           <Route path="/" element={<HomePage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           {/*<Route path="/ico" element={<Preico />} />*/}
-          {/*<Route path="/dapp" element={<Iscrizione />} />*/}
+          <Route path="/dapp" element={<Iscrizione />} />
           <Route path="/sesso" element={<Sesso />} />
           <Route path="/creazioneclub" element={<CreazioneClub />} />
           <Route path="/home" element={<Home />} />
           <Route path="/supportus" element={<BtemSwap />} />
+          <Route path="/dapp/creaclub" element={<CreazioneClub />} />
+          <Route path="/dapp/dashboard" element={<DappDashboard />} />
+          <Route path="/tiktokagency" element={<HomeTikTok/>} />
+          <Route path="/blog" element={<Blog/>}/>
+          <Route path="/articolo-test" element={<Test/>}/>
         </Routes>
       </Router>
     </>

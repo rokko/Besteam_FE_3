@@ -9,6 +9,7 @@ import abiSALE from "../abiIDOBesteam.json";
 var Contract2 = require("web3-eth-contract");
 
 const SecondForm = (props: any) => {
+/*
   const [investMatic, setInvestMatic] = useState(0);
   const { account, library } = useWeb3React();
   const PREICO_ADDRESS = "0x9bd219F280E64701bcec868e3ac428b6D5828Dae";
@@ -211,7 +212,8 @@ const SecondForm = (props: any) => {
         </Box>
       )}
     </>
-  );
+  );*/
+  <p>Second Form</p>
 };
 
 export default SecondForm;

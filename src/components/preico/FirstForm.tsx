@@ -10,6 +10,7 @@ import Modalico from "./Modalico";
 var Contract2 = require("web3-eth-contract");
 
 const FirstForm = (props: any) => {
+  /*
   const { account } = useWeb3React();
   const PREICO_ADDRESS = "0x9bd219F280E64701bcec868e3ac428b6D5828Dae";
   Contract2.setProvider(window.ethereum);
@@ -221,8 +222,8 @@ const FirstForm = (props: any) => {
         )}
       </Box>
       <Modalico open={open} testo={1} setopen={setOpen} />
-    </>
-  );
+    </>*/
+  return(<p>Prova</p>);
 };
 
 export default FirstForm;

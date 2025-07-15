@@ -7,6 +7,7 @@ import { Button, InputBase } from "@mui/material";
 var Contract2 = require("web3-eth-contract");
 
 const Dashboard = () => {
+  /*
   const [newAddress, setNewAddress] = useState("");
   const [pass, setPass] = useState("");
   const [login, setLogin] = useState(false);
@@ -274,7 +275,10 @@ const Dashboard = () => {
         </>
       )}
     </>
-  );
+  );*/
+  return(
+    <p>Dashboard</p>
+  )
 };
 
 export default Dashboard;

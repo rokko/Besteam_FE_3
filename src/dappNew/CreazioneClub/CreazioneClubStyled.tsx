@@ -29,9 +29,22 @@ const ButtonLogo = styled.div`
 `;
 
 const InputClub = styled.input`
-  background-color: #124921;
-  width: 400px;
-  height: 30px;
+  background-color: white;
+  width:31.042vw ;
+  height: 1.528vw;
   border: none;
 `;
-export { CreazioneClubForm, InputClub, ButtonLogo };
+
+const TestoLeftInput = styled.p`
+  font-size:1.13vw;
+  font-family: DINPro;
+  text-align: left;
+  letter-spacing: 0px;
+  color: white;
+  opacity: 1;
+  font-weight:400;
+  line-height:0
+
+`
+
+export { CreazioneClubForm, InputClub, ButtonLogo, TestoLeftInput };

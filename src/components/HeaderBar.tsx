@@ -20,6 +20,7 @@ import HomeTikTok from "./tiktokagency/HomeTikTokAgency";
 import VerifyPage from "../communityCup/VerifyPage";
 import Blog from "../blog/Blog";
 import Test from "../blog/articoli/Test";
+import AppRedirect from "./AppRedirect";
 
 const goToRegister = () => {
   document.body.scrollTop = 10000; // For Safari
@@ -121,6 +122,7 @@ const HeaderBar = () => {
           <Route path="/tiktokagency" element={<HomeTikTok/>} />
           <Route path="/blog" element={<Blog/>}/>
           <Route path="/articolo-test" element={<Test/>}/>
+          <Route path="/app" element={<AppRedirect/>}/>
         </Routes>
       </Router>
     </>

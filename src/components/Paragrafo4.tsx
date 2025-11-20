@@ -66,18 +66,16 @@ const Paragrafo4 = () => {
               height="10px"
               style={{ marginRight: "300px" }}
             />
-            <p className="titolo-paragrafo">NFTs.</p>
+            <p className="titolo-paragrafo">Train Your Stats!</p>
             <p style={{ fontFamily: "DIN-PRO" }}>
-              Build your inventory by selecting{" "}
+             Upgrade your avatar with {" "}
               <span className="testo-parole-paragrafo">
-                your favorite NFTs{" "}
+                focused training;{" "}
               </span>
-              ;<br />
-              they are useful for customizing the avatar and the team <br />
-              <span className="bold-italic">in an exclusive way</span>. <br />
-              You can{" "}
-              <span className="testo-parole-paragrafo">buy or resell </span>them
-              in the “OpenSea” Marketplace. <br />
+              <br />
+             improve skills and unlock new abilities to boost <br />.
+             performance on the field, following your coach’s tactic. <br />
+             Train daily and track your progress as you climb the ranks.<br />
             </p>
           </div>
 

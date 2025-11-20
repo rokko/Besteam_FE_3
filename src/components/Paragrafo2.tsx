@@ -1,5 +1,6 @@
 import React from "react";
-import just from "../components/video/just.png";
+import just from "../components/video/p21.webp";
+import just2 from '../components/video/p22.webp';
 import { useMediaQuery } from "react-responsive";
 import { Slide } from "react-slideshow-image";
 import arrowleft from "./video/frecciasinistra.png";
@@ -107,13 +108,13 @@ const Paragrafo2 = () => {
                   height={"99.5%"}
                 />
                 <img
-                  src={just}
+                  src={just2}
                   alt="immagine2"
                   width={"100%"}
                   height={"99.5%"}
                 />
                 <img
-                  src={just}
+                  src={just2}
                   alt="immagine2"
                   width={"100%"}
                   height={"99.5%"}

@@ -5,9 +5,9 @@ import arrowright from "../components/video/freccia.png";
 import arrowleft from "../components/video/frecciasinistra.png";
 import crociprima from "../components/video/crociprima.png";
 import bordo from "../components/video/bordoimmagine.png";
-import uno from "../components/video/paragrafo1/1.png";
-import due from "../components/video/paragrafo1/2.png";
-import tre from "../components/video/paragrafo1/3.png";
+import uno from "../components/video/paragrafo1/1.webp";
+import due from "../components/video/paragrafo1/2.webp";
+import tre from "../components/video/paragrafo1/3.webp";
 
 
 import besteam from "../components/video/besteam.jpg";

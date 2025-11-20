@@ -26,7 +26,7 @@ const Paragrafo1 = () => {
           position: "absolute",
           left: "1rem",
           top: "8rem",
-          display: "block",
+          display: "none",
         }}
       >
         <img src={arrowleft} width="23px" height="30px" />
@@ -39,7 +39,7 @@ const Paragrafo1 = () => {
           position: "absolute",
           right: "1rem",
           top: "8rem",
-          display: "block",
+          display: "none",
         }}
       >
         <img src={arrowright} width="23px" height="30px" />{" "}

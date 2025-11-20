@@ -1,5 +1,6 @@
 import React from "react";
-import esports from "../components/video/esports.jpg";
+import esports from "../components/video/p51.webp";
+import esports2 from "../components/video/p52.webp";
 import { useMediaQuery } from "react-responsive";
 import { Slide } from "react-slideshow-image";
 import arrowleft from "./video/frecciasinistra.png";
@@ -104,17 +105,12 @@ const Paragrafo5 = () => {
                   height={"99.5%"}
                 />
                 <img
-                  src={just}
+                  src={esports2}
                   alt="immagine2"
                   width={"100%"}
                   height={"99.5%"}
                 />
-                <img
-                  src={esports}
-                  alt="immagine2"
-                  width={"100%"}
-                  height={"99.5%"}
-                />
+               
               </Slide>
             </div>
 
@@ -172,16 +168,12 @@ const Paragrafo5 = () => {
                 className="immagine-paragrafo-5"
               />
               <img
-                src={just}
+                src={esports2}
                 alt="immagine2"
                 className="immagine-paragrafo-5"
               />
 
-              <img
-                src={esports}
-                alt="immagine2"
-                className="immagine-paragrafo-5"
-              />
+           
             </Slide>
 
             <div

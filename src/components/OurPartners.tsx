@@ -8,6 +8,8 @@ import sei from "./video/ourpartners/6.png";
 import sette from "./video/lazioinnova.png";
 import otto from "./video/inup.png";
 import nove from "./video/scale.png";
+import google from "./video/googlecloud.webp";
+import tiktok from "./video/tiktok.webp";
 import bordo from "../components/video/bordo2.png";
 import { useMediaQuery } from "react-responsive";
 
@@ -39,6 +41,26 @@ const OurPartners = () => {
             alignItems: "center",
           }}
         >
+        
+            <a
+              href={
+                "https://startup.google.com/cloud/"
+              }
+            >
+              <img
+                src={google}
+                alt={"google"}
+                style={{ width: isMobile ? "30vw" : "20.833vw" }}
+              />
+            </a>
+            <a href={"https://www.besteam.io/tiktokagency"}>
+              <img
+                src={tiktok}
+                alt={"tiktok"}
+                style={{ width: isMobile ? "30vw" : "20.833vw" }}
+              />
+            </a>
+          </div>
           <div style={{ display: "flex", gap: "1.302vw" }}>
             <a href={"https://jersix.com/"}>
               <img

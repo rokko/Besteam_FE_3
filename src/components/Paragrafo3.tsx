@@ -14,13 +14,13 @@ const Paragrafo3 = () => {
     prevArrow: (
       <div
         className="hoverzoom"
-        style={{ width: "30px", marginRight: "-35px" }}
+        style={{ width: "30px", marginRight: "-35px" ,display:"none" }}
       >
-        <img src={arrowleft} width="23px" height="30px" />
+        <img src={arrowleft} width="23px" height="30px"   />
       </div>
     ),
     nextArrow: (
-      <div className="hoverzoom" style={{ width: "30px", marginLeft: "-35px" }}>
+      <div className="hoverzoom" style={{ width: "30px", marginLeft: "-35px",display:"none" }}>
         <img src={arrowright} width="23px" height="30px" />{" "}
       </div>
     ),

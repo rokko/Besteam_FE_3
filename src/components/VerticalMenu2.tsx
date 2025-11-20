@@ -13,21 +13,7 @@ const VerticalMenu2 = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "#1c1c1c" }}>
-      <span
-        style={{ backgroundColor: "#1c1c1c" }}
-        id="basic-button"
-        aria-expanded={open ? "true" : undefined}
-        onClick={handleClick}
-      >
-        <a
-          href="https://opensea.io/collection/besteam-collection"
-          target={"_blank"}
-          style={{ textDecoration: "none" }}
-        >
-          <p className="testo">NFTs</p>
-        </a>
-      </span>
+  
       {/* <Menu
         sx={{
           marginTop: "27px",
@@ -62,7 +48,7 @@ const VerticalMenu2 = () => {
           <p className="testo">Marketplace</p>
         </MenuItem>
       </Menu>*/}
-    </div>
+  
   );
 };
 

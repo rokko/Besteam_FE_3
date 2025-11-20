@@ -85,12 +85,7 @@ const HeaderBar = () => {
             </Button>
             */}
             <VerticalMenu />
-            <a
-              href="/supportus"
-              style={{ textDecoration: "none", marginLeft: "-0.6vw" }}
-            >
-              <p className="testo">SupportUS</p>
-            </a>
+            
             <a
               href="/blog"
               style={{ textDecoration: "none", marginLeft: "-0.6vw" }}
@@ -98,9 +93,7 @@ const HeaderBar = () => {
               <p className="testo">Blog</p>
             </a>
 
-            <div className="wallet">
-              <ConnectionWallet />
-            </div>
+        
           </div>
           <div className="hamburger">
             <HamburgerMenu />

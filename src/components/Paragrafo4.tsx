@@ -1,5 +1,7 @@
 import React from "react";
-import ntfs from "../components/video/ntfs.jpg";
+import ntfs2 from "../components/video/p41.webp";
+import ntfs3 from "../components/video/p42.webp";
+
 import { useMediaQuery } from "react-responsive";
 import { Slide } from "react-slideshow-image";
 import arrowleft from "./video/frecciasinistra.png";
@@ -98,24 +100,19 @@ const Paragrafo4 = () => {
             >
               <Slide {...customOptions}>
                 <img
-                  src={paragrafo4}
+                  src={ntf2}
                   alt="immagine2"
                   width={"100%"}
                   height={"99.5%"}
                 />
                 <img
-                  src={ntfs}
+                  src={ntfs3}
                   alt="immagine2"
                   width={"100%"}
                   height={"99.5%"}
                 />
 
-                <img
-                  src={ntfs}
-                  alt="immagine2"
-                  width={"100%"}
-                  height={"99.5%"}
-                />
+              
               </Slide>
             </div>
             <img
@@ -160,25 +157,16 @@ const Paragrafo4 = () => {
             </div>
             <Slide {...customOptions2}>
               <img
-                src={ntfs}
+                src={ntfs2}
                 alt="immagine2"
                 className="immagine-paragrafo-5"
               />
               <img
-                src={paragrafo4}
+                src={ntfs3}
                 alt="immagine2"
                 className="immagine-paragrafo-5"
               />
-              <img
-                src={ntfs}
-                alt="immagine2"
-                className="immagine-paragrafo-5"
-              />
-              <img
-                src={ntfs}
-                alt="immagine2"
-                className="immagine-paragrafo-5"
-              />
+           
             </Slide>
             <div
               style={{ display: "flex", flexDirection: "row", marginTop: -12 }}

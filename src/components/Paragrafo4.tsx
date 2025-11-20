@@ -100,7 +100,7 @@ const Paragrafo4 = () => {
             >
               <Slide {...customOptions}>
                 <img
-                  src={ntf2}
+                  src={ntfs2}
                   alt="immagine2"
                   width={"100%"}
                   height={"99.5%"}

@@ -212,7 +212,6 @@ const SecondHeader = () => {
             }}
           ></img>
           <TestoLeft style={{ fontFamily: "DinPROBlackItalic" }}>
-            VIRTUAL.
             <br />
             FOOTBALL.
             <br />
@@ -413,7 +412,6 @@ const SecondHeader = () => {
                 fontFamily: "DinPROBlackItalic",
               }}
             >
-              VIRTUAL.
               <br />
               FOOTBALL.
               <br />

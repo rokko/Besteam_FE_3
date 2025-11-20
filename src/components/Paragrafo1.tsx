@@ -92,11 +92,11 @@ const Paragrafo1 = () => {
         >
           <p
             className="titolo-paragrafo  "
-            style={{ fontFamily: "DinPROBold" }}
+            style={{ fontFamily: "DinPROBold" , fontSize:'26px'}}
           >
             WELCOME TO BESTEAM
           </p>
-          <p style={{ fontFamily: "DIN-PRO" }}>
+          <p style={{ fontFamily: "DIN-PRO", marginTop:"-10px" }}>
             A <span className="testo-parole-paragrafo ">NFT</span> Football
             simulation game built on{" "}
             <span className="testo-parole-paragrafo"> Polygon Blockchain </span>

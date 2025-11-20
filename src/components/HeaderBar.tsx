@@ -6,7 +6,6 @@ import VerticalMenu from "./VerticalMenu";
 import HamburgerMenu from "./HamburgerMenu";
 import WhitePaper from "../Screens/WhitePaper";
 import HomePage from "../Screens/HomePage";
-import VerticalMenu2 from "../components/VerticalMenu2";
 import ConnectionWallet from "./ConnectionWallet";
 import Dashboard from "./Dashboard.tsx/Dashboard";
 import Preico from "../components/preico/Preico";
@@ -64,7 +63,7 @@ const HeaderBar = () => {
               <p className="testo">Team</p>
             </a>
 
-            <VerticalMenu2 />
+       
             {/*
             <Button
               style={{

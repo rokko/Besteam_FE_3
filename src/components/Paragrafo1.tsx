@@ -95,15 +95,11 @@ const Paragrafo1 = () => {
             style={{ fontFamily: "DinPROBold" , fontSize:'26px'}}
           >
             WELCOME TO BESTEAM
-          </p>
-          <p style={{ fontFamily: "DIN-PRO", marginTop:"-10px" }}>
-            A <span className="testo-parole-paragrafo ">NFT</span> Football
-            simulation game built on{" "}
-            <span className="testo-parole-paragrafo"> Polygon Blockchain </span>
-            .<br />
-            You will have to train to be the MVP of the most difficult matches{" "}
+          </p><p style={{ fontFamily: "DIN-PRO", marginTop:"-10px" }}>
+            The <span className="testo-parole-paragrafo ">football game </span> that changes the rules<br />
+           Train hard, build your team, and fight for the biggest trophies.{" "}
             <br />
-            and win the most important trophies with your team.
+          Only the Best make it to the top.
             <br />
           </p>
           <div

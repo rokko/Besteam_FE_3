@@ -1,5 +1,6 @@
 import React from "react";
-import buildteam from "../components/video/buildteam.png";
+import buildteam from "../components/video/p31.webp";
+import buildteam2 from "../components/video/p32.webp";
 import { useMediaQuery } from "react-responsive";
 import { Slide } from "react-slideshow-image";
 import arrowleft from "./video/frecciasinistra.png";
@@ -107,17 +108,12 @@ const Paragrafo3 = () => {
                   height={"99.5%"}
                 />
                 <img
-                  src={buildteam}
+                  src={buildteam2}
                   alt="immagine2"
                   width={"100%"}
                   height={"99.5%"}
                 />
-                <img
-                  src={buildteam}
-                  alt="immagine2"
-                  width={"100%"}
-                  height={"99.5%"}
-                />
+              
               </Slide>
             </div>
 
@@ -179,15 +175,11 @@ const Paragrafo3 = () => {
                 className="immagine-paragrafo-5"
               />
               <img
-                src={buildteam}
+                src={buildteam2}
                 alt="immagine2"
                 className="immagine-paragrafo-5"
               />
-              <img
-                src={buildteam}
-                alt="immagine2"
-                className="immagine-paragrafo-5"
-              />
+          
             </Slide>
             <div
               style={{ display: "flex", flexDirection: "row", marginTop: -12 }}

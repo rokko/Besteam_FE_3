@@ -8,8 +8,7 @@ import bordo from "../components/video/bordoimmagine.png";
 import uno from "../components/video/paragrafo1/1.png";
 import due from "../components/video/paragrafo1/2.png";
 import tre from "../components/video/paragrafo1/3.png";
-import qua from "../components/video/paragrafo1/4.png";
-import cin from "../components/video/paragrafo1/5.png";
+
 
 import besteam from "../components/video/besteam.jpg";
 import { relative } from "path";
@@ -145,18 +144,7 @@ const Paragrafo1 = () => {
                   alt="immagine1"
                   style={{ maxWidth: "800px" }}
                 />
-                <img
-                  className="immage-correzione"
-                  src={qua}
-                  alt="immagine1"
-                  style={{ maxWidth: "800px" }}
-                />
-                <img
-                  className="immage-correzione"
-                  src={cin}
-                  alt="immagine1"
-                  style={{ maxWidth: "800px" }}
-                />
+               
               </Slide>
             </div>
 
@@ -217,8 +205,7 @@ const Paragrafo1 = () => {
                 <img src={uno} alt="immagine1" width="100%" />
                 <img src={due} alt="immagine1" width="100%" />
                 <img src={tre} alt="immagine1" width="100%" />
-                <img src={qua} alt="immagine1" width="100%" />
-                <img src={cin} alt="immagine1" width="100%" />
+            
               </Slide>
               <div
                 style={{

@@ -41,26 +41,21 @@ const OurPartners = () => {
             alignItems: "center",
           }}
         >
-        
-            <a
-              href={
-                "https://startup.google.com/cloud/"
-              }
-            >
-              <img
-                src={google}
-                alt={"google"}
-                style={{ width: isMobile ? "30vw" : "20.833vw" }}
-              />
-            </a>
-            <a href={"https://www.besteam.io/tiktokagency"}>
-              <img
-                src={tiktok}
-                alt={"tiktok"}
-                style={{ width: isMobile ? "30vw" : "20.833vw" }}
-              />
-            </a>
-          </div>
+          <a href={"https://startup.google.com/cloud/"}>
+            <img
+              src={google}
+              alt={"google"}
+              style={{ width: isMobile ? "30vw" : "20.833vw" }}
+            />
+          </a>
+          <a href={"https://www.besteam.io/tiktokagency"}>
+            <img
+              src={tiktok}
+              alt={"tiktok"}
+              style={{ width: isMobile ? "30vw" : "20.833vw" }}
+            />
+          </a>
+
           <div style={{ display: "flex", gap: "1.302vw" }}>
             <a href={"https://jersix.com/"}>
               <img
@@ -88,6 +83,7 @@ const OurPartners = () => {
               />
             </a>
           </div>
+
           <div
             style={{
               display: "flex",
@@ -111,7 +107,6 @@ const OurPartners = () => {
                 style={{ width: isMobile ? "13vw" : "7.292vw" }}
               />
             </a>
-
             <a
               href={
                 "https://www.lazioinnova.it/news/i-vincitori-di-multisoccer-la-startup-competition-di-social-football-summit/"
@@ -125,10 +120,6 @@ const OurPartners = () => {
               />
             </a>
           </div>
-          <div style={{ display: "flex", flexDirection: "row" }}>
-           
-           
-          </div>
         </div>
       </div>
     </div>
@@ -136,11 +127,3 @@ const OurPartners = () => {
 };
 
 export default OurPartners;
-
-/*<a href={"https://aeternadesign.com/"}>
-<img
-src={sei}
-alt="bestcoin"
-style={{ width: isMobile ? "13vw" : "7.292vw" }}
-/>
-</a>*/

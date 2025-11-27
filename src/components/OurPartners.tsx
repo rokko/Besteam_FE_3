@@ -41,14 +41,14 @@ const OurPartners = () => {
             alignItems: "center",
           }}
         >
-             <div
+        <div
           style={{
             display: "flex",
             flexDirection: "row",
             gap: "1.302vw",
             alignItems: "center",
           }}
-        ></div>
+        >
           <a href={"https://startup.google.com/cloud/"}>
             <img
               src={google}

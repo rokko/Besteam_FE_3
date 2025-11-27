@@ -130,16 +130,14 @@ const Paragrafo4 = () => {
             <img src={crociprima} />
             <p className="titolo-paragrafo">NFTs.</p>
             <p className="testo-paragrafo">
-              Build your inventory by selecting{" "}
+               Upgrade your avatar with {" "}
               <span className="testo-parole-paragrafo">
-                your favorite NFTs{" "}
+                focused training;{" "}
               </span>
-              ;<br />
-              they are useful for customizing the avatar and the team <br />
-              You can{" "}
-              <span className="testo-parole-paragrafo">buy or resell </span>them
               <br />
-              in the “OpenSea” Marketplace. <br />
+             improve skills and unlock new abilities to boost <br />
+             performance on the field, following your coach’s tactic. <br />
+             Train daily and track your progress as you climb the ranks.<br />
             </p>
           </div>
 

@@ -153,23 +153,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -247,23 +231,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -341,23 +309,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -435,23 +387,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -529,23 +465,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -623,23 +543,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -717,23 +621,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -811,23 +699,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -905,23 +777,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -999,23 +855,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -1093,23 +933,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -1187,23 +1011,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -1281,23 +1089,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -1375,23 +1167,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -1469,23 +1245,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -1563,23 +1323,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -1657,23 +1401,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -1751,23 +1479,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -1845,23 +1557,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -1939,23 +1635,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -2033,23 +1713,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -2127,23 +1791,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -2221,23 +1869,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -2315,23 +1947,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -2409,23 +2025,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -2503,23 +2103,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -2597,23 +2181,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -2691,23 +2259,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -2785,23 +2337,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -2879,23 +2415,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{
@@ -2973,23 +2493,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  POLYGON BLOCKCHAIN
-                </p>
-                <img
-                  src={poly}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
+                 
 
                 <p
                   style={{

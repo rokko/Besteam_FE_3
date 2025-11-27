@@ -8,8 +8,8 @@ import sei from "./video/ourpartners/6.png";
 import sette from "./video/lazioinnova.png";
 import otto from "./video/inup.png";
 import nove from "./video/scale.png";
-import google from "./video/googlecloud.webp";
-import tiktok from "./video/tiktok.webp";
+import google from "./video/googlecloud.png";
+import tiktok from "./video/tiktok.png";
 import bordo from "../components/video/bordo2.png";
 import { useMediaQuery } from "react-responsive";
 

@@ -11,6 +11,8 @@ import up from "../components/video/freccia.jpg";
 import freccia2 from "../components/video/freccia2.png";
 import { FaInstagram, FaDiscord, FaTelegram, FaTwitter, FaTiktok } from "react-icons/fa";
 //import OurTeam from "../components/OurTeam";
+import { SiEpicgames } from "react-icons/si";
+
 import gifPallone from "../components/video/bb.gif";
 import OurPartners from "../components/OurPartners";
 import OurTeam from "../components/OurTeam";
@@ -139,7 +141,7 @@ const HomePage: React.FC = () => {
                 </a>
                 <a href="https://t.me/besteam_io">
                   <div className="colore">
-                    <FaTelegram style={{ width: "20px", height: "20px" }} />
+                    <SiEpicgames  style={{ width: "20px", height: "20px" }} />
                   </div>
                 </a>
                 <a href="https://twitter.com/BesTeam_io">

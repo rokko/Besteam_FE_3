@@ -295,22 +295,6 @@ Eduardo Rizzo  </TestoNome>
     </TestoLink>
   </BoxInfoTeam>
 </BoxImageTeam> 
-<BoxImageTeam> 
-  <img src={giovanni}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
-  <BoxInfoTeam>
-  <TestoNome>
-Giovanni Liotti  </TestoNome>
-  <TestoRuolo>3D Animator</TestoRuolo>
-  <TestoLink>  
-                    <a
-                      href="https://www.linkedin.com/in/giovanni-liotti/"
-                      target="_blank"
-                    >
-                      Linkedin
-                    </a>
-    </TestoLink>
-  </BoxInfoTeam>
-</BoxImageTeam> 
 
 <BoxImageTeam> 
   <img src={rocco}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
@@ -345,23 +329,7 @@ Rocco Caricola  </TestoNome>
     </TestoLink>
   </BoxInfoTeam>
 </BoxImageTeam> 
-<BoxImageTeam> 
-  <img src={eros}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
-  <BoxInfoTeam>
-  <TestoNome>
-  Eros Tringali
-  </TestoNome>
-  <TestoRuolo>Back-end developer</TestoRuolo>
-  <TestoLink>  
-                    <a
-                      href="https://www.linkedin.com/in/eros-tringali/"
-                      target="_blank"
-                    >
-                      Linkedin
-                    </a>
-    </TestoLink>
-  </BoxInfoTeam>
-</BoxImageTeam> 
+
 <BoxImageTeam> 
   <img src={aminul}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
@@ -379,23 +347,7 @@ Rocco Caricola  </TestoNome>
     </TestoLink>
   </BoxInfoTeam>
 </BoxImageTeam> 
-<BoxImageTeam> 
-  <img src={giacomo} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
-  <BoxInfoTeam>
-  <TestoNome>
-      Giacomo Colella
-  </TestoNome>
-  <TestoRuolo>Blockchain Dev</TestoRuolo>
-  <TestoLink>  
-                    <a
-                      href="https://www.linkedin.com/in/giacomocolella/"
-                      target="_blank"
-                    >
-                      Linkedin
-                    </a>
-    </TestoLink>
-  </BoxInfoTeam>
-</BoxImageTeam> 
+
 <BoxImageTeam> 
   <img src={eduardo}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
   <BoxInfoTeam>
@@ -478,55 +430,9 @@ Rocco Caricola  </TestoNome>
     </TestoLink>
   </BoxInfoTeam>
 </BoxImageTeam> 
-<BoxImageTeam> 
-  <img src={lorena}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
-  <BoxInfoTeam>
-  <TestoNome>
-     Lorena Rusu
-  </TestoNome>
-  <TestoRuolo>Esport Caster</TestoRuolo>
-  <TestoLink>  
-                    <a
-                      href="https://www.linkedin.com/in/lorena-rusu-9123471b1/"
-                      target="_blank"
-                    >
-                      Linkedin
-                    </a>
-    </TestoLink>
-  </BoxInfoTeam>
-</BoxImageTeam> 
-<BoxImageTeam> 
-  <img src={mattia}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
-  <BoxInfoTeam>
-  <TestoNome>
-Mattia Meo  </TestoNome>
-  <TestoRuolo>Esport Caster</TestoRuolo>
-  <TestoLink>  
-                    <a
-                      href="https://www.linkedin.com/in/giuseppe-mattia-meo-4999041ba/?originalSubdomain=it"
-                      target="_blank"
-                    >
-                      Linkedin
-                    </a>
-    </TestoLink>
-  </BoxInfoTeam>
-</BoxImageTeam> 
-<BoxImageTeam> 
-  <img src={ale}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
-  <BoxInfoTeam>
-  <TestoNome>
-  Alessio Di Iorio </TestoNome>
-  <TestoRuolo>Game Developer</TestoRuolo>
-  <TestoLink>  
-                    <a
-                      href="https://www.linkedin.com/in/di-iorio-alessio/"
-                      target="_blank"
-                    >
-                      Linkedin
-                    </a>
-    </TestoLink>
-  </BoxInfoTeam>
-</BoxImageTeam> 
+
+
+
 
 
 

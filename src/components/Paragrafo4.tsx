@@ -75,7 +75,7 @@ const Paragrafo4 = () => {
                 focused training;{" "}
               </span>
               <br />
-             improve skills and unlock new abilities to boost <br />.
+             improve skills and unlock new abilities to boost <br />
              performance on the field, following your coach’s tactic. <br />
              Train daily and track your progress as you climb the ranks.<br />
             </p>

@@ -41,6 +41,14 @@ const OurPartners = () => {
             alignItems: "center",
           }}
         >
+             <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            gap: "1.302vw",
+            alignItems: "center",
+          }}
+        ></div>
           <a href={"https://startup.google.com/cloud/"}>
             <img
               src={google}
@@ -55,6 +63,7 @@ const OurPartners = () => {
               style={{ width: isMobile ? "30vw" : "20.833vw" }}
             />
           </a>
+          </div>
 
           <div style={{ display: "flex", gap: "1.302vw" }}>
             <a href={"https://jersix.com/"}>

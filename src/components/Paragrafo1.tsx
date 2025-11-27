@@ -49,13 +49,13 @@ const Paragrafo1 = () => {
     prevArrow: (
       <div
         className="hoverzoom"
-        style={{ width: "20px", marginRight: "-20px" }}
+        style={{ width: "20px", marginRight: "-20px" , display: "none"}}
       >
         <img
           src={arrowleft}
           width="20x!important"
           height="20px"
-          style={{ position: "absolute", left: "20px", top: "-10px" }}
+          style={{ position: "absolute", left: "20px", top: "-10px", display: "none" }}
         />
       </div>
     ),

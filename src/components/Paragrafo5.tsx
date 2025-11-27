@@ -30,7 +30,7 @@ const Paragrafo5 = () => {
     prevArrow: (
       <div
         className="hoverzoom"
-        style={{ width: "20px", marginRight: "-20px" }}
+        style={{ width: "20px", marginRight: "-20px", display: "none" }}
       >
         <img
           src={arrowleft}
@@ -41,7 +41,7 @@ const Paragrafo5 = () => {
       </div>
     ),
     nextArrow: (
-      <div className="hoverzoom" style={{ width: "20px", marginLeft: "-20px" }}>
+      <div className="hoverzoom" style={{ width: "20px", marginLeft: "-20px" , display: "none"}}>
         <img
           src={arrowright}
           width="20px"

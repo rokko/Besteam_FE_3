@@ -5,6 +5,12 @@ import { useMediaQuery } from "react-responsive";
 import freccia2 from "../video/freccia2.png";
 
 const LastFooter = () => {
+  const InstagramIcon = FaInstagram as any;
+  const DiscordIcon = FaDiscord as any;
+  const TelegramIcon = FaTelegram as any;
+  const TwitterIcon = FaTwitter as any;
+  const TiktokIcon = FaTiktok as any;
+
   function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
@@ -31,27 +37,27 @@ const LastFooter = () => {
           >
             <a href="https://www.instagram.com/besteam.io/">
               <div className="colore">
-                <FaInstagram style={{ width: "20px", height: "20px" }} />
+                <InstagramIcon style={{ width: "20px", height: "20px" }} />
               </div>
             </a>
             <a href="https://discord.gg/bfT9Fz8nJU">
               {" "}
               <div className="colore">
                 {" "}
-                <FaDiscord style={{ width: "20px", height: "20px" }} />
+                <DiscordIcon style={{ width: "20px", height: "20px" }} />
               </div>
             </a>
             <a href="https://t.me/besteam_io">
               <div className="colore">
-                <FaTelegram style={{ width: "20px", height: "20px" }} />
+                <TelegramIcon style={{ width: "20px", height: "20px" }} />
               </div>
             </a>
             <a href="https://twitter.com/BesTeam_io">
               <div className="colore">
-                <FaTwitter style={{ width: "20px", height: "20px" }} />
+                <TwitterIcon style={{ width: "20px", height: "20px" }} />
               </div>
             </a>
-        
+
             <button
               onClick={topFunction}
               style={{
@@ -63,18 +69,18 @@ const LastFooter = () => {
             >
               <img src={freccia2} alt="arrow" />
             </button>
-            <a href="/tiktokagency" style={{ display: 'flex', flexDirection: 'row',width:'200px' , height:'30px', justifyItems:'center', alignContent:'center', alignItems:'center' }}>
-                  <div className="colore"  >
-                    <FaTiktok style={{ width: "20px", height: "20px" }} />
-                  </div>
-                  
-                    <div   
-                 style={{ width: '114px', height: '30px', backgroundColor: 'trasparent' , display:'flex', alignContent:'center', alignItems:'center'}}>
-                      <p style={{fontSize:'15px', fontWeight:'500', marginLeft:'5px'}}>  TikTok Agency</p>
-                    </div>
-                 
+            <a href="/tiktokagency" style={{ display: 'flex', flexDirection: 'row', width: '200px', height: '30px', justifyItems: 'center', alignContent: 'center', alignItems: 'center' }}>
+              <div className="colore"  >
+                <TiktokIcon style={{ width: "20px", height: "20px" }} />
+              </div>
 
-                </a>
+              <div
+                style={{ width: '114px', height: '30px', backgroundColor: 'trasparent', display: 'flex', alignContent: 'center', alignItems: 'center' }}>
+                <p style={{ fontSize: '15px', fontWeight: '500', marginLeft: '5px' }}>  TikTok Agency</p>
+              </div>
+
+
+            </a>
           </div>
         </div>
       )}

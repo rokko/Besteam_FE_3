@@ -27,6 +27,12 @@ import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 
 const HomePage: React.FC = () => {
+  const InstagramIcon = FaInstagram as any;
+  const DiscordIcon = FaDiscord as any;
+  const EpicIcon = SiEpicgames as any;
+  const TwitterIcon = FaXTwitter as any;
+  const TiktokIcon = FaTiktok as any;
+
   const [attivo, setAttivo] = useState(false);
   const [attivo2, setAttivo2] = useState(false);
   const [hoveredIcon, setHoveredIcon] = useState<string>('')
@@ -131,29 +137,29 @@ const HomePage: React.FC = () => {
               <div className={"social-up"}>
                 <a href="https://www.instagram.com/besteam.io/">
                   <div className="colore">
-                    <FaInstagram style={{ width: "20px", height: "20px" }} />
+                    <InstagramIcon style={{ width: "20px", height: "20px" }} />
                   </div>
                 </a>
                 <a href="https://discord.gg/bfT9Fz8nJU">
                   {" "}
                   <div className="colore">
                     {" "}
-                    <FaDiscord style={{ width: "20px", height: "20px" }} />
+                    <DiscordIcon style={{ width: "20px", height: "20px" }} />
                   </div>
                 </a>
                 <a href="https://t.me/besteam_io">
                   <div className="colore">
-                    <SiEpicgames  style={{ width: "20px", height: "20px" }} />
+                    <EpicIcon style={{ width: "20px", height: "20px" }} />
                   </div>
                 </a>
                 <a href="https://twitter.com/BesTeam_io">
                   <div className="colore">
-                    <FaXTwitter style={{ width: "20px", height: "20px" }} />
+                    <TwitterIcon style={{ width: "20px", height: "20px" }} />
                   </div>
                 </a>
-                <a href="/tiktokagency" style={{ display: 'flex', flexDirection: 'row',width:'200px' , height:'30px', justifyItems:'center', alignContent:'center', alignItems:'center' }}>
-                  <div className="colore"  onMouseEnter={() =>  setApriTesto(!apriTesto)}       onMouseLeave={() => setApriTesto(!apriTesto)}>
-                    <FaTiktok style={{ width: "20px", height: "20px" }} />
+                <a href="/tiktokagency" style={{ display: 'flex', flexDirection: 'row', width: '200px', height: '30px', justifyItems: 'center', alignContent: 'center', alignItems: 'center' }}>
+                  <div className="colore" onMouseEnter={() => setApriTesto(!apriTesto)} onMouseLeave={() => setApriTesto(!apriTesto)}>
+                    <TiktokIcon style={{ width: "20px", height: "20px" }} />
                   </div>
 
                   {/*apriTesto && (

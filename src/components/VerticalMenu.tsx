@@ -40,7 +40,7 @@ const VerticalMenu = () => {
           <MenuItem style={{ backgroundColor:'#1c1c1c', color:'#ffffff'}} onClick={handleClose}><a className="testo" href="https://www.instagram.com/besteam.io/">Instagram</a></MenuItem>
           <MenuItem style={{backgroundColor:'#1c1c1c', color:'#ffffff'}} onClick={handleClose}><a className="testo" href="https://t.me/besteam_io">Telegram</a></MenuItem>
           <MenuItem style={{ backgroundColor:'#1c1c1c', color:'#ffffff'}} onClick={handleClose}><a className="testo" href="https://twitter.com/BesTeam_io">Twitter</a></MenuItem>
-         <MenuItem style={{ backgroundColor:'#1c1c1c', color:'#ffffff'}} onClick={handleClose}><a className="testo" href="https://discord.gg/besteam">Discord</a></MenuItem>
+         <MenuItem style={{ backgroundColor:'#1c1c1c', color:'#ffffff'}} onClick={handleClose}><a className="testo" href="https://discord.gg/bfT9Fz8nJU">Discord</a></MenuItem>
          <hr className="linea-bianca" />
           </Menu>
       </div>

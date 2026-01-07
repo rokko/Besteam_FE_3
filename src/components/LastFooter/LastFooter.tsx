@@ -34,7 +34,7 @@ const LastFooter = () => {
                 <FaInstagram style={{ width: "20px", height: "20px" }} />
               </div>
             </a>
-            <a href="https://discord.com/invite/besteam">
+            <a href="https://discord.gg/bfT9Fz8nJU">
               {" "}
               <div className="colore">
                 {" "}

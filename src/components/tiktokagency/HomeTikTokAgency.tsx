@@ -1404,7 +1404,7 @@ const HomeTikTok = () => {
 
             <p className='testoContactUs2'> agency@besteam.io</p>
           </div>
-          <a className='riga' href='https://discord.gg/besteam'>
+          <a className='riga' href='https://discord.gg/bfT9Fz8nJU'>
             <img src={discord} style={{ height: '26px', width: '25px' }} />
             <p className='testoContactUs2'> https://discord.gg/besteam</p>
           </a>

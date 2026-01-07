@@ -125,6 +125,8 @@ const HamburgerMenu = () => {
   };
 
   const [open, setOpen] = useState(false);
+  const MenuIcon = BiMenu as any;
+  const CloseIcon = MdHighlightOff as any;
 
   return (
     <>
@@ -132,9 +134,9 @@ const HamburgerMenu = () => {
         <Box style={{ width: 50, height: 50 }}>
           <IconContext.Provider value={{ color: "#ffffff", size: "40px" }}>
             {!open ? (
-              <BiMenu onClick={() => setOpen(!open)} />
+              <MenuIcon onClick={() => setOpen(!open)} />
             ) : (
-              <MdHighlightOff onClick={() => setOpen(!open)} />
+              <CloseIcon onClick={() => setOpen(!open)} />
             )}
           </IconContext.Provider>
         </Box>

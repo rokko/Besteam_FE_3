@@ -34,11 +34,67 @@ const SectionArticoli = styled.div`
   }
 `;
 
+const HeroContainer = styled.div`
+  width: 100%;
+  height: 480px;
+  background-image: url(${card});
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 60px;
+  margin-top: 10px;
+  box-sizing: border-box;
+`;
+
+const HeroTitle = styled.h2`
+  font-family: 'DINPro', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 100%;
+  color: white;
+  margin: 0;
+  text-align: left;
+`;
+
+const HeroAuthorDate = styled.p`
+  font-family: 'DINPro', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: white;
+  margin: 0;
+  text-align: left;
+`;
+
+const HeroCategory = styled.p`
+  font-family: 'DINPro', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  color: white;
+  margin: 0;
+  text-align: left;
+`;
+
+const HeroTitleAuthorContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+
 const Blog = () => {
   return (
     <ContainerBlack>
-      <img src={card} style={{ marginTop: '10px', width: '100%', height: '480px' }} alt="Maxi Card" />
-      
+      <HeroContainer>
+        <HeroTitleAuthorContainer>
+          <HeroTitle>Un Nuovo Inizio</HeroTitle>
+          <HeroAuthorDate>Besteam.io 10/03/25</HeroAuthorDate>
+        </HeroTitleAuthorContainer>
+        <HeroCategory>Innovation</HeroCategory>
+      </HeroContainer>
+
       <SectionArticoli>
         <CardArticolo />
         <CardArticolo />
@@ -51,14 +107,14 @@ const Blog = () => {
           <button
             key={i}
             onClick={() => console.log('prova')}
-            style={{ 
-              fontWeight: '500', 
-              color: 1 === i ? '#2DC653' : 'white', 
-              fontFamily: 'DinPRO', 
-              fontSize: '24px', 
-              background: 'none', 
-              border: 'none', 
-              cursor: 'pointer' 
+            style={{
+              fontWeight: '500',
+              color: 1 === i ? '#2DC653' : 'white',
+              fontFamily: 'DinPRO',
+              fontSize: '24px',
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer'
             }}
           >
             {i + 1}
@@ -68,8 +124,8 @@ const Blog = () => {
           <img src={frecciaright} style={{ width: '18px', height: '25px' }} alt="Freccia Destra" />
         </button>
       </div>
-        <div style={{marginTop:'180px'}}>
-      <NewsLetter />
+      <div style={{ marginTop: '180px' }}>
+        <NewsLetter />
       </div>
       <Footer />
     </ContainerBlack>

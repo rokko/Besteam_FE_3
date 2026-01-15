@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import styled from 'styled-components';
 import 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
 import Slider from 'react-slick';
 import card from './assets/articoloImage.jpg';
 import CardArticolo from './components/CardArticolo';

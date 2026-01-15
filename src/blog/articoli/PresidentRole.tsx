@@ -225,169 +225,170 @@ const RightButton = styled(SliderButton)`
 
 
 const PresidentRole = () => {
-    // State for slider
-    const images = [manchestercity, besteamfirst, ronaldinho];
+  // State for slider
+  const images = [manchestercity, besteamfirst, ronaldinho];
 
-    const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-    // Function to go to next slide
-    const nextSlide = () => {
-        setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    };
-    const prevSlide = () => {
-        setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-    };
+  // Function to go to next slide
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
 
-    return (
-        <div style={{ backgroundColor: '#1C1C1C' }}>
-            <CardContainer>
-                <ImageContainer>
-                    <Image
-                        src={besteamfirst}
-                        alt="Cosa fa un Presidente su Besteam?"
-                    />
-                </ImageContainer>
+  return (
+    <div style={{ backgroundColor: '#1C1C1C' }}>
+      <CardContainer>
+        <ImageContainer>
+          <Image
+            src={besteamfirst}
+            alt="Cosa fa un Presidente su Besteam?"
+          />
+        </ImageContainer>
 
-                <ContentContainer>
-                    <Title>
-                        Cosa fa un Presidente su Besteam?<br />
-                    </Title>
+        <ContentContainer>
+          <Title>
+            Cosa fa un Presidente su Besteam?<br />
+          </Title>
 
-                    <AuthorDate>
-                        Besteam | 10/03/25
-                    </AuthorDate>
+          <AuthorDate>
+            Besteam | 10/03/25
+          </AuthorDate>
 
-                    <CategoriesContainer>
-                        <Category>Management</Category>
-                        <Category>Football</Category>
-                    </CategoriesContainer>
+          <CategoriesContainer>
+            <Category>Management</Category>
+            <Category>Football</Category>
+          </CategoriesContainer>
 
-                    {/* Testo introduttivo */}
-                    <IntroText>
-                        Scopri il ruolo chiave nel mondo virtuale del Footballverse.<br />
-                        In Besteam, il Presidente non è solo un titolo di prestigio: è il cuore pulsante di una squadra virtuale, il suo fondatore, stratega e visionario. Il suo ruolo richiama da vicino quello di un vero presidente di club calcistico, ma con potenzialità estese dal metaverso. Ecco cosa significa essere Presidente su Besteam.
-                    </IntroText>
+          {/* Testo introduttivo */}
+          <IntroText>
+            Scopri il ruolo chiave nel mondo virtuale del Footballverse.<br />
+            In Besteam, il Presidente non è solo un titolo di prestigio: è il cuore pulsante di una squadra virtuale, il suo fondatore, stratega e visionario. Il suo ruolo richiama da vicino quello di un vero presidente di club calcistico, ma con potenzialità estese dal metaverso. Ecco cosa significa essere Presidente su Besteam.
+          </IntroText>
 
-                    {/* Sections */}
-                    <SectionContent>
-                        <SectionTitle>1. Creazione e Gestione del Team</SectionTitle>
-                        <SectionText>
-                            Tutto inizia con una visione. Come Presidente, puoi creare da zero la tua squadra, scegliendone nome, stemma, colori e identità visiva. Ma non finisce qui.
-                            <br />La tua squadra avrà accesso a spazi esclusivi nel metaverso, i cosiddetti Team’s HUB: centri sportivi, stadi personalizzabili, aree per il merchandising, spazi per fan ed eventi.
-                            <br />Inoltre, decidi le attività della squadra: allenamenti, amichevoli, tornei eSport, eventi pubblici nella BestCity... la tua creatività è il limite.
-                        </SectionText>
-                    </SectionContent>
+          {/* Sections */}
+          <SectionContent>
+            <SectionTitle>1. Creazione e Gestione del Team</SectionTitle>
+            <SectionText>
+              Tutto inizia con una visione. Come Presidente, puoi creare da zero la tua squadra, scegliendone nome, stemma, colori e identità visiva. Ma non finisce qui.
+              <br />La tua squadra avrà accesso a spazi esclusivi nel metaverso, i cosiddetti Team’s HUB: centri sportivi, stadi personalizzabili, aree per il merchandising, spazi per fan ed eventi.
+              <br />Inoltre, decidi le attività della squadra: allenamenti, amichevoli, tornei eSport, eventi pubblici nella BestCity... la tua creatività è il limite.
+            </SectionText>
+          </SectionContent>
 
-                    <SectionContent>
-                        <SectionTitle>2. Composizione e Reclutamento</SectionTitle>
-                        <SectionText>
-                            Una squadra è forte quanto le persone che la compongono. Il Presidente ha il compito di reclutare utenti reali per formare il proprio staff: giocatori, allenatori, direttori sportivi e altri ruoli chiave.
-                            <br />Ogni avatar ha abilità uniche e potenzialità da sviluppare.
-                            <br />Gestisci anche contratti virtuali e sponsorizzazioni, grazie a un sistema play-to-earn che premia l’attività e le performance nel gioco.
-                        </SectionText>
-                    </SectionContent>
+          <SectionContent>
+            <SectionTitle>2. Composizione e Reclutamento</SectionTitle>
+            <SectionText>
+              Una squadra è forte quanto le persone che la compongono. Il Presidente ha il compito di reclutare utenti reali per formare il proprio staff: giocatori, allenatori, direttori sportivi e altri ruoli chiave.
+              <br />Ogni avatar ha abilità uniche e potenzialità da sviluppare.
+              <br />Gestisci anche contratti virtuali e sponsorizzazioni, grazie a un sistema play-to-earn che premia l’attività e le performance nel gioco.
+            </SectionText>
+          </SectionContent>
 
-                    <SectionContent>
-                        <SectionTitle>3. Aspetti Manageriali e Strategici</SectionTitle>
-                        <SectionText>
-                            Essere Presidente significa anche occuparsi della parte “dietro le quinte”:
-                            <br />• Gestione degli allenamenti e delle tattiche di gioco
-                            <br />• Pianificazione del calendario gare
-                            <br />• Crescita dell'immagine della squadra, dai social media agli eventi pubblici
-                            <br />• Sviluppo di partnership, NFT, merchandising e fan engagement
-                            <br />Un mix tra manager sportivo, imprenditore digitale e influencer.
-                        </SectionText>
-                    </SectionContent>
+          <SectionContent>
+            <SectionTitle>3. Aspetti Manageriali e Strategici</SectionTitle>
+            <SectionText>
+              Essere Presidente significa anche occuparsi della parte “dietro le quinte”:
+              <br />• Gestione degli allenamenti e delle tattiche di gioco
+              <br />• Pianificazione del calendario gare
+              <br />• Crescita dell'immagine della squadra, dai social media agli eventi pubblici
+              <br />• Sviluppo di partnership, NFT, merchandising e fan engagement
+              <br />Un mix tra manager sportivo, imprenditore digitale e influencer.
+            </SectionText>
+          </SectionContent>
 
-                    <SectionContent>
-                        <SectionTitle>4. Partecipazione ai Tornei</SectionTitle>
-                        <SectionText>
-                            La competizione è al centro dell’esperienza su Besteam. Come Presidente, puoi iscrivere il tuo team a tornei eSport competitivi (11vs11, 5vs5, 3vs3) e seguire l’intero percorso, dalle formazioni alle strategie.
-                            <br />Lavori fianco a fianco con allenatori e staff per ottenere prestazioni vincenti.
-                        </SectionText>
-                    </SectionContent>
+          <SectionContent>
+            <SectionTitle>4. Partecipazione ai Tornei</SectionTitle>
+            <SectionText>
+              La competizione è al centro dell’esperienza su Besteam. Come Presidente, puoi iscrivere il tuo team a tornei eSport competitivi (11vs11, 5vs5, 3vs3) e seguire l’intero percorso, dalle formazioni alle strategie.
+              <br />Lavori fianco a fianco con allenatori e staff per ottenere prestazioni vincenti.
+            </SectionText>
+          </SectionContent>
 
-                    <SectionContent>
-                        <SectionTitle>5. Valore della Squadra e Monetizzazione</SectionTitle>
-                        <SectionText>
-                            Ogni vittoria, ogni fan, ogni asset digitale aumenta il valore reale della tua squadra.
-                            <br />Grazie agli strumenti messi a disposizione dal sistema (NFT, trasferimenti, spazi virtuali), puoi:
-                            <br />• Vendere giocatori
-                            <br />• Stipulare accordi commerciali
-                            <br />• Monetizzare premi e notorietà
-                            <br />Una vera esperienza manageriale e imprenditoriale, in chiave gaming.
-                        </SectionText>
-                    </SectionContent>
+          <SectionContent>
+            <SectionTitle>5. Valore della Squadra e Monetizzazione</SectionTitle>
+            <SectionText>
+              Ogni vittoria, ogni fan, ogni asset digitale aumenta il valore reale della tua squadra.
+              <br />Grazie agli strumenti messi a disposizione dal sistema (NFT, trasferimenti, spazi virtuali), puoi:
+              <br />• Vendere giocatori
+              <br />• Stipulare accordi commerciali
+              <br />• Monetizzare premi e notorietà
+              <br />Una vera esperienza manageriale e imprenditoriale, in chiave gaming.
+            </SectionText>
+          </SectionContent>
 
-                    <SectionContent>
-                        <SectionTitle>6. Integrazione nel Metaverso – Il Footballverse</SectionTitle>
-                        <SectionText>
-                            La tua squadra non vive isolata: è parte attiva della BestCity, un universo digitale condiviso dove puoi:
-                            <br />• Organizzare eventi e presentazioni
-                            <br />• Socializzare con altri team e utenti
-                            <br />• Interagire con sponsor, media e tifosi
-                            <br />Un ecosistema connesso dove ogni azione conta e ogni relazione può fare la differenza.
-                        </SectionText>
-                    </SectionContent>
+          <SectionContent>
+            <SectionTitle>6. Integrazione nel Metaverso – Il Footballverse</SectionTitle>
+            <SectionText>
+              La tua squadra non vive isolata: è parte attiva della BestCity, un universo digitale condiviso dove puoi:
+              <br />• Organizzare eventi e presentazioni
+              <br />• Socializzare con altri team e utenti
+              <br />• Interagire con sponsor, media e tifosi
+              <br />Un ecosistema connesso dove ogni azione conta e ogni relazione può fare la differenza.
+            </SectionText>
+          </SectionContent>
 
 
-                    {/* NEW BE THE FIRST Slider with text below */}
-                    <SliderContainer>
-                        <LeftButton onClick={prevSlide}>‹</LeftButton>
-                        <SliderWrapper currentSlide={currentSlide}>
-                            {images.map((img, index) => (
-                                <Slide key={index}>
-                                    <SliderImage src={img} alt={`Slide ${index + 1}`} />
-                                </Slide>
-                            ))}
-                        </SliderWrapper>
-                        <RightButton onClick={nextSlide}>›</RightButton>
-                    </SliderContainer>
-                    <SliderTextContainer style={{ marginTop: '104px', marginBottom: '104px' }}>
-                        <SectionTitle>In conclusione</SectionTitle>
-                        Essere Presidente su Besteam non è solo un ruolo: è una sfida entusiasmante, una responsabilità creativa e strategica, e una nuova frontiera del calcio virtuale. Se hai sempre sognato di guidare un club tutto tuo, nel cuore di un metaverso innovativo, è il momento di scendere in campo.
-                        <br /><br />
-                        La tua squadra ti aspetta.
-                    </SliderTextContainer>
-                    <div style={{ marginTop: '80px' }}>
+          {/* NEW BE THE FIRST Slider with text below */}
+          <SliderContainer>
+            <LeftButton onClick={prevSlide}>‹</LeftButton>
+            <SliderWrapper currentSlide={currentSlide}>
+              {images.map((img, index) => (
+                <Slide key={index}>
+                  <SliderImage src={img} alt={`Slide ${index + 1}`} />
+                </Slide>
+              ))}
+            </SliderWrapper>
+            <RightButton onClick={nextSlide}>›</RightButton>
+          </SliderContainer>
+          <SliderTextContainer style={{ marginTop: '104px', marginBottom: '104px' }}>
+            <SectionTitle>In conclusione</SectionTitle>
+            Essere Presidente su Besteam non è solo un ruolo: è una sfida entusiasmante, una responsabilità creativa e strategica, e una nuova frontiera del calcio virtuale. Se hai sempre sognato di guidare un club tutto tuo, nel cuore di un metaverso innovativo, è il momento di scendere in campo.
+            <br /><br />
+            La tua squadra ti aspetta.
+          </SliderTextContainer>
+        </ContentContainer>
+        <div style={{ marginTop: '80px' }}>
 
-                        <div style={{ width: '100%', height: '700px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', alignItems: 'center', backgroundColor: '#2d2d2d' }}>
-                            <Title style={{ fontSize: '40px' }}>Articoli Correlati</Title>
-                            <div style={{ display: 'flex', flexDirection: 'row', gap: '45px', marginTop: '78px' }}>
-                                <CardArticolo link='/cosa-sono-nft' />
-                                <CardArticolo link='/carriera-virtuale' />
-                                <CardArticolo link='/ruolo-presidente' />
-                            </div>
-                            <div className="paginationControls" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', marginTop: '55px' }}>
-                                {Array.from({ length: 3 }, (_, i) => (
-                                    <button
-                                        key={i}
-                                        onClick={() => console.log('prova')}
-                                        style={{
-                                            fontWeight: '500',
-                                            color: 1 === i ? '#2DC653' : 'white',
-                                            fontFamily: 'DinPRO',
-                                            fontSize: '24px',
-                                            background: 'none',
-                                            border: 'none',
-                                            cursor: 'pointer'
-                                        }}
-                                    >
-                                        {i + 1}
-                                    </button>
-                                ))}
-                                <button onClick={() => console.log('avanti')} disabled={false} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
-                                    <img src={frecciaright} style={{ width: '18px', height: '25px' }} alt="Freccia Destra" />
-                                </button>
-                            </div>
+          <div style={{ width: '100%', height: '700px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', alignItems: 'center', backgroundColor: '#2d2d2d' }}>
+            <Title style={{ fontSize: '40px' }}>Articoli Correlati</Title>
+            <div style={{ display: 'flex', flexDirection: 'row', gap: '45px', marginTop: '78px' }}>
+              <CardArticolo link='/cosa-sono-nft' title="Cosa sono gli NFT?" category="Blockchain" />
+              <CardArticolo link='/carriera-virtuale' title="La carriera virtuale" category="Career" />
+              <CardArticolo link='/ruolo-presidente' title="Cosa fa un Presidente?" category="Management" />
+            </div>
+            <div className="paginationControls" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', marginTop: '55px' }}>
+              {Array.from({ length: 3 }, (_, i) => (
+                <button
+                  key={i}
+                  onClick={() => console.log('prova')}
+                  style={{
+                    fontWeight: '500',
+                    color: 1 === i ? '#2DC653' : 'white',
+                    fontFamily: 'DinPRO',
+                    fontSize: '24px',
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer'
+                  }}
+                >
+                  {i + 1}
+                </button>
+              ))}
+              <button onClick={() => console.log('avanti')} disabled={false} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
+                <img src={frecciaright} style={{ width: '18px', height: '25px' }} alt="Freccia Destra" />
+              </button>
+            </div>
 
-                        </div>
-                        <NewsLetter />
-                        <Footer />
-                    </div>
-            </CardContainer>
+          </div>
+          <NewsLetter />
+          <Footer />
         </div>
-    );
+      </CardContainer>
+    </div>
+  );
 };
 
 export default PresidentRole;

@@ -61,15 +61,22 @@ const Category = styled.p`
   text-align: left;
 `;
 
-const CardArticolo = ({ link }: { link?: string }) => {
+interface CardProps {
+  link?: string;
+  title: string;
+  category: string;
+  date?: string;
+}
+
+const CardArticolo = ({ link, title, category, date }: CardProps) => {
   return (
     <CardContainer href={link || '/articolo-test'}>
       <TitleAuthorContainer>
-        <Title>Test</Title>
-        <AuthorDate>Besteam.io 10/03/25</AuthorDate>
+        <Title>{title}</Title>
+        <AuthorDate>Besteam.io {date || '10/03/25'}</AuthorDate>
       </TitleAuthorContainer>
 
-      <Category>Future</Category>
+      <Category>{category}</Category>
     </CardContainer>
   );
 };

@@ -330,180 +330,180 @@ const RightButton = styled(SliderButton)`
 
 
 const PlayToEarn = () => {
-    // State for slider
-    const images = [ronaldinho, argentina, seriea];
+  // State for slider
+  const images = [ronaldinho, argentina, seriea];
 
-    const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-    // Function to go to next slide
-    const nextSlide = () => {
-        setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    };
-    const prevSlide = () => {
-        setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-    };
+  // Function to go to next slide
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
 
-    return (
-        <div style={{ backgroundColor: '#1C1C1C' }}>
-            <CardContainer>
-                <ImageContainer>
-                    <Image
-                        src={besteamfirst}
-                        alt="Play-to-Earn nei Videogiochi"
-                    />
-                </ImageContainer>
+  return (
+    <div style={{ backgroundColor: '#1C1C1C' }}>
+      <CardContainer>
+        <ImageContainer>
+          <Image
+            src={besteamfirst}
+            alt="Play-to-Earn nei Videogiochi"
+          />
+        </ImageContainer>
 
-                <ContentContainer>
-                    <Title>
-                        Play-to-Earn nei Videogiochi: Il Futuro del Gaming con Besteam<br />
-                    </Title>
+        <ContentContainer>
+          <Title>
+            Play-to-Earn nei Videogiochi: Il Futuro del Gaming con Besteam<br />
+          </Title>
 
-                    <AuthorDate>
-                        Besteam | 10/03/25
-                    </AuthorDate>
+          <AuthorDate>
+            Besteam | 10/03/25
+          </AuthorDate>
 
-                    <CategoriesContainer>
-                        <Category>Game Design</Category>
-                    </CategoriesContainer>
+          <CategoriesContainer>
+            <Category>Game Design</Category>
+          </CategoriesContainer>
 
-                    {/* Testo introduttivo */}
-                    <IntroText>
-                        Negli ultimi anni, il settore videoludico ha subito un’importante trasformazione grazie al modello Play-to-Earn (P2E), un concetto che rivoluziona l’idea tradizionale di gioco.
+          {/* Testo introduttivo */}
+          <IntroText>
+            Negli ultimi anni, il settore videoludico ha subito un’importante trasformazione grazie al modello Play-to-Earn (P2E), un concetto che rivoluziona l’idea tradizionale di gioco.
 
-                        Mentre i videogiochi classici si basano su un modello economico in cui i giocatori spendono denaro senza poterlo recuperare, il P2E introduce un sistema in cui è possibile ottenere ricompense digitali mentre si gioca.
-                    </IntroText>
+            Mentre i videogiochi classici si basano su un modello economico in cui i giocatori spendono denaro senza poterlo recuperare, il P2E introduce un sistema in cui è possibile ottenere ricompense digitali mentre si gioca.
+          </IntroText>
 
-                    {/* First section */}
-                    <MetaverseSection>
-                        <MetaverseImageContainer>
-                            <Image
-                                src={manchestercity}
-                                alt="Cos’è il Play-to-Earn?"
-                            />
-                        </MetaverseImageContainer>
+          {/* First section */}
+          <MetaverseSection>
+            <MetaverseImageContainer>
+              <Image
+                src={manchestercity}
+                alt="Cos’è il Play-to-Earn?"
+              />
+            </MetaverseImageContainer>
 
-                        <MetaverseContent>
-                            <SectionTitle>Cos’è il Play-to-Earn?</SectionTitle>
-                            <SectionText>
-                                Il modello Play-to-Earn è una modalità innovativa che permette ai giocatori di ottenere ricompense reali attraverso la partecipazione attiva nel gioco.
-                                Queste ricompense possono assumere diverse forme, tra cui asset digitali, NFT (token non fungibili) o altre risorse dal valore economico.
-                                L’elemento chiave è la proprietà digitale degli oggetti ottenuti nel gioco, che possono essere scambiati, venduti o utilizzati per generare ulteriore valore.
-                                <br /><br />
-                                A differenza dei giochi tradizionali, dove gli oggetti e le valute rimangono confinati all’interno dell’ecosistema di gioco e spesso vengono persi nel momento in cui si smette di giocare, i giochi P2E garantiscono agli utenti un’opportunità di ottenere asset digitali per il tempo e l’impegno investito.
-                            </SectionText>
-                        </MetaverseContent>
-                    </MetaverseSection>
+            <MetaverseContent>
+              <SectionTitle>Cos’è il Play-to-Earn?</SectionTitle>
+              <SectionText>
+                Il modello Play-to-Earn è una modalità innovativa che permette ai giocatori di ottenere ricompense reali attraverso la partecipazione attiva nel gioco.
+                Queste ricompense possono assumere diverse forme, tra cui asset digitali, NFT (token non fungibili) o altre risorse dal valore economico.
+                L’elemento chiave è la proprietà digitale degli oggetti ottenuti nel gioco, che possono essere scambiati, venduti o utilizzati per generare ulteriore valore.
+                <br /><br />
+                A differenza dei giochi tradizionali, dove gli oggetti e le valute rimangono confinati all’interno dell’ecosistema di gioco e spesso vengono persi nel momento in cui si smette di giocare, i giochi P2E garantiscono agli utenti un’opportunità di ottenere asset digitali per il tempo e l’impegno investito.
+              </SectionText>
+            </MetaverseContent>
+          </MetaverseSection>
 
-                    {/* Second section */}
-                    <BesteamSection>
-                        <BesteamContent>
-                            <SectionTitle>Esempi di Giochi Play-to-Earn</SectionTitle>
-                            <SectionText>
-                                Diversi giochi hanno già adottato il modello Play-to-Earn, ottenendo grande successo nel settore. Alcuni esempi:
-                                <br /> - <strong>Axie Infinity</strong>: uno dei giochi P2E più famosi, in cui i giocatori allevano, combattono e scambiano creature digitali chiamate Axie, ottenendo ricompense digitali.
-                                <br /> - <strong>Decentraland</strong>: un metaverso basato su blockchain dove gli utenti possono acquistare, vendere e monetizzare terreni virtuali e asset digitali.
-                                <br /> - <strong>The Sandbox</strong>: un mondo virtuale in cui i giocatori possono creare, possedere e monetizzare esperienze di gioco grazie agli NFT.
-                                <br /><br />
-                                Questi giochi dimostrano come il Play-to-Earn possa trasformare il modo in cui i giocatori interagiscono con i videogiochi, offrendo un’opportunità di ottenere valore reale dagli asset digitali.
-                            </SectionText>
-                        </BesteamContent>
+          {/* Second section */}
+          <BesteamSection>
+            <BesteamContent>
+              <SectionTitle>Esempi di Giochi Play-to-Earn</SectionTitle>
+              <SectionText>
+                Diversi giochi hanno già adottato il modello Play-to-Earn, ottenendo grande successo nel settore. Alcuni esempi:
+                <br /> - <strong>Axie Infinity</strong>: uno dei giochi P2E più famosi, in cui i giocatori allevano, combattono e scambiano creature digitali chiamate Axie, ottenendo ricompense digitali.
+                <br /> - <strong>Decentraland</strong>: un metaverso basato su blockchain dove gli utenti possono acquistare, vendere e monetizzare terreni virtuali e asset digitali.
+                <br /> - <strong>The Sandbox</strong>: un mondo virtuale in cui i giocatori possono creare, possedere e monetizzare esperienze di gioco grazie agli NFT.
+                <br /><br />
+                Questi giochi dimostrano come il Play-to-Earn possa trasformare il modo in cui i giocatori interagiscono con i videogiochi, offrendo un’opportunità di ottenere valore reale dagli asset digitali.
+              </SectionText>
+            </BesteamContent>
 
-                        <BesteamImageContainer>
-                            <Image
-                                src={besteamfirst}
-                                alt="Esempi P2E"
-                            />
-                        </BesteamImageContainer>
-                    </BesteamSection>
+            <BesteamImageContainer>
+              <Image
+                src={besteamfirst}
+                alt="Esempi P2E"
+              />
+            </BesteamImageContainer>
+          </BesteamSection>
 
-                    {/* Third section (Besteam Adoption) - Adding another section for this specific text block */}
-                    <MetaverseSection>
-                        <MetaverseImageContainer>
-                            {/* Reusing existing image as placeholder */}
-                            <Image
-                                src={seriea}
-                                alt="Besteam P2E"
-                            />
-                        </MetaverseImageContainer>
-                        <MetaverseContent>
-                            <SectionTitle>L’adozione del Play-to-Earn da parte di Besteam</SectionTitle>
-                            <SectionText>
-                                Besteam ha deciso di abbracciare completamente questa filosofia, creando un ecosistema in cui il divertimento si unisce a opportunità economiche concrete.
-                                Attraverso un’infrastruttura basata su blockchain, Besteam consentirà ai giocatori di possedere realmente gli asset digitali ottenuti, offrendo loro un’esperienza di gioco coinvolgente e redditizia.
-                                <br /><br />
-                                <strong>I punti di forza principali di Besteam includono:</strong>
-                                <br /> - <strong>Monetizzazione delle Abilità:</strong> i giocatori potranno ottenere ricompense sotto forma di NFT o asset digitali in base alla loro bravura e al tempo investito.
-                                <br /> - <strong>Mercato Aperto:</strong> gli asset guadagnati saranno liberamente scambiabili su marketplace dedicati, dando valore reale ai progressi nel gioco.
-                                <br /> - <strong>Sicurezza e Trasparenza:</strong> grazie alla tecnologia blockchain, ogni transazione e ogni oggetto posseduto saranno certificati e verificabili, garantendo un ambiente di gioco equo e privo di frodi.
-                                <br /> - <strong>Accessibilità Democratizzata:</strong> chiunque potrà accedere e beneficiare del sistema Play-to-Earn, senza limitazioni imposte dai modelli di business tradizionali.
-                            </SectionText>
-                        </MetaverseContent>
-                    </MetaverseSection>
+          {/* Third section (Besteam Adoption) - Adding another section for this specific text block */}
+          <MetaverseSection>
+            <MetaverseImageContainer>
+              {/* Reusing existing image as placeholder */}
+              <Image
+                src={seriea}
+                alt="Besteam P2E"
+              />
+            </MetaverseImageContainer>
+            <MetaverseContent>
+              <SectionTitle>L’adozione del Play-to-Earn da parte di Besteam</SectionTitle>
+              <SectionText>
+                Besteam ha deciso di abbracciare completamente questa filosofia, creando un ecosistema in cui il divertimento si unisce a opportunità economiche concrete.
+                Attraverso un’infrastruttura basata su blockchain, Besteam consentirà ai giocatori di possedere realmente gli asset digitali ottenuti, offrendo loro un’esperienza di gioco coinvolgente e redditizia.
+                <br /><br />
+                <strong>I punti di forza principali di Besteam includono:</strong>
+                <br /> - <strong>Monetizzazione delle Abilità:</strong> i giocatori potranno ottenere ricompense sotto forma di NFT o asset digitali in base alla loro bravura e al tempo investito.
+                <br /> - <strong>Mercato Aperto:</strong> gli asset guadagnati saranno liberamente scambiabili su marketplace dedicati, dando valore reale ai progressi nel gioco.
+                <br /> - <strong>Sicurezza e Trasparenza:</strong> grazie alla tecnologia blockchain, ogni transazione e ogni oggetto posseduto saranno certificati e verificabili, garantendo un ambiente di gioco equo e privo di frodi.
+                <br /> - <strong>Accessibilità Democratizzata:</strong> chiunque potrà accedere e beneficiare del sistema Play-to-Earn, senza limitazioni imposte dai modelli di business tradizionali.
+              </SectionText>
+            </MetaverseContent>
+          </MetaverseSection>
 
-                    {/* NEW BE THE FIRST Slider with text below */}
-                    <SliderContainer>
-                        <LeftButton onClick={prevSlide}>‹</LeftButton>
-                        <SliderWrapper currentSlide={currentSlide}>
-                            {images.map((img, index) => (
-                                <Slide key={index}>
-                                    <SliderImage src={img} alt={`Slide ${index + 1}`} />
-                                </Slide>
-                            ))}
-                        </SliderWrapper>
-                        <RightButton onClick={nextSlide}>›</RightButton>
-                    </SliderContainer>
-                    <SliderTextContainer style={{ marginTop: '104px' }}>
-                        <SectionTitle>Il Futuro del Gaming è Play-to-Earn
-                        </SectionTitle>
-                        Il Play-to-Earn rappresenta una delle più grandi evoluzioni nel mondo dei videogiochi, offrendo ai giocatori nuove possibilità di coinvolgimento e di ottenere valore economico dagli asset digitali. Con l’avvento della blockchain e degli NFT, questa rivoluzione è solo all’inizio. Besteam si posiziona all’avanguardia di questa trasformazione, puntando a creare un’esperienza di gioco che sia non solo avvincente, ma anche economicamente vantaggiosa per la community.
-                    </SliderTextContainer>
-                </ContentContainer>
-                <img src={crociprima} />
-                <SliderTextContainer style={{ marginTop: '104px', marginBottom: '104px' }}>
+          {/* NEW BE THE FIRST Slider with text below */}
+          <SliderContainer>
+            <LeftButton onClick={prevSlide}>‹</LeftButton>
+            <SliderWrapper currentSlide={currentSlide}>
+              {images.map((img, index) => (
+                <Slide key={index}>
+                  <SliderImage src={img} alt={`Slide ${index + 1}`} />
+                </Slide>
+              ))}
+            </SliderWrapper>
+            <RightButton onClick={nextSlide}>›</RightButton>
+          </SliderContainer>
+          <SliderTextContainer style={{ marginTop: '104px' }}>
+            <SectionTitle>Il Futuro del Gaming è Play-to-Earn
+            </SectionTitle>
+            Il Play-to-Earn rappresenta una delle più grandi evoluzioni nel mondo dei videogiochi, offrendo ai giocatori nuove possibilità di coinvolgimento e di ottenere valore economico dagli asset digitali. Con l’avvento della blockchain e degli NFT, questa rivoluzione è solo all’inizio. Besteam si posiziona all’avanguardia di questa trasformazione, puntando a creare un’esperienza di gioco che sia non solo avvincente, ma anche economicamente vantaggiosa per la community.
+          </SliderTextContainer>
+        </ContentContainer>
+        <img src={crociprima} />
+        <SliderTextContainer style={{ marginTop: '104px', marginBottom: '104px' }}>
 
-                    Preparati a entrare in un nuovo mondo di gioco, dove il divertimento si unisce alla possibilità di ottenere asset digitali con valore reale.
+          Preparati a entrare in un nuovo mondo di gioco, dove il divertimento si unisce alla possibilità di ottenere asset digitali con valore reale.
 
-                    <br />
-                    Con Besteam, il futuro del gaming è già qui.       </SliderTextContainer>
-                <div style={{ marginTop: '80px' }}>
+          <br />
+          Con Besteam, il futuro del gaming è già qui.       </SliderTextContainer>
+        <div style={{ marginTop: '80px' }}>
 
-                    <div style={{ width: '100%', height: '700px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', alignItems: 'center', backgroundColor: '#2d2d2d' }}>
-                        <Title style={{ fontSize: '40px' }}>Articoli Correlati</Title>
-                        <div style={{ display: 'flex', flexDirection: 'row', gap: '45px', marginTop: '78px' }}>
-                            <CardArticolo link='/metaverso-calcistico' />
-                            <CardArticolo link='/play-to-earn' />
-                            <CardArticolo link='/play-to-earn' />
-                        </div>
-                        <div className="paginationControls" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', marginTop: '55px' }}>
-                            {Array.from({ length: 3 }, (_, i) => (
-                                <button
-                                    key={i}
-                                    onClick={() => console.log('prova')}
-                                    style={{
-                                        fontWeight: '500',
-                                        color: 1 === i ? '#2DC653' : 'white',
-                                        fontFamily: 'DinPRO',
-                                        fontSize: '24px',
-                                        background: 'none',
-                                        border: 'none',
-                                        cursor: 'pointer'
-                                    }}
-                                >
-                                    {i + 1}
-                                </button>
-                            ))}
-                            <button onClick={() => console.log('avanti')} disabled={false} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
-                                <img src={frecciaright} style={{ width: '18px', height: '25px' }} alt="Freccia Destra" />
-                            </button>
-                        </div>
+          <div style={{ width: '100%', height: '700px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', alignItems: 'center', backgroundColor: '#2d2d2d' }}>
+            <Title style={{ fontSize: '40px' }}>Articoli Correlati</Title>
+            <div style={{ display: 'flex', flexDirection: 'row', gap: '45px', marginTop: '78px' }}>
+              <CardArticolo link='/metaverso-calcistico' title="Cos'è il metaverso calcistico?" category="Innovation" />
+              <CardArticolo link='/play-to-earn' title="Play-to-Earn nei Videogiochi" category="Game Design" />
+              <CardArticolo link='/articolo-test' title="Test Article" category="Test" />
+            </div>
+            <div className="paginationControls" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', marginTop: '55px' }}>
+              {Array.from({ length: 3 }, (_, i) => (
+                <button
+                  key={i}
+                  onClick={() => console.log('prova')}
+                  style={{
+                    fontWeight: '500',
+                    color: 1 === i ? '#2DC653' : 'white',
+                    fontFamily: 'DinPRO',
+                    fontSize: '24px',
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer'
+                  }}
+                >
+                  {i + 1}
+                </button>
+              ))}
+              <button onClick={() => console.log('avanti')} disabled={false} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
+                <img src={frecciaright} style={{ width: '18px', height: '25px' }} alt="Freccia Destra" />
+              </button>
+            </div>
 
-                    </div>
-                    <NewsLetter />
-                    <Footer />
-                </div>
-            </CardContainer>
+          </div>
+          <NewsLetter />
+          <Footer />
         </div>
-    );
+      </CardContainer >
+    </div >
+  );
 };
 
 export default PlayToEarn;

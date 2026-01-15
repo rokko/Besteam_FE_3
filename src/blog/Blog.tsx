@@ -34,18 +34,20 @@ const SectionArticoli = styled.div`
   }
 `;
 
-const HeroContainer = styled.div`
+const HeroContainer = styled.a`
   width: 100%;
   height: 480px;
   background-image: url(${card});
   background-size: cover;
   background-position: center;
-  display: flex;
+  display: flex !important; /* Override slick-slide display */
   flex-direction: column;
   justify-content: space-between;
   padding: 40px 60px;
-  margin-top: 10px;
+  margin-top: 0px; /* Removed margin to fix gap */
   box-sizing: border-box;
+  text-decoration: none;
+  cursor: pointer;
 `;
 
 const HeroTitle = styled.h2`
@@ -84,24 +86,77 @@ const HeroTitleAuthorContainer = styled.div`
   gap: 20px;
 `;
 
+const articles = [
+  {
+    title: "Cos'è il metaverso calcistico?",
+    category: "Innovation",
+    link: "/metaverso-calcistico",
+    date: "10/03/25"
+  },
+  {
+    title: "Play-to-Earn nei Videogiochi",
+    category: "Game Design",
+    link: "/play-to-earn",
+    date: "10/03/25"
+  },
+  {
+    title: "Cosa sono gli NFT? Esempi di successo",
+    category: "Blockchain",
+    link: "/cosa-sono-nft",
+    date: "10/03/25"
+  },
+  {
+    title: "La carriera da calciatore virtuale",
+    category: "Career Mode",
+    link: "/carriera-virtuale",
+    date: "10/03/25"
+  },
+  {
+    title: "Cosa fa un Presidente su Besteam?",
+    category: "Management",
+    link: "/ruolo-presidente",
+    date: "10/03/25"
+  }
+];
+
 const Blog = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false
+  };
+
   return (
     <ContainerBlack>
-      <HeroContainer>
-        <HeroTitleAuthorContainer>
-          <HeroTitle>Un Nuovo Inizio</HeroTitle>
-          <HeroAuthorDate>Besteam.io 10/03/25</HeroAuthorDate>
-        </HeroTitleAuthorContainer>
-        <HeroCategory>Innovation</HeroCategory>
-      </HeroContainer>
+      <div style={{ width: '100%', overflow: 'hidden' }}>
+        <Slider {...settings}>
+          {articles.map((article, index) => (
+            <HeroContainer key={index} href={article.link}>
+              <HeroTitleAuthorContainer>
+                <HeroTitle>{article.title}</HeroTitle>
+                <HeroAuthorDate>Besteam.io {article.date}</HeroAuthorDate>
+              </HeroTitleAuthorContainer>
+              <HeroCategory>{article.category}</HeroCategory>
+            </HeroContainer>
+          ))}
+        </Slider>
+      </div>
 
       <SectionArticoli>
-        <CardArticolo link='/metaverso-calcistico' />
-        <CardArticolo link='/play-to-earn' />
-        <CardArticolo link='/cosa-sono-nft' />
-        <CardArticolo link='/carriera-virtuale' />
-        <CardArticolo link='/ruolo-presidente' />
-
+        {articles.map((article, index) => (
+          <CardArticolo
+            key={index}
+            link={article.link}
+            title={article.title}
+            category={article.category}
+            date={article.date}
+          />
+        ))}
       </SectionArticoli>
 
       <div className="paginationControls" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', marginTop: '55px' }}>

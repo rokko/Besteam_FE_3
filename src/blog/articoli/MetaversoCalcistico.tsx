@@ -437,9 +437,9 @@ const MetaversoCalcistico = () => {
                     <div style={{ width: '100%', height: '700px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', alignItems: 'center', backgroundColor: '#2d2d2d' }}>
                         <Title style={{ fontSize: '40px' }}>Articoli Correlati</Title>
                         <div style={{ display: 'flex', flexDirection: 'row', gap: '45px', marginTop: '78px' }}>
-                            <CardArticolo />
-                            <CardArticolo />
-                            <CardArticolo />
+                            <CardArticolo link='/metaverso-calcistico' title="Cos'è il metaverso calcistico?" category="Innovation" />
+                            <CardArticolo link='/play-to-earn' title="Play-to-Earn nei Videogiochi" category="Game Design" />
+                            <CardArticolo link='/articolo-test' title="Test Article" category="Test" />
                         </div>
                         <div className="paginationControls" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', marginTop: '55px' }}>
                             {Array.from({ length: 3 }, (_, i) => (

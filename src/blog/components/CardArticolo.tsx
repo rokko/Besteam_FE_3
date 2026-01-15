@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import cardImage from '../assets/cardImage.jpg';
+
 const CardContainer = styled.a`
   width: 370px;
   height: 370px;
@@ -8,7 +10,9 @@ const CardContainer = styled.a`
   flex-direction: column;
   justify-content: space-between;
   border-radius: 30px;
-  background-color: #004d26; /* Dark green background */
+  background-image: url(${cardImage});
+  background-size: cover;
+  background-position: center;
   padding-left: 33px; /* Solo padding a sinistra per l'allineamento */
   padding-right: 33px;
 `;
@@ -64,7 +68,7 @@ const CardArticolo = () => {
         <Title>Test</Title>
         <AuthorDate>Besteam.io 10/03/25</AuthorDate>
       </TitleAuthorContainer>
-      
+
       <Category>Future</Category>
     </CardContainer>
   );

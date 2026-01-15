@@ -4,11 +4,11 @@ import styled from 'styled-components';
 import 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
-import card from './assets/MAXIcard.png';
+import card from './assets/articoloImage.jpg';
 import CardArticolo from './components/CardArticolo';
 import NewsLetter from '../components/NewsLetter';
 import frecciaright from './assets/frecciaright.png';
-
+import cardImage from './assets/cardImage.jpg'
 const ContainerBlack = styled.div`
   background-color: #1c1c1c;
   height: 100%;

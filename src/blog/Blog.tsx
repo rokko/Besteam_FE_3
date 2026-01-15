@@ -97,8 +97,10 @@ const Blog = () => {
 
       <SectionArticoli>
         <CardArticolo link='/metaverso-calcistico' />
-        <CardArticolo link='/articolo-test' />
-        <CardArticolo link='/articolo-test' />
+        <CardArticolo link='/play-to-earn' />
+        <CardArticolo link='/cosa-sono-nft' />
+        <CardArticolo link='/carriera-virtuale' />
+        <CardArticolo link='/ruolo-presidente' />
 
       </SectionArticoli>
 

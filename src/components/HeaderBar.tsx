@@ -20,6 +20,10 @@ import VerifyPage from "../communityCup/VerifyPage";
 import Blog from "../blog/Blog";
 import Test from "../blog/articoli/Test";
 import MetaversoCalcistico from "../blog/articoli/MetaversoCalcistico";
+import PlayToEarn from "../blog/articoli/PlayToEarn";
+import NFTExplainer from "../blog/articoli/NFTExplainer";
+import VirtualCareer from "../blog/articoli/VirtualCareer";
+import PresidentRole from "../blog/articoli/PresidentRole";
 import AppRedirect from "./AppRedirect";
 
 const goToRegister = () => {
@@ -116,6 +120,10 @@ const HeaderBar = () => {
           <Route path="/blog" element={<Blog />} />
           <Route path="/articolo-test" element={<Test />} />
           <Route path="/metaverso-calcistico" element={<MetaversoCalcistico />} />
+          <Route path="/play-to-earn" element={<PlayToEarn />} />
+          <Route path="/cosa-sono-nft" element={<NFTExplainer />} />
+          <Route path="/carriera-virtuale" element={<VirtualCareer />} />
+          <Route path="/ruolo-presidente" element={<PresidentRole />} />
           <Route path="/app" element={<AppRedirect />} />
         </Routes>
       </Router>

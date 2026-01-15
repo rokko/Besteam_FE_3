@@ -96,9 +96,9 @@ const Blog = () => {
       </HeroContainer>
 
       <SectionArticoli>
-        <CardArticolo />
-        <CardArticolo />
-        <CardArticolo />
+        <CardArticolo link='/metaverso-calcistico' />
+        <CardArticolo link='/articolo-test' />
+        <CardArticolo link='/articolo-test' />
 
       </SectionArticoli>
 

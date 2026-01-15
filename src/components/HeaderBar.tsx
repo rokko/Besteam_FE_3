@@ -19,6 +19,7 @@ import HomeTikTok from "./tiktokagency/HomeTikTokAgency";
 import VerifyPage from "../communityCup/VerifyPage";
 import Blog from "../blog/Blog";
 import Test from "../blog/articoli/Test";
+import MetaversoCalcistico from "../blog/articoli/MetaversoCalcistico";
 import AppRedirect from "./AppRedirect";
 
 const goToRegister = () => {
@@ -63,7 +64,7 @@ const HeaderBar = () => {
               <p className="testo">Team</p>
             </a>
 
-       
+
             {/*
             <Button
               style={{
@@ -84,7 +85,7 @@ const HeaderBar = () => {
             </Button>
             */}
             <VerticalMenu />
-            
+
             <a
               href="/blog"
               style={{ textDecoration: "none", marginLeft: "-0.6vw" }}
@@ -92,7 +93,7 @@ const HeaderBar = () => {
               <p className="testo">Blog</p>
             </a>
 
-        
+
           </div>
           <div className="hamburger">
             <HamburgerMenu />
@@ -100,7 +101,7 @@ const HeaderBar = () => {
         </div>
         <Routes>
           <Route path="/whitepaper" element={<WhitePaper />} />
-          <Route path="/verify" element={<VerifyPage />}/>
+          <Route path="/verify" element={<VerifyPage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           {/*<Route path="/ico" element={<Preico />} />*/}
@@ -111,10 +112,11 @@ const HeaderBar = () => {
           <Route path="/supportus" element={<BtemSwap />} />
           <Route path="/dapp/creaclub" element={<CreazioneClub />} />
           <Route path="/dapp/dashboard" element={<DappDashboard />} />
-          <Route path="/tiktokagency" element={<HomeTikTok/>} />
-          <Route path="/blog" element={<Blog/>}/>
-          <Route path="/articolo-test" element={<Test/>}/>
-          <Route path="/app" element={<AppRedirect/>}/>
+          <Route path="/tiktokagency" element={<HomeTikTok />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/articolo-test" element={<Test />} />
+          <Route path="/metaverso-calcistico" element={<MetaversoCalcistico />} />
+          <Route path="/app" element={<AppRedirect />} />
         </Routes>
       </Router>
     </>

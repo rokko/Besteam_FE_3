@@ -37,7 +37,7 @@ const SectionArticoli = styled.div`
 const Blog = () => {
   return (
     <ContainerBlack>
-      <img src={card} style={{ marginTop: '116px', width: '100%', height: '480px' }} alt="Maxi Card" />
+      <img src={card} style={{ marginTop: '10px', width: '100%', height: '480px' }} alt="Maxi Card" />
       
       <SectionArticoli>
         <CardArticolo />

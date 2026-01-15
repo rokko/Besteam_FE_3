@@ -335,7 +335,7 @@ const BlogPostCard = () => {
   const images = [ronaldinho, argentina, seriea];
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   // Function to go to next slide
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
@@ -343,132 +343,132 @@ const BlogPostCard = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
-  
-  return (
-    <div style={{backgroundColor:'#1C1C1C'}}>
-    <CardContainer>
-      <ImageContainer>
-        <Image 
-          src={besteamfirst}
-          alt="Calcio Virtuale nel Metaverso" 
-        />
-      </ImageContainer>
-      
-      <ContentContainer>
-        <Title>
-          What is the Football Metaverse?  <br />
-        </Title>
-        
-        <AuthorDate>
-          Besteam | 10/03/25
-        </AuthorDate>
-        
-        <CategoriesContainer>
-          <Category>Categoria</Category>
-          <Category>Categoria</Category>
-          <Category>Categoria</Category>
-        </CategoriesContainer>
-        
-        {/* Testo introduttivo */}
-        <IntroText>
-          Over the past few years, the metaverse has been shaking up multiple industries—including football! But it's not just a cool tech trend; it's a game-changer for fans and clubs alike. So, what exactly is the football metaverse, and what makes it so exciting? Let's dive in!  
-        </IntroText>
-        
-        {/* First section: A New Way to Experience Football */}
-        <MetaverseSection>
-          <MetaverseImageContainer>
-            <Image 
-              src={manchestercity} 
-              alt="L'Innovazione del Calcio nel Metaverso" 
-            />
-          </MetaverseImageContainer>
-          
-          <MetaverseContent>
-            <SectionTitle>A New Way to Experience Football</SectionTitle>
-            <SectionText>
-              The football metaverse is a virtual world where fans can connect with their favorite teams, enjoy immersive experiences, and actively engage in the game—without leaving home. Thanks to cutting-edge tech like Virtual Reality (VR), blockchain, and NFTs, football is stepping into a whole new dimension where physical limits disappear. Big clubs like Manchester City are already building their own metaverse stadiums, allowing fans to watch matches in an interactive digital space.
-            </SectionText>
-          </MetaverseContent>
-        </MetaverseSection>
-        
-        {/* Second section: Play, Earn, and Socialize */}
-        <BesteamSection>
-          <BesteamContent>
-            <SectionTitle>Play, Earn, and Socialize</SectionTitle>
-            <SectionText>
-              In the football metaverse, you're not just a spectator—you can play, compete, and even earn rewards in brand-new ways. Platforms like Besteam offer play-to-earn football simulations where you create a custom avatar, build your dream team, and join tournaments to win cryptocurrency prizes. Fans can also buy, sell, and trade digital assets like custom jerseys, virtual stadiums, and exclusive NFT collectibles, making the virtual football experience even more exciting.
-            </SectionText>
-          </BesteamContent>
-          
-          <BesteamImageContainer>
-            <Image 
-              src={besteamfirst}
-              alt="BUILD YOUR BESTEAM" 
-            />
-          </BesteamImageContainer>
-        </BesteamSection>
-        
-        {/* NEW BE THE FIRST Slider with text below */}
-        <SliderContainer>
-  <LeftButton onClick={prevSlide}>‹</LeftButton>
-  <SliderWrapper currentSlide={currentSlide}>
-    {images.map((img, index) => (
-      <Slide key={index}>
-        <SliderImage src={img} alt={`Slide ${index + 1}`} />
-      </Slide>
-    ))}
-  </SliderWrapper>
-  <RightButton onClick={nextSlide}>›</RightButton>
-</SliderContainer>
-        <SliderTextContainer style={{marginTop:'104px'}}>
-        <SectionTitle>The Future of Football in the Metaverse  
-</SectionTitle>
-        The football metaverse isn’t just about gaming—it’s redefining what it means to be a fan. Clubs can unlock new revenue streams, players can interact directly with supporters, and matches could be broadcast in ways we’ve never seen before. In the near future, we might even see exclusive metaverse events, virtual press conferences, and AR-powered meet-and-greets with football stars. 
-        </SliderTextContainer>
-      </ContentContainer>
-      <img src={crociprima} />
-      <SliderTextContainer style={{marginTop:'104px',marginBottom:'104px'}}>
-        
-      The football metaverse is still in its early days, but it’s already changing the game. The combination of technology, digital economy, and pure football passion is creating something epic—making the sport more accessible, interactive, and immersive than ever.  
-<br/>
-Are you ready to step into the future of football?        </SliderTextContainer>
-      <div style={{marginTop:'80px'}}>
 
-        <div style={{width:'100%', height:'700px', display:'flex', flexDirection:'column', justifyContent:'center', alignContent:'center',alignItems:'center', backgroundColor:'#2d2d2d'}}>
-            <Title style={{fontSize:'40px'}}>Articoli Correlati</Title>
-            <div style={{display:'flex', flexDirection:'row',gap:'45px',marginTop:'78px'}}>
-            <CardArticolo/>
-            <CardArticolo/>
-            <CardArticolo/>
+  return (
+    <div style={{ backgroundColor: '#1C1C1C' }}>
+      <CardContainer>
+        <ImageContainer>
+          <Image
+            src={besteamfirst}
+            alt="Calcio Virtuale nel Metaverso"
+          />
+        </ImageContainer>
+
+        <ContentContainer>
+          <Title>
+            What is the Football Metaverse?  <br />
+          </Title>
+
+          <AuthorDate>
+            Besteam | 10/03/25
+          </AuthorDate>
+
+          <CategoriesContainer>
+            <Category>Categoria</Category>
+            <Category>Categoria</Category>
+            <Category>Categoria</Category>
+          </CategoriesContainer>
+
+          {/* Testo introduttivo */}
+          <IntroText>
+            Over the past few years, the metaverse has been shaking up multiple industries—including football! But it's not just a cool tech trend; it's a game-changer for fans and clubs alike. So, what exactly is the football metaverse, and what makes it so exciting? Let's dive in!
+          </IntroText>
+
+          {/* First section: A New Way to Experience Football */}
+          <MetaverseSection>
+            <MetaverseImageContainer>
+              <Image
+                src={manchestercity}
+                alt="L'Innovazione del Calcio nel Metaverso"
+              />
+            </MetaverseImageContainer>
+
+            <MetaverseContent>
+              <SectionTitle>A New Way to Experience Football</SectionTitle>
+              <SectionText>
+                The football metaverse is a virtual world where fans can connect with their favorite teams, enjoy immersive experiences, and actively engage in the game—without leaving home. Thanks to cutting-edge tech like Virtual Reality (VR), blockchain, and NFTs, football is stepping into a whole new dimension where physical limits disappear. Big clubs like Manchester City are already building their own metaverse stadiums, allowing fans to watch matches in an interactive digital space.
+              </SectionText>
+            </MetaverseContent>
+          </MetaverseSection>
+
+          {/* Second section: Play, Earn, and Socialize */}
+          <BesteamSection>
+            <BesteamContent>
+              <SectionTitle>Play, Earn, and Socialize</SectionTitle>
+              <SectionText>
+                In the football metaverse, you're not just a spectator—you can play, compete, and even earn rewards in brand-new ways. Platforms like Besteam offer play-to-earn football simulations where you create a custom avatar, build your dream team, and join tournaments to win cryptocurrency prizes. Fans can also buy, sell, and trade digital assets like custom jerseys, virtual stadiums, and exclusive NFT collectibles, making the virtual football experience even more exciting.
+              </SectionText>
+            </BesteamContent>
+
+            <BesteamImageContainer>
+              <Image
+                src={besteamfirst}
+                alt="BUILD YOUR BESTEAM"
+              />
+            </BesteamImageContainer>
+          </BesteamSection>
+
+          {/* NEW BE THE FIRST Slider with text below */}
+          <SliderContainer>
+            <LeftButton onClick={prevSlide}>‹</LeftButton>
+            <SliderWrapper currentSlide={currentSlide}>
+              {images.map((img, index) => (
+                <Slide key={index}>
+                  <SliderImage src={img} alt={`Slide ${index + 1}`} />
+                </Slide>
+              ))}
+            </SliderWrapper>
+            <RightButton onClick={nextSlide}>›</RightButton>
+          </SliderContainer>
+          <SliderTextContainer style={{ marginTop: '104px' }}>
+            <SectionTitle>The Future of Football in the Metaverse
+            </SectionTitle>
+            The football metaverse isn’t just about gaming—it’s redefining what it means to be a fan. Clubs can unlock new revenue streams, players can interact directly with supporters, and matches could be broadcast in ways we’ve never seen before. In the near future, we might even see exclusive metaverse events, virtual press conferences, and AR-powered meet-and-greets with football stars.
+          </SliderTextContainer>
+        </ContentContainer>
+        <img src={crociprima} />
+        <SliderTextContainer style={{ marginTop: '104px', marginBottom: '104px' }}>
+
+          The football metaverse is still in its early days, but it’s already changing the game. The combination of technology, digital economy, and pure football passion is creating something epic—making the sport more accessible, interactive, and immersive than ever.
+          <br />
+          Are you ready to step into the future of football?        </SliderTextContainer>
+        <div style={{ marginTop: '80px' }}>
+
+          <div style={{ width: '100%', height: '700px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', alignItems: 'center', backgroundColor: '#2d2d2d' }}>
+            <Title style={{ fontSize: '40px' }}>Articoli Correlati</Title>
+            <div style={{ display: 'flex', flexDirection: 'row', gap: '45px', marginTop: '78px' }}>
+              <CardArticolo link='/metaverso-calcistico' title="Cos'è il metaverso calcistico?" category="Innovation" />
+              <CardArticolo link='/play-to-earn' title="Play-to-Earn nei Videogiochi" category="Game Design" />
+              <CardArticolo link='/articolo-test' title="Test Article" category="Test" />
             </div>
             <div className="paginationControls" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', marginTop: '55px' }}>
-        {Array.from({ length: 3 }, (_, i) => (
-          <button
-            key={i}
-            onClick={() => console.log('prova')}
-            style={{ 
-              fontWeight: '500', 
-              color: 1 === i ? '#2DC653' : 'white', 
-              fontFamily: 'DinPRO', 
-              fontSize: '24px', 
-              background: 'none', 
-              border: 'none', 
-              cursor: 'pointer' 
-            }}
-          >
-            {i + 1}
-          </button>
-        ))}
-        <button onClick={() => console.log('avanti')} disabled={false} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
-          <img src={frecciaright} style={{ width: '18px', height: '25px' }} alt="Freccia Destra" />
-        </button>
-      </div>
+              {Array.from({ length: 3 }, (_, i) => (
+                <button
+                  key={i}
+                  onClick={() => console.log('prova')}
+                  style={{
+                    fontWeight: '500',
+                    color: 1 === i ? '#2DC653' : 'white',
+                    fontFamily: 'DinPRO',
+                    fontSize: '24px',
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer'
+                  }}
+                >
+                  {i + 1}
+                </button>
+              ))}
+              <button onClick={() => console.log('avanti')} disabled={false} style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
+                <img src={frecciaright} style={{ width: '18px', height: '25px' }} alt="Freccia Destra" />
+              </button>
+            </div>
 
+          </div>
+          <NewsLetter />
+          <Footer />
         </div>
-        <NewsLetter />
-        <Footer />
-      </div>
-    </CardContainer>
+      </CardContainer>
     </div>
   );
 };

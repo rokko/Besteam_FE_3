@@ -43,17 +43,11 @@ const Blog = () => {
         <CardArticolo />
         <CardArticolo />
         <CardArticolo />
-        <CardArticolo />
-        <CardArticolo />
-        <CardArticolo />
-        <CardArticolo />
-        <CardArticolo />
-        <CardArticolo />
 
       </SectionArticoli>
 
       <div className="paginationControls" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', marginTop: '55px' }}>
-        {Array.from({ length: 3 }, (_, i) => (
+        {Array.from({ length: 1 }, (_, i) => (
           <button
             key={i}
             onClick={() => console.log('prova')}

@@ -13,7 +13,7 @@ import aranc from "./video/simboloarancione.jpg";
 import { useMediaQuery } from "react-responsive";
 import { Slide } from "react-slideshow-image";
 import enrico from '../components/video/enrico.webp'
-import angelica from '../components/video/cardAngelica.png
+import angelica from '../components/video/cardAngelica.png'
 import saverio2 from '../components/video/CardSaverio.png'
 import davide from '../components/video/cardDavide.png'
 import niccolò from '../components/video/CardNicolo.png'

@@ -13,6 +13,11 @@ import aranc from "./video/simboloarancione.jpg";
 import { useMediaQuery } from "react-responsive";
 import { Slide } from "react-slideshow-image";
 import enrico from '../components/video/enrico.webp'
+import angelica from '../components/video/immaginiOurTeam/Card Angelica.webp'
+import saverio2 from '../components/video/immaginiOurTeam/Card Saverio.webp'
+import davide from '../components/video/immaginiOurTeam/Card Davide.webp'
+import niccolò from '../components/video/immaginiOurTeam/Card Niccolò.webp'
+import gabriele from '../components/video/immaginiOurTeam/Card Gabriele.webp'
 import marco from '../components/video/immaginiOurTeam/Card Marco.webp'
 import filippo from '../components/video/immaginiOurTeam/Card Filippo.webp'
 import giulietta from '../components/video/immaginiOurTeam/Card Giulietta.webp'
@@ -179,10 +184,7 @@ const OurTeam = () => {
       Enrico Coviello
   </TestoNome>
   <TestoRuolo>CEO, Co-founder</TestoRuolo>
-  <TestoLink>  <a href="https://twitter.com/Enrico_Coviello" target="_blank">
-                      Twitter{" "}
-                    </a>
-                    -{" "}
+  <TestoLink>  
                     <a
                       href="https://www.linkedin.com/in/enrico-coviello-352a39225/"
                       target="_blank"
@@ -199,10 +201,7 @@ const OurTeam = () => {
       Marco Tedesco
   </TestoNome>
   <TestoRuolo>COO, Co-founder</TestoRuolo>
-  <TestoLink>  <a href="https://twitter.com/Tedarco96" target="_blank">
-                      Twitter{" "}
-                    </a>
-                    -{" "}
+  <TestoLink>  
                     <a
                       href="https://www.linkedin.com/in/marco-tedesco-a54914227/"
                       target="_blank"
@@ -430,6 +429,93 @@ Rocco Caricola  </TestoNome>
     </TestoLink>
   </BoxInfoTeam>
 </BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={angelica} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
+  <BoxInfoTeam>
+  <TestoNome >
+  Angelica Cavazza  </TestoNome>
+  <br/>
+  <TestoRuolo></TestoRuolo>
+  <TestoLink> 
+       <a
+                      href="https://www.linkedin.com/in/angelica-cavazza-a06921360/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={saverio2} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
+  <BoxInfoTeam>
+  <TestoNome >
+  Saverio Fontana  </TestoNome>
+  <br/>
+  <TestoRuolo></TestoRuolo>
+  <TestoLink> 
+       <a
+                      href="https://www.linkedin.com/in/saverio-fontana-1a9308159/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={davide} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
+  <BoxInfoTeam>
+  <TestoNome >
+  Davide Scavo  </TestoNome>
+  <br/>
+  <TestoRuolo></TestoRuolo>
+  <TestoLink> 
+       <a
+                      href="https://www.linkedin.com/in/davidescavo/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={niccolò} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
+  <BoxInfoTeam>
+  <TestoNome >
+  Niccolò Guglielmi </TestoNome>
+  <br/>
+  <TestoRuolo></TestoRuolo>
+  <TestoLink> 
+       <a
+                      href="https://www.linkedin.com/in/niccol%C3%B2-guglielmi/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={gabriele} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
+  <BoxInfoTeam>
+  <TestoNome >
+ Gabriele vitelli</TestoNome>
+  <br/>
+  <TestoRuolo></TestoRuolo>
+  <TestoLink> 
+       <a
+                      href="https://www.linkedin.com/in/gabriele-vitelli-8691a233b/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+
+
 
 
 

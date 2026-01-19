@@ -13,11 +13,11 @@ import aranc from "./video/simboloarancione.jpg";
 import { useMediaQuery } from "react-responsive";
 import { Slide } from "react-slideshow-image";
 import enrico from '../components/video/enrico.webp'
-import angelica from '../components/video/immaginiOurTeam/Card Angelica Cavazza.webp'
-import saverio2 from '../components/video/immaginiOurTeam/Card Saverio Fontana.webp'
-import davide from '../components/video/immaginiOurTeam/Card Davide Scavo.webp'
-import niccolò from '../components/video/immaginiOurTeam/Card Niccolò Guglielmi.webp'
-import gabriele from '../components/video/immaginiOurTeam/Card Gabriele Vitelli.webp'
+import angelica from '../components/video/immaginiOurTeam/Card Angelica Cavazza.png'
+import saverio2 from '../components/video/immaginiOurTeam/Card Saverio Fontana.png'
+import davide from '../components/video/immaginiOurTeam/Card Davide Scavo.png'
+import niccolò from '../components/video/immaginiOurTeam/Card Niccolò Guglielmi.png'
+import gabriele from '../components/video/immaginiOurTeam/Card Gabriele Vitelli.png'
 import marco from '../components/video/immaginiOurTeam/Card Marco.webp'
 import filippo from '../components/video/immaginiOurTeam/Card Filippo.webp'
 import giulietta from '../components/video/immaginiOurTeam/Card Giulietta.webp'

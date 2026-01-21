@@ -10,21 +10,29 @@ import team2 from "./video/team/filippo.png";
 import team3 from "./video/team/enrico.png";
 import verde from "./video/simboloverde.jpg";
 import aranc from "./video/simboloarancione.jpg";
+
 import { useMediaQuery } from "react-responsive";
 import { Slide } from "react-slideshow-image";
 import enrico from '../components/video/enrico.webp'
-import angelica from '../components/video/cardAngelica.png'
+import angelica from '../components/video/immaginiOurTeam/Card Angelica.webp'
 import saverio2 from '../components/video/CardSaverio.png'
 import davide from '../components/video/cardDavide.png'
 import niccolò from '../components/video/CardNicolo.png'
 import gabriele from '../components/video/cardGabriele.png'
 import marco from '../components/video/immaginiOurTeam/Card Marco.webp'
+import filippoV from '../components/video/immaginiOurTeam/Card FilippoV.webp'
+import francesco from '../components/video/immaginiOurTeam/Card Francesco.webp'
+import giulioleso from '../components/video/immaginiOurTeam/Card Giulio.webp'
 import filippo from '../components/video/immaginiOurTeam/Card Filippo.webp'
 import giulietta from '../components/video/immaginiOurTeam/Card Giulietta.webp'
 import edoardo from '../components/video/immaginiOurTeam/Card Edoardo.webp'
 import ornella from '../components/video/immaginiOurTeam/Card Ornella.webp'
+import federico from '../components/video/immaginiOurTeam/Card Federico.webp'
 import eduardo from '../components/video/immaginiOurTeam/Card Eduardo.webp'
+import niccolò2 from '../components/video/immaginiOurTeam/Card Niccolo2.webp'
+import elisa from '../components/video/immaginiOurTeam/Card Elisa.webp'
 import giovanni from '../components/video/immaginiOurTeam/Card Giovanni.webp'
+import alessandroFeliciani from '../components/video/immaginiOurTeam/Card Alessandro.webp'
 import rocco from '../components/video/immaginiOurTeam/Card Rocco.webp'
 import jacopo from '../components/video/immaginiOurTeam/Card Jacopo.webp'
 import eros from '../components/video/immaginiOurTeam/Card Eros.webp'
@@ -33,6 +41,7 @@ import giacomo from '../components/video/immaginiOurTeam/Card Giacomo.webp'
 import mauro from '../components/video/immaginiOurTeam/Card Mauro.webp'
 import gaetano from '../components/video/immaginiOurTeam/Card Gaetano.webp'
 import ale from '../components/video/ale.webp'
+import giuliano from '../components/video/immaginiOurTeam/Card Giuliano.webp'
 import giuseppe from '../components/video/immaginiOurTeam/Card Giuseppe.webp'
 import emanuele from '../components/video/immaginiOurTeam/Card Emanuele.webp'
 import vinenzo from '../components/video/immaginiOurTeam/Cad Enzo.webp'
@@ -245,6 +254,34 @@ const OurTeam = () => {
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
+  <img src={vinenzo} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
+  <BoxInfoTeam>
+  <TestoNome >
+  Vincenzo Lupo Cosimo  </TestoNome>
+  <br/>
+  <TestoRuolo>Esport Supervisor</TestoRuolo>
+  <TestoLink> 
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <BoxInfoTeam>
+  <img src={giulioleso} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
+  <TestoNome >
+  Giulio Leso  </TestoNome>
+  <br/>
+  <TestoRuolo>CTO</TestoRuolo>
+  <TestoLink> 
+          <a
+                      href="https://www.linkedin.com/in/giulioleso/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
   <img src={edoardo}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
   <BoxInfoTeam>
   <TestoNome>
@@ -254,6 +291,23 @@ const OurTeam = () => {
   <TestoLink> 
                     <a
                       href="https://www.linkedin.com/in/edoardo-grassi-278331162/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={alessandroFeliciani}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
+  <BoxInfoTeam>
+  <TestoNome>
+     Alessandro Feliciani
+  </TestoNome>
+  <TestoRuolo>Rigger</TestoRuolo>
+  <TestoLink> 
+                    <a
+                      href="https://www.linkedin.com/in/alessandro-feliciani-b607ab5/"
                       target="_blank"
                     >
                       Linkedin
@@ -278,6 +332,41 @@ const OurTeam = () => {
     </TestoLink>
   </BoxInfoTeam>
 </BoxImageTeam> 
+<BoxImageTeam > 
+  <img src={francesco} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
+  <BoxInfoTeam>
+  <TestoNome >
+  Francesco D'Urso
+    </TestoNome>
+  <br/>
+  <TestoRuolo>Character designer</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/francesco-d-urso-686035235/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={filippoV}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
+  <BoxInfoTeam>
+  <TestoNome>
+  Filippo Vetro
+  </TestoNome>
+  <TestoRuolo>Character designer</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="http://linkedin.com/in/filippovetro3d"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
 <BoxImageTeam> 
   <img src={eduardo}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
@@ -294,7 +383,74 @@ Eduardo Rizzo  </TestoNome>
     </TestoLink>
   </BoxInfoTeam>
 </BoxImageTeam> 
-
+<BoxImageTeam> 
+  <img src={niccolò2} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
+  <BoxInfoTeam>
+  <TestoNome >
+  Niccolò De Stefano </TestoNome>
+  <br/>
+  <TestoRuolo></TestoRuolo>
+  <TestoLink> 
+       <a
+                      href="https://www.linkedin.com/in/niccolò-destefano-0126011b5/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={federico} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
+  <BoxInfoTeam>
+  <TestoNome >
+ Federico Latini </TestoNome>
+  <br/>
+  <TestoRuolo></TestoRuolo>
+  <TestoLink> 
+       <a
+                      href="https://www.linkedin.com/in/federico-latini/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam>
+<BoxImageTeam> 
+  <img src={jacopo}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
+  <BoxInfoTeam>
+  <TestoNome>
+  Jacopo Gornati
+  </TestoNome>
+  <TestoRuolo>Back-end developer</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/jacopo-gornati-91955868/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam>
+<BoxImageTeam> 
+  <img src={giuliano}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
+  <BoxInfoTeam>
+  <TestoNome>
+  Giuliano Neroni
+  </TestoNome>
+  <TestoRuolo>Blockchain dev.r</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/giuliano-neroni-901217151/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam>  
 <BoxImageTeam> 
   <img src={rocco}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
   <BoxInfoTeam>
@@ -312,24 +468,6 @@ Rocco Caricola  </TestoNome>
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={jacopo}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
-  <BoxInfoTeam>
-  <TestoNome>
-  Jacopo Gornati
-  </TestoNome>
-  <TestoRuolo>Back-end developer</TestoRuolo>
-  <TestoLink>  
-                    <a
-                      href="https://www.linkedin.com/in/jacopo-gornati-91955868/"
-                      target="_blank"
-                    >
-                      Linkedin
-                    </a>
-    </TestoLink>
-  </BoxInfoTeam>
-</BoxImageTeam> 
-
-<BoxImageTeam> 
   <img src={aminul}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
   <TestoNome>
@@ -346,35 +484,16 @@ Rocco Caricola  </TestoNome>
     </TestoLink>
   </BoxInfoTeam>
 </BoxImageTeam> 
-
 <BoxImageTeam> 
-  <img src={eduardo}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}}/>
+  <img src={elisa}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
   <TestoNome>
-  Filippo Vetro
+ Elisa Gallani
   </TestoNome>
-  <TestoRuolo>Character designer</TestoRuolo>
+  <TestoRuolo>UI/UX Designer</TestoRuolo>
   <TestoLink>  
                     <a
-                      href="http://linkedin.com/in/filippovetro3d"
-                      target="_blank"
-                    >
-                      Linkedin
-                    </a>
-    </TestoLink>
-  </BoxInfoTeam>
-</BoxImageTeam> 
-<BoxImageTeam > 
-  <img src={eduardo} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
-  <BoxInfoTeam>
-  <TestoNome >
-  Francesco D'Urso
-    </TestoNome>
-  <br/>
-  <TestoRuolo>Character designer</TestoRuolo>
-  <TestoLink>  
-                    <a
-                      href="https://www.linkedin.com/in/francesco-d-urso-686035235/"
+                      href="https://www.linkedin.com/in/elisa-gallani-433644168/"
                       target="_blank"
                     >
                       Linkedin
@@ -419,23 +538,12 @@ Rocco Caricola  </TestoNome>
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={vinenzo} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
-  <BoxInfoTeam>
-  <TestoNome >
-  Vincenzo Lupo Cosimo  </TestoNome>
-  <br/>
-  <TestoRuolo>Esport Supervisor</TestoRuolo>
-  <TestoLink> 
-    </TestoLink>
-  </BoxInfoTeam>
-</BoxImageTeam> 
-<BoxImageTeam> 
   <img src={angelica} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
   <TestoNome >
   Angelica Cavazza  </TestoNome>
   <br/>
-  <TestoRuolo></TestoRuolo>
+  <TestoRuolo>VFX</TestoRuolo>
   <TestoLink> 
        <a
                       href="https://www.linkedin.com/in/angelica-cavazza-a06921360/"
@@ -452,7 +560,7 @@ Rocco Caricola  </TestoNome>
   <TestoNome >
   Saverio Fontana  </TestoNome>
   <br/>
-  <TestoRuolo></TestoRuolo>
+  <TestoRuolo>Game dev</TestoRuolo>
   <TestoLink> 
        <a
                       href="https://www.linkedin.com/in/saverio-fontana-1a9308159/"
@@ -469,7 +577,7 @@ Rocco Caricola  </TestoNome>
   <TestoNome >
   Davide Scavo  </TestoNome>
   <br/>
-  <TestoRuolo></TestoRuolo>
+  <TestoRuolo>Business dev.</TestoRuolo>
   <TestoLink> 
        <a
                       href="https://www.linkedin.com/in/davidescavo/"
@@ -486,7 +594,7 @@ Rocco Caricola  </TestoNome>
   <TestoNome >
   Niccolò Guglielmi </TestoNome>
   <br/>
-  <TestoRuolo></TestoRuolo>
+  <TestoRuolo>Game dev.</TestoRuolo>
   <TestoLink> 
        <a
                       href="https://www.linkedin.com/in/niccol%C3%B2-guglielmi/"
@@ -503,7 +611,7 @@ Rocco Caricola  </TestoNome>
   <TestoNome >
  Gabriele vitelli</TestoNome>
   <br/>
-  <TestoRuolo></TestoRuolo>
+  <TestoRuolo>Level designer</TestoRuolo>
   <TestoLink> 
        <a
                       href="https://www.linkedin.com/in/gabriele-vitelli-8691a233b/"
@@ -514,17 +622,7 @@ Rocco Caricola  </TestoNome>
     </TestoLink>
   </BoxInfoTeam>
 </BoxImageTeam> 
-
-
-
-
-
-
-
-
-
-          
-              </Slide>
+</Slide>
 {/*
           <div
             style={{

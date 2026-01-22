@@ -14,7 +14,7 @@ import giuseppeAlbertini from "./video/immaginiOurTeam/Card GiuseppeAlbertini.we
 import aranc from "./video/simboloarancione.jpg";
 import giacomoVettori from "./video/immaginiOurTeam/Card GiacomoV.webp";
 import { useMediaQuery } from "react-responsive";
-import giannotti from '../video/immaginiOurTeam/Card Giannotti.webp'
+import giannotti from '../components/video/immaginiOurTeam/Card Giannotti.webp'
 import { Slide } from "react-slideshow-image";
 import enrico from '../components/video/enrico.webp'
 import carrara from '../components/video/immaginiOurTeam/Card Carrara.webp'

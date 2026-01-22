@@ -70,7 +70,7 @@ const HamburgerMenu = () => {
             style={{ textDecoration: "none" }}
           >
           <div className="beforeline">
-            <p className="testo coming">Blog</p>
+            <p className="testo">Blog</p>
           </div>
           </a>
         </div>

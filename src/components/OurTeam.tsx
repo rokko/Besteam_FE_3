@@ -6,6 +6,7 @@ import photoTeam from "../components/video/fototeam.png";
 import arrowright from "../components/video/freccia.png";
 import arrowleft from "../components/video/frecciasinistra.png";
 import team1 from "./video/team/marco.png";
+import silviaDellOrco from "./video/immaginiOurTeam/Card Silvia.webp";
 import team2 from "./video/team/filippo.png";
 import team3 from "./video/team/enrico.png";
 import verde from "./video/simboloverde.jpg";
@@ -503,24 +504,6 @@ Rocco Caricola  </TestoNome>
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={giuseppe}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
-  <BoxInfoTeam>
-  <TestoNome >
-  Giuseppe Albertini
-  </TestoNome>
-  <br/>
-  <TestoRuolo>PM</TestoRuolo>
-  <TestoLink>  
-                    <a
-                      href="https://www.linkedin.com/in/giuseppe-albertini-734a3244/"
-                      target="_blank"
-                    >
-                      Linkedin
-                    </a>
-    </TestoLink>
-  </BoxInfoTeam>
-</BoxImageTeam> 
-<BoxImageTeam> 
   <img src={emanuele}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <BoxInfoTeam>
   <TestoNome >
@@ -531,6 +514,24 @@ Rocco Caricola  </TestoNome>
   <TestoLink>  
                     <a
                       href="https://www.linkedin.com/in/emanuele-paparella-9a86b024b/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={silviaDellOrco}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
+  <BoxInfoTeam>
+  <TestoNome >
+      Silvia Dell'Orco
+  </TestoNome>
+  <br/>
+  <TestoRuolo>Innovation manager</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/silviadellorco/"
                       target="_blank"
                     >
                       Linkedin

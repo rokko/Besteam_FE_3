@@ -17,8 +17,8 @@ import { useMediaQuery } from "react-responsive";
 import { Slide } from "react-slideshow-image";
 import enrico from '../components/video/enrico.webp'
 import angelica from '../components/video/immaginiOurTeam/Card Angelica.webp'
-import saverio2 from '../components/video/CardSaverio.png'
-import davide from '../components/video/cardDavide.png'
+import saverio2 from '../components/video/team/Card Saverio.webp'
+import davide from '../components/video/team/Card Davide.webp'
 import niccolò from '../components/video/CardNicolo.png'
 import gabriele from '../components/video/cardGabriele.png'
 import marco from '../components/video/immaginiOurTeam/Card Marco.webp'

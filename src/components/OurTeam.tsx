@@ -9,6 +9,7 @@ import team1 from "./video/team/marco.png";
 import team2 from "./video/team/filippo.png";
 import team3 from "./video/team/enrico.png";
 import verde from "./video/simboloverde.jpg";
+import giuseppeAlbertini from "./video/immaginiOurTeam/Card GiuseppeAlbertini.webp";
 import aranc from "./video/simboloarancione.jpg";
 import giacomoVettori from "./video/immaginiOurTeam/Card GiacomoV.webp";
 import { useMediaQuery } from "react-responsive";
@@ -530,6 +531,24 @@ Rocco Caricola  </TestoNome>
   <TestoLink>  
                     <a
                       href="https://www.linkedin.com/in/emanuele-paparella-9a86b024b/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={giuseppeAlbertini}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
+  <BoxInfoTeam>
+  <TestoNome >
+     Giuseppe Albertini
+  </TestoNome>
+  <br/>
+  <TestoRuolo>PM</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/giuseppe-albertini-734a3244/"
                       target="_blank"
                     >
                       Linkedin

@@ -391,7 +391,7 @@ Eduardo Rizzo  </TestoNome>
   <TestoNome >
   Niccolò De Stefano </TestoNome>
   <br/>
-  <TestoRuolo></TestoRuolo>
+  <TestoRuolo>3D Modeler</TestoRuolo>
   <TestoLink> 
        <a
                       href="https://www.linkedin.com/in/niccolò-destefano-0126011b5/"
@@ -408,7 +408,7 @@ Eduardo Rizzo  </TestoNome>
   <TestoNome >
  Federico Latini </TestoNome>
   <br/>
-  <TestoRuolo></TestoRuolo>
+  <TestoRuolo>3D Animator</TestoRuolo>
   <TestoLink> 
        <a
                       href="https://www.linkedin.com/in/federico-latini/"

@@ -69,7 +69,7 @@ const LastFooter = () => {
             >
               <img src={freccia2} alt="arrow" />
             </button>
-            <a href="/tiktokagency" style={{ display: 'flex', flexDirection: 'row', width: '200px', height: '30px', justifyItems: 'center', alignContent: 'center', alignItems: 'center' }}>
+            <a href="/tiktokagency">
               <div className="colore"  >
                 <TiktokIcon style={{ width: "20px", height: "20px" }} />
               </div>

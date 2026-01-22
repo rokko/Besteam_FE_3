@@ -74,10 +74,7 @@ const LastFooter = () => {
                 <TiktokIcon style={{ width: "20px", height: "20px" }} />
               </div>
 
-              <div
-                style={{ width: '114px', height: '30px', backgroundColor: 'trasparent', display: 'flex', alignContent: 'center', alignItems: 'center' }}>
-                <p style={{ fontSize: '15px', fontWeight: '500', marginLeft: '5px' }}>  TikTok Agency</p>
-              </div>
+            
 
 
             </a>

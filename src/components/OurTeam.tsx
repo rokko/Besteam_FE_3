@@ -260,17 +260,6 @@ const OurTeam = () => {
   </BoxInfoTeam>
 </BoxImageTeam> 
 <BoxImageTeam> 
-  <img src={vinenzo} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
-  <BoxInfoTeam>
-  <TestoNome >
-  Vincenzo Lupo Cosimo  </TestoNome>
-  <br/>
-  <TestoRuolo>Esport Supervisor</TestoRuolo>
-  <TestoLink> 
-    </TestoLink>
-  </BoxInfoTeam>
-</BoxImageTeam> 
-<BoxImageTeam> 
   <BoxInfoTeam>
   <img src={giulioleso} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
   <TestoNome >

@@ -64,9 +64,15 @@ const HamburgerMenu = () => {
           </div>
         )}
         <div className="testi-menu">
+            <a
+            href="/blog"
+            target={"_blank"}
+            style={{ textDecoration: "none" }}
+          >
           <div className="beforeline">
-            <p className="testo coming">SupportUS</p>
+            <p className="testo coming">Blog</p>
           </div>
+          </a>
         </div>
 
         <div className="testi-menu">

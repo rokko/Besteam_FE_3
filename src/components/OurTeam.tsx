@@ -14,8 +14,12 @@ import giuseppeAlbertini from "./video/immaginiOurTeam/Card GiuseppeAlbertini.we
 import aranc from "./video/simboloarancione.jpg";
 import giacomoVettori from "./video/immaginiOurTeam/Card GiacomoV.webp";
 import { useMediaQuery } from "react-responsive";
+import giannotti from '../video/immaginiOurTeam/Card Giannotti.webp'
 import { Slide } from "react-slideshow-image";
 import enrico from '../components/video/enrico.webp'
+import carrara from '../components/video/immaginiOurTeam/Card Carrara.webp'
+import zannutti from '../components/video/immaginiOurTeam/Card Zanutto.webp'
+
 import angelica from '../components/video/immaginiOurTeam/Card Angelica.webp'
 import saverio2 from '../components/video/team/Card Saverio.webp'
 import davide from '../components/video/team/Card Davide.webp'
@@ -496,6 +500,57 @@ Rocco Caricola  </TestoNome>
   <TestoLink>  
                     <a
                       href="https://www.linkedin.com/in/elisa-gallani-433644168/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={zannutti}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
+  <BoxInfoTeam>
+  <TestoNome>
+ Gabriele Zanutto
+  </TestoNome>
+  <TestoRuolo>Game Designer</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/gabriele-zanutto-130494238/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={carrara}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
+  <BoxInfoTeam>
+  <TestoNome>
+ Francesco Carrara
+  </TestoNome>
+  <TestoRuolo>Game Designer</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/francesco-carrara-profilo/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={giannotti}  style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
+  <BoxInfoTeam>
+  <TestoNome>
+Andrea Giannotti
+  </TestoNome>
+  <TestoRuolo>Game dev.</TestoRuolo>
+  <TestoLink>  
+                    <a
+                      href="https://www.linkedin.com/in/andrea-giannotti26/"
                       target="_blank"
                     >
                       Linkedin

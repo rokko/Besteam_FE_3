@@ -10,7 +10,7 @@ import team2 from "./video/team/filippo.png";
 import team3 from "./video/team/enrico.png";
 import verde from "./video/simboloverde.jpg";
 import aranc from "./video/simboloarancione.jpg";
-
+import giacomoVettori from "./video/immaginiOurTeam/Card GiacomoV.webp";
 import { useMediaQuery } from "react-responsive";
 import { Slide } from "react-slideshow-image";
 import enrico from '../components/video/enrico.webp'
@@ -615,6 +615,23 @@ Rocco Caricola  </TestoNome>
   <TestoLink> 
        <a
                       href="https://www.linkedin.com/in/gabriele-vitelli-8691a233b/"
+                      target="_blank"
+                    >
+                      Linkedin
+                    </a>
+    </TestoLink>
+  </BoxInfoTeam>
+</BoxImageTeam> 
+<BoxImageTeam> 
+  <img src={giacomoVettori} style={{zIndex:'-100', width:'102%',alignSelf:'center'}} />
+  <BoxInfoTeam>
+  <TestoNome >
+ Giacomo Vettori</TestoNome>
+  <br/>
+  <TestoRuolo>3D Animator</TestoRuolo>
+  <TestoLink> 
+       <a
+                      href="https://www.linkedin.com/in/giacomo-vettori-3a066b378/"
                       target="_blank"
                     >
                       Linkedin

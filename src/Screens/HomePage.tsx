@@ -157,8 +157,8 @@ const HomePage: React.FC = () => {
                     <TwitterIcon style={{ width: "20px", height: "20px" }} />
                   </div>
                 </a>
-                <a href="/tiktokagency" style={{ display: 'flex', flexDirection: 'row', width: '200px', height: '30px', justifyItems: 'center', alignContent: 'center', alignItems: 'center' }}>
-                  <div className="colore" onMouseEnter={() => setApriTesto(!apriTesto)} onMouseLeave={() => setApriTesto(!apriTesto)}>
+                <a href="/tiktokagency" >
+                  <div className="colore" >
                     <TiktokIcon style={{ width: "20px", height: "20px" }} />
                   </div>
 

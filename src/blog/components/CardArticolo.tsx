@@ -10,7 +10,7 @@ const CardContainer = styled.a`
   flex-direction: column;
   justify-content: space-between;
   border-radius: 30px;
-  background-image: url(${cardImage});
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${cardImage});
   background-size: cover;
   background-position: center;
   padding-left: 33px; /* Solo padding a sinistra per l'allineamento */

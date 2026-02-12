@@ -38,7 +38,7 @@ const SectionArticoli = styled.div`
 const HeroContainer = styled.a`
   width: 100%;
   height: 480px;
-  background-image: url(${card});
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${card});
   background-size: cover;
   background-position: center;
   display: flex !important; /* Override slick-slide display */

@@ -76,84 +76,6 @@ const TickerLine = () => {
                   }}
                 />
 
-            
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                    fontSize: "70px",
-                  }}
-                >
-                  PLAY 11VS11
-                </p>
-                <div style={{ width: "100%" }}></div>
-                <img
-                  src={best}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
-
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                    fontSize: "70px",
-                  }}
-                >
-                  BECOME A VIRTUAL FOOTBALLER
-                </p>
-                <img
-                  src={avat}
-                  style={{
-                    marginLeft: "20px",
-                    height: "50px",
-                    marginBottom: "-12px",
-                  }}
-                />
-
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    marginLeft: "60px",
-                    fontSize: "70px",
-                  }}
-                >
-                  JOIN FOOTBALL METAVERSE
-                </p>
-                <img
-                  src={ball}
-                  style={{
-                    height: "50px",
-                    marginBottom: "-12px",
-                    marginLeft: "20px",
-                  }}
-                />
-                <p
-                  style={{
-                    color: "#2DC653",
-                    marginTop: "80px",
-                    fontSize: "70px",
-                    marginLeft: "60px",
-                  }}
-                >
-                  PLAY FOOTBALL TO EARN
-                </p>
-                <img
-                  src={up}
-                  style={{
-                    height: "50px",
-                    marginBottom: "-12px",
-                    marginLeft: "40px",
-                  }}
-                />
-
-                 
 
                 <p
                   style={{
@@ -231,7 +153,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -309,7 +231,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -387,7 +309,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -465,7 +387,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -543,7 +465,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -621,7 +543,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -699,7 +621,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -777,7 +699,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -855,7 +777,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -933,7 +855,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -1011,7 +933,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -1089,7 +1011,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -1167,7 +1089,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -1245,7 +1167,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -1323,7 +1245,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -1401,7 +1323,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -1479,7 +1401,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -1557,7 +1479,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -1635,7 +1557,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -1713,7 +1635,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -1791,7 +1713,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -1869,7 +1791,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -1947,7 +1869,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -2025,7 +1947,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -2103,7 +2025,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -2181,7 +2103,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -2259,7 +2181,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -2337,7 +2259,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -2415,7 +2337,7 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
 
                 <p
                   style={{
@@ -2493,7 +2415,85 @@ const TickerLine = () => {
                   }}
                 />
 
-                 
+
+
+                <p
+                  style={{
+                    color: "#2DC653",
+                    marginTop: "80px",
+                    marginLeft: "60px",
+                    fontSize: "70px",
+                  }}
+                >
+                  PLAY 11VS11
+                </p>
+                <div style={{ width: "100%" }}></div>
+                <img
+                  src={best}
+                  style={{
+                    marginLeft: "20px",
+                    height: "50px",
+                    marginBottom: "-12px",
+                  }}
+                />
+
+                <p
+                  style={{
+                    color: "#2DC653",
+                    marginTop: "80px",
+                    marginLeft: "60px",
+                    fontSize: "70px",
+                  }}
+                >
+                  BECOME A VIRTUAL FOOTBALLER
+                </p>
+                <img
+                  src={avat}
+                  style={{
+                    marginLeft: "20px",
+                    height: "50px",
+                    marginBottom: "-12px",
+                  }}
+                />
+
+                <p
+                  style={{
+                    color: "#2DC653",
+                    marginTop: "80px",
+                    marginLeft: "60px",
+                    fontSize: "70px",
+                  }}
+                >
+                  JOIN FOOTBALL METAVERSE
+                </p>
+                <img
+                  src={ball}
+                  style={{
+                    height: "50px",
+                    marginBottom: "-12px",
+                    marginLeft: "20px",
+                  }}
+                />
+                <p
+                  style={{
+                    color: "#2DC653",
+                    marginTop: "80px",
+                    fontSize: "70px",
+                    marginLeft: "60px",
+                  }}
+                >
+                  PLAY FOOTBALL TO EARN
+                </p>
+                <img
+                  src={up}
+                  style={{
+                    height: "50px",
+                    marginBottom: "-12px",
+                    marginLeft: "40px",
+                  }}
+                />
+
+
 
                 <p
                   style={{
@@ -2573,7 +2573,20 @@ const TickerLine = () => {
           flexDirection: "row",
         }}
       >
-       
+                <img
+          src={barranews}
+          alt="barranews"
+          style={{
+            position: "absolute",
+            right: 15,
+            top: 0,
+            zIndex: 200,
+            height: "3.5vh",
+            width: "85px",
+          }}
+        />
+
+
         <Ticker speed={8} mode={"chain"}>
           {({ index }) => (
             <div
@@ -2606,15 +2619,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -2697,15 +2702,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -2788,15 +2785,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -2879,15 +2868,6 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
-
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -2970,15 +2950,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -3061,15 +3033,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -3152,15 +3116,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -3243,15 +3199,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -3334,15 +3282,6 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
-
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -3425,15 +3364,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -3516,15 +3447,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -3607,15 +3530,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -3698,15 +3613,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -3789,15 +3696,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -3880,15 +3779,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -3971,15 +3862,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -4062,15 +3945,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -4153,15 +4028,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -4244,15 +4111,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -4335,15 +4194,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -4426,15 +4277,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -4517,15 +4360,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -4608,15 +4443,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -4699,15 +4526,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -4790,15 +4609,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -4881,15 +4692,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -4972,15 +4775,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -5063,15 +4858,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -5154,15 +4941,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -5245,15 +5024,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -5336,15 +5107,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{
@@ -5427,15 +5190,7 @@ const TickerLine = () => {
                 }}
               />
 
-              <p
-                style={{
-                  color: "#2DC653",
 
-                  marginLeft: "20px",
-                }}
-              >
-                POLYGON BLOCKCHAIN
-              </p>
               <img
                 src={poly}
                 style={{

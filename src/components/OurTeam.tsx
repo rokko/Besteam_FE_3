@@ -260,7 +260,7 @@ const OurTeam = () => {
                 </BoxInfoTeam>
               </BoxImageTeam>
                <BoxImageTeam>
-                <img src={edoardo} style={{ zIndex: '-100', width: '102%', alignSelf: 'center' }} />
+                <img src={giulioleso} style={{ zIndex: '-100', width: '102%', alignSelf: 'center' }} />
                 <BoxInfoTeam>
                   <TestoNome>
                     Edoardo Grassi

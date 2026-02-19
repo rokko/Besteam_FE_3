@@ -2573,18 +2573,7 @@ const TickerLine = () => {
           flexDirection: "row",
         }}
       >
-        <img
-          src={barranews}
-          alt="barranews"
-          style={{
-            position: "absolute",
-            right: 15,
-            top: 0,
-            zIndex: 200,
-            height: "3.5vh",
-            width: "85px",
-          }}
-        />
+       
         <Ticker speed={8} mode={"chain"}>
           {({ index }) => (
             <div

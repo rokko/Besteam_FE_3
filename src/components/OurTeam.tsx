@@ -263,9 +263,9 @@ const OurTeam = () => {
                 <img src={giulioleso} style={{ zIndex: '-100', width: '102%', alignSelf: 'center' }} />
                 <BoxInfoTeam>
                   <TestoNome>
-                    Edoardo Grassi
+                    Giulio Leso
                   </TestoNome>
-                  <TestoRuolo>Lead 3D</TestoRuolo>
+                  <TestoRuolo>CTO</TestoRuolo>
                   <TestoLink>
                     <a
                       href="https://www.linkedin.com/in/edoardo-grassi-278331162/"

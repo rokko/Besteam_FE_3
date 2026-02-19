@@ -259,16 +259,16 @@ const OurTeam = () => {
                   </TestoLink>
                 </BoxInfoTeam>
               </BoxImageTeam>
-              <BoxImageTeam>
+               <BoxImageTeam>
+                <img src={edoardo} style={{ zIndex: '-100', width: '102%', alignSelf: 'center' }} />
                 <BoxInfoTeam>
-                  <img src={giulioleso} style={{ zIndex: '-100', width: '102%', alignSelf: 'center' }} />
-                  <TestoNome >
-                    Giulio Leso  </TestoNome>
-                  <br />
-                  <TestoRuolo>CTO</TestoRuolo>
+                  <TestoNome>
+                    Edoardo Grassi
+                  </TestoNome>
+                  <TestoRuolo>Lead 3D</TestoRuolo>
                   <TestoLink>
                     <a
-                      href="https://www.linkedin.com/in/giulioleso/"
+                      href="https://www.linkedin.com/in/edoardo-grassi-278331162/"
                       target="_blank"
                     >
                       Linkedin

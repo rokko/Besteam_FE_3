@@ -146,7 +146,7 @@ const Paragrafo3 = () => {
               <span className="testo-grassetto"> or just be a player.</span>
               <br />
               Each team has a{" "}
-              <span className="testo-parole-paragrafo">customizable </span> logo
+              <span className="testo-parole-paragrafo">customizable </span> logo <br />
               and <span className="testo-parole-paragrafo">home stadium.</span>
               <br />
               With your teammates

@@ -130,14 +130,14 @@ const Paragrafo4 = () => {
             <img src={crociprima} />
             <p className="titolo-paragrafo">NFTs.</p>
             <p className="testo-paragrafo">
-               Upgrade your avatar with {" "}
+               Upgrade your avatar with
               <span className="testo-parole-paragrafo">
-                focused training;{" "}
+                focused training;
               </span>
               <br />
-             improve skills and unlock new abilities to boost <br />
-             performance on the field, following your coach’s tactic. <br />
-             Train daily and track your progress as you climb the ranks.<br />
+             improve skills and unlock new abilities<br /> to boost 
+             performance on the field,<br /> following your coach’s tactic. <br />
+             Train daily and track your progress <br/>as you climb the ranks.<br />
             </p>
           </div>
 

@@ -143,7 +143,7 @@ const Paragrafo5 = () => {
               against other teams.
               <br />
               In this event there are referees, specialized casters. <br />
-              and they are broadcast on the main{" "}
+              and they are broadcast<br /> on the main
               <span className="testo-parole-paragrafo">streaming </span>{" "}
               platforms
             </p>

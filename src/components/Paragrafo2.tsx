@@ -141,18 +141,18 @@ const Paragrafo2 = () => {
             <p className="titolo-paragrafo">Just like YOU!</p>
             <p className="testo-paragrafo">
               You can be yourself showing{" "}
-              <span className="testo-parole-paragrafo"> your outfit </span>in
+              <span className="testo-parole-paragrafo"> your outfit </span><br />in
               the BestCity.
               <br />
               Your avatar is{" "}
               <span className="testo-parole-paragrafo">
                 fully customizable{" "}
-              </span>{" "}
+              </span>{" "}<br />
               with exclusive{" "}
               <span className="testo-parole-paragrafo"> NTFs </span> ;<br />
               modify your look, your hairstyle and much more ...
               <br />
-              Wear your team colors and promote your personal style{" "}
+              Wear your team colors <br />and promote your personal style{" "}
             </p>
           </div>
 

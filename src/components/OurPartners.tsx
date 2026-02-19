@@ -26,7 +26,7 @@ const OurPartners = () => {
           marginTop: isMobile ? "20vh" : "",
         }}
       >
-        <img src={bordo} style={{ width: "100%" }} />
+      
       </div>
 
       <div className="container-page">

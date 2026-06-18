@@ -233,21 +233,27 @@ export const PlayerCell = styled.div<{ flex?: number }>`
 `;
 
 export const PlayerDetail = styled.div`
-  width: 340px;
+  width: 360px;
   flex-shrink: 0;
 `;
 
 export const PlayerCard = styled.div`
-  border: 2px solid ${ACCENT};
+  border: 3px solid ${ACCENT};
   border-radius: 12px;
-  background-color: #111;
+  background-color: #888;
   overflow: hidden;
 `;
 
-export const PlayerPhoto = styled.div`
-  width: 100%;
-  height: 260px;
-  background-color: #333;
+export const PlayerCardInner = styled.div`
+  display: flex;
+  flex-direction: row;
+  background-color: #888;
+`;
+
+export const PlayerPhotoArea = styled.div`
+  flex: 1;
+  height: 300px;
+  background-color: #555;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -259,56 +265,44 @@ export const PlayerPhoto = styled.div`
   }
 `;
 
-export const PlayerCardBody = styled.div`
-  padding: 16px;
+export const PlayerIconColumn = styled.div`
+  width: 48px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 8px 0;
+`;
+
+export const ColIcon = styled.div`
+  color: ${ACCENT};
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const PlayerBottomBanner = styled.div`
+  background-color: #000;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const PlayerCardName = styled.div`
   color: #fff;
   font-family: "DinPROBold", sans-serif;
-  font-size: 18px;
-  text-align: center;
-  margin-bottom: 12px;
+  font-size: 16px;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 `;
 
-export const PlayerClubIcons = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 16px;
-`;
-
-export const ClubIcon = styled.div`
-  width: 40px;
-  height: 40px;
-  background-color: #000;
-  border: 1px solid ${ACCENT};
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${GOLD};
-  font-size: 18px;
-`;
-
-export const ActionButtons = styled.div`
-  display: flex;
-  gap: 8px;
-  margin-top: 12px;
-`;
-
-export const ActionBtn = styled.button<{ primary?: boolean }>`
-  flex: 1;
-  padding: 8px;
-  border: none;
-  border-radius: 6px;
-  font-family: "DinPROBold", sans-serif;
-  font-size: 12px;
-  cursor: pointer;
-  background-color: ${({ primary }) => (primary ? ACCENT : "#000")};
-  color: ${({ primary }) => (primary ? "#000" : "#fff")};
-  text-transform: uppercase;
+export const FlagIcon = styled.span`
+  font-size: 20px;
+  line-height: 1;
 `;
 
 export const LockScreen = styled.div`

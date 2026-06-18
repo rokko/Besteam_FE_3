@@ -24,13 +24,13 @@ import {
   PlayerCell,
   PlayerDetail,
   PlayerCard,
-  PlayerPhoto,
-  PlayerCardBody,
+  PlayerCardInner,
+  PlayerPhotoArea,
+  PlayerIconColumn,
+  ColIcon,
+  PlayerBottomBanner,
   PlayerCardName,
-  PlayerClubIcons,
-  ClubIcon,
-  ActionButtons,
-  ActionBtn,
+  FlagIcon,
   GOLD,
   LockScreen,
   LockTitle,
@@ -229,20 +229,34 @@ const MarketPlayer: React.FC = () => {
 
         <PlayerDetail>
           <PlayerCard>
-            <PlayerPhoto>
-              <img src={PLACEHOLDER_PHOTO} alt="Player" />
-            </PlayerPhoto>
-            <PlayerCardBody>
-              <PlayerCardName>{selectedPlayer.name}</PlayerCardName>
-              <PlayerClubIcons>
-                <ClubIcon><TeamShield size={20} color={GOLD} /></ClubIcon>
-                <ClubIcon><TeamShield size={20} color={GOLD} /></ClubIcon>
-              </PlayerClubIcons>
-              <ActionButtons>
-                <ActionBtn primary>BUY</ActionBtn>
-                <ActionBtn>OFFER</ActionBtn>
-              </ActionButtons>
-            </PlayerCardBody>
+            <PlayerCardInner>
+              <PlayerPhotoArea>
+                <img src={PLACEHOLDER_PHOTO} alt="Player" />
+              </PlayerPhotoArea>
+              <PlayerIconColumn>
+                <ColIcon>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 2L3 7v5c0 5.5 3.5 10.5 9 12 5.5-1.5 9-6.5 9-12V7z" />
+                  </svg>
+                </ColIcon>
+                <ColIcon>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="3" y="12" width="4" height="9" />
+                    <rect x="10" y="7" width="4" height="14" />
+                    <rect x="17" y="3" width="4" height="18" />
+                  </svg>
+                </ColIcon>
+                <ColIcon>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54z" />
+                  </svg>
+                </ColIcon>
+              </PlayerIconColumn>
+            </PlayerCardInner>
+            <PlayerBottomBanner>
+              <PlayerCardName>HOMEPLAYERLICETRE</PlayerCardName>
+              <FlagIcon>🇮🇹</FlagIcon>
+            </PlayerBottomBanner>
           </PlayerCard>
         </PlayerDetail>
       </PlayerLayout>

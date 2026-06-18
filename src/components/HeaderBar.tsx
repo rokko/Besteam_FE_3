@@ -25,6 +25,7 @@ import NFTExplainer from "../blog/articoli/NFTExplainer";
 import VirtualCareer from "../blog/articoli/VirtualCareer";
 import PresidentRole from "../blog/articoli/PresidentRole";
 import AppRedirect from "./AppRedirect";
+import Market from "../Screens/Market/Market";
 
 const goToRegister = () => {
   document.body.scrollTop = 10000; // For Safari
@@ -124,6 +125,7 @@ const HeaderBar = () => {
           <Route path="/cosa-sono-nft" element={<NFTExplainer />} />
           <Route path="/carriera-virtuale" element={<VirtualCareer />} />
           <Route path="/ruolo-presidente" element={<PresidentRole />} />
+          <Route path="/market" element={<Market />} />
           <Route path="/app" element={<AppRedirect />} />
         </Routes>
       </Router>

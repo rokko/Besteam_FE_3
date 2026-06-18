@@ -16,7 +16,6 @@ import {
   TeamCard,
   TeamIcon,
   TeamCardName,
-  TeamBar,
   PlayerLayout,
   PlayerList,
   PlayerListHeader,
@@ -45,7 +44,7 @@ import {
 
 const PLACEHOLDER_PHOTO = "https://via.placeholder.com/340x260/444/666?text=Player";
 
-const TeamShield: React.FC<{ size?: number; color?: string }> = ({ size = 52, color = GOLD }) => (
+const TeamShield: React.FC<{ size?: number; color?: string }> = ({ size = 64, color = GOLD }) => (
   <svg width={size} height={size} viewBox="0 0 36 36" fill="none">
     <path d="M18 2L4 10v8c0 8.5 5.5 16 14 18 8.5-2 14-9.5 14-18v-8L18 2z" fill={color} opacity="0.2" />
     <path d="M18 4L6 11v7c0 7.5 5 14 12 16 7-2 12-8.5 12-16v-7L18 4z" stroke={color} strokeWidth="1.5" fill="none" />
@@ -182,8 +181,7 @@ const MarketTeam: React.FC = () => {
             const hasBorder = i < 2;
             return (
               <TeamCard key={i} hasBorder={hasBorder}>
-                <TeamIcon><TeamShield size={52} color={GOLD} /></TeamIcon>
-                {isTopRow && <TeamBar />}
+                <TeamIcon><TeamShield size={64} color={GOLD} /></TeamIcon>
                 <TeamCardName>{name}</TeamCardName>
               </TeamCard>
             );

@@ -150,15 +150,18 @@ export const TeamCard = styled.div<{ hasBorder?: boolean }>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 14px 6px 10px;
+  padding: 10px 6px;
   aspect-ratio: 3 / 4;
 `;
 
 export const TeamIcon = styled.div`
   color: ${GOLD};
-  font-size: 52px;
+  font-size: 64px;
   line-height: 1;
-  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
 `;
 
 export const TeamCardName = styled.div`

@@ -156,7 +156,7 @@ export const TeamCard = styled.div<{ hasBorder?: boolean }>`
 
 export const TeamIcon = styled.div`
   color: ${GOLD};
-  font-size: 32px;
+  font-size: 52px;
   line-height: 1;
   margin-bottom: 6px;
 `;
@@ -306,46 +306,6 @@ export const ActionBtn = styled.button<{ primary?: boolean }>`
   background-color: ${({ primary }) => (primary ? ACCENT : "#000")};
   color: ${({ primary }) => (primary ? "#000" : "#fff")};
   text-transform: uppercase;
-`;
-
-export const HeaderWithPopups = styled.div`
-  position: relative;
-`;
-
-export const PopupBubble = styled.div<{ top?: string; right?: string; left?: string }>`
-  position: absolute;
-  top: ${({ top }) => top || "-30px"};
-  right: ${({ right }) => right || "auto"};
-  left: ${({ left }) => left || "auto"};
-  width: 48px;
-  height: 48px;
-  background-color: #000;
-  border: 2px solid ${ACCENT};
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${GOLD};
-  font-size: 20px;
-  z-index: 10;
-`;
-
-export const PopupBubbleSmall = styled.div<{ top?: string; right?: string; left?: string }>`
-  position: absolute;
-  top: ${({ top }) => top || "-20px"};
-  right: ${({ right }) => right || "auto"};
-  left: ${({ left }) => left || "auto"};
-  width: 36px;
-  height: 36px;
-  background-color: #000;
-  border: 2px solid ${ACCENT};
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${GOLD};
-  font-size: 16px;
-  z-index: 10;
 `;
 
 export const LockScreen = styled.div`

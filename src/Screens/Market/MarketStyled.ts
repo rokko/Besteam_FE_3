@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ACCENT = "#2DC653";
+export const GOLD = "#FFD700";
 export const BG_DARK = "#1C1C1C";
 export const BG_WINDOW = "#E8E8E8";
 export const BG_LIST = "#B0B0B0";
@@ -16,37 +17,49 @@ export const PageWrapper = styled.div`
   font-family: "DinPRO", sans-serif;
 `;
 
-export const ScreenTitle = styled.h2`
-  color: ${ACCENT};
-  font-family: "DinPROBold", sans-serif;
-  font-size: 24px;
-  margin-bottom: 16px;
-  text-align: left;
+export const TopBar = styled.div`
   width: 100%;
   max-width: 1200px;
-`;
-
-export const TabBar = styled.div`
+  background-color: #000;
+  border-radius: 30px;
   display: flex;
-  gap: 8px;
+  align-items: center;
+  padding: 8px 20px;
   margin-bottom: 20px;
-  width: 100%;
-  max-width: 1200px;
+  box-sizing: border-box;
 `;
 
-export const TabButton = styled.button<{ active: boolean }>`
-  background-color: ${({ active }) => (active ? ACCENT : "#333")};
-  color: ${({ active }) => (active ? "#000" : "#aaa")};
+export const BackArrow = styled.button`
+  background: none;
   border: none;
-  padding: 10px 32px;
-  font-family: "DinPROBold", sans-serif;
-  font-size: 18px;
+  color: ${ACCENT};
+  font-size: 22px;
   cursor: pointer;
-  border-radius: 20px;
-  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-right: 16px;
   &:hover {
-    opacity: 0.85;
+    opacity: 0.8;
   }
+`;
+
+export const TabItem = styled.span<{ active: boolean }>`
+  font-family: "DinPROBold", sans-serif;
+  font-size: 20px;
+  color: ${({ active }) => (active ? ACCENT : "#666")};
+  cursor: pointer;
+  padding: 4px 20px;
+  text-transform: uppercase;
+  &:hover {
+    color: ${({ active }) => (active ? ACCENT : "#999")};
+  }
+`;
+
+export const TabSeparator = styled.span`
+  color: #444;
+  font-size: 20px;
+  padding: 0 4px;
 `;
 
 export const ContentPanel = styled.div`
@@ -65,20 +78,27 @@ export const ContentPanel = styled.div`
   box-sizing: border-box;
 `;
 
+export const SearchFilterRow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+`;
+
 export const SearchBar = styled.div`
   display: flex;
   align-items: center;
   background-color: #d0d0d0;
   border-radius: 24px;
-  padding: 8px 16px;
-  margin-bottom: 16px;
+  padding: 6px 14px;
   input {
-    flex: 1;
+    width: 160px;
     border: none;
     outline: none;
     background: transparent;
     font-family: "DinPRO", sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     color: #666;
     &::placeholder {
       color: #999;
@@ -86,14 +106,14 @@ export const SearchBar = styled.div`
   }
   svg {
     color: #666;
-    margin-right: 8px;
+    margin-right: 6px;
+    flex-shrink: 0;
   }
 `;
 
 export const FilterRow = styled.div`
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 8px;
   flex-wrap: wrap;
 `;
 
@@ -101,19 +121,25 @@ export const FilterChip = styled.div<{ active?: boolean }>`
   background-color: ${({ active }) => (active ? ACCENT : "#000")};
   color: ${({ active }) => (active ? "#000" : "#fff")};
   font-family: "DinPROBold", sans-serif;
-  font-size: 12px;
-  padding: 6px 20px;
+  font-size: 11px;
+  padding: 5px 16px;
   border-radius: 20px;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  white-space: nowrap;
+`;
+
+export const TeamBox = styled.div`
+  background-color: ${BG_LIST};
+  border-radius: 10px;
+  padding: 20px;
 `;
 
 export const TeamGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 16px;
-  margin-top: 12px;
+  gap: 14px;
 `;
 
 export const TeamCard = styled.div<{ hasBorder?: boolean }>`
@@ -124,33 +150,33 @@ export const TeamCard = styled.div<{ hasBorder?: boolean }>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 16px 8px 8px;
-  position: relative;
-  min-height: 110px;
+  padding: 14px 6px 10px;
+  aspect-ratio: 3 / 4;
 `;
 
 export const TeamIcon = styled.div`
-  color: ${ACCENT};
-  font-size: 36px;
+  color: ${GOLD};
+  font-size: 32px;
   line-height: 1;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 `;
 
-export const TeamBar = styled.div`
-  width: 80%;
-  height: 4px;
-  background-color: ${ACCENT};
-  border-radius: 2px;
-  margin-top: 6px;
-`;
-
-export const TeamLabel = styled.div`
-  color: ${ACCENT};
+export const TeamCardName = styled.div`
+  color: #fff;
   font-family: "DinPROBold", sans-serif;
   font-size: 10px;
   text-align: center;
-  margin-bottom: 4px;
   text-transform: uppercase;
+  margin-top: auto;
+  line-height: 1.2;
+`;
+
+export const TeamBar = styled.div`
+  width: 70%;
+  height: 3px;
+  background-color: ${ACCENT};
+  border-radius: 2px;
+  margin: 4px 0;
 `;
 
 export const PlayerLayout = styled.div`
@@ -259,7 +285,7 @@ export const ClubIcon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${ACCENT};
+  color: ${GOLD};
   font-size: 18px;
 `;
 
@@ -282,6 +308,10 @@ export const ActionBtn = styled.button<{ primary?: boolean }>`
   text-transform: uppercase;
 `;
 
+export const HeaderWithPopups = styled.div`
+  position: relative;
+`;
+
 export const PopupBubble = styled.div<{ top?: string; right?: string; left?: string }>`
   position: absolute;
   top: ${({ top }) => top || "-30px"};
@@ -295,7 +325,7 @@ export const PopupBubble = styled.div<{ top?: string; right?: string; left?: str
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${ACCENT};
+  color: ${GOLD};
   font-size: 20px;
   z-index: 10;
 `;
@@ -313,34 +343,9 @@ export const PopupBubbleSmall = styled.div<{ top?: string; right?: string; left?
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${ACCENT};
+  color: ${GOLD};
   font-size: 16px;
   z-index: 10;
-`;
-
-export const HeaderWithPopups = styled.div`
-  position: relative;
-`;
-
-export const ListIcon = styled.span`
-  display: inline-flex;
-  align-items: center;
-  svg {
-    width: 16px;
-    height: 16px;
-  }
-`;
-
-export const NoteIconPlaceholder = styled.div`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  svg {
-    width: 14px;
-    height: 14px;
-  }
 `;
 
 export const LockScreen = styled.div`

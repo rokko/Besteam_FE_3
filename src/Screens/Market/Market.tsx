@@ -1,18 +1,22 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   PageWrapper,
-  ScreenTitle,
-  TabBar,
-  TabButton,
+  TopBar,
+  BackArrow,
+  TabItem,
+  TabSeparator,
   ContentPanel,
+  SearchFilterRow,
   SearchBar,
   FilterRow,
   FilterChip,
+  TeamBox,
   TeamGrid,
   TeamCard,
   TeamIcon,
+  TeamCardName,
   TeamBar,
-  TeamLabel,
   PlayerLayout,
   PlayerList,
   PlayerListHeader,
@@ -31,7 +35,7 @@ import {
   HeaderWithPopups,
   PopupBubble,
   PopupBubbleSmall,
-  ACCENT,
+  GOLD,
   LockScreen,
   LockTitle,
   LockSubtitle,
@@ -44,13 +48,24 @@ import {
 
 const PLACEHOLDER_PHOTO = "https://via.placeholder.com/340x260/444/666?text=Player";
 
-const teamLogos = Array.from({ length: 12 }, (_, i) => i);
-
-const TeamShield: React.FC<{ size?: number }> = ({ size = 36 }) => (
+const TeamShield: React.FC<{ size?: number; color?: string }> = ({ size = 36, color = GOLD }) => (
   <svg width={size} height={size} viewBox="0 0 36 36" fill="none">
-    <path d="M18 2L4 10v8c0 8.5 5.5 16 14 18 8.5-2 14-9.5 14-18v-8L18 2z" fill={ACCENT} opacity="0.2" />
-    <path d="M18 4L6 11v7c0 7.5 5 14 12 16 7-2 12-8.5 12-16v-7L18 4z" stroke={ACCENT} strokeWidth="1.5" fill="none" />
-    <text x="18" y="21" textAnchor="middle" fill={ACCENT} fontSize="10" fontWeight="bold">T</text>
+    <path d="M18 2L4 10v8c0 8.5 5.5 16 14 18 8.5-2 14-9.5 14-18v-8L18 2z" fill={color} opacity="0.2" />
+    <path d="M18 4L6 11v7c0 7.5 5 14 12 16 7-2 12-8.5 12-16v-7L18 4z" stroke={color} strokeWidth="1.5" fill="none" />
+    <text x="18" y="21" textAnchor="middle" fill={color} fontSize="10" fontWeight="bold">T</text>
+  </svg>
+);
+
+const SearchSvg = () => (
+  <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+    <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" strokeWidth="1.5" fill="none" />
+    <path d="M10.5 10.5L15 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+  </svg>
+);
+
+const ArrowBackSvg = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
   </svg>
 );
 
@@ -59,13 +74,6 @@ const ListSvg = () => (
     <rect x="1" y="2" width="14" height="2" rx="1" />
     <rect x="1" y="7" width="14" height="2" rx="1" />
     <rect x="1" y="12" width="14" height="2" rx="1" />
-  </svg>
-);
-
-const SearchSvg = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-    <circle cx="6.5" cy="6.5" r="5" stroke="currentColor" strokeWidth="1.5" fill="none" />
-    <path d="M10.5 10.5L15 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
   </svg>
 );
 
@@ -78,11 +86,17 @@ const dummyPlayers = [
   { name: "NamePlayerLocalize", position: "COM" },
 ];
 
+const teamNames = [
+  "FC EAGLES", "LION FC", "WOLVES 11", "STAR UTD", "BEAR FC", "HAWKS FC",
+  "TITANS", "DRAGON FC", "PANTHER", "SHARKS", "PHOENIX", "RAPID FC",
+];
+
 const Market: React.FC = () => {
   const [accesso, setAccesso] = useState(true);
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [activeTab, setActiveTab] = useState<"Team" | "Player">("Team");
+  const navigate = useNavigate();
 
   if (accesso) {
     return (
@@ -129,15 +143,18 @@ const Market: React.FC = () => {
 
   return (
     <PageWrapper>
-      <ScreenTitle>Market</ScreenTitle>
-      <TabBar>
-        <TabButton active={activeTab === "Team"} onClick={() => setActiveTab("Team")}>
-          Market_Team
-        </TabButton>
-        <TabButton active={activeTab === "Player"} onClick={() => setActiveTab("Player")}>
-          Market_Player
-        </TabButton>
-      </TabBar>
+      <TopBar>
+        <BackArrow onClick={() => navigate(-1)}>
+          <ArrowBackSvg />
+        </BackArrow>
+        <TabItem active={activeTab === "Team"} onClick={() => setActiveTab("Team")}>
+          Team
+        </TabItem>
+        <TabSeparator>|</TabSeparator>
+        <TabItem active={activeTab === "Player"} onClick={() => setActiveTab("Player")}>
+          Player
+        </TabItem>
+      </TopBar>
 
       {activeTab === "Team" ? <MarketTeam /> : <MarketPlayer />}
     </PageWrapper>
@@ -148,47 +165,42 @@ const MarketTeam: React.FC = () => {
   return (
     <ContentPanel>
       <HeaderWithPopups>
-        <SearchBar>
-          <SearchSvg />
-          <input type="text" placeholder="Search teams..." />
-        </SearchBar>
+        <SearchFilterRow>
+          <SearchBar>
+            <SearchSvg />
+            <input type="text" placeholder="Search teams..." />
+          </SearchBar>
+          <FilterRow>
+            <FilterChip active>TEAMS</FilterChip>
+            <FilterChip>ALL</FilterChip>
+            <FilterChip>RARE</FilterChip>
+            <FilterChip>EPIC</FilterChip>
+            <FilterChip>LEGENDARY</FilterChip>
+          </FilterRow>
+        </SearchFilterRow>
         <PopupBubbleSmall top="-18px" left="16px">
-          <TeamShield size={18} />
+          <TeamShield size={18} color={GOLD} />
         </PopupBubbleSmall>
         <PopupBubble top="-24px" right="16px">
-          <TeamShield size={22} />
+          <TeamShield size={22} color={GOLD} />
         </PopupBubble>
       </HeaderWithPopups>
 
-      <FilterRow>
-        <FilterChip active>TEAMS</FilterChip>
-        <FilterChip>ALL</FilterChip>
-        <FilterChip>RARE</FilterChip>
-        <FilterChip>EPIC</FilterChip>
-        <FilterChip>LEGENDARY</FilterChip>
-      </FilterRow>
-
-      <TeamGrid>
-        {teamLogos.map((_, i) => {
-          const isTopRow = i < 6;
-          const hasBorder = i < 2;
-          return (
-            <TeamCard key={i} hasBorder={hasBorder}>
-              {isTopRow ? (
-                <>
-                  <TeamIcon><TeamShield /></TeamIcon>
-                  <TeamBar />
-                </>
-              ) : (
-                <>
-                  <TeamLabel>TEAM {i - 5}</TeamLabel>
-                  <TeamIcon><TeamShield /></TeamIcon>
-                </>
-              )}
-            </TeamCard>
-          );
-        })}
-      </TeamGrid>
+      <TeamBox>
+        <TeamGrid>
+          {teamNames.map((name, i) => {
+            const isTopRow = i < 6;
+            const hasBorder = i < 2;
+            return (
+              <TeamCard key={i} hasBorder={hasBorder}>
+                <TeamIcon><TeamShield color={GOLD} /></TeamIcon>
+                {isTopRow && <TeamBar />}
+                <TeamCardName>{name}</TeamCardName>
+              </TeamCard>
+            );
+          })}
+        </TeamGrid>
+      </TeamBox>
     </ContentPanel>
   );
 };
@@ -199,22 +211,23 @@ const MarketPlayer: React.FC = () => {
   return (
     <ContentPanel>
       <HeaderWithPopups>
-        <SearchBar>
-          <SearchSvg />
-          <input type="text" placeholder="Search players..." />
-        </SearchBar>
+        <SearchFilterRow>
+          <SearchBar>
+            <SearchSvg />
+            <input type="text" placeholder="Search players..." />
+          </SearchBar>
+          <FilterRow>
+            <FilterChip>TEAMS</FilterChip>
+            <FilterChip active>PLAYER</FilterChip>
+            <FilterChip>RARE</FilterChip>
+            <FilterChip>EPIC</FilterChip>
+            <FilterChip>LEGENDARY</FilterChip>
+          </FilterRow>
+        </SearchFilterRow>
         <PopupBubbleSmall top="-18px" left="120px">
-          <TeamShield size={18} />
+          <TeamShield size={18} color={GOLD} />
         </PopupBubbleSmall>
       </HeaderWithPopups>
-
-      <FilterRow>
-        <FilterChip>TEAMS</FilterChip>
-        <FilterChip active>PLAYER</FilterChip>
-        <FilterChip>RARE</FilterChip>
-        <FilterChip>EPIC</FilterChip>
-        <FilterChip>LEGENDARY</FilterChip>
-      </FilterRow>
 
       <PlayerLayout>
         <PlayerList>
@@ -240,8 +253,8 @@ const MarketPlayer: React.FC = () => {
             <PlayerCardBody>
               <PlayerCardName>{selectedPlayer.name}</PlayerCardName>
               <PlayerClubIcons>
-                <ClubIcon><TeamShield size={20} /></ClubIcon>
-                <ClubIcon><TeamShield size={20} /></ClubIcon>
+                <ClubIcon><TeamShield size={20} color={GOLD} /></ClubIcon>
+                <ClubIcon><TeamShield size={20} color={GOLD} /></ClubIcon>
               </PlayerClubIcons>
               <ActionButtons>
                 <ActionBtn primary>BUY</ActionBtn>

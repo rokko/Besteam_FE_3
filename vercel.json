@@ -1,3 +1,6 @@
 {
+  "framework": "create-react-app",
+  "outputDirectory": "build",
+  "buildCommand": "DISABLE_ESLINT_PLUGIN=true react-app-rewired build",
   "installCommand": "yarn install --network-timeout 300000"
 }
